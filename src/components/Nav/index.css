@@ -1,0 +1,24 @@
+/* .navigation {
+    display:inline-block
+} */
+main.navigation {
+    margin: 0 auto;
+    margin-bottom: -10px;
+}
+main.navigation > div {
+    min-width: 95vw;
+    text-align: center;
+}
+.sidebar {
+    background-color:white;
+}
+div.nav-icon > button.btn {
+    border-radius: 0px;
+    box-shadow: none;
+}
+.default > svg {
+    color: gray;
+}
+#links > a {
+    color: white;
+}

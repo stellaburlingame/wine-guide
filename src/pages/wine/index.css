@@ -1,0 +1,47 @@
+@media print {
+  .pages {
+    font-size: 30px !important;
+    text-align: right;
+    width: 100%;
+    margin-top: "1rem";
+    margin-bottom: "2rem";
+    font-style: "italic";
+    color: black !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    zoom: 39%;
+    font-size: 30px;
+  }
+  .card-title {
+    font-size: 35px;
+  }
+  h6 {
+    font-size: 33px;
+    font-weight: bold;
+  }
+
+  .wine-print {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    page-break-inside: avoid;
+  }
+
+  .wine-print .col-6 {
+    width: 50% !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .wine-print .card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0.5in;
+  }
+}
