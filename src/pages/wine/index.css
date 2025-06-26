@@ -45,3 +45,17 @@
     margin: 0.5in;
   }
 }
+.wine-doc, .wine-docg {
+  padding: 0.15rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  font-family: "Didot", serif;
+}
+.wine-docg {
+  color: #fffdf0;
+  background-color: #534230;
+}
+.wine-doc {
+  color: #1265A9;
+  background-color: #B6D3F3;
+}
