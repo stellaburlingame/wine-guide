@@ -11,8 +11,8 @@ function Index(props) {
                 <Link variant="outline-*" className="navbar-brand logo" to="italiano">Rosso Italiano</Link>
                 <Link variant="outline-*" className="navbar-brand logo" to="rosso">Rosso</Link>
                 <Link variant="outline-*" className="navbar-brand logo" to="bianco">Bianco</Link>
-                <Link variant="outline-*" className="navbar-brand logo" to="sparkling">Sparking</Link>
-                <Link variant="outline-*" className="navbar-brand logo" to="rose">Rose</Link>
+                {/* <Link variant="outline-*" className="navbar-brand logo" to="sparkling">Sparking</Link> */}
+                {/* <Link variant="outline-*" className="navbar-brand logo" to="rose">Rose</Link> */}
                 <div id="navbarNav">
                 <ul id="links" className="nav  ml-auto">
                 {/* <Link variant="outline-*" className="navbar-brand logo" to="/">Training</Link> */}
