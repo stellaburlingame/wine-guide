@@ -55,9 +55,19 @@ class index extends React.Component {
                     <React.Fragment key={rowIndex}>
                       <div className="row">
                         {row.map(({ key, ...data1 }) => (
-                          <div className="col-6" key={key}>
+                          <div className="col-md-12 col-lg-6 col-sm-12" key={key}>
                             <Card className="m-1" bg={"Light"}>
-                              <Card.Header><Card.Title>{data1['Wine Name']} {data1['Vintage']}</Card.Title></Card.Header>
+                              <Card.Header>
+                                <Card.Title>
+                                  {data1['Wine Name']} {' '} {data1['Vintage']} {' '}
+                                  {data1.DOCG && (
+                                    <strong className="wine-docg">DOCG</strong>
+                                  )} {' '}
+                                  {data1.DOC && (
+                                    <strong className="wine-doc">DOC</strong>
+                                  )}
+                                </Card.Title>
+                              </Card.Header>
                               <Card.Body className="d-flex">
                                 <div style={{ width: "40%" }}>
                                   <Card.Img
@@ -169,7 +179,7 @@ class index extends React.Component {
                                         <ListGroup.Item><strong>Aging:</strong> {data1["Aging"]}</ListGroup.Item>
                                       )}
                                       {data1["Blend"] && (
-                                        <ListGroup.Item><strong>Aging:</strong> {data1["Blend"]}</ListGroup.Item>
+                                        <ListGroup.Item><strong>Blend:</strong> {data1["Blend"]}</ListGroup.Item>
                                       )}
                                       {/* {data1["Type of cask"] && (
                                         <ListGroup.Item><strong>Type of cask:</strong> {data1["Type of cask"]}</ListGroup.Item>
@@ -193,7 +203,9 @@ class index extends React.Component {
                                             {data1["Appelation"] && (
                                               <p><strong>Appelation:</strong> {data1["Appelation"]}</p>
                                             )}
-                                            <p><strong>Vineyard:</strong> {data1["Vineyard"]}</p>
+                                            {data1["Vineyard"] && (
+                                              <p><strong>Vineyard:</strong> {data1["Vineyard"]}</p>
+                                            )}
                                           </div>
                                         </div>
                                       </ListGroup.Item>
