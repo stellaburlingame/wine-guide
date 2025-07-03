@@ -50,6 +50,7 @@
   padding-left: .25rem;
   padding-right: .25rem;
   font-family: "Didot", serif;
+  border-radius: 4px;
 }
 .wine-docg {
   color: #fffdf0;
@@ -58,4 +59,50 @@
 .wine-doc {
   color: #1265A9;
   background-color: #B6D3F3;
+}
+
+.wine-price {
+  margin-left: 0.25rem;
+}
+
+.wine-specs__body {
+  margin-top: 0.5rem;
+}
+
+.wine-specs__body--medium {
+  margin-right: 1rem;
+}
+
+.gradient-chart__background {
+  position: relative;
+}
+
+.gradient-chart__triangle-indicator {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.wine-card-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 4px;
+}
+
+.wine-region-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.wine-card-right {
+  width: 60%;
+  padding-right: 1rem;
+}
+
+.wine-card-left {
+  width: 40%;
+}
+
+.wine-pairing-text {
+  margin-top: 0.5rem;
 }

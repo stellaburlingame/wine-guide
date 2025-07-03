@@ -65,11 +65,17 @@ class index extends React.Component {
                                   )} {' '}
                                   {data1.DOC && (
                                     <strong className="wine-doc">DOC</strong>
+                                  )} {' '}
+                                  {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
+                                    <span className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</span>
+                                  )} {' '}
+                                  {!isNaN(parseFloat(data1.Glass_Price)) && parseFloat(data1.Glass_Price) > 0 && (
+                                    <span className="wine-price"><strong>${parseInt(data1.Glass_Price)}</strong>/gls</span>
                                   )}
                                 </Card.Title>
                               </Card.Header>
                               <Card.Body className="d-flex">
-                                <div style={{ width: "40%" }}>
+                                <div className="wine-card-left">
                                   <Card.Img
                                     onError={({ currentTarget }) => {
                                       currentTarget.onerror = null;
@@ -77,10 +83,10 @@ class index extends React.Component {
                                     }}
                                     variant="top"
                                     src={`${process.env.PUBLIC_URL}/photos/wine/${data1["Image"]}`}
-                                    style={{ width: "100%", height: "400px", borderRadius: "4px" }}
+                                    className="wine-card-image"
                                   />
                                 </div>
-                                <div style={{ width: "60%", paddingRight: "1rem" }}>
+                                <div className="wine-card-right">
                                   {data1["Summary"] && (
                                     <>
                                       <p dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
@@ -98,7 +104,7 @@ class index extends React.Component {
                               </Card.Body>
                               <Card.Body>
                                 <div className="d-flex">
-                                  <div style={{ width: "50%", paddingRight: "1rem" }}>
+                                  <div className="wine-card-left" style={{ paddingRight: "1rem" }}>
                                     <strong>Tasting Notes:</strong>
                                     <ListGroup variant="flush">
                                       <ListGroup.Item><strong>Flavor:</strong> {data1["Flavor"]}</ListGroup.Item>
@@ -108,17 +114,17 @@ class index extends React.Component {
                                       <ListGroup.Item><strong>Acidity:</strong> {data1["Acidity"]}</ListGroup.Item>
                                     </ListGroup>
                                   </div>
-                                  <div style={{ width: "50%" }}>
+                                  <div className="wine-card-right">
                                     <ListGroup variant="flush">
                                       <ListGroup.Item>
                                         <strong>Body:</strong>
-                                        <div className="wine-specs__body" data-testid="wine-specs__body" style={{ marginTop: "0.5rem" }}>
+                                        <div className="wine-specs__body" data-testid="wine-specs__body">
                                           <div>
                                             <span className="wine-specs__body--medium">Light</span>
                                             <span className="wine-specs__body--medium">Medium</span>
                                             <span className="wine-specs__body--medium">Full</span>
                                           </div>
-                                          <div className="gradient-chart__background" style={{ position: "relative" }}>
+                                          <div className="gradient-chart__background">
                                             <div className="gradient-chart__triangle-indicator"
                                               style={{
                                                 left: data1["Body"]?.toLowerCase() === "full" ? "100%" :
@@ -126,42 +132,38 @@ class index extends React.Component {
                                                       data1["Body"]?.toLowerCase() === "medium" ? "52%" :
                                                       data1["Body"]?.toLowerCase() === "light to medium" ? "27%" :
                                                       data1["Body"]?.toLowerCase() === "light" ? "2%" : "2%",
-                                                transform: "translateX(-50%)",
-                                                position: "absolute"
                                               }}
                                               aria-label={`Wine is ${data1["Body"]} body`}>
                                               <span>&#9660;</span>
                                             </div>
                                           </div>
                                         </div>
-                                        <p style={{ marginTop: "0.5rem" }}>
+                                        <p className="wine-pairing-text">
                                           {data1["Body Characteristics"]}
                                         </p>
                                       </ListGroup.Item>
                                       {this.props.type !== "bianco" && (
                                         <ListGroup.Item>
                                           <strong>Tannins:</strong>
-                                          <div className="wine-specs__body" data-testid="wine-specs__tannins" style={{ marginTop: "0.5rem" }}>
+                                          <div className="wine-specs__body" data-testid="wine-specs__tannins">
                                             <div>
                                               <span className="wine-specs__body--medium">Low</span>
                                               <span className="wine-specs__body--medium">Medium</span>
                                               <span className="wine-specs__body--medium">High</span>
                                             </div>
-                                            <div className="gradient-chart__background" style={{ position: "relative" }}>
+                                            <div className="gradient-chart__background">
                                               <div className="gradient-chart__triangle-indicator"
                                                 style={{
                                                   left: data1["Tannin Level"]?.toLowerCase() === "high" ? "100%" :
                                                         data1["Tannin Level"]?.toLowerCase() === "medium" ? "50%" :
                                                         data1["Tannin Level"]?.toLowerCase() === "low" ? "0%" : "0%",
-                                                  transform: "translateX(-50%)",
-                                                  position: "absolute"
                                                 }}
                                                 aria-label={`Wine has ${data1["Tannin Level"]} tannins`}>
                                                 <span>&#9660;</span>
                                               </div>
                                             </div>
                                           </div>
-                                          <p style={{ marginTop: "0.5rem" }}>
+                                          <p className="wine-pairing-text">
                                             {data1["Tannin Characteristics"]}
                                           </p>
                                         </ListGroup.Item>
@@ -170,7 +172,7 @@ class index extends React.Component {
                                   </div>
                                 </div>
                                 <div className="d-flex">
-                                  <div style={{ width: "50%", paddingRight: "1rem" }}>
+                                  <div className="wine-card-left" style={{ paddingRight: "1rem" }}>
                                     <strong>Winemaking:</strong>
                                     <ListGroup variant="flush" >
                                       <ListGroup.Item><strong>Vinification:</strong> {data1["Vinification"]}</ListGroup.Item>
@@ -186,16 +188,16 @@ class index extends React.Component {
                                       )} */}
                                     </ListGroup>
                                   </div>
-                                  <div style={{ width: "50%" }}>
+                                  <div className="wine-card-right">
                                     <ListGroup variant="flush">
                                       <ListGroup.Item>
                                         <div className="d-flex">
-                                          <div style={{ width: "30%", paddingRight: "1rem" }}>
+                                          <div className="wine-region-image" style={{ width: "30%", paddingRight: "1rem" }}>
                                             <img
                                               src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
                                               alt={data1["Region"]}
                                               onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; }}
-                                              style={{ width: "100%", height: "auto", borderRadius: "4px" }}
+                                              className="wine-region-image"
                                             />
                                           </div>
                                           <div style={{ width: "70%" }}>
