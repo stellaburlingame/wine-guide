@@ -8,17 +8,14 @@ function Index(props) {
         <main>
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark ">
             <div className="container">
-                <Link variant="outline-*" className="navbar-brand logo" to="italiano">Rosso Italiano</Link>
-                <Link variant="outline-*" className="navbar-brand logo" to="rosso">Rosso</Link>
-                <Link variant="outline-*" className="navbar-brand logo" to="bianco">Bianco</Link>
-                {/* <Link variant="outline-*" className="navbar-brand logo" to="sparkling">Sparking</Link> */}
-                {/* <Link variant="outline-*" className="navbar-brand logo" to="rose">Rose</Link> */}
                 <div id="navbarNav">
                 <ul id="links" className="nav  ml-auto">
-                {/* <Link variant="outline-*" className="navbar-brand logo" to="/">Training</Link> */}
-
-                    {/* <a variant="outline-*" className="nav-link" href="https://dvasquez4155.github.io/TFM/">Home</a> */}
-                    {/* <Link variant="outline-*" className="nav-link" to="/">Testing</Link> */}
+                    {/* <Link variant="outline-*" className="navbar-brand logo" to="/">Training</Link> */}
+                    <Link variant="outline-*" className="nav-link" to="italiano">Rosso Italiano</Link>
+                    <Link variant="outline-*" className="nav-link" to="rosso">Rosso</Link>
+                    <Link variant="outline-*" className="nav-link" to="bianco">Bianco</Link>
+                    {/* <Link variant="outline-*" className="nav-link" to="sparkling">Sparking</Link>
+                    <Link variant="outline-*" className="nav-link" to="rose">Rose</Link> */}
                 </ul>
                 </div>
             </div>

@@ -192,7 +192,7 @@ class index extends React.Component {
                                     <ListGroup variant="flush">
                                       <ListGroup.Item>
                                         <div className="d-flex">
-                                          <div className="wine-region-image" style={{ width: "30%", paddingRight: "1rem" }}>
+                                          <div className="wine-region-image" style={{ width: "100%", paddingRight: "1rem" }}>
                                             <img
                                               src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
                                               alt={data1["Region"]}
@@ -201,12 +201,12 @@ class index extends React.Component {
                                             />
                                           </div>
                                           <div style={{ width: "70%" }}>
-                                            <p><strong>Region:</strong> {data1["Region"]}</p>
+                                            <p><strong>Region:<br /></strong> {data1["Region"]}</p>
                                             {data1["Appelation"] && (
-                                              <p><strong>Appelation:</strong> {data1["Appelation"]}</p>
+                                              <p><strong>Appelation:<br /></strong> {data1["Appelation"]}</p>
                                             )}
                                             {data1["Vineyard"] && (
-                                              <p><strong>Vineyard:</strong> {data1["Vineyard"]}</p>
+                                              <p><strong>Vineyard:<br /></strong> {data1["Vineyard"]}</p>
                                             )}
                                           </div>
                                         </div>
