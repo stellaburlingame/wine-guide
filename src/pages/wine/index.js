@@ -74,8 +74,8 @@ class index extends React.Component {
                                   )}
                                 </Card.Title>
                               </Card.Header>
-                              <Card.Body className="d-flex">
-                                <div className="wine-card-left-image">
+                              <Card.Body className="row">
+                                <div className="col-lg-3 col-md-3 col-sm-3">
                                   <Card.Img
                                     onError={({ currentTarget }) => {
                                       currentTarget.onerror = null;
@@ -86,7 +86,7 @@ class index extends React.Component {
                                     className="wine-card-image"
                                   />
                                 </div>
-                                <div className="wine-card-right-image">
+                                <div className="col-lg-9 col-md-9 col-sm-9">
                                   {data1["Summary"] && (
                                     <>
                                       <p dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
@@ -103,8 +103,8 @@ class index extends React.Component {
                                 </div>
                               </Card.Body>
                               <Card.Body>
-                                <div className="d-flex">
-                                  <div className="wine-card-left" style={{ paddingRight: "1rem" }}>
+                                <div className="row">
+                                  <div className="col-lg-6 col-md-12 col-sm-12">
                                     <strong>Tasting Notes:</strong>
                                     <ListGroup variant="flush">
                                       <ListGroup.Item><strong>Flavor:</strong> {data1["Flavor"]}</ListGroup.Item>
@@ -114,10 +114,10 @@ class index extends React.Component {
                                       <ListGroup.Item><strong>Acidity:</strong> {data1["Acidity"]}</ListGroup.Item>
                                     </ListGroup>
                                   </div>
-                                  <div className="wine-card-right">
+                                  <div className="col-lg-6 col-md-6 col-sm-12">
                                     <ListGroup variant="flush">
-                                      <ListGroup.Item>
                                         <strong>Body:</strong>
+                                      <ListGroup.Item>
                                         <div className="wine-specs__body" data-testid="wine-specs__body">
                                           <div>
                                             <span className="wine-specs__body--medium">Light</span>
@@ -143,8 +143,9 @@ class index extends React.Component {
                                         </p>
                                       </ListGroup.Item>
                                       {this.props.type !== "bianco" && (
-                                        <ListGroup.Item>
+                                        <>
                                           <strong>Tannins:</strong>
+                                          <ListGroup.Item>
                                           <div className="wine-specs__body" data-testid="wine-specs__tannins">
                                             <div>
                                               <span className="wine-specs__body--medium">Low</span>
@@ -167,12 +168,14 @@ class index extends React.Component {
                                             {data1["Tannin Characteristics"]}
                                           </p>
                                         </ListGroup.Item>
+                                        </>
+                                        
                                       )}
                                     </ListGroup>
                                   </div>
                                 </div>
-                                <div className="d-flex">
-                                  <div className="wine-card-left" style={{ paddingRight: "1rem" }}>
+                                <div className="row">
+                                  <div className="wine-card-left col-lg-6 col-md-6 col-sm-12">
                                     <strong>Winemaking:</strong>
                                     <ListGroup variant="flush" >
                                       <ListGroup.Item><strong>Vinification:</strong> {data1["Vinification"]}</ListGroup.Item>
@@ -188,7 +191,7 @@ class index extends React.Component {
                                       )} */}
                                     </ListGroup>
                                   </div>
-                                  <div className="wine-card-right">
+                                  <div className="col-lg-6 col-md-6 col-sm-12">
                                     <ListGroup variant="flush">
                                       <ListGroup.Item>
                                         <div className="">

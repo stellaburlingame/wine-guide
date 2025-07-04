@@ -101,13 +101,6 @@
   border-radius: 4px;
 }
 
-.wine-card-right {
-  width: 50%;
-}
-
-.wine-card-left {
-  width: 50%;
-}
 .wine-card-right-image {
   width: 70%;
   padding-left: 1rem;
@@ -127,3 +120,9 @@ body {
   width: 100% !important;
   margin: 0 auto !important;
 }
+/* .card-body > div {
+  display: flex;
+}
+.wine-card-right-image {
+  display: block;
+} */
