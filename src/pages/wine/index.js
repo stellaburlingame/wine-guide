@@ -75,7 +75,7 @@ class index extends React.Component {
                                 </Card.Title>
                               </Card.Header>
                               <Card.Body className="d-flex">
-                                <div className="wine-card-left">
+                                <div className="wine-card-left-image">
                                   <Card.Img
                                     onError={({ currentTarget }) => {
                                       currentTarget.onerror = null;
@@ -86,13 +86,13 @@ class index extends React.Component {
                                     className="wine-card-image"
                                   />
                                 </div>
-                                <div className="wine-card-right">
+                                <div className="wine-card-right-image">
                                   {data1["Summary"] && (
                                     <>
                                       <p dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
                                     </>
                                   )}
-                                  <strong>Wimemakeer Recommended:</strong> {data1["General Recommended Accompanies"]}
+                                  <strong>Winemaker Recommended:</strong> {data1["General Recommended Accompanies"]}
                                   <br />
                                   <br />
                                   <strong>Stella Recommended:</strong> {data1["Stella Recommended"]}
