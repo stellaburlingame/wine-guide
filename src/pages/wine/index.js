@@ -1,5 +1,8 @@
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
+import Badge from 'react-bootstrap/Badge';
+import Row from 'react-bootstrap/Row';
+
 import "./index.css";
 
 class index extends React.Component {
@@ -53,28 +56,29 @@ class index extends React.Component {
                     return rows;
                   }, []).map((row, rowIndex) => (
                     <React.Fragment key={rowIndex}>
-                      <div className="row">
+                      <Row>
                         {row.map(({ key, ...data1 }) => (
                           <div className="col-md-12 col-lg-6 col-sm-12" key={key}>
                             <Card className="m-1" bg={"Light"}>
                               <Card.Header>
                                 <Card.Title>
-                                  {data1['Wine Name']} {' '} {data1['Vintage']} {' '}
+                                  {data1['Wine Name']} {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
                                   {data1.DOCG && (
-                                    <strong className="wine-docg">DOCG</strong>
+                                    <Badge className="wine-docg">DOCG</Badge>
                                   )} {' '}
                                   {data1.DOC && (
-                                    <strong className="wine-doc">DOC</strong>
+                                    <Badge className="wine-doc">DOC</Badge>
                                   )} {' '}
                                   {!isNaN(parseFloat(data1.Glass_Price)) && parseFloat(data1.Glass_Price) > 0 && (
-                                    <span className="wine-price"><strong>${parseInt(data1.Glass_Price)}</strong>/gls</span>
+                                    <Badge bg='success' className="wine-price"><strong>${parseInt(data1.Glass_Price)}</strong>/gls</Badge>
                                   )} {' '}
                                   {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
-                                    <span className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</span>
+                                    <Badge bg='success' className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</Badge>
                                   )}
                                 </Card.Title>
                               </Card.Header>
-                              <Card.Body className="row">
+                              <Card.Body>
+                                <Row>
                                 <div className="col-lg-3 col-md-3 col-sm-3">
                                   <div className="wine-card-image-wrapper">
                                     <Card.Img
@@ -89,22 +93,20 @@ class index extends React.Component {
                                   </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9">
+
+                                  <ListGroup variant="flush" >
                                   {data1["Summary"] && (
-                                    <>
-                                      <p dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
-                                    </>
+                                    <ListGroup.Item>
+                                      <span dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
+                                    </ListGroup.Item>
                                   )}
-                                  <strong>Winemaker Recommended:</strong> {data1["General Recommended Accompanies"]}
-                                  <br />
-                                  <br />
+                                  <ListGroup.Item><strong>Winemaker Recommended:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
+                                  <ListGroup.Item>
                                   <strong>Stella Recommended:</strong> {data1["Stella Recommended"]}
-                                  {/* <ListGroup variant="flush" >
-                                    <ListGroup.Item><strong>Wimemakeer Recommended:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
-                                    <ListGroup.Item></ListGroup.Item>
-                                  </ListGroup> */}
+                                  </ListGroup.Item>
+                                    
+                                  </ListGroup>
                                 </div>
-                              </Card.Body>
-                              <Card.Body>
                                 <div className="row">
                                   <div className="col-lg-6 col-md-12 col-sm-12">
                                     <strong>Tasting Notes:</strong>
@@ -176,7 +178,6 @@ class index extends React.Component {
                                     </ListGroup>
                                   </div>
                                 </div>
-                                <div className="row">
                                   <div className="wine-card-left col-lg-6 col-md-6 col-sm-12">
                                     <strong>Winemaking:</strong>
                                     <ListGroup variant="flush" >
@@ -188,14 +189,11 @@ class index extends React.Component {
                                       {data1["Blend"] && (
                                         <ListGroup.Item><strong>Blend:</strong> {data1["Blend"]}</ListGroup.Item>
                                       )}
-                                      {/* {data1["Type of cask"] && (
-                                        <ListGroup.Item><strong>Type of cask:</strong> {data1["Type of cask"]}</ListGroup.Item>
-                                      )} */}
                                     </ListGroup>
                                   </div>
                                   <div className="col-lg-6 col-md-6 col-sm-12">
-                                    <ListGroup variant="flush">
-                                      <ListGroup.Item>
+                                    {/* <ListGroup variant="flush">
+                                      <ListGroup.Item> */}
                                         <div className="">
                                           <div className="wine-region-image col-sm-12 col-md-12 col-lg-9" style={{ paddingBottom: "1rem" }}>
                                             <img
@@ -215,15 +213,15 @@ class index extends React.Component {
                                             )}
                                           </div>
                                         </div>
-                                      </ListGroup.Item>
-                                    </ListGroup>
+                                      {/* </ListGroup.Item>
+                                    </ListGroup> */}
                                   </div>
-                                </div>
+                                </Row>
                               </Card.Body>
                             </Card>
                           </div>
                         ))}
-                      </div>
+                      </Row>
                       {/* <p className="pages" style={{color: "white"}}>
                         Page {rowIndex + 1} of {Math.ceil(this.state.specs.length / 2)}
                       </p> */}
