@@ -70,10 +70,13 @@ class index extends React.Component {
                                     <Badge className="wine-doc">DOC</Badge>
                                   )} {' '}
                                   {!isNaN(parseFloat(data1.Glass_Price)) && parseFloat(data1.Glass_Price) > 0 && (
-                                    <Badge bg='success' className="wine-price"><strong>${parseInt(data1.Glass_Price)}</strong>/gls</Badge>
+                                    <Badge bg='success' className="wine-price">${parseInt(data1.Glass_Price)}/gls</Badge>
+                                  )} {' '}
+                                  {!isNaN(parseFloat(data1.Half_Bottle_Price)) && parseFloat(data1.Half_Bottle_Price) > 0 && (
+                                    <Badge bg='success' className="wine-price">${parseInt(data1.Half_Bottle_Price)}/half btl</Badge>
                                   )} {' '}
                                   {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
-                                    <Badge bg='success' className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</Badge>
+                                    <Badge bg='success' className="wine-price">${parseInt(data1.Bottle_Price)}/btl</Badge>
                                   )}
                                 </Card.Title>
                               </Card.Header>
