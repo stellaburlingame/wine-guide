@@ -1,4 +1,8 @@
 @media print {
+
+  .wine-card-image {
+    height: calc(500px - 1em) !important;
+  }
   .pages {
     font-size: 30px !important;
     text-align: right;
@@ -8,7 +12,7 @@
     color: black !important;
   }
   .card {
-    margin-top: 3rem !important;
+    margin-top: 0rem !important;
   }
   body {
     -webkit-print-color-adjust: exact;
@@ -51,26 +55,28 @@
     size: landscape;
     margin: 0.5in;
   }
+
+
 }
 .wine-doc, .wine-docg {
-  padding: 0.15rem;
-  padding-left: .25rem;
-  padding-right: .25rem;
+  /* padding: 0.15rem; */
+  /* padding-left: .25rem; */
+  /* padding-right: .25rem; */
   font-family: "Didot", serif;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 .wine-docg {
-  color: #fffdf0;
-  background-color: #534230;
+  color: #fffdf0 !important;
+  background-color: #534230 !important;
 }
 .wine-doc {
-  color: #1265A9;
-  background-color: #B6D3F3;
+  color: #1265A9 !important;
+  background-color: #B6D3F3 !important;
 }
 
-.wine-price {
+/* .wine-price {
   margin-left: 0.25rem;
-}
+} */
 
 .wine-specs__body {
   margin-top: 0.5rem;
@@ -90,16 +96,22 @@
 }
 
 .wine-card-image {
-  width: 100%;
-  height: 400px;
+  height: calc(400px - 1em);
+  width: auto;
   border-radius: 4px;
+  display: block;
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+
   filter:
     /* heavier bottom-left*/ 
-    /* drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1))  */
+    drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1)) 
     /* heavier bottom-right */
-    /* drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.1 )) */
+    drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.1 ))
     /*center-bottom rounded*/ 
-    /* drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1)); */
+    drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1));
 }
 
 .wine-region-image {
@@ -133,28 +145,26 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  height: 100%;
   text-align: center;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .wine-card-image-wrapper {
+    margin-bottom: 0;
+  }
 }
 
-.wine-card-image {
-  width: 100%;
-  height: 400px;
-  border-radius: 4px;
-  display: block;
-  position: relative;
-  z-index: 2;
-  margin: 0 auto;
-}
-
-.wine-card-image-wrapper::after {
+/* .wine-card-image-wrapper::after {
   content: "";
   position: absolute;
-  bottom: -20px;
+  bottom: 1rem;
   left: 0;
   width: 100%;
-  height: 60px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
   z-index: 1;
   filter: blur(4px);
   pointer-events: none;
-}
+} */
