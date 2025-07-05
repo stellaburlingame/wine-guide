@@ -8,6 +8,7 @@ import './App.css';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Nav />
       <div className="App col-lg-12 mx-auto">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="italiano" element={<Wine type='italiano' />} />
           <Route path="rosso" element={<Wine type='rosso' />} />
           <Route path="bianco" element={<Wine type='bianco' />} />
