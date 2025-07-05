@@ -66,25 +66,27 @@ class index extends React.Component {
                                   {data1.DOC && (
                                     <strong className="wine-doc">DOC</strong>
                                   )} {' '}
-                                  {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
-                                    <span className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</span>
-                                  )} {' '}
                                   {!isNaN(parseFloat(data1.Glass_Price)) && parseFloat(data1.Glass_Price) > 0 && (
                                     <span className="wine-price"><strong>${parseInt(data1.Glass_Price)}</strong>/gls</span>
+                                  )} {' '}
+                                  {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
+                                    <span className="wine-price"><strong>${parseInt(data1.Bottle_Price)}</strong>/btl</span>
                                   )}
                                 </Card.Title>
                               </Card.Header>
                               <Card.Body className="row">
                                 <div className="col-lg-3 col-md-3 col-sm-3">
-                                  <Card.Img
-                                    onError={({ currentTarget }) => {
-                                      currentTarget.onerror = null;
-                                      currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
-                                    }}
-                                    variant="top"
-                                    src={`${process.env.PUBLIC_URL}/photos/wine/${data1["Image"]}`}
-                                    className="wine-card-image"
-                                  />
+                                  <div className="wine-card-image-wrapper">
+                                    <Card.Img
+                                      onError={({ currentTarget }) => {
+                                        currentTarget.onerror = null;
+                                        currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                                      }}
+                                      variant="top"
+                                      src={`${process.env.PUBLIC_URL}/photos/wine/${data1["Image"]}`}
+                                      className="wine-card-image"
+                                    />
+                                  </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9">
                                   {data1["Summary"] && (

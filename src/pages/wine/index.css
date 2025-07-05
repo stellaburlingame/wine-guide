@@ -93,6 +93,13 @@
   width: 100%;
   height: 400px;
   border-radius: 4px;
+  filter:
+    /* heavier bottom-left*/ 
+    /* drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1))  */
+    /* heavier bottom-right */
+    /* drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.1 )) */
+    /*center-bottom rounded*/ 
+    /* drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1)); */
 }
 
 .wine-region-image {
@@ -120,9 +127,34 @@ body {
   width: 100% !important;
   margin: 0 auto !important;
 }
-/* .card-body > div {
+
+/* Bottom-only elliptical shadow for wine-card-image using a wrapper and pseudo-element */
+.wine-card-image-wrapper {
+  position: relative;
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.wine-card-right-image {
+
+.wine-card-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 4px;
   display: block;
-} */
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.wine-card-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
+  z-index: 1;
+  filter: blur(4px);
+  pointer-events: none;
+}
