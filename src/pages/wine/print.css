@@ -87,4 +87,35 @@
         bottom: 0;
         left: 0;
     } */
+
+    .navbar,
+    header {
+        display: none !important;
+    }
+
+    .wine-print {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        page-break-inside: avoid;
+    }
+
+    .wine-print .col-sm-4 {
+        width: 50% !important;
+        max-width: 50%;
+        flex: 0 0 50%;
+        box-sizing: border-box;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .wine-print .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
 }
