@@ -110,9 +110,11 @@ class index extends React.Component {
                                     
                                   </ListGroup>
                                 </div>
+                                <strong className="card-header">Tasting Notes</strong>
                                 <div className="row">
+                                  {/* <Card.Header></Card.Header> */}
                                   <div className="col-lg-6 col-md-12 col-sm-12">
-                                    <strong>Tasting Notes:</strong>
+                                    {/* <strong>Tasting Notes:</strong> */}
                                     <ListGroup variant="flush">
                                       <ListGroup.Item><strong>Flavor:</strong> {data1["Flavor"]}</ListGroup.Item>
                                       <ListGroup.Item><strong>Aroma:</strong> {data1["Aroma"]}</ListGroup.Item>
@@ -123,8 +125,11 @@ class index extends React.Component {
                                   </div>
                                   <div className="col-lg-6 col-md-6 col-sm-12">
                                     <ListGroup variant="flush">
-                                        <strong>Body:</strong>
                                       <ListGroup.Item>
+                                        <strong>Body: </strong>
+                                        <span className="wine-pairing-text">
+                                          {data1["Body Characteristics"]}
+                                        </span>
                                         <div className="wine-specs__body" data-testid="wine-specs__body">
                                           <div>
                                             <span className="wine-specs__body--medium">Light</span>
@@ -145,14 +150,14 @@ class index extends React.Component {
                                             </div>
                                           </div>
                                         </div>
-                                        <p className="wine-pairing-text">
-                                          {data1["Body Characteristics"]}
-                                        </p>
                                       </ListGroup.Item>
+                                      <ListGroup.Item>
                                       {this.props.type !== "bianco" && (
                                         <>
-                                          <strong>Tannins:</strong>
-                                          <ListGroup.Item>
+                                          <strong>Tannins: </strong>
+                                          <span className="wine-pairing-text">
+                                            {data1["Tannin Characteristics"]}
+                                          </span>
                                           <div className="wine-specs__body" data-testid="wine-specs__tannins">
                                             <div>
                                               <span className="wine-specs__body--medium">Low</span>
@@ -171,18 +176,15 @@ class index extends React.Component {
                                               </div>
                                             </div>
                                           </div>
-                                          <p className="wine-pairing-text">
-                                            {data1["Tannin Characteristics"]}
-                                          </p>
-                                        </ListGroup.Item>
                                         </>
                                         
                                       )}
+                                      </ListGroup.Item>
                                     </ListGroup>
                                   </div>
                                 </div>
-                                  <div className="wine-card-left col-lg-6 col-md-6 col-sm-12">
-                                    <strong>Winemaking:</strong>
+                                    <strong className="card-header">Winemaking</strong>
+                                  <div className="winemaking col-lg-6 col-md-6 col-sm-6">
                                     <ListGroup variant="flush" >
                                       <ListGroup.Item><strong>Vinification:</strong> {data1["Vinification"]}</ListGroup.Item>
                                       <ListGroup.Item><strong>Maturation:</strong> {data1["Maturation"]}</ListGroup.Item>
@@ -192,32 +194,23 @@ class index extends React.Component {
                                       {data1["Blend"] && (
                                         <ListGroup.Item><strong>Blend:</strong> {data1["Blend"]}</ListGroup.Item>
                                       )}
+                                      {data1["Region"] && (
+                                        <ListGroup.Item><strong>Region:</strong> {data1["Region"]}</ListGroup.Item>
+                                      )}
+                                      {data1["Appelation"] && (
+                                        <ListGroup.Item><strong>Region:</strong> {data1["Appelation"]}</ListGroup.Item>
+                                      )}
+                                      {data1["Vineyard"] && (
+                                        <ListGroup.Item><strong>Vineyard:</strong> {data1["Vineyard"]}</ListGroup.Item>
+                                      )}
                                     </ListGroup>
                                   </div>
-                                  <div className="col-lg-6 col-md-6 col-sm-12">
-                                    {/* <ListGroup variant="flush">
-                                      <ListGroup.Item> */}
-                                        <div className="">
-                                          <div className="wine-region-image col-sm-12 col-md-12 col-lg-9" style={{ paddingBottom: "1rem" }}>
+                                  <div className="wine-region-image col-lg-3 col-md-3 col-sm-3">
                                             <img
                                               src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
                                               alt={data1["Region"]}
                                               onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; }}
-                                              className="wine-region-image"
                                             />
-                                          </div>
-                                          <div style={{ width: "100%" }}>
-                                            <p><strong>Region:</strong> {data1["Region"]}</p>
-                                            {data1["Appelation"] && (
-                                              <p><strong>Appelation:</strong> {data1["Appelation"]}</p>
-                                            )}
-                                            {data1["Vineyard"] && (
-                                              <p><strong>Vineyard:</strong> {data1["Vineyard"]}</p>
-                                            )}
-                                          </div>
-                                        </div>
-                                      {/* </ListGroup.Item>
-                                    </ListGroup> */}
                                   </div>
                                 </Row>
                               </Card.Body>

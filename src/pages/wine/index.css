@@ -1,5 +1,8 @@
 @media print {
 
+  .wine-region-image > img {
+    width: 60%;
+  }
   .wine-card-image {
     height: calc(500px - 1em) !important;
   }
@@ -27,43 +30,32 @@
     font-size: 33px;
     font-weight: bold;
   }
-
   .wine-print {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     page-break-inside: avoid;
   }
-
   .wine-print .col-6 {
     width: 50% !important;
     page-break-inside: avoid;
     break-inside: avoid;
   }
-
   .wine-print .card {
     page-break-inside: avoid;
     break-inside: avoid;
   }
-
   .wine-card-left,
   .wine-card-right, .col-md-12, .col-sm-12 {
     width: 50% !important;
   }
-
   @page {
     size: landscape;
     margin: 0.5in;
   }
-
-
 }
 .wine-doc, .wine-docg {
-  /* padding: 0.15rem; */
-  /* padding-left: .25rem; */
-  /* padding-right: .25rem; */
   font-family: "Didot", serif;
-  /* border-radius: 4px; */
 }
 .wine-docg {
   color: #fffdf0 !important;
@@ -103,8 +95,7 @@
   position: relative;
   z-index: 4;
   margin: 0 auto;
-  padding-bottom: 2rem;
-
+  padding-bottom: 1.5rem;
   filter:
     /* heavier bottom-left*/ 
     drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1)) 
@@ -113,22 +104,26 @@
     /*center-bottom rounded*/ 
     drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1));
 }
-
+.winemaking {
+  width: 66%;
+}
 .wine-region-image {
-  /* width: 100%; */
+  width: 34%;
   height: auto;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
 }
-
+.wine-region-image > img {
+  width: 70%;
+}
 .wine-card-right-image {
   width: 70%;
   padding-left: 1rem;
 }
-
 .wine-card-left-image {
   width: 30%;
 }
-
 .wine-pairing-text {
   margin-top: 0.5rem;
 }
@@ -138,8 +133,15 @@ body {
 .row {
   width: 100% !important;
   margin: 0 auto !important;
+  padding-bottom: 1rem;
 }
-
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
 /* Bottom-only elliptical shadow for wine-card-image using a wrapper and pseudo-element */
 .wine-card-image-wrapper {
   position: relative;
@@ -155,7 +157,9 @@ body {
     margin-bottom: 0;
   }
 }
-
+.card-body {
+  padding: 1rem 0rem;
+}
 /* .wine-card-image-wrapper::after {
   content: "";
   position: absolute;
