@@ -59,7 +59,7 @@
         width: 50% !important;
     }
     .card {
-        max-height: 7.25in;
+        height: 7.25in;
         margin-top: -1rem !important;
     }
     .card .card-body {
@@ -67,16 +67,12 @@
         padding-bottom: 0 !important;
     }
 
-    .card-body {
-        height: auto !important;
-        max-height: 100% !important;
-    }
-
     .card .row  {
         padding-top: 0 !important; 
     }
     .card-body {
         padding: 0 !important;
+        height: 100%;
     }
 
     .card-header {
@@ -89,10 +85,18 @@
     } */
 
     .navbar,
-    header {
+    header, .footer {
         display: none !important;
     }
-
+    .winemaking-wrapper {
+        position: absolute;
+        bottom: 0;
+    }
+    /* .tasting-notes-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
     .wine-print {
         display: flex;
         flex-wrap: wrap;
