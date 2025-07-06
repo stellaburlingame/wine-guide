@@ -103,9 +103,9 @@ class index extends React.Component {
                                       <span dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
                                     </ListGroup.Item>
                                   )}
-                                  <ListGroup.Item><strong>Winemaker Recommended:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
+                                  <ListGroup.Item><strong>Winemaker paring:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
                                   <ListGroup.Item>
-                                  <strong>Stella Recommended:</strong> {data1["Stella Recommended"]}
+                                  <strong>Stella pairing:</strong> {data1["Stella Recommended"]}
                                   </ListGroup.Item>
                                     
                                   </ListGroup>
