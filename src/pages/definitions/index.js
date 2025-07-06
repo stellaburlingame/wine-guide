@@ -28,9 +28,11 @@ class DefinitionsPage extends React.Component {
             {this.state.definitions.map((def, index) => (
                 <Col key={index} sm={12} md={6} lg={4} className="mb-4">
                 <Card>
-                    <Card.Body>
-                    <Card.Title>{def.Name}</Card.Title>
-                    <Card.Text>{def.Definition}</Card.Text>
+                    <Card.Header>
+                        <Card.Title>{def.Name}</Card.Title>
+                    </Card.Header>
+                    <Card.Body className='p-3'>
+                        <Card.Text dangerouslySetInnerHTML={{ __html: def.Definition }} />
                     </Card.Body>
                 </Card>
                 </Col>
