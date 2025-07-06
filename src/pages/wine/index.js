@@ -2,6 +2,7 @@ import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
+import DefinitionModal from '../../components/DefinitionModal';
 
 import "./print.css";
 import "./index.css";
@@ -9,7 +10,14 @@ import "./index.css";
 class index extends React.Component {
     state = {
         specs: [],
-        value: "all"
+        value: "all",
+        showDefinitionModal: false,
+        definitions: [],
+        currentTerm: {
+          Definition: "",
+          Image: "",
+          Name: ""
+        }
     }
     componentDidMount() {
         fetch(`${process.env.PUBLIC_URL}/assets/${this.props.type}.json`)
@@ -18,6 +26,14 @@ class index extends React.Component {
               this.setState({ specs: data });
           })
           .catch((err) => console.log(err));
+
+        fetch(`${process.env.PUBLIC_URL}/assets/definitions.json`)
+        .then(res => res.json())
+        .then(data => {
+            this.setState({ definitions: data });
+            console.log("Definitions loaded:", data);
+        })
+        .catch(err => console.log(err));
     }
 
     componentDidUpdate(prevProps) {
@@ -37,6 +53,18 @@ class index extends React.Component {
     }
     handleChange(event) {
         this.setState({value: event.target.value});
+    }
+    handleDefinitionShow = (term) => {
+        const termObject = this.state.definitions.find(def => def.Name === term);
+        if (termObject) {
+            this.setState({ showDefinitionModal: true, currentTerm: termObject });
+        } else {
+            console.warn("Term not found:", term);
+        }
+    }
+
+    handleDefinitionClose = () => {
+        this.setState({ showDefinitionModal: false });
     }
     checkIfAllFilter(value) {
         if (value === "all") {
@@ -65,13 +93,13 @@ class index extends React.Component {
                                 <Card.Title>
                                   {data1['Wine Name']} {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
                                   {data1['Region'] === "Piemonte, Italy" && (
-                                    <Badge className="wine-piemonte">Piemonte</Badge>
+                                    <Badge className="wine-piemonte" onClick={() => this.handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>Piemonte</Badge>
                                   )}{' '}
                                   {data1.DOCG && (
-                                    <Badge className="wine-docg">DOCG</Badge>
+                                    <Badge className="wine-docg" onClick={() => this.handleDefinitionShow("DOCG")} style={{ cursor: 'pointer' }}>DOCG</Badge>
                                   )} {' '}
                                   {data1.DOC && (
-                                    <Badge className="wine-doc">DOC</Badge>
+                                    <Badge className="wine-doc" onClick={() => this.handleDefinitionShow("DOC")} style={{ cursor: 'pointer' }}>DOC</Badge>
                                   )} {' '}
                                   {!isNaN(parseFloat(data1.Glass_Price)) && parseFloat(data1.Glass_Price) > 0 && (
                                     <Badge bg='success' className="wine-price">${parseInt(data1.Glass_Price)}/gls</Badge>
@@ -114,6 +142,8 @@ class index extends React.Component {
                                     
                                   </ListGroup>
                                 </div>
+                                </Row>
+                                <Row className="tasting-notes-wrapper">
                                 <strong className="card-header">Tasting Notes</strong>
                                 <div className="row">
                                   <div className="col-lg-6 col-md-12 col-sm-12">
@@ -186,6 +216,8 @@ class index extends React.Component {
                                     </ListGroup>
                                   </div>
                                 </div>
+                                </Row>
+                                <Row className="winemaking-wrapper">
                                   <strong className="card-header">Winemaking</strong>
                                   <div className="winemaking p-0">
                                     <ListGroup variant="flush" >
@@ -209,11 +241,11 @@ class index extends React.Component {
                                     </ListGroup>
                                   </div>
                                   <div className="wine-region-image p-0">
-                                            <img
-                                              src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
-                                              alt={data1["Region"]}
-                                              onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; }}
-                                            />
+                                    <img
+                                      src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
+                                      alt={data1["Region"]}
+                                      onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; }}
+                                    />
                                   </div>
                                 </Row>
                               </Card.Body>
@@ -228,6 +260,13 @@ class index extends React.Component {
                   ))}
                   
                 </div>
+                <DefinitionModal
+                  show={this.state.showDefinitionModal}
+                  onHide={this.handleDefinitionClose}
+                  Name={this.state.currentTerm?.Name}
+                  Definition={this.state.currentTerm?.Definition}
+                  Image={this.state.currentTerm?.Image}
+                />
             </>
         )
     }
