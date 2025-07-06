@@ -3,6 +3,7 @@ import { Card, ListGroup } from "react-bootstrap";
 import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
 
+import "./print.css";
 import "./index.css";
 
 class index extends React.Component {
@@ -59,10 +60,13 @@ class index extends React.Component {
                       <Row>
                         {row.map(({ key, ...data1 }) => (
                           <div className="col-md-12 col-lg-6 col-sm-12" key={key}>
-                            <Card className="m-1" bg={"Light"}>
+                            <Card bg={"Light"}>
                               <Card.Header>
                                 <Card.Title>
                                   {data1['Wine Name']} {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
+                                  {data1['Region'] === "Piemonte, Italy" && (
+                                    <Badge className="wine-piemonte">Piemonte</Badge>
+                                  )}{' '}
                                   {data1.DOCG && (
                                     <Badge className="wine-docg">DOCG</Badge>
                                   )} {' '}
@@ -103,24 +107,25 @@ class index extends React.Component {
                                       <span dangerouslySetInnerHTML={{ __html: data1["Summary"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
                                     </ListGroup.Item>
                                   )}
-                                  <ListGroup.Item><strong>Winemaker paring:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
                                   <ListGroup.Item>
-                                  <strong>Stella pairing:</strong> {data1["Stella Recommended"]}
+                                    <strong>Stella pairing:</strong> {data1["Stella Recommended"]}
                                   </ListGroup.Item>
+                                  <ListGroup.Item><strong>Winemaker paring:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
                                     
                                   </ListGroup>
                                 </div>
                                 <strong className="card-header">Tasting Notes</strong>
                                 <div className="row">
-                                  {/* <Card.Header></Card.Header> */}
                                   <div className="col-lg-6 col-md-12 col-sm-12">
-                                    {/* <strong>Tasting Notes:</strong> */}
                                     <ListGroup variant="flush">
                                       <ListGroup.Item><strong>Flavor:</strong> {data1["Flavor"]}</ListGroup.Item>
                                       <ListGroup.Item><strong>Aroma:</strong> {data1["Aroma"]}</ListGroup.Item>
-                                      {/* <ListGroup.Item><strong>Style:</strong> {data1["Style"]}</ListGroup.Item> */}
-                                      <ListGroup.Item><strong>Finish:</strong> <span dangerouslySetInnerHTML={{ __html: data1["Finish"]?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} /></ListGroup.Item>
-                                      <ListGroup.Item><strong>Acidity:</strong> {data1["Acidity"]}</ListGroup.Item>
+                                        {data1["Finish"] && (
+                                          <ListGroup.Item><strong>Finish:</strong> {data1["Finish"]}</ListGroup.Item>
+                                        )}
+                                        {data1["Acidity"] && (
+                                          <ListGroup.Item><strong>Acidity:</strong> {data1["Acidity"]}</ListGroup.Item>
+                                        )}  
                                     </ListGroup>
                                   </div>
                                   <div className="col-lg-6 col-md-6 col-sm-12">
@@ -151,9 +156,8 @@ class index extends React.Component {
                                           </div>
                                         </div>
                                       </ListGroup.Item>
-                                      <ListGroup.Item>
                                       {this.props.type !== "bianco" && (
-                                        <>
+                                        <ListGroup.Item>
                                           <strong>Tannins: </strong>
                                           <span className="wine-pairing-text">
                                             {data1["Tannin Characteristics"]}
@@ -176,15 +180,14 @@ class index extends React.Component {
                                               </div>
                                             </div>
                                           </div>
-                                        </>
+                                        </ListGroup.Item>
                                         
                                       )}
-                                      </ListGroup.Item>
                                     </ListGroup>
                                   </div>
                                 </div>
-                                    <strong className="card-header">Winemaking</strong>
-                                  <div className="winemaking col-lg-6 col-md-6 col-sm-6">
+                                  <strong className="card-header">Winemaking</strong>
+                                  <div className="winemaking p-0">
                                     <ListGroup variant="flush" >
                                       <ListGroup.Item><strong>Vinification:</strong> {data1["Vinification"]}</ListGroup.Item>
                                       <ListGroup.Item><strong>Maturation:</strong> {data1["Maturation"]}</ListGroup.Item>
@@ -198,14 +201,14 @@ class index extends React.Component {
                                         <ListGroup.Item><strong>Region:</strong> {data1["Region"]}</ListGroup.Item>
                                       )}
                                       {data1["Appelation"] && (
-                                        <ListGroup.Item><strong>Region:</strong> {data1["Appelation"]}</ListGroup.Item>
+                                        <ListGroup.Item><strong>Appelation:</strong> {data1["Appelation"]}</ListGroup.Item>
                                       )}
                                       {data1["Vineyard"] && (
                                         <ListGroup.Item><strong>Vineyard:</strong> {data1["Vineyard"]}</ListGroup.Item>
                                       )}
                                     </ListGroup>
                                   </div>
-                                  <div className="wine-region-image col-lg-3 col-md-3 col-sm-3">
+                                  <div className="wine-region-image p-0">
                                             <img
                                               src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
                                               alt={data1["Region"]}
