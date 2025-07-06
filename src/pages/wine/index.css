@@ -1,61 +1,10 @@
-@media print {
-
-  .wine-region-image > img {
-    width: 60%;
-  }
-  .wine-card-image {
-    height: calc(500px - 1em) !important;
-  }
-  .pages {
-    font-size: 30px !important;
-    text-align: right;
-    width: 90%;
-    margin-bottom: 2rem;
-    font-style: "italic";
-    color: black !important;
-  }
-  .card {
-    margin-top: 0rem !important;
-  }
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    zoom: 39%;
-    font-size: 30px;
-  }
-  .card-title {
-    font-size: 35px;
-  }
-  h6 {
-    font-size: 33px;
-    font-weight: bold;
-  }
-  .wine-print {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    page-break-inside: avoid;
-  }
-  .wine-print .col-6 {
-    width: 50% !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  .wine-print .card {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  .wine-card-left,
-  .wine-card-right, .col-md-12, .col-sm-12 {
-    width: 50% !important;
-  }
-  @page {
-    size: landscape;
-    margin: 0.5in;
-  }
-}
-.wine-doc, .wine-docg {
+/* DOC/DOCG Classifcations */
+.wine-doc, .wine-docg, .wine-piemonte {
   font-family: "Didot", serif;
+}
+.wine-piemonte {
+  color: #fffdf0 !important;
+  background-color: #dc9c10 !important;
 }
 .wine-docg {
   color: #fffdf0 !important;
@@ -65,28 +14,21 @@
   color: #1265A9 !important;
   background-color: #B6D3F3 !important;
 }
-
-/* .wine-price {
-  margin-left: 0.25rem;
-} */
-
+/* Gradient Chart */
 .wine-specs__body {
   margin-top: 0.5rem;
 }
-
 .wine-specs__body--medium {
   margin-right: 1rem;
 }
-
 .gradient-chart__background {
   position: relative;
 }
-
 .gradient-chart__triangle-indicator {
   position: absolute;
   transform: translateX(-50%);
 }
-
+/* Wine Card Image */
 .wine-card-image {
   height: calc(400px - 1em);
   width: auto;
@@ -104,22 +46,44 @@
     /*center-bottom rounded*/ 
     drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1));
 }
+/* Wine Making and Region */
 .winemaking {
-  width: 66%;
+  width: 73%;
 }
 .wine-region-image {
-  width: 34%;
+  width: 27%;
   height: auto;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
 }
-.wine-region-image > img {
-  width: 70%;
+/* Smaller screens adjustments */
+@media (max-width: 576px) {
+  .card-body {
+    padding-bottom: 0 !important;
+  }
+  .winemaking,
+  .wine-region-image {
+    padding-left: 0 !important;
+  }
+  .winemaking {
+    width: 100% !important;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+  .wine-region-image {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .wine-region-image > img {
+    width: 70%;
+  }
+}
+/* Wine Card Layout */
+.card {
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
 }
 .wine-card-right-image {
   width: 70%;
-  padding-left: 1rem;
 }
 .wine-card-left-image {
   width: 30%;
@@ -153,7 +117,7 @@ body {
   overflow: visible;
 }
 @media (min-width: 768px) {
-  .wine-card-image-wrapper {
+  .wine-card-image-wrapper .wine-region-image {
     margin-bottom: 0;
   }
 }
@@ -172,3 +136,7 @@ body {
   filter: blur(4px);
   pointer-events: none;
 } */
+.row {
+  margin: 0 auto !important;
+  padding: 0;
+}
