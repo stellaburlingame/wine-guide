@@ -9,6 +9,8 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
 import Home from "./pages/home";
+import NotFound from "./pages/NotFound";
+import Definitions from "./pages/definitions";
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
           <Route path="bianco" element={<Wine type='bianco' />} />
           <Route path="sparkling" element={<Wine type='sparkling' />} />
           <Route path="rose" element={<Wine type='rose' />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="definitions" element={<Definitions/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
