@@ -3,10 +3,7 @@ import { Button, Image, Modal } from "react-bootstrap";
 import './index.css';
 
 function Index(props) {
-    console.log("DefinitionModal props:", props);
-
     const formattedDefinition = props.Definition?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-
     return (
         <Modal show={props.show} onHide={props.onHide}>
             <Modal.Header closeButton>
