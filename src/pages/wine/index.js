@@ -26,6 +26,10 @@ class index extends React.Component {
         fetch(`${process.env.PUBLIC_URL}/assets/${this.props.type}.json`)
         .then((res) => res.json())
           .then((data) => {
+              data.forEach((spec) => {
+                let wineName = spec['Wine Name'] + spec['Vintage'];
+                console.log(wineName.replace(/[^a-z0-9]/gi, ''));
+              })
               this.setState({ specs: data });
           })
           .catch((err) => console.log(err));
@@ -33,7 +37,6 @@ class index extends React.Component {
         .then(res => res.json())
         .then(data => {
             this.setState({ definitions: data });
-            console.log("Definitions loaded:", data);
         })
         .catch(err => console.log(err));
         window.addEventListener('scroll', this.checkScrollTop);
