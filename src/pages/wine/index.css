@@ -57,7 +57,7 @@
 }
 /* Smaller screens adjustments */
 @media (max-width: 576px) {
-  .card-body {
+  .wine-card-body {
     padding-bottom: 0 !important;
   }
   .winemaking,
@@ -78,7 +78,7 @@
   }
 }
 /* Wine Card Layout */
-.card {
+.wine-card {
   margin-bottom: 1rem !important;
   margin-top: 1rem !important;
 }
@@ -121,8 +121,9 @@ body {
     margin-bottom: 0;
   }
 }
-.card-body {
+.wine-card-body {
   padding: 1rem 0rem;
+  padding-bottom: 0 !important;
 }
 /* .wine-card-image-wrapper::after {
   content: "";
