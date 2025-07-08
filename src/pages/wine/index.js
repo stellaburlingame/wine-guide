@@ -174,10 +174,10 @@ class index extends React.Component {
                                           onClick={() => {
                                             const fields = ["Summary", "Flavor", "Aroma", "Body Characteristics", "Tannin Characteristics"];
                                             for (const field of fields) {
-                                              const text = data1[field]?.toLowerCase();
+                                              const text = data1[field];
                                               if (!text) continue;
                                               const sentence = text.split(/(?<=[.?!])\s+/).find(sent =>
-                                                lowerKeywords.some(keyword => sent.includes(keyword))
+                                                lowerKeywords.some(keyword => sent.toLowerCase().includes(keyword))
                                               );
                                               if (sentence) {
                                                 this.handleDefinitionShow({
@@ -189,8 +189,8 @@ class index extends React.Component {
                                               }
                                             }
                                             // fallback: show first keyword match or empty string
-                                            const allText = `${data1["Summary"] ?? ""} ${data1["Flavor"] ?? ""} ${data1["Aroma"] ?? ""} ${data1["Body Characteristics"] ?? ""} ${data1["Tannin Characteristics"] ?? ""}`.toLowerCase();
-                                            const fallbackKeyword = lowerKeywords.find(k => allText.includes(k)) || "";
+                                            const allText = `${data1["Summary"] ?? ""} ${data1["Flavor"] ?? ""} ${data1["Aroma"] ?? ""} ${data1["Body Characteristics"] ?? ""} ${data1["Tannin Characteristics"] ?? ""}`;
+                                            const fallbackKeyword = lowerKeywords.find(k => allText.toLowerCase().includes(k)) || "";
                                             this.handleDefinitionShow({
                                               Name: icon.Type,
                                               Definition: fallbackKeyword,
