@@ -77,7 +77,7 @@ class index extends React.Component {
             <>
                   <Row className="col-12 wine-print">
                     {this.state.specs.map(( data1, index) => (
-                          <div className="col-md-12 col-lg-6 col-sm-12" key={index}>
+                          <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
                             <Card className='wine-card' bg={"Light"}>
                               <Card.Header>
                                 <Card.Title>
