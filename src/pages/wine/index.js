@@ -26,7 +26,6 @@ class index extends React.Component {
               this.setState({ specs: data });
           })
           .catch((err) => console.log(err));
-
         fetch(`${process.env.PUBLIC_URL}/assets/definitions.json`)
         .then(res => res.json())
         .then(data => {
@@ -35,7 +34,6 @@ class index extends React.Component {
         })
         .catch(err => console.log(err));
     }
-
     componentDidUpdate(prevProps) {
         if (this.props.type !== prevProps.type) {
             fetch(`${process.env.PUBLIC_URL}/assets/${this.props.type}.json`)
@@ -46,7 +44,6 @@ class index extends React.Component {
               .catch((err) => console.log(err));
         }
     }
-
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -78,17 +75,10 @@ class index extends React.Component {
     render() {
         return (
             <>
-                <div className="col-12 wine-print">
-                  {this.state.specs.reduce((rows, data1, index) => {
-                    if (index % 2 === 0) rows.push([]);
-                    rows[rows.length - 1].push({ ...data1, key: index });
-                    return rows;
-                  }, []).map((row, rowIndex) => (
-                    <React.Fragment key={rowIndex}>
-                      <Row>
-                        {row.map(({ key, ...data1 }) => (
-                          <div className="col-md-12 col-lg-6 col-sm-12" key={key}>
-                            <Card bg={"Light"}>
+                  <Row className="col-12 wine-print">
+                    {this.state.specs.map(( data1, index) => (
+                          <div className="col-md-12 col-lg-6 col-sm-12" key={index}>
+                            <Card className='wine-card' bg={"Light"}>
                               <Card.Header>
                                 <Card.Title>
                                   {data1['Wine Name']} {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
@@ -112,7 +102,7 @@ class index extends React.Component {
                                   )}
                                 </Card.Title>
                               </Card.Header>
-                              <Card.Body>
+                              <Card.Body className="wine-card-body">
                                 <Row>
                                 <div className="col-lg-3 col-md-3 col-sm-3">
                                   <div className="wine-card-image-wrapper">
@@ -128,7 +118,6 @@ class index extends React.Component {
                                   </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9">
-
                                   <ListGroup variant="flush" >
                                   {data1["Summary"] && (
                                     <ListGroup.Item>
@@ -252,14 +241,11 @@ class index extends React.Component {
                             </Card>
                           </div>
                         ))}
-                      </Row>
                       {/* <p className="pages" style={{color: "white"}}>
                         Page {rowIndex + 1} of {Math.ceil(this.state.specs.length / 2)}
                       </p> */}
-                    </React.Fragment>
-                  ))}
-                  
-                </div>
+                </Row>
+
                 <DefinitionModal
                   show={this.state.showDefinitionModal}
                   onHide={this.handleDefinitionClose}
