@@ -88,7 +88,7 @@
     } */
 
     .navbar,
-    header, .footer {
+    header, .footer, .scroll-to-top-button {
         display: none !important;
     }
     .winemaking-wrapper {
