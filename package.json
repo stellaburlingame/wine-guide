@@ -1,7 +1,7 @@
 {
   "name": "wine-training",
   "version": "0.1.0",
-  "homepage": "https://dvasquez4155.github.io/wine-training",
+  "homepage": "https://wine-training.dvas4155.com/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
