@@ -3,9 +3,13 @@ import { Button, Image, Modal } from "react-bootstrap";
 import './index.css';
 
 function Index(props) {
-    const formattedDefinition = props.Definition?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
     return (
-        <Modal show={props.show} onHide={props.onHide}>
+        <Modal 
+            show={props.show} 
+            onHide={props.onHide} 
+            dialogClassName="responsive-modal"
+            // fullscreen={true}
+        >
             <Modal.Header closeButton>
                 <Modal.Title>{props.Name}</Modal.Title>
             </Modal.Header>
@@ -21,7 +25,13 @@ function Index(props) {
                         style={{ maxWidth: "100%" }}
                     />
                 )}
-                <div dangerouslySetInnerHTML={{ __html: formattedDefinition }} />
+                        {props.Definition}
+                { props.Secondary_Text && (
+                    <>
+                        <hr />
+                        <p className="secondary-text">{props.Secondary_Text}</p>
+                    </>
+                )}
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={props.onHide}>
