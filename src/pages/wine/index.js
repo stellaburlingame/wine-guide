@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import DefinitionModal from '../../components/DefinitionModal';
 
 import icons from "../../components/Icons/icons.json";
+import regions from "../../components/Regions/regions.json";
 
 import "./print.css";
 import "./index.css";
@@ -264,7 +265,7 @@ class index extends React.Component {
                                     <ListGroup.Item><strong>Blend:</strong> {data1["Blend"]}</ListGroup.Item>
                                   )}
                                   {data1["Region"] && (
-                                    <ListGroup.Item><strong>Region:</strong> {data1["Region"]}</ListGroup.Item>
+                                    <ListGroup.Item><strong>Region:</strong> {regions[data1?.Region]?.["Region location"]}</ListGroup.Item>
                                   )}
                                   {data1["Appelation"] && (
                                     <ListGroup.Item><strong>Appelation:</strong> {data1["Appelation"]}</ListGroup.Item>
@@ -274,10 +275,17 @@ class index extends React.Component {
                                   )}
                                 </ListGroup>
                               </div>
-                              <div className="wine-region-image p-0">
+                              <div className="wine-region-image p-0" onClick={() => this.handleModalShow(
+                                {
+                                  Name: regions[data1?.Region]?.["Region location"],
+                                  Definition: <>{regions[data1?.Region]?.["Region Summary"]}</>,
+                                  Image: `${process.env.PUBLIC_URL}/photos/region/${regions[data1?.Region]?.["Region Image"]}`
+                                }
+
+                              )} style={{ cursor: 'pointer' }}>
                                 <img
-                                  src={`${process.env.PUBLIC_URL}/photos/region/${data1["Region Image"]}`}
-                                  alt={data1["Region"]}
+                                  src={`${process.env.PUBLIC_URL}/photos/region/${regions[data1?.Region]?.["Region Image"]}`}
+                                  alt={regions[data1?.Region]?.["Region location"]}
                                   onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; }}
                                 />
                               </div>
