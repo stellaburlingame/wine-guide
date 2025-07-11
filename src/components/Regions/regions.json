@@ -1,0 +1,78 @@
+{
+    "Sonoma": {
+        "Region Image": "Sonoma_County.svg",
+        "Region Summary": "Sonoma County, located in Northern California, is renowned for its diverse microclimates and rich agricultural heritage. It produces a wide range of wines, from robust reds to crisp whites, and is particularly famous for its Pinot Noir and Chardonnay. The region's commitment to sustainable practices and its picturesque landscapes make it a favorite among wine enthusiasts.",
+        "Region location": "Sonoma County, California"
+    },
+    "Chablis": {
+        "Region Image": "Bourgogne.svg",
+        "Region Summary": "Chablis, located in the northernmost part of Burgundy, France, is known for its unoaked Chardonnay wines that express bright acidity and flinty minerality. The region's cool climate and limestone-rich soils contribute to its unique style, making Chablis a benchmark for crisp and elegant white wines.",
+        "Region location": "Chablis, Burgundy, France"
+    },
+    "Napa":{
+        "Region Image": "Napa.svg",
+        "Region Summary": "Napa Valley, in Northern California, is one of the world’s premier wine regions. Known for its diversity of microclimates and terroirs, Napa excels in producing world-class Chardonnay, Sauvignon Blanc, and other varietals. The region is renowned for its commitment to quality and innovation in winemaking.",
+        "Region location": "Napa, California, USA"
+    },
+    "Piemonte": {
+        "Region Image": "Piedmont.svg",
+        "Region Summary": "Piemonte, located in northwestern Italy, is celebrated for its refined white wines made from the Cortese grape in the Gavi DOCG appellation. The region's cool climate and hilly terrain foster wines with vibrant acidity, minerality, and subtle almond notes.",
+        "Known Varietals": ["Cortese"],
+        "Region location": "Piemonte, Italy"
+    },
+    "Willamette Valley": {
+        "Region Image": "Willamette.png",
+        "Region Summary": "Willamette Valley in Oregon is a renowned cool-climate wine region producing elegant and aromatic Pinot Gris and Chardonnay. Its long growing season and volcanic soils contribute to wines with vibrant acidity and expressive fruit.",
+        "Region location": "Oregon, USA"
+    },
+    "Tuscany": {
+        "Region Image": "Tuscany.svg",
+        "Region Summary": "Tuscany, in central Italy, is home to the Maremma Toscana DOC, known for vibrant Vermentino blends. The region's warm climate and coastal breezes yield wines with exotic fruit, herbal complexity, and mineral-driven finishes.",
+        "Region location": "Tuscany, Italy"
+    },
+    "Paso Robles": {
+        "Region Image": "PasoRobles.svg",
+        "Region Summary": "Paso Robles, located on California's Central Coast, is known for its diverse terroir and climate, producing a wide range of wines. The region excels in Zinfandel, Rhône varietals, and Cabernet Sauvignon, offering bold flavors and rich textures.",
+        "Region location": "Paso Robles, California"
+    },
+    "Anderson Valley": {
+        "Region Image": "Mendocino.svg",
+        "Region Summary": "Anderson Valley, in Mendocino County, California, is celebrated for its cool climate and coastal influence, producing exceptional Pinot Noir and Chardonnay. The region's unique terroir results in wines with bright acidity, complex fruit profiles, and a distinct sense of place.",
+        "Region location": "Mendocino County, California"
+    },
+    "Dry Creek Valley": {
+        "Region Image": "Sonoma_County.svg",
+        "Region Summary": "Dry Creek Valley, located within Sonoma County, is known for its expressive Sauvignon Blanc wines. The region combines warm days and cool nights, creating wines with bright acidity, floral aromas, and vibrant citrus notes.",
+        "Region location": "Sonoma County, California"
+    },
+    "Alexander Valley": {
+        "Region Image": "Sonoma_County.svg",
+        "Region Summary": "Alexander Valley, part of Sonoma County, is celebrated for its rich and full-bodied Sauvignon Blanc wines. The region's warm climate and diverse soils produce wines with ripe fruit flavors, balanced acidity, and a touch of minerality.",
+        "Region location": "Sonoma County, California"
+    },
+    "Lombardy": {
+        "Region Image": "Lombardy.svg",
+        "Region Summary": "Lombardy, located in northern Italy, is home to the Valtellina Superiore DOCG, a Nebbiolo-based wine grown on steep Alpine terraces. The region produces elegant and complex red wines with bright acidity and mountain character.",
+        "Region location": "Lombardy, Italy"
+    },
+    "Veneto": {
+        "Region Image": "Veneto.svg",
+        "Region Summary": "Veneto, in northeastern Italy, is renowned for producing Amarone della Valpolicella DOCG, a powerful and age-worthy red made using the traditional appassimento drying process. Its wines are rich, intense, and perfect for hearty cuisine.",
+        "Region location": "Veneto, Italy"
+    },
+    "Sicily": {
+        "Region Image": "Sicily.svg",
+        "Region Summary": "Sicily is Italy’s southernmost wine region and home to Nero d’Avola. The island’s varied altitudes and Mediterranean climate produce expressive wines with ripe fruit, spice, and freshness, especially from high-elevation vineyards.",
+        "Region location": "Sicily, Italy"
+    },
+    "Puglia": {
+        "Region Image": "Apulia.svg",
+        "Region Summary": "Puglia, located in the heel of Italy’s boot, is known for its robust and fruit-forward red wines made from Primitivo. The region’s sunny climate and coastal influence create bold yet approachable wines.",
+        "Region location": "Puglia, Italy"
+    },
+    "Friuli-Venezia Giulia": {
+        "Region Image": "Friuli.svg",
+        "Region Summary": "Friuli-Venezia Giulia, in northeastern Italy, is acclaimed for its fresh, mineral-driven white wines, particularly Pinot Grigio. The region's mix of alpine and Adriatic influences, along with its marl and sandstone soils, produces structured and complex whites.",
+        "Region location": "Friuli-Venezia Giulia, Italy"
+    }
+}
