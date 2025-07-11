@@ -15,15 +15,18 @@ function Index(props) {
             </Modal.Header>
             <Modal.Body>
                 {props.Image && (
+                    <>
                     <Image
                         onError={({ currentTarget }) => {
                             currentTarget.onerror = null;
                             currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
                         }}
-                        src={`${process.env.PUBLIC_URL}/photos/${props.Image}`}
+                        src={`${props.Image}`}
                         alt={props.Name}
-                        style={{ maxWidth: "100%" }}
+                        style={{ maxWidth: "100%", height:"50vh" }}
                     />
+                    <hr />
+                    </>
                 )}
                         {props.Definition}
                 { props.Secondary_Text && (
