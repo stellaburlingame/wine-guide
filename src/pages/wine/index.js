@@ -177,7 +177,7 @@ class index extends React.Component {
                             <Row className="tasting-notes-wrapper">
                             <div className="card-header row">
                               <strong className="col" style={{maxWidth: 'fit-content'}} >Tasting Notes</strong>
-                              {this.icons(data1)}
+                              {/* {this.icons(data1)} */}
                               </div>
                             <div className="row">
                               <div className="col-lg-6 col-md-12 col-sm-12">
