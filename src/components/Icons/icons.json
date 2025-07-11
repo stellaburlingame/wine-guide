@@ -3,6 +3,7 @@
     "Type": "Vegan",
     "Icon": "🥗",
     "Notes": "No animal products",
+    "Definition": "No animal products",
     "Color": "#b5e7a0",
     "Keywords": ["vegan", "plant-based", "no animal products"],
     "TextColor": "#000000"
@@ -11,6 +12,7 @@
     "Type": "Floral",
     "Icon": "🌸",
     "Notes": "Honeysuckle, jasmine, etc.",
+    "Definition": "Honeysuckle, jasmine, etc.",
     "Color": "#f9c5d1",
     "Keywords": ["floral", "honeysuckle", "jasmine", "rose", "violet", "orange blossom", "lavender", "rose petals", "dried rose petals", "geranium", "apple blossom"],
     "TextColor": "#000000"
@@ -19,6 +21,7 @@
     "Type": "Herbal",
     "Icon": "🌿",
     "Notes": "Thyme, basil, parsley",
+    "Definition": "Thyme, basil, parsley",
     "Color": "#b0d7a3",
     "Keywords": ["herbal", "herbaceous", "grass", "mint", "eucalyptus", "thyme", "basil", "parsley", "sage", "rosemary", "oregano"],
     "TextColor": "#000000"
@@ -27,6 +30,7 @@
     "Type": "Citrus",
     "Icon": "🍋",
     "Notes": "Lemon, lime, grapefruit",
+    "Definition": "Lemon, lime, grapefruit",
     "Color": "#fff6a3",
     "Keywords": ["citrus", "lemon", "lime", "grapefruit"],
     "TextColor": "#000000"
@@ -35,14 +39,16 @@
     "Type": "Fruity/Berry",
     "Icon": "🍓",
     "Notes": "Raspberry, strawberry, cherry, etc.",
+    "Definition": "Raspberry, strawberry, cherry, etc.",
     "Color": "#ffc1dc",
-    "Keywords": ["berry", "raspberry", "strawberry", "cherry", "blueberry", "blackberry", "red fruit", "red fruits", "blackberries", "blueberries", "black currant", "black cherry", "dark berries", "mixed berries", "cherry", "cassis", "cranberry", "red cherry", "red plum", "currant"],
+    "Keywords": ["berry", "raspberry", "strawberry", "cherry", "blueberry", "blackberry", "red fruit", "red fruits", "blackberries", "red berries", "blueberries", "black currant", "black cherry", "dark berries", "mixed berries", "cassis", "cranberry", "red cherry", "red plum", "currant"],
     "TextColor": "#000000"
   },
   {
     "Type": "Stone Fruit",
     "Icon": "🍑",
     "Notes": "Peach, apricot, etc.",
+    "Definition": "Peach, apricot, etc.",
     "Color": "#ffe4b5",
     "Keywords": ["stone fruit", "peach", "apricot", "nectarine"],
     "TextColor": "#000000"
@@ -51,6 +57,7 @@
     "Type": "Tropical Fruit",
     "Icon": "🍍",
     "Notes": "Mango, pineapple, etc.",
+    "Definition": "Mango, pineapple, etc.",
     "Color": "#ffeaaa",
     "Keywords": ["tropical fruit", "mango", "pineapple", "papaya", "passion fruit"],
     "TextColor": "#000000"
@@ -59,6 +66,7 @@
     "Type": "Spicy",
     "Icon": "🌶️",
     "Notes": "Jalapeño, pepper",
+    "Definition": "Jalapeño, pepper",
     "Color": "#ffb3a7",
     "Keywords": ["spicy", "jalapeño", "pepper", "clove", "cinnamon", "anise", "spice", "baking spice", "sage", "rosemary", "sweet tobacco", "subtle spice", "oak spice"],
     "TextColor": "#000000"
@@ -67,6 +75,7 @@
     "Type": "Oaky/Vanilla",
     "Icon": "🪵",
     "Notes": "Barrel aging, vanilla tones",
+    "Definition": "Barrel aging, vanilla tones",
     "Color": "#e2c290",
     "Keywords": ["vanilla", "toast", "coconut", "smoke", "sandalwood", "subtle oak", "oak spice"],
     "TextColor": "#000000"
@@ -75,6 +84,7 @@
     "Type": "Minerality",
     "Icon": "⛏️",
     "Notes": "Chalky, flinty notes",
+    "Definition": "Chalky, flinty notes",
     "Color": "#d6e4e5",
     "Keywords": ["mineral", "minerality", "stone", "flint", "wet rock", "saline"],
     "TextColor": "#000000"
@@ -83,6 +93,7 @@
     "Type": "Bubbly/Sparkling",
     "Icon": "🥂",
     "Notes": "Sparkling wines",
+    "Definition": "Sparkling wines",
     "Color": "#e0f7fa",
     "Keywords": ["sparkling", "bubbly", "bubbles", "carbonation"],
     "TextColor": "#000000"
@@ -91,6 +102,7 @@
     "Type": "Balanced",
     "Icon": "⚖️",
     "Notes": "Even profile of acid/body/tannin",
+    "Definition": "Even profile of acid/body/tannin",
     "Color": "#cfcfcf",
     "Keywords": ["balanced", "even", "harmonious", "structure"],
     "TextColor": "#000000"
@@ -99,6 +111,7 @@
     "Type": "Bold/Full-Bodied",
     "Icon": "💪",
     "Notes": "Big reds or rich whites",
+    "Definition": "Big reds or rich whites",
     "Color": "#d19c97",
     "Keywords": ["bold", "full-bodied", "rich", "intense"],
     "TextColor": "#000000"
@@ -107,6 +120,7 @@
     "Type": "Chocolate",
     "Icon": "🍫",
     "Notes": "Dark chocolate, cocoa, mocha",
+    "Definition": "Dark chocolate, cocoa, mocha",
     "Color": "#c89f91",
     "Keywords": ["chocolate", "dark chocolate", "cocoa", "mocha"],
     "TextColor": "#000000"
@@ -115,6 +129,7 @@
     "Type": "Silky",
     "Icon": "🧵",
     "Notes": "Smooth, refined mouthfeel",
+    "Definition": "Smooth, refined mouthfeel",
     "Color": "#e8d5e2",
     "Keywords": ["silky", "silk", "smooth texture", "refined texture"],
     "TextColor": "#000000"
@@ -123,6 +138,7 @@
     "Type": "Complex",
     "Icon": "🧠",
     "Notes": "Layered flavors and aromas, nuanced structure",
+    "Definition": "Layered flavors and aromas, nuanced structure",
     "Color": "#d4c2fc",
     "Keywords": ["complex", "nuanced", "layered", "concentrated"],
     "TextColor": "#000000"
@@ -131,6 +147,7 @@
     "Type": "Aged",
     "Icon": "🕰️",
     "Notes": "Flavors developed through aging in bottle or barrel",
+    "Definition": "Flavors developed through aging in bottle or barrel",
     "Color": "#d7ccc8",
     "Keywords": ["aged", "leather", "tobacco", "forest floor", "cedar", "wet wool", "earthy spice", "graceful finish"],
     "TextColor": "#000000"
