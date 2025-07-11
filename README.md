@@ -1,7 +1,7 @@
 # Wine Training
 ![Followers](https://img.shields.io/github/followers/DVasquez4155?style=social) ![License](https://img.shields.io/github/license/DVasquez4155/wine-training) ![Language](https://img.shields.io/github/languages/top/DVasquez4155/wine-training) ![Latest Commit](https://img.shields.io/github/last-commit/DVasquez4155/wine-training)
 ## Description
-[![Image that shows the project](./assets/img/icon.png)](https://DVasquez4155.github.io/wine-training)
+[![Image that shows the project](./public/icon.png)](https://DVasquez4155.github.io/wine-training)
 
 A website that:
 * Helps train new staff members with specifications
