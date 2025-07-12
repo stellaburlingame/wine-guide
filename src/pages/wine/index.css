@@ -89,7 +89,11 @@
   width: 30%;
 }
 .wine-pairing-text {
-  margin-top: 0.5rem;
+  margin-right: 1px;
+  border-color: gold;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
 }
 body {
   overflow-y: hidden;
