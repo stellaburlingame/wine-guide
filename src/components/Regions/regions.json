@@ -17,7 +17,6 @@
     "Piemonte": {
         "Region Image": "Piedmont.svg",
         "Region Summary": "Piemonte, located in northwestern Italy, is celebrated for its refined white wines made from the Cortese grape in the Gavi DOCG appellation. The region's cool climate and hilly terrain foster wines with vibrant acidity, minerality, and subtle almond notes.",
-        "Known Varietals": ["Cortese"],
         "Region location": "Piemonte, Italy"
     },
     "Willamette Valley": {
@@ -74,5 +73,30 @@
         "Region Image": "Friuli.svg",
         "Region Summary": "Friuli-Venezia Giulia, in northeastern Italy, is acclaimed for its fresh, mineral-driven white wines, particularly Pinot Grigio. The region's mix of alpine and Adriatic influences, along with its marl and sandstone soils, produces structured and complex whites.",
         "Region location": "Friuli-Venezia Giulia, Italy"
+    },
+    "Trentino": {
+        "Region Image": "Trentino.svg",
+        "Region Summary": "Trentino, in northern Italy, is known for its mountainous landscape and crisp alpine wines. The region produces notable white wines like Pinot Grigio and Chardonnay, as well as elegant reds from Teroldego and Lagrein.",
+        "Region location": "Trentino-Alto Adige, Italy"
+    },
+    "Champagne": {
+        "Region Image": "Champagne.svg",
+        "Region Summary": "Champagne, located in northeastern France, is the world’s most celebrated sparkling wine region. Known for its chalky soils and cool climate, Champagne produces elegant wines with high acidity and fine bubbles through the traditional method. The region is home to iconic blends of Chardonnay, Pinot Noir, and Meunier.",
+        "Region location": "Champagne, France"
+    },
+    "Limoux": {
+        "Region Image": "Languedoc.svg",
+        "Region Summary": "Limoux, located in the Languedoc region of southern France, is renowned for producing sparkling wines using the traditional method, particularly Blanquette de Limoux and Crémant de Limoux. It is considered one of the oldest sparkling wine regions in the world.",
+        "Region location": "Languedoc, France"
+    },
+    "Emilia-Romagna": {
+        "Region Image": "EmiliaRomagna.svg",
+        "Region Summary": "Emilia-Romagna, located in northern Italy, is known for its production of Lambrusco, a sparkling red wine that ranges from dry to sweet. The region's fertile plains and winemaking traditions result in fresh, lively wines that pair well with the area's rich cuisine.",
+        "Region location": "Emilia-Romagna, Italy"
+    },
+    "Provence": {
+        "Region Image": "Provence.png",
+        "Region Summary": "Provence, in southeastern France, is world-famous for its elegant and pale rosé wines. The region benefits from a Mediterranean climate, limestone soils, and coastal breezes, producing wines with delicate aromas, bright acidity, and notes of red berries and herbs.",
+        "Region location": "Provence, France"
     }
 }
