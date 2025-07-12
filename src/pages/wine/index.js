@@ -168,7 +168,11 @@ class index extends React.Component {
                                 </ListGroup.Item>
                               )}
                               <ListGroup.Item>
-                                <strong>Stella pairing:</strong> {data1["Stella Recommended"]}
+                                <strong>Stella pairing:</strong> {data1["Stella Recommended"].split(', ').map((pairing, i) => (
+                                  <Badge bg="light" text="dark" key={i} className="wine-pairing-text">
+                                    {pairing}
+                                    </Badge>
+                                ))}
                               </ListGroup.Item>
                               <ListGroup.Item><strong>Winemaker paring:</strong> {data1["General Recommended Accompanies"]}</ListGroup.Item>
                                 
@@ -197,7 +201,7 @@ class index extends React.Component {
                                 <ListGroup variant="flush">
                                   <ListGroup.Item>
                                     <strong>Body: </strong>
-                                    <span className="wine-pairing-text">
+                                    <span>
                                       {data1["Body Characteristics"]}
                                     </span>
                                     <div className="wine-specs__body" data-testid="wine-specs__body">
@@ -224,7 +228,7 @@ class index extends React.Component {
                                   {this.props.type !== "bianco" && (
                                     <ListGroup.Item>
                                       <strong>Tannins: </strong>
-                                      <span className="wine-pairing-text">
+                                      <span>
                                         {data1["Tannin Characteristics"]}
                                       </span>
                                       <div className="wine-specs__body" data-testid="wine-specs__tannins">
@@ -246,7 +250,6 @@ class index extends React.Component {
                                         </div>
                                       </div>
                                     </ListGroup.Item>
-                                    
                                   )}
                                 </ListGroup>
                               </div>
@@ -281,7 +284,6 @@ class index extends React.Component {
                                   Definition: <>{regions[data1?.Region]?.["Region Summary"]}</>,
                                   Image: `${process.env.PUBLIC_URL}/photos/region/${regions[data1?.Region]?.["Region Image"]}`
                                 }
-
                               )} style={{ cursor: 'pointer' }}>
                                 <img
                                   src={`${process.env.PUBLIC_URL}/photos/region/${regions[data1?.Region]?.["Region Image"]}`}
