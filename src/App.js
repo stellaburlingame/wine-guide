@@ -19,6 +19,7 @@ function App() {
       <div className="App col-lg-12 mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="all" element={<Wine type='all' />} />
           <Route path="italiano" element={<Wine type='italiano' />} />
           <Route path="rosso" element={<Wine type='rosso' />} />
           <Route path="bianco" element={<Wine type='bianco' />} />

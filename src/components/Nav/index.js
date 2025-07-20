@@ -20,6 +20,7 @@ function Index(props) {
                     <Dropdown as={NavItem}>
                       <Dropdown.Toggle as={NavLink} className="nav-link text-white">Wines</Dropdown.Toggle>
                       <Dropdown.Menu>
+                        <Dropdown.Item as={Link} to="all">All Wines</Dropdown.Item>
                         <Dropdown.Item as={Link} to="italiano">Rosso Italiano</Dropdown.Item>
                         <Dropdown.Item as={Link} to="rosso">Rosso</Dropdown.Item>
                         <Dropdown.Item as={Link} to="bianco">Bianco</Dropdown.Item>
