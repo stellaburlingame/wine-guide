@@ -593,6 +593,7 @@ class index extends React.Component {
                               </div>
                             </div>
                             <ListGroup variant="flush" className="col-lg-9 col-md-9 col-sm-9 wine-list-group">
+                              {this.icons(data1)}
                               {data1["Summary"] && (
                                 <ListGroup.Item>
                                   <span>
@@ -618,7 +619,6 @@ class index extends React.Component {
                               </div>
                             <div className="row">
                                 <ListGroup variant="flush" className="col-lg-6 col-md-12 col-sm-12 wine-list-group"> 
-                                  {this.icons(data1)}
                                   <ListGroup.Item><strong>Flavor:</strong> {data1["Flavor"]}</ListGroup.Item>
                                   <ListGroup.Item><strong>Aroma:</strong> {data1["Aroma"]}</ListGroup.Item>
                                     {data1["Finish"] && (
