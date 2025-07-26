@@ -1,7 +1,7 @@
 [
   {
-  "Wine Type": "Red",
   "Blend": "",
+  "Wine Type": "Italiano",
   "Wine Name": "Cipressi, Barbera d'Asti",
   "Vintage": "2021",
   "Tannin Level": "Medium",
@@ -29,7 +29,7 @@
   "DOCG": true,
   "DOC": false,
   "Glass_Price": 0,
-  "Bottle_Price": 0,
+  "Bottle_Price": 80,
   "PDF": "CipressiNizzaMicheleChiarloBarberadAsti2019.pdf",
   "Top Icons": [
   "Fruity/Berry",
@@ -40,8 +40,8 @@
 ]
 },
 {
-  "Wine Type": "Red",
   "Blend": "",
+  "Wine Type": "Italiano",
   "Wine Name": "Pajena, Enrico Serafino, Barbera d'Alba",
   "Vintage": "2021",
   "Tannin Level": "Medium",
@@ -81,8 +81,9 @@
   ]
 },
 {
-  "Wine Type": "Red",
+
   "Blend": "",
+  "Wine Type": "Italiano",
   "Wine Name": "Barbaresco, Prunotto",
   "Vintage": "2021",
   "Tannin Level": "High",
@@ -123,8 +124,9 @@
 },
   {
   "Stella Recommended": "Osso Buco di Vitello, Scottadito di Agnello, Spezzatino al Barolo",
-  "Wine Type": "Red",
+
   "Blend": "",
+  "Wine Type": "Italiano",
   "Wine Name": "Barolo, Pio Cesare",
   "Vintage": "2019",
   "Tannin Level": "High",
@@ -165,8 +167,8 @@
   {
     "Stella Recommended": "Osso Buco di Vitello, Scottadito di Agnello, Spezzatino al Barolo",
     "Bottle_Price": 158,
-    "Wine Type": "Red",
     "Blend": "",
+    "Wine Type": "Italiano",
     "Wine Name": "Barolo, Massolino",
     "Vintage": "2019",
     "Tannin Level": "High",
@@ -209,9 +211,10 @@
     "Vegan": true
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "",
-    "Wine Name": "Travaglini Gattinara",
+    "Wine Type": "Italiano",
+  "Wine Name": "Travaglini Gattinara",
     "Vintage": 2013,
     "Tannin Level": "High",
     "Tannin Characteristics": "Firm and high in acidity, with structure from rare alpine soil composition.",
@@ -243,9 +246,10 @@
     "PDF": "TravagliniGattinara2020.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "",
-    "Wine Name": "Pian delle Vigne Brunello di Montalcino",
+    "Wine Type": "Italiano",
+  "Wine Name": "Pian delle Vigne Brunello di Montalcino",
     "Vintage": 2019,
     "Tannin Level": "High",
     "Tannin Characteristics": "Silky and elegant, with freshness and vibrancy that reflect the terroir.",
@@ -277,9 +281,10 @@
     "PDF": "PiandelleVigneBrunellodiMontalcino2019.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "",
-    "Wine Name": "Le Ragose Amarone della Valpolicella Classico",
+    "Wine Type": "Italiano",
+  "Wine Name": "Le Ragose Amarone della Valpolicella Classico",
     "Vintage": 2015,
     "Tannin Level": "High",
     "Tannin Characteristics": "Firm and velvety tannins with depth and structure.",
@@ -311,9 +316,10 @@
     "PDF": "LeRagoseAmaronedellaValpolicellaClassico2015.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "85% Sangiovese Grosso, Canaiolo Nero, Colorino, Merlot",
-    "Wine Name": "Poliziano Vino Nobile di Montepulciano",
+    "Wine Type": "Italiano",
+  "Wine Name": "Poliziano Vino Nobile di Montepulciano",
     "Vintage": 2021,
     "Tannin Level": "Medium-High",
     "Tannin Characteristics": "Mature and balanced tannins, slightly dry, warm and extroverted.",
@@ -346,9 +352,10 @@
     "PDF": "PolizianoVinoNobilediMontepulciano2021.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "100% Sangiovese",
-    "Wine Name": "Nozzole Chianti Classico",
+    "Wine Type": "Italiano",
+  "Wine Name": "Nozzole Chianti Classico",
     "Vintage": 2021,
     "Tannin Level": "Medium",
     "Tannin Characteristics": "Firm and pleasant tannins, richly vinous texture.",
@@ -380,9 +387,10 @@
     "PDF": "NozzoleChiantiClassico2021.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "90% Sangiovese, 10% Cabernet Sauvignon",
-    "Wine Name": "Tenuta di Arceno Chianti Classico Riserva",
+    "Wine Type": "Italiano",
+  "Wine Name": "Tenuta di Arceno Chianti Classico Riserva",
     "Vintage": 2019,
     "Tannin Level": "High",
     "Tannin Characteristics": "Firm and well-integrated tannins that support aging.",
@@ -414,9 +422,10 @@
     "PDF": "TenutadiArcenoChiantiClassicoRiserva2019.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "100% Nero d\u2019Avola",
-    "Wine Name": "Tenuta Regaleali Lam\u00f9ri",
+    "Wine Type": "Italiano",
+  "Wine Name": "Tenuta Regaleali Lam\u00f9ri",
     "Vintage": 2022,
     "Tannin Level": "Medium",
     "Tannin Characteristics": "Soft and elegant tannins with subtle hints of wood.",
@@ -448,9 +457,10 @@
     "PDF": "TenutaRegalealiLamri2022.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "Nebbiolo (Chiavennasca), Merlot",
-    "Wine Name": "Nino Negri Valtellina Superiore DOCG Quadrio",
+    "Wine Type": "Italiano",
+  "Wine Name": "Nino Negri Valtellina Superiore DOCG Quadrio",
     "Vintage": 2020,
     "Tannin Level": "Medium",
     "Tannin Characteristics": "Elegant tannins offering structure without overwhelming dryness.",
@@ -482,9 +492,10 @@
     "PDF": "NinoNegriValtellinaSuperioreDOCGQuadrio2020.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "Corvina Veronese and Corvinone Veronese 75%, Rondinella 25%",
-    "Wine Name": "Campagnola Amarone della Valpolicella DOCG Classico",
+    "Wine Type": "Italiano",
+  "Wine Name": "Campagnola Amarone della Valpolicella DOCG Classico",
     "Vintage": "",
     "Tannin Level": "High",
     "Tannin Characteristics": "Round and rich with well-integrated tannins from long oak aging.",
@@ -516,9 +527,10 @@
     "PDF": "CampagnolaAmaronedellaValpolicellaDOCGClassico.pdf"
   },
   {
-    "Wine Type": "Red",
+  
     "Blend": "100% Primitivo",
-    "Wine Name": "Cantele Primitivo Puglia IGP",
+    "Wine Type": "Italiano",
+  "Wine Name": "Cantele Primitivo Puglia IGP",
     "Vintage": "",
     "Tannin Level": "Medium",
     "Tannin Characteristics": "Moderate tannins with a gentle, smooth finish.",
@@ -553,68 +565,76 @@
     "Wine Type": "Red",
     "Blend": "90% Barbera, 10% Nebbiolo",
     "Wine Name": "Barbera 'Vezzi'",
+    "Producer": "Gotham Project",
     "Vintage": 2022,
     "Tannin Level": "Medium",
-    "Tannin Characteristics": "Moderate tannins from Barbera and structure from Nebbiolo, balanced and food-friendly.",
+    "Tannin Characteristics": "Moderate tannins typical of Barbera and Nebbiolo, with structure retained by steel aging.",
     "Body": "Medium",
-    "Body Characteristics": "Fresh, vibrant, and juicy with good acidity.",
-    "Finish": "Clean",
-    "Finish Characterstics": "Crisp and refreshing, with a food-friendly finish.",
+    "Body Characteristics": "Fresh and balanced due to cool fermentation and stainless steel aging.",
+    "Finish": "Medium",
+    "Finish Characteristics": "Clean and crisp with bright red fruit notes lingering on the palate.",
     "Acidity": "High",
-    "Aroma": "Red berries, floral notes, subtle earthiness (inferred)",
-    "Flavor": "Bright cherry, cranberry, and spice (inferred)",
-    "Style": "Fresh and approachable",
-    "Vinification": "Hand-harvested; fermented and aged in stainless steel at cool temperatures.",
-    "Maturation": "No oak aging. Short-term aging, focused on freshness",
-    "Type of cask": "Stainless Steel",
-    "Color": "Red",
+    "Aroma": "Bright red fruit and subtle floral hints.",
+    "Flavor": "Red berries, tangy acidity, and fresh finish.",
+    "Style": "Dry Red Wine",
+    "Vinification": "Hand-harvested grapes fermented and aged in stainless steel at cool temperatures.",
+    "Maturation": "Aged in stainless steel to preserve freshness.",
+    "Type of cask": "Stainless steel",
+    "Color": "Bright ruby red",
     "Region": "Piemonte",
-    "Vineyard": "Langhe and Monferrato",
+    "Appellation": "Piedmont",
+    "Vineyard": "Vineyards located in the Langhe and Monferrato",
     "Sweetness": "Dry",
     "Varietal": "Barbera",
-    "Farming Practice": "Sustainable",
-    "General Recommended Accompanies": "Pizza, pasta with red sauce, grilled chicken, salumi",
-    "Summary": "A fresh and vibrant Piedmont red made from Barbera and a touch of Nebbiolo, offering juicy red fruit, bright acidity, and no oak influence.",
-    "Image": "barbera-vezzi-gotham-project-5-600x600.webp",
+    "General Recommended Accompanies": "Great with pizza, pasta with red sauce, grilled vegetables, and cured meats.",
     "Stella Recommended": "Gnocchi di Patate \u201cNonna Nilla\u201d (Italian sausage and porcini ragu), Rigatoni al Ragu di Maiale, Pollo alla Parmigiana",
-    "Glass_Price": 18,
+    "Image": "BarberaVezzi2022.png",
+    "Summary": "Barbera 'Vezzi' by Gotham Project is a fresh, vibrant red from Langhe and Monferrato in Piemonte. Made from 90% Barbera and 10% Nebbiolo, it’s fermented and aged in stainless steel for crispness and energy. Sustainable farming practices highlight the fruit purity and bright acidity.",
     "DOCG": false,
     "DOC": false,
-    "PDF": "BarberaVezzi2022.pdf"
+    "Glass_Price": 18,
+    "Bottle_Price": 0,
+    "PDF": "BarberaVezzi2022.pdf",
+    "Top Icons": ["Fruity/Berry", "Balanced", "Sustainable"],
+    "Sustainability": "Sustainable farming practices are used in the vineyard.",
+    "Vegan": false
   },
   {
-    "Wine Type": "Red",
+    "Wine Type": "Rosso",
     "Blend": "50% Syrah, 25% Merlot, 25% Sangiovese",
     "Wine Name": "Querceto Tuscan Red",
+    "Producer": "Castello di Querceto",
     "Vintage": 2020,
     "Tannin Level": "Medium",
-    "Tannin Characteristics": "Finely integrated tannins supporting a harmonious palate.",
+    "Tannin Characteristics": "Finely integrated tannin structure gently supports the palate.",
     "Body": "Medium",
-    "Body Characteristics": "Balanced and smooth with saturated dark red fruits and subtle oak.",
-    "Finish": "Balanced",
-    "Finish Characterstics": "Hints of vanilla, toast, and dark fruit linger gently.",
+    "Body Characteristics": "Harmonious palate of saturated dark red fruits with a smooth structure.",
+    "Finish": "Medium",
+    "Finish Characteristics": "Lingering notes of toast, vanilla, and dried dark fruits.",
     "Acidity": "Medium",
-    "Aroma": "Black raspberry, rosemary, forest floor, toasty oak",
-    "Flavor": "Dried cherry, blackberry, plum, vanilla, toast",
-    "Style": "Tuscan countryside expression\u2014savory, fruit-forward, and balanced",
-    "Vinification": "Traditional fermentation techniques; oak-aged for complexity",
-    "Maturation": "Oak influence for spice and structure",
-    "Type of cask": "Toasted oak",
-    "Color": "Intense red ruby",
+    "Aroma": "Savory rosemary and forest floor, black raspberry, with toasty oak spice.",
+    "Flavor": "Dried cherry, blackberry, plum, with a hint of vanilla and toast.",
+    "Style": "Dry Red Wine",
+    "Vinification": "Grapes from different terrains of Tuscany fermented and blended to reflect regional characteristics.",
+    "Maturation": "Not specified in detail; includes exposure to oak contributing toast and vanilla notes.",
+    "Type of cask": "Oak (toasty oak notes mentioned)",
+    "Color": "Intense ruby red",
     "Region": "Tuscany",
-    "Appelation": "Toscana IGT",
-    "Vineyard": "Castello di Querceto",
+    "Appellation": "Toscana IGT",
+    "Vineyard": "Valdarno hills and Chianti region; Merlot & Syrah from marlstone-rich soil, Sangiovese from high elevation vineyards.",
     "Sweetness": "Dry",
     "Varietal": "Syrah, Merlot, Sangiovese",
-    "Farming Practice": "Sustainable (inferred)",
-    "General Recommended Accompanies": "Pastas, meat dishes, charcuterie, pizza, blue cheese",
-    "Stella Recommended": "Rigatoni al Ragu di Maiale, Maiale con Pancetta e Aglio, Scottadito",
-    "Summary": "Querceto Red 2020 blends Syrah, Merlot, and Sangiovese from Chianti and Valdarno to create a savory, fruit-laced wine with depth, spice, and food-friendly balance.",
-    "Image": "CdQ-Tuscan-Red-Tech-Sheet-2020-vintage.png",
+    "General Recommended Accompanies": "Pastas, meat dishes, charcuterie, pizza, and blue cheese.",
+    "Stella Recommended": "",
+    "Image": "QuercetoTuscanRed2020.png",
+    "Summary": "The Merlot & Syrah are produced in the Valdarno hills where the soil is rich in marlstone and clay; the sun is notably bright, but nights are cool – important for optimum ripening of these grapes. The Sangiovese is planted at the highest elevation of the Chianti region. This wine expresses the fresh scents and balanced flavors associated with the vineyards of Castello di Querceto",
     "DOCG": false,
     "DOC": false,
     "Glass_Price": 14,
     "Bottle_Price": 0,
-    "PDF": "QuercetoTuscanRed2020.pdf"
+    "PDF": "QuercetoTuscanRed2020.pdf",
+    "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Herbal", "Balanced"],
+    "Sustainability": "",
+    "Vegan": false
   }
 ]
