@@ -16,8 +16,9 @@ function Index(props) {
                 <ul id="links" className="nav ml-auto">
                     <Link variant="outline-*" className="nav-link" to="/">Home</Link>
                     <Link variant="outline-*" className="nav-link" to="definitions">Definitions</Link>
+                    <Link variant="outline-*" className="nav-link" to="wine">Wines</Link>
 
-                    <Dropdown as={NavItem}>
+                    {/* <Dropdown as={NavItem}>
                       <Dropdown.Toggle as={NavLink} className="nav-link text-white">Wines</Dropdown.Toggle>
                       <Dropdown.Menu>
                         <Dropdown.Item as={Link} to="all">All Wines</Dropdown.Item>
@@ -27,7 +28,7 @@ function Index(props) {
                         <Dropdown.Item as={Link} to="sparkling">Sparkling</Dropdown.Item>
                         <Dropdown.Item as={Link} to="rose">Rose</Dropdown.Item>
                       </Dropdown.Menu>
-                    </Dropdown>
+                    </Dropdown> */}
                 </ul>
                 </div>
             </div>
