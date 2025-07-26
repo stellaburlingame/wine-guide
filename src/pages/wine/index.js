@@ -356,13 +356,6 @@ class index extends React.Component {
                               value={country}
                               checked={this.state.selectedCountry === country}
                               onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
-                              disabled={
-                                (
-                                  this.state.selectedPriceType !== "" ||
-                                  this.state.selectedType !== ""
-                                ) &&
-                                !availableFilters.countries.includes(country)
-                              }
                             />
                           ))}
                         </div>
@@ -371,7 +364,15 @@ class index extends React.Component {
                       <div className="col-md-6 col-sm-12">
                         <Form.Group>
                           <Form.Label>Filter by Region</Form.Label>
-                          <div>
+
+                          {this.state.selectedCountry && this.state.selectedCountry !== "all" ? (
+                          <></>
+                          ) : (
+                            <div className="text-muted" style={{ height: '38px', paddingTop: '6px' }}>
+                              Select a country to choose a region
+                            </div>
+                          )}
+                          <div hidden={!this.state.selectedCountry && this.state.selectedCountry !== "all"}>
                             <Form.Check
                               inline
                               type="radio"
