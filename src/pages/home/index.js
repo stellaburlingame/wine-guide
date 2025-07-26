@@ -20,11 +20,13 @@ function Index(props) {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                        <Link variant="outline-*" className="navbar-brand logo" to="wine"><Button variant="primary">Visit</Button></Link>
+                        {/* <Link variant="outline-*" className="navbar-brand logo" to="all"><Button variant="primary">All Wines</Button></Link>
                         <Link variant="outline-*" className="navbar-brand logo" to="italiano"><Button variant="primary">Rosso Italiano</Button></Link>
                         <Link variant="outline-*" className="navbar-brand logo" to="rosso"><Button variant="primary">Rosso</Button></Link>
                         <Link variant="outline-*" className="navbar-brand logo" to="bianco"><Button variant="primary">Bianco</Button></Link>
                         <Link variant="outline-*" className="navbar-brand logo" to="sparkling"><Button variant="primary">Sparkling</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="rose"><Button variant="primary">Rose</Button></Link>
+                        <Link variant="outline-*" className="navbar-brand logo" to="rose"><Button variant="primary">Rose</Button></Link> */}
                     </Card.Footer>
                 </Card>
             </CardGroup>
