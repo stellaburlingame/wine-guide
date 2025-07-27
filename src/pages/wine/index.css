@@ -165,3 +165,9 @@ body {
   border-right: 1px solid rgba(0, 0, 0, .125);
   border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
+.nav-link {
+    /* border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-bottom: .25rem;
+    margin-top: calc(var(--bs-nav-tabs-border-width) * -1); */
+}

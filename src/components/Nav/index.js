@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Dropdown from 'react-bootstrap/Dropdown';
-import NavItem from 'react-bootstrap/NavItem';
-import NavLink from 'react-bootstrap/NavLink';
+import Navbar from 'react-bootstrap/Navbar';
 
 require('./index.css')
 
@@ -11,24 +9,23 @@ function Index(props) {
         <main>
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark ">
             <div className="container">
-                <Link variant="outline-*" className="navbar-brand logo" to="/">Wine Training</Link>
+                <Link to="/" className="navbar-brand">
+                <Navbar.Brand href="#home">
+                    <img
+                    alt=""
+                    src="/dark.svg"
+                    width="30px"
+                    height="30px"
+                    className="d-inline-block align-top"
+                    />{' '}
+                    Wine Training
+                </Navbar.Brand>
+                </Link>
                 <div id="navbarNav">
                 <ul id="links" className="nav ml-auto">
                     <Link variant="outline-*" className="nav-link" to="/">Home</Link>
                     <Link variant="outline-*" className="nav-link" to="definitions">Definitions</Link>
                     <Link variant="outline-*" className="nav-link" to="wine">Wines</Link>
-
-                    {/* <Dropdown as={NavItem}>
-                      <Dropdown.Toggle as={NavLink} className="nav-link text-white">Wines</Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="all">All Wines</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="italiano">Rosso Italiano</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="rosso">Rosso</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="bianco">Bianco</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="sparkling">Sparkling</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="rose">Rose</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown> */}
                 </ul>
                 </div>
             </div>

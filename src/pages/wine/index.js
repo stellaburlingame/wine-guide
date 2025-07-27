@@ -297,39 +297,56 @@ class index extends React.Component {
                           ))}
                         </div>
                       </Form.Group>
-                      {/* Varietal Filter */}
-                      <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
-                        <Form.Label>Filter by Varietal</Form.Label>
-                        <div>
-                          <Form.Check
-                            inline
-                            type="radio"
-                            label="All"
-                            name="varietal"
-                            value="all"
-                            checked={this.state.varietalValue === "all"}
-                            onChange={(e) => this.setState({ varietalValue: e.target.value })}
-                            // "All" is always enabled
-                          />
-                          {availableFilters.varietals.concat(
-                            this.state.varietalValue !== "all" && !availableFilters.varietals.includes(this.state.varietalValue)
-                              ? [this.state.varietalValue]
-                              : []
-                          ).filter((v, i, arr) => arr.indexOf(v) === i).map(varietal => (
-                            <Form.Check
-                              inline
-                              key={varietal}
-                              type="radio"
-                              label={varietal}
-                              name="varietal"
-                              value={varietal}
-                              checked={this.state.varietalValue === varietal}
-                              onChange={(e) => this.setState({ varietalValue: e.target.value })}
-                              disabled={!availableFilters.varietals.includes(varietal) && this.state.varietalValue !== varietal}
-                            />
-                          ))}
-                        </div>
-                      </Form.Group>
+                      {/* Varietal Filter Block: Show placeholder when "All Types" is selected */}
+                      <div className="col-md-6 col-sm-12">
+                        <Form.Group>
+                          <Form.Label>Filter by Varietal</Form.Label>
+                          {this.state.selectedType !== "" ? (
+                            <div>
+                              <Form.Check
+                                inline
+                                type="radio"
+                                label="All"
+                                name="varietal"
+                                value="all"
+                                checked={this.state.varietalValue === "all"}
+                                onChange={(e) => this.setState({ varietalValue: e.target.value })}
+                              />
+                              {Array.from(
+                                new Set(
+                                  this.state.specs
+                                    .filter((wine) =>
+                                      wine["Wine Type"] === this.state.selectedType
+                                    )
+                                    .flatMap((wine) =>
+                                      wine.Varietal
+                                        ? wine.Varietal.split(',').map((v) => v.trim())
+                                        : []
+                                    )
+                                )
+                              )
+                                .sort()
+                                .map((varietal) => (
+                                  <Form.Check
+                                    key={varietal}
+                                    type="radio"
+                                    inline
+                                    name="varietal"
+                                    value={varietal}
+                                    id={`varietal-${varietal}`}
+                                    label={varietal}
+                                    checked={this.state.varietalValue === varietal}
+                                    onChange={(e) =>
+                                      this.setState((prev) => ({ ...prev, varietalValue: e.target.value }))
+                                    }
+                                  />
+                                ))}
+                            </div>
+                          ) : (
+                            <div className="text-muted">Select Wine Type to choose a varietal</div>
+                          )}
+                        </Form.Group>
+                      </div>
                       {/* Country Filter */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Country</Form.Label>

@@ -99,12 +99,12 @@
     "TextColor": "#000000"
   },
   {
-    "Type": "Bold/Full-Bodied",
+    "Type": "Bold",
     "Icon": "💪",
     "Notes": "Big reds or rich whites",
     "Definition": "Big reds or rich whites",
     "Color": "#d19c97",
-    "Keywords": ["bold", "full-bodied", "rich", "intense"],
+    "Keywords": ["bold", "rich", "intense"],
     "TextColor": "#000000"
   },
   {
