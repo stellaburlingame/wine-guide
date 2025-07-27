@@ -1,5 +1,23 @@
 [
   {
+    "Type": "Vegan",
+    "Icon": "🥗",
+    "Notes": "No animal products",
+    "Definition": "Wine made without the use of animal-derived fining agents such as egg whites, casein, or gelatin.",
+    "Color": "#b5e7a0",
+    "Keywords": ["vegan", "plant-based", "no animal products", "animal-free", "egg-free", "dairy-free", "vegan-friendly"],
+    "TextColor": "#000000"
+  },
+  {
+    "Type": "Sustainable",
+    "Icon": "🌱",
+    "Notes": "Eco-conscious vineyard and winery practices",
+    "Definition": "Wine produced using methods that prioritize environmental responsibility, water conservation, and biodiversity.",
+    "Color": "#ccebc5",
+    "Keywords": ["sustainable", "eco", "green", "environmentally-friendly", "biodynamic", "organic", "low-intervention", "eco-conscious"],
+    "TextColor": "#000000"
+  },
+  {
     "Type": "Floral",
     "Icon": "🌸",
     "Notes": "Honeysuckle, jasmine, etc.",
@@ -141,24 +159,6 @@
     "Definition": "Flavors developed through aging in bottle or barrel",
     "Color": "#d7ccc8",
     "Keywords": ["aged", "leather", "tobacco", "forest floor", "cedar", "wet wool", "earthy spice", "graceful finish"],
-    "TextColor": "#000000"
-  }
-,  {
-    "Type": "Vegan",
-    "Icon": "🥗",
-    "Notes": "No animal products",
-    "Definition": "Wine made without the use of animal-derived fining agents such as egg whites, casein, or gelatin.",
-    "Color": "#b5e7a0",
-    "Keywords": ["vegan", "plant-based", "no animal products", "animal-free", "egg-free", "dairy-free", "vegan-friendly"],
-    "TextColor": "#000000"
-  },
-  {
-    "Type": "Sustainable",
-    "Icon": "🌱",
-    "Notes": "Eco-conscious vineyard and winery practices",
-    "Definition": "Wine produced using methods that prioritize environmental responsibility, water conservation, and biodiversity.",
-    "Color": "#ccebc5",
-    "Keywords": ["sustainable", "eco", "green", "environmentally-friendly", "biodynamic", "organic", "low-intervention", "eco-conscious"],
     "TextColor": "#000000"
   }
 ]
