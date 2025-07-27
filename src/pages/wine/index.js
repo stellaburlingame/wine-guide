@@ -241,9 +241,9 @@ class index extends React.Component {
         );
         return (
             <>
-            <Row className="form-wrapper">
+            <Row className="p-3">
               {/* Type Filter Tabs */}
-              <Form.Group className="col-12 mb-3">
+              <Form.Group className="p-0 col-12">
                 <Tabs
                   activeKey={this.state.selectedType}
                   onSelect={(k) => {
@@ -262,6 +262,7 @@ class index extends React.Component {
                   ))}
                 </Tabs>
               </Form.Group>
+            <Card body className="form-wrapper">
               {/* Search */}
               <Form.Group className="mt-3 mb-3 col-12">
                 <label htmlFor="searchFilter" className="form-label fw-bold">Search</label>
@@ -526,6 +527,7 @@ class index extends React.Component {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+            </Card>
             </Row>
               <Row className="col-12 wine-print">
                 {(() => {
