@@ -34,9 +34,11 @@
   width: auto;
   border-radius: 4px;
   display: block;
-  position: relative;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   z-index: 4;
-  margin: 0 auto;
+  margin: 0;
   padding-bottom: 1.5rem;
   filter:
     /* heavier bottom-left*/ 
@@ -81,6 +83,7 @@
 .wine-card {
   margin-bottom: 1rem !important;
   margin-top: 1rem !important;
+  position: relative;
 }
 .wine-card-right-image {
   width: 70%;
@@ -170,4 +173,16 @@ body {
     border-bottom-right-radius: .25rem;
     border-bottom: .25rem;
     margin-top: calc(var(--bs-nav-tabs-border-width) * -1); */
+}
+.wine-card-image-producer {
+  width: 6rem;
+  left: 1rem;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  z-index: 99;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
 }

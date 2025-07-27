@@ -51,6 +51,7 @@ function getAvailableFilters(wines, regions, filters) {
     'Vintage',
     'Sweetness'
   ];
+  
   const filtered = wines.filter(w => {
     // Country/region logic
     const wineCountry = regions[w.Region]?.Country || w.Country;
@@ -116,6 +117,21 @@ class index extends React.Component {
         showBoldnessFilter: false,
         boldness: 0,
     }
+  clearAllFilters = () => {
+    this.setState({
+      searchQuery: '',
+      selectedCountry: '',
+      selectedRegion: '',
+      selectedPriceType: '',
+      selectedIcon: [],
+      boldness: 0.25,
+      showBoldnessFilter: false,
+      veganOnly: false,
+      sustainableOnly: false,
+      selectedType: '',
+      varietalValue: 'all'
+    });
+  }
     // Add logic to set selectedType and filter by Wine Type based on hash on mount
     componentDidMount() {
         // Read wine type from URL hash and set as initial selectedType
@@ -263,9 +279,9 @@ class index extends React.Component {
                 </Tabs>
               </Form.Group>
             <Card body className="form-wrapper">
+              <Row>
               {/* Search */}
-              <Form.Group className="mt-3 mb-3 col-12">
-                <label htmlFor="searchFilter" className="form-label fw-bold">Search</label>
+              <Form.Group className="mt-3 col-sm-10">
                 <Form.Control
                   type="text"
                   id="searchFilter"
@@ -274,6 +290,36 @@ class index extends React.Component {
                   onChange={(e) => this.setState({ searchQuery: e.target.value.toLowerCase() })}
                 />
               </Form.Group>
+
+              {/* Clear Filters Button Group */}
+              <Form.Group className="col-sm-2 mb-3 mt-3">
+                {(() => {
+                  // Compute filtersCleared as described in the instructions
+                  const filtersCleared =
+                    !this.state.searchQuery &&
+                    !this.state.selectedCountry &&
+                    !this.state.selectedRegion &&
+                    !this.state.selectedPriceType &&
+                    this.state.selectedIcon.length === 0 &&
+                    this.state.boldness === 0.25 &&
+                    !this.state.showBoldnessFilter &&
+                    !this.state.veganOnly &&
+                    !this.state.sustainableOnly &&
+                    !this.state.selectedType &&
+                    this.state.varietalValue === "all";
+                  return (
+                    <button
+                      type="button"
+                      className="btn btn-success form-control"
+                      onClick={this.clearAllFilters}
+                      disabled={filtersCleared}
+                    >
+                      Clear Filters
+                    </button>
+                  );
+                })()}
+              </Form.Group>
+              </Row>
               <Accordion className="mb-4">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Show More Filters</Accordion.Header>
@@ -505,24 +551,6 @@ class index extends React.Component {
                           </>
                         )}
                       </Form.Group>
-                      {/* Clear Filters Button Group */}
-                      <Form.Group className="col-12 text-end mt-3">
-                        <button
-                          type="button"
-                          className="btn btn-outline-secondary"
-                          onClick={() => this.setState({
-                            selectedCountry: "",
-                            selectedRegion: "",
-                            varietalValue: "all",
-                            searchQuery: "",
-                            selectedIcon: [],
-                            selectedType: "",
-                            selectedPriceType: ""
-                          })}
-                        >
-                          Clear Filters
-                        </button>
-                      </Form.Group>
                     </Row>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -617,6 +645,13 @@ class index extends React.Component {
                             <Row>
                             <div className="col-lg-3 col-md-3 col-sm-3">
                               <div className="wine-card-image-wrapper">
+
+                                <img
+                                  src={`${process.env.PUBLIC_URL}/photos/producer/${data1["Producer"]}.png`}
+                                  alt="Producer"
+                                  className="wine-card-image-producer"
+                                  onError={(e) => (e.currentTarget.style.display = 'none')}
+                                />
                                 {data1['PDF'] ? (
                                   <a href={`${process.env.PUBLIC_URL}/pdfs/${data1['PDF']}`} target="_blank" rel="noopener noreferrer">
                                     <Card.Img
