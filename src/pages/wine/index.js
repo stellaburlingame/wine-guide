@@ -14,6 +14,8 @@ import regions from "../../components/Regions/regions.json";
 
 import "./print.css";
 import "./index.css";
+const sustainabilityIcon = icons.filter(icon => icon.Type === "Sustainable")[0]
+const veganIcon = icons.filter(icon => icon.Type === "Vegan")[0]
 
 // Utility to get available filter options after applying current filters
 function getAvailableFilters(wines, regions, filters) {
@@ -296,11 +298,35 @@ class index extends React.Component {
                             />
                           ))}
                         </div>
-                      </Form.Group>
+
+                        {/* Vegan and Sustainability Switches */}
+                        <div>
+                          <br />
+                        <Form.Label>Filter by Practices</Form.Label>
+                          <Form.Check
+                            type="switch"
+                            id="vegan-switch"
+                            label="Only Vegan Practices"
+                            checked={this.state.veganOnly}
+                            onChange={(e) =>
+                              this.setState((prev) => ({ ...prev, veganOnly: e.target.checked }))
+                            }
+                          />
+                          <Form.Check
+                            type="switch"
+                            id="sustainability-switch"
+                            label="Only Sustainability Practices"
+                            checked={this.state.sustainableOnly}
+                            onChange={(e) =>
+                              this.setState((prev) => ({ ...prev, sustainableOnly: e.target.checked }))
+                            }
+                          />
+                        </div>
                       {/* Varietal Filter Block: Show placeholder when "All Types" is selected */}
-                      <div className="col-md-6 col-sm-12">
-                        <Form.Group>
-                          <Form.Label>Filter by Varietal</Form.Label>
+                      </Form.Group>
+
+                      <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
+                        <Form.Label>Filter by Varietal</Form.Label>
                           {this.state.selectedType !== "" ? (
                             <div>
                               <Form.Check
@@ -345,8 +371,7 @@ class index extends React.Component {
                           ) : (
                             <div className="text-muted">Select Wine Type to choose a varietal</div>
                           )}
-                        </Form.Group>
-                      </div>
+                      </Form.Group>
                       {/* Country Filter */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Country</Form.Label>
@@ -505,7 +530,7 @@ class index extends React.Component {
               <Row className="col-12 wine-print">
                 {(() => {
                   // Apply remaining filters to filteredSpecs
-                  const filteredData = filteredSpecs.filter(w => {
+                  let filteredData = filteredSpecs.filter(w => {
                     // region is already filtered by filteredSpecs
                     const varietalMatch = this.state.varietalValue === "all" || w.Varietal === this.state.varietalValue;
                     const iconMatch = this.state.selectedIcon.length === 0 ||
@@ -553,6 +578,13 @@ class index extends React.Component {
                     const boldnessMatch = !this.state.showBoldnessFilter || wineBodyValue === this.state.boldness;
                     return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
                   });
+                  // Vegan and Sustainability filters
+                  if (this.state.veganOnly) {
+                    filteredData = filteredData.filter(wine => wine.Vegan === true);
+                  }
+                  if (this.state.sustainableOnly) {
+                    filteredData = filteredData.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
+                  }
                   return filteredData.map((data1, index) => (
                     <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
                         <Card className='wine-card' bg={"Light"}>
@@ -675,7 +707,7 @@ class index extends React.Component {
                                       </div>
                                     </div>
                                   </ListGroup.Item>
-                                  {this.props.type !== "bianco" && (
+                                  {data1['Wine Type'] !== "Bianco" && (
                                     <ListGroup.Item>
                                       <strong>Tannins: </strong>
                                       <span>
@@ -691,7 +723,9 @@ class index extends React.Component {
                                           <div className="gradient-chart__triangle-indicator"
                                             style={{
                                               left: data1["Tannin Level"]?.toLowerCase() === "high" ? "100%" :
+                                                    data1["Tannin Level"]?.toLowerCase() === "medium to high" ? "75%" :
                                                     data1["Tannin Level"]?.toLowerCase() === "medium" ? "50%" :
+                                                    data1["Tannin Level"]?.toLowerCase() === "medium to low" ? "25%" :
                                                     data1["Tannin Level"]?.toLowerCase() === "low" ? "0%" : "0%",
                                             }}
                                             aria-label={`Wine has ${data1["Tannin Level"]} tannins`}>
@@ -808,7 +842,7 @@ class index extends React.Component {
                   }
                 }
                 // fallback: show first keyword match or empty string
-                const allText = `${data1["Summary"] ?? ""} ${data1["Flavor"] ?? ""} ${data1["Aroma"] ?? ""} ${data1["Body Characteristics"] ?? ""} ${data1["Tannin Characteristics"] ?? ""}`;
+                const allText = `${data1["Summary"] ?? ""} ${data1["Flavor"] ?? ""} ${data1["Aroma"] ?? ""} ${data1["Body Characteristics"] ?? ""} ${data1["Tannin Characteristics"] ?? ""} ${data1["Tannin Characteristics"] ?? ""}`;
                 const fallbackKeyword = lowerKeywords.find(k => allText.toLowerCase().includes(k)) || "";
                 this.handleModalShow({
                   Name: icon.Type,
@@ -826,8 +860,44 @@ class index extends React.Component {
         ) : null;
       });
     // Only render ListGroup.Item if there are icons to display
+    console.log("Sustainability Icon: ", sustainabilityIcon);
     return iconArray.filter(Boolean).length > 0 && (
       <ListGroup.Item className="icon-wrapper">
+        {data1['Sustainability'] && (
+          <span
+            className="badge"
+            onClick={() => {
+                  this.handleModalShow({
+                    Name: sustainabilityIcon.Type,
+                    Definition: <><strong>Definition: </strong>{sustainabilityIcon.Definition.replace(/\*\*/g, '').trim()}</>,
+                    Secondary_Text: <><strong>{data1["Wine Name"]}: </strong>{data1["Sustainability"].replace(/\*\*/g, '').trim()}</>,
+                    Image: ""
+                  });
+            }}
+            
+            style={{ marginRight: "0.5em", backgroundColor: sustainabilityIcon.Color, color: sustainabilityIcon.TextColor, cursor: "pointer" }}
+            >
+              
+              {sustainabilityIcon.Icon} {sustainabilityIcon.Type}
+            </span>
+          )}
+        {data1['Vegan'] && (
+          <span
+            className="badge"
+            onClick={() => {
+                  this.handleModalShow({
+                    Name: veganIcon.Type,
+                    Definition: <><strong>Definition: </strong>{veganIcon.Definition.replace(/\*\*/g, '').trim()}</>,
+                    Image: ""
+                  });
+            }}
+            
+            style={{ marginRight: "0.5em", backgroundColor: veganIcon.Color, color: veganIcon.TextColor, cursor: "pointer" }}
+            >
+              
+              {veganIcon.Icon} {veganIcon.Type}
+            </span>
+          )}
         {iconArray}
       </ListGroup.Item>
     );
