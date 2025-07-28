@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Range } from 'react-range';
 import Form from 'react-bootstrap/Form';
 
-function RangeExample({ onChange, min = 0, max = 395, defaultValues = [0, 395] }) {
+function RangeExample({ onChange, min = 42, max = 395, defaultValues = [42, 395] }) {
   const [values, setValues] = useState(defaultValues);
 
   const handleChange = (newValues) => {
@@ -21,7 +21,8 @@ function RangeExample({ onChange, min = 0, max = 395, defaultValues = [0, 395] }
           min={min}
           max={max}
           values={values}
-          onChange={handleChange}
+          onChange={setValues}
+          onFinalChange={handleChange}
           renderTrack={({ props, children }) => {
             // Calculate left and right percentages for the colored track
             const percentLeft = ((values[0] - min) / (max - min)) * 100;
