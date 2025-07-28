@@ -274,6 +274,7 @@ class index extends React.Component {
                   id="type-tab"
                   className="wine-type-tabs"
                   fill
+                  justify
                 >
                   <Tab eventKey="" title="All Types" />
                   {[...new Set(this.state.specs.map(w => w["Wine Type"]).filter(Boolean))].sort().map(type => (
@@ -412,7 +413,7 @@ class index extends React.Component {
                                     )
                                     .flatMap((wine) =>
                                       wine.Varietal
-                                        ? wine.Varietal.split(',').map((v) => v.trim())
+                                        ? wine.Varietal
                                         : []
                                     )
                                 )
@@ -922,7 +923,6 @@ class index extends React.Component {
         ) : null;
       });
     // Only render ListGroup.Item if there are icons to display
-    console.log("Sustainability Icon: ", sustainabilityIcon);
     return iconArray.filter(Boolean).length > 0 && (
       <ListGroup.Item className="icon-wrapper">
         {data1['Sustainability'] && (
