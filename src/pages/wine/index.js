@@ -153,6 +153,10 @@ class index extends React.Component {
             // Flatten all JSON arrays and set once
             const combinedData = results.flat();
             this.setState({ specs: combinedData });
+            const bottlePrices = combinedData
+              .map(w => parseFloat(w.Bottle_Price))
+              .filter(price => !isNaN(price) && price > 0);
+            console.log("All Bottle Prices:", bottlePrices);
           })
           .catch((err) => console.log(err));
 
@@ -331,20 +335,6 @@ class index extends React.Component {
                   <Accordion.Header>Show More Filters</Accordion.Header>
                   <Accordion.Body>
                     <Row>
-                      {/* Bottle Price Range Filter */}
-                      <div className="col-md-6 col-sm-12 fw-bold mb-3">
-                        <RangeExample
-                          minPrice={this.state.minBottlePrice}
-                          maxPrice={this.state.maxBottlePrice}
-                          onChange={({ min, max }) => {
-                            this.setState((prev) => ({
-                              ...prev,
-                              minBottlePrice: min ?? 0,
-                              maxBottlePrice: max ?? 500,
-                            }));
-                          }}
-                        />
-                      </div>
                       {/* Price Type Filter Radio Group */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Price Type</Form.Label>
@@ -366,6 +356,21 @@ class index extends React.Component {
                           ))}
                         </div>
 
+                      {/* Bottle Price Range Filter */}
+                      <div className="">
+                        <br />
+                        <RangeExample
+                          minPrice={this.state.minBottlePrice}
+                          maxPrice={this.state.maxBottlePrice}
+                          onChange={({ min, max }) => {
+                            this.setState((prev) => ({
+                              ...prev,
+                              minBottlePrice: min ?? 0,
+                              maxBottlePrice: max ?? 500,
+                            }));
+                          }}
+                        />
+                      </div>
                         {/* Vegan and Sustainability Switches */}
                         <div>
                           <br />
@@ -644,11 +649,14 @@ class index extends React.Component {
                     <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
                         <Card className='wine-card' bg={"Light"}>
                           <Card.Header>
-                            <Card.Title>
-                              {data1['Wine Name']} {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
-                              {data1['Region'] === "Piemonte, Italy" && (
+                            <Card.Text>
+                              <span className=".card-title" style={{ fontWeight: 'bold'}}>
+                                {data1['Wine Name']}
+                              </span>
+                              {' '} <Badge bg='secondary'>{data1['Vintage']}</Badge> {' '}
+                              {/* {data1['Region'] === "Piemonte" && (
                                 <Badge className="wine-piemonte" onClick={() => this.handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>Piemonte</Badge>
-                              )}{' '}
+                              )}{' '} */}
                               {data1.DOCG && (
                                 <Badge className="wine-docg" onClick={() => this.handleDefinitionShow("DOCG")} style={{ cursor: 'pointer' }}>DOCG</Badge>
                               )} {' '}
@@ -664,9 +672,17 @@ class index extends React.Component {
                               {!isNaN(parseFloat(data1.Bottle_Price)) && parseFloat(data1.Bottle_Price) > 0 && (
                                 <Badge bg='success' className="wine-price">${parseInt(data1.Bottle_Price)}/btl</Badge>
                               )}
-                            </Card.Title>
+                            </Card.Text>
                           </Card.Header>
                           <Card.Body className="wine-card-body">
+                            <Row>
+                              <ListGroup.Item className="icon-wrapper">
+                                {data1['Region'] === "Piemonte" && (
+                                  <Badge className="wine-piemonte" onClick={() => this.handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>Piemonte</Badge>
+                                )}{' '}
+                                {this.icons(data1)}
+                              </ListGroup.Item>
+                            </Row>
                             <Row>
                             <div className="col-lg-3 col-md-3 col-sm-3">
                               <div className="wine-card-image-wrapper">
@@ -705,12 +721,14 @@ class index extends React.Component {
                               </div>
                             </div>
                             <ListGroup variant="flush" className="col-lg-9 col-md-9 col-sm-9 wine-list-group">
-                              {this.icons(data1)}
+                              {/* {this.icons(data1)} */}
                               {data1["Summary"] && (
                                 <ListGroup.Item>
                                   <span>
                                     <span dangerouslySetInnerHTML={{ __html: this.format(data1["Summary"]) }} />
                                   </span>
+                                  <br />
+                                  <strong>Uniqueness:</strong> {data1["Unique Summary"]}
                                 </ListGroup.Item>
                               )}
                               <ListGroup.Item>
@@ -725,8 +743,8 @@ class index extends React.Component {
                             </ListGroup>
                             </Row>
                             <Row className="tasting-notes-wrapper">
-                            <div className="card-header row">
-                              <strong className="col" style={{maxWidth: 'fit-content'}} >Tasting Notes</strong>
+                            <div className="card-header">
+                              <strong>Tasting Notes</strong>
                               {/* {this.icons(data1)} */}
                               </div>
                             <div className="row">
@@ -770,7 +788,7 @@ class index extends React.Component {
                                       </div>
                                     </div>
                                   </ListGroup.Item>
-                                  {data1['Wine Type'] !== "Bianco" && (
+                                  {data1['Tannin Level'] !== "" && (
                                     <ListGroup.Item>
                                       <strong>Tannins: </strong>
                                       <span>
@@ -924,7 +942,7 @@ class index extends React.Component {
       });
     // Only render ListGroup.Item if there are icons to display
     return iconArray.filter(Boolean).length > 0 && (
-      <ListGroup.Item className="icon-wrapper">
+      <>
         {data1['Sustainability'] && (
           <span
             className="badge"
@@ -961,7 +979,7 @@ class index extends React.Component {
             </span>
           )}
         {iconArray}
-      </ListGroup.Item>
+      </>
     );
   }
 }
