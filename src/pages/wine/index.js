@@ -1,5 +1,6 @@
 
 import React from "react";
+import RangeExample from '../../components/RangeExample';
 import { Card, ListGroup } from "react-bootstrap";
 import Badge from 'react-bootstrap/Badge';
 import Form from 'react-bootstrap/Form';
@@ -116,6 +117,8 @@ class index extends React.Component {
         selectedPriceType: "",
         showBoldnessFilter: false,
         boldness: 0,
+        minBottlePrice: null,
+        maxBottlePrice: null,
     }
   clearAllFilters = () => {
     this.setState({
@@ -306,7 +309,9 @@ class index extends React.Component {
                     !this.state.veganOnly &&
                     !this.state.sustainableOnly &&
                     !this.state.selectedType &&
-                    this.state.varietalValue === "all";
+                    this.state.varietalValue === "all" &&
+                    this.state.minBottlePrice == null &&
+                    this.state.maxBottlePrice == null;
                   return (
                     <button
                       type="button"
@@ -325,6 +330,20 @@ class index extends React.Component {
                   <Accordion.Header>Show More Filters</Accordion.Header>
                   <Accordion.Body>
                     <Row>
+                      {/* Bottle Price Range Filter */}
+                      <div className="col-md-6 col-sm-12 fw-bold mb-3">
+                        <RangeExample
+                          minPrice={this.state.minBottlePrice}
+                          maxPrice={this.state.maxBottlePrice}
+                          onChange={({ min, max }) => {
+                            this.setState((prev) => ({
+                              ...prev,
+                              minBottlePrice: min ?? 0,
+                              maxBottlePrice: max ?? 500,
+                            }));
+                          }}
+                        />
+                      </div>
                       {/* Price Type Filter Radio Group */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Price Type</Form.Label>
@@ -606,6 +625,11 @@ class index extends React.Component {
                     };
                     const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
                     const boldnessMatch = !this.state.showBoldnessFilter || wineBodyValue === this.state.boldness;
+                    // Bottle Price Range filter
+                    let bottlePrice = Number(w.Bottle_Price);
+                    if (isNaN(bottlePrice)) bottlePrice = 0;
+                    if (this.state.minBottlePrice && bottlePrice < Number(this.state.minBottlePrice)) return false;
+                    if (this.state.maxBottlePrice && bottlePrice > Number(this.state.maxBottlePrice)) return false;
                     return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
                   });
                   // Vegan and Sustainability filters
@@ -651,6 +675,7 @@ class index extends React.Component {
                                   alt="Producer"
                                   className="wine-card-image-producer"
                                   onError={(e) => (e.currentTarget.style.display = 'none')}
+                                  onLoad={(e) => (e.currentTarget.style.display = '')}
                                 />
                                 {data1['PDF'] ? (
                                   <a href={`${process.env.PUBLIC_URL}/pdfs/${data1['PDF']}`} target="_blank" rel="noopener noreferrer">
