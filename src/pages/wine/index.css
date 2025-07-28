@@ -30,16 +30,15 @@
 }
 /* Wine Card Image */
 .wine-card-image {
-  height: calc(400px - 1em);
+  height: calc(400px - 4rem);
   width: auto;
   border-radius: 4px;
   display: block;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  position: relative;
   z-index: 4;
-  margin: 0;
-  padding-bottom: 1.5rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   filter:
     /* heavier bottom-left*/ 
     drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1)) 
@@ -83,13 +82,12 @@
 .wine-card {
   margin-bottom: 1rem !important;
   margin-top: 1rem !important;
-  position: relative;
 }
 .wine-card-right-image {
-  width: 70%;
+  width: 65%;
 }
 .wine-card-left-image {
-  width: 30%;
+  width: 35%;
 }
 .wine-pairing-text {
   margin-right: 1px;
@@ -174,15 +172,20 @@ body {
     border-bottom: .25rem;
     margin-top: calc(var(--bs-nav-tabs-border-width) * -1); */
 }
+
 .wine-card-image-producer {
-  width: 6rem;
-  left: 1rem;
+  width: 60%;
+  left: -.5rem;
   height: auto;
-  border-radius: 4px;
   display: block;
   position: absolute;
-  top: 1rem;
+  top: .5rem;
   z-index: 99;
   margin: 0 auto;
   padding-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .wine-card-image-producer {
+    width: 35%;
+  }
 }

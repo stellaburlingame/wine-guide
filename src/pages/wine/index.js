@@ -257,7 +257,7 @@ class index extends React.Component {
         );
         return (
             <>
-            <Row className="p-3">
+            <Row className="p-3  form-wrapper">
               {/* Type Filter Tabs */}
               <Form.Group className="p-0 col-12">
                 <Tabs

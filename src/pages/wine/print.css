@@ -127,4 +127,7 @@
         margin: 0;
         padding: 0;
     }
+    .wine-card-image-producer {
+        width: 30% !important;
+    }
 }
