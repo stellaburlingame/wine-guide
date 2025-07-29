@@ -120,6 +120,8 @@ class index extends React.Component {
         minBottlePrice: null,
         maxBottlePrice: null,
         producerOffsetClasses: {},
+        // Add new filter for Top Picks
+        topPicks: false,
     }
   clearAllFilters = () => {
     this.setState({
@@ -133,7 +135,8 @@ class index extends React.Component {
       veganOnly: false,
       sustainableOnly: false,
       selectedType: '',
-      varietalValue: 'all'
+      varietalValue: 'all',
+      topPicks: false
     });
   }
     // Add logic to set selectedType and filter by Wine Type based on hash on mount
@@ -142,6 +145,30 @@ class index extends React.Component {
         const match = window.location.href.match(/\/#\/wine#([\w-]+)/);
         const typeFromHash = match ? match[1] : "";
         this.setState({ selectedType: typeFromHash });
+
+        // --- Begin hash filter logic for #top ---
+        // Only apply this logic if hash is exactly "#top"
+        const hash = window.location.hash.toLowerCase();
+        console.log("Current hash:", hash);
+        if (hash === '#/wine-top-picks') {
+          // Only apply Top Bottle and Top Glass, all else default
+          this.setState({
+            selectedCountry: '',
+            selectedRegion: '',
+            selectedPriceType: '',
+            selectedIcon: [],
+            showBoldnessFilter: false,
+            veganOnly: false,
+            sustainableOnly: false,
+            selectedType: '',
+            varietalValue: 'all',
+            minBottlePrice: null,
+            maxBottlePrice: null,
+            topPicks: true,
+            searchQuery: ''
+          });
+        }
+        // --- End hash filter logic for #top ---
 
         Promise.all(
           ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
@@ -162,10 +189,10 @@ class index extends React.Component {
               producerOffsetClasses[idx] = rand;
             });
             this.setState({ producerOffsetClasses });
-            const bottlePrices = combinedData
-              .map(w => parseFloat(w.Bottle_Price))
-              .filter(price => !isNaN(price) && price > 0);
-            console.log("All Bottle Prices:", bottlePrices);
+            // const bottlePrices = combinedData
+            //   .map(w => parseFloat(w.Bottle_Price))
+            //   .filter(price => !isNaN(price) && price > 0);
+            // console.log("All Bottle Prices:", bottlePrices);
           })
           .catch((err) => console.log(err));
 
@@ -193,7 +220,21 @@ class index extends React.Component {
         }
     }
     componentDidUpdate(prevProps, prevState) {
-      // Optional: if you ever want to react to prop changes in the future
+      // Optional: react to prop changes in the future
+      console.log("Component updated with new props:", this.props);
+      // Handle prop.type === 'top' to activate Top Picks filter and set wineType to 'top'
+      if (this.props.type === 'top' && prevProps.type !== 'top') {
+        this.setState((prevState) => ({
+          ...prevState,
+          topPicks: true,
+        }));
+      }
+      if (this.props.type !== 'top' && prevProps.type === 'top') {
+        this.setState((prevState) => ({
+          ...prevState,
+          topPicks: false,
+        }));
+      }
       if (JSON.stringify(this.state.specs) !== JSON.stringify(prevState.specs)) {
         return;
       }
@@ -247,6 +288,11 @@ class index extends React.Component {
     this.setState({ selectedCountry, selectedRegion: "" });
   }
   render() {
+        // Only render filters if enableFilters prop is true (or undefined, for backward compatibility)
+        if (this.props.enableFilters === false) {
+          // If explicitly set to false, do not render filters or results.
+          return null;
+        }
         // --- region/country filter logic for filtering ---
         const filteredSpecs = this.state.specs.filter((wine) => {
           // Use regions mapping to get country for wine.Region
@@ -275,11 +321,17 @@ class index extends React.Component {
             <>
             <Row className="p-3  form-wrapper">
               {/* Type Filter Tabs */}
-              <Form.Group className="p-0 col-12">
+              <Form.Group className="p-0 col-12" hidden={this.state.topPicks}>
                 <Tabs
                   activeKey={this.state.selectedType}
                   onSelect={(k) => {
-                    this.setState({ selectedType: k });
+                    // Handle Top Picks logic
+                    const isTopTab = k === "top";
+                    this.setState((prevState) => ({
+                      ...prevState,
+                      selectedType: k,
+                      topPicks: isTopTab ? true : false
+                    }));
                     const url = new URL(window.location.href);
                     url.hash = `#/wine#${k}`;
                     window.history.pushState(null, "", url);
@@ -290,9 +342,11 @@ class index extends React.Component {
                   justify
                 >
                   <Tab eventKey="" title="All Types" />
-                  {[...new Set(this.state.specs.map(w => w["Wine Type"]).filter(Boolean))].sort().map(type => (
-                    <Tab key={type} eventKey={type} title={type} />
-                  ))}
+                  <Tab eventKey="italiano" title="Italiano" />
+                  <Tab eventKey="rosso" title="Rosso" />
+                  <Tab eventKey="bianco" title="Bianco" />
+                  <Tab eventKey="sparkling" title="Sparkling" />
+                  <Tab eventKey="rose" title="Rose" />
                 </Tabs>
               </Form.Group>
             <Card body className="form-wrapper">
@@ -325,7 +379,8 @@ class index extends React.Component {
                     !this.state.selectedType &&
                     this.state.varietalValue === "all" &&
                     this.state.minBottlePrice == null &&
-                    this.state.maxBottlePrice == null;
+                    this.state.maxBottlePrice == null &&
+                    !this.state.topPicks;
                   return (
                     <button
                       type="button"
@@ -406,54 +461,58 @@ class index extends React.Component {
                       {/* Varietal Filter Block: Show placeholder when "All Types" is selected */}
                       </Form.Group>
 
+                      {/* ---- Varietal Filter: Show only varietals available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Varietal</Form.Label>
-                          {this.state.selectedType !== "" ? (
-                            <div>
-                              <Form.Check
-                                inline
-                                type="radio"
-                                label="All"
-                                name="varietal"
-                                value="all"
-                                checked={this.state.varietalValue === "all"}
-                                onChange={(e) => this.setState({ varietalValue: e.target.value })}
-                              />
-                              {Array.from(
-                                new Set(
-                                  this.state.specs
-                                    .filter((wine) =>
-                                      wine["Wine Type"] === this.state.selectedType
-                                    )
-                                    .flatMap((wine) =>
-                                      wine.Varietal
-                                        ? wine.Varietal
-                                        : []
-                                    )
+                        {this.state.selectedType !== "" ? (
+                          <div>
+                            <Form.Check
+                              inline
+                              type="radio"
+                              label="All"
+                              name="varietal"
+                              value="all"
+                              checked={this.state.varietalValue === "all"}
+                              onChange={(e) => this.setState({ varietalValue: e.target.value })}
+                            />
+                            {(this.state.topPicks
+                              ? Array.from(
+                                  new Set(
+                                    this.state.specs
+                                      .filter(w => (w["Top Bottle"] || w["Top Glass"]) && w["Wine Type"] === this.state.selectedType)
+                                      .flatMap(w => w.Varietal ? w.Varietal : [])
+                                  )
                                 )
-                              )
-                                .sort()
-                                .map((varietal) => (
-                                  <Form.Check
-                                    key={varietal}
-                                    type="radio"
-                                    inline
-                                    name="varietal"
-                                    value={varietal}
-                                    id={`varietal-${varietal}`}
-                                    label={varietal}
-                                    checked={this.state.varietalValue === varietal}
-                                    onChange={(e) =>
-                                      this.setState((prev) => ({ ...prev, varietalValue: e.target.value }))
-                                    }
-                                  />
-                                ))}
-                            </div>
-                          ) : (
-                            <div className="text-muted">Select Wine Type to choose a varietal</div>
-                          )}
+                              : Array.from(
+                                  new Set(
+                                    this.state.specs
+                                      .filter(wine => wine["Wine Type"] === this.state.selectedType)
+                                      .flatMap(wine => wine.Varietal ? wine.Varietal : [])
+                                  )
+                                )
+                            )
+                              .sort()
+                              .map((varietal) => (
+                                <Form.Check
+                                  key={varietal}
+                                  type="radio"
+                                  inline
+                                  name="varietal"
+                                  value={varietal}
+                                  id={`varietal-${varietal}`}
+                                  label={varietal}
+                                  checked={this.state.varietalValue === varietal}
+                                  onChange={(e) =>
+                                    this.setState((prev) => ({ ...prev, varietalValue: e.target.value }))
+                                  }
+                                />
+                              ))}
+                          </div>
+                        ) : (
+                          <div className="text-muted">Select Wine Type to choose a varietal</div>
+                        )}
                       </Form.Group>
-                      {/* Country Filter */}
+                      {/* ---- Country Filter: Show only countries available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Country</Form.Label>
                         <div>
@@ -464,32 +523,52 @@ class index extends React.Component {
                             value=""
                             checked={this.state.selectedCountry === ""}
                             onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
-                            // "All" is always enabled
                           />
-                          {countries.concat(
-                            this.state.selectedCountry && !countries.includes(this.state.selectedCountry)
-                              ? [this.state.selectedCountry]
-                              : []
-                          ).filter((v, i, arr) => arr.indexOf(v) === i).map((country) => (
-                            <Form.Check
-                              key={country}
-                              type="radio"
-                              label={country}
-                              name="country"
-                              value={country}
-                              checked={this.state.selectedCountry === country}
-                              onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
-                            />
-                          ))}
+                          {(this.state.topPicks
+                            ? Array.from(
+                                new Set(
+                                  this.state.specs
+                                    .filter(w => w["Top Bottle"] || w["Top Glass"])
+                                    .map(w => regions[w.Region]?.Country || w.Country)
+                                    .filter(Boolean)
+                                )
+                              )
+                            : countries
+                          )
+                            .concat(
+                              this.state.selectedCountry &&
+                                !(
+                                  this.state.topPicks
+                                    ? this.state.specs
+                                        .filter(w => w["Top Bottle"] || w["Top Glass"])
+                                        .map(w => regions[w.Region]?.Country || w.Country)
+                                        .filter(Boolean)
+                                        .includes(this.state.selectedCountry)
+                                    : countries.includes(this.state.selectedCountry)
+                                )
+                                ? [this.state.selectedCountry]
+                                : []
+                            )
+                            .filter((v, i, arr) => arr.indexOf(v) === i)
+                            .map((country) => (
+                              <Form.Check
+                                key={country}
+                                type="radio"
+                                label={country}
+                                name="country"
+                                value={country}
+                                checked={this.state.selectedCountry === country}
+                                onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
+                              />
+                            ))}
                         </div>
                       </Form.Group>
-                      {/* Region Filter: Always render the Form.Group for layout, but only render filtered region options */}
+                      {/* ---- Region Filter: Show only regions available in top picks if topPicks is active ---- */}
                       <div className="col-md-6 col-sm-12">
                         <Form.Group>
                           <Form.Label>Filter by Region</Form.Label>
-
                           {this.state.selectedCountry && this.state.selectedCountry !== "all" ? (
-                          <></>
+                            <></>
                           ) : (
                             <div className="text-muted" style={{ height: '38px', paddingTop: '6px' }}>
                               Select a country to choose a region
@@ -505,37 +584,64 @@ class index extends React.Component {
                               checked={this.state.selectedRegion === ""}
                               onChange={(e) => this.setState({ selectedRegion: e.target.value })}
                             />
-                            {Object.keys(regions)
-                              .filter(region =>
-                                this.state.selectedCountry === "all" ||
-                                this.state.selectedCountry === "" ||
-                                regions[region]?.Country === this.state.selectedCountry
-                              )
-                              .map(region => (
-                                <Form.Check
-                                  key={region}
-                                  type="radio"
-                                  inline
-                                  name="region"
-                                  value={region}
-                                  label={region}
-                                  checked={this.state.selectedRegion === region}
-                                  onChange={(e) => this.setState({ selectedRegion: e.target.value })}
-                                />
-                              ))}
+                            {(this.state.topPicks
+                              ? Object.keys(regions)
+                                  .filter(region =>
+                                    (this.state.selectedCountry === "all" ||
+                                      this.state.selectedCountry === "" ||
+                                      regions[region]?.Country === this.state.selectedCountry) &&
+                                    this.state.specs.some(
+                                      w =>
+                                        (w["Top Bottle"] || w["Top Glass"]) &&
+                                        w.Region === region
+                                    )
+                                  )
+                              : Object.keys(regions).filter(region =>
+                                  this.state.selectedCountry === "all" ||
+                                  this.state.selectedCountry === "" ||
+                                  regions[region]?.Country === this.state.selectedCountry
+                                )
+                            ).map(region => (
+                              <Form.Check
+                                key={region}
+                                type="radio"
+                                inline
+                                name="region"
+                                value={region}
+                                label={region}
+                                checked={this.state.selectedRegion === region}
+                                onChange={(e) => this.setState({ selectedRegion: e.target.value })}
+                              />
+                            ))}
                           </div>
                         </Form.Group>
                       </div>
-                      {/* Top Icon Filter */}
+                      {/* ---- Top Icon Filter: Show only icons available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Description</Form.Label>
                         <div>
-                          {Array.from(new Set(
-                            this.state.specs.flatMap(wine => wine['Top Icons'] || [])
-                              .concat(
-                                this.state.selectedIcon.filter(icon => !this.state.specs.flatMap(wine => wine['Top Icons'] || []).includes(icon))
+                          {Array.from(
+                            new Set(
+                              (this.state.topPicks
+                                ? this.state.specs
+                                    .filter(w => w["Top Bottle"] || w["Top Glass"])
+                                    .flatMap(w => w['Top Icons'] || [])
+                                : this.state.specs.flatMap(wine => wine['Top Icons'] || [])
+                              ).concat(
+                                this.state.selectedIcon.filter(
+                                  icon =>
+                                    !(
+                                      this.state.topPicks
+                                        ? this.state.specs
+                                            .filter(w => w["Top Bottle"] || w["Top Glass"])
+                                            .flatMap(w => w['Top Icons'] || [])
+                                            .includes(icon)
+                                        : this.state.specs.flatMap(wine => wine['Top Icons'] || []).includes(icon)
+                                    )
+                                )
                               )
-                          )).map((icon, idx) => (
+                            )
+                          ).map((icon, idx) => (
                             <Form.Check
                               key={idx}
                               type="checkbox"
@@ -551,7 +657,15 @@ class index extends React.Component {
                                   return { selectedIcon: [...icons] };
                                 });
                               }}
-                              disabled={!availableFilters.icons.includes(icon) && !this.state.selectedIcon.includes(icon)}
+                              disabled={
+                                !(this.state.topPicks
+                                  ? this.state.specs
+                                      .filter(w => w["Top Bottle"] || w["Top Glass"])
+                                      .flatMap(w => w['Top Icons'] || [])
+                                      .includes(icon)
+                                  : availableFilters.icons.includes(icon)
+                                ) && !this.state.selectedIcon.includes(icon)
+                              }
                             />
                           ))}
                         </div>
@@ -594,71 +708,85 @@ class index extends React.Component {
               <Row className="col-12 wine-print">
                 {(() => {
                   // Apply remaining filters to filteredSpecs
-                  let filteredData = filteredSpecs.filter(w => {
-                    // region is already filtered by filteredSpecs
-                    const varietalMatch = this.state.varietalValue === "all" || w.Varietal === this.state.varietalValue;
-                    const iconMatch = this.state.selectedIcon.length === 0 ||
-                      (w['Top Icons'] && this.state.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
-                    const typeMatch = this.state.selectedType
-                      ? (w["Wine Type"]?.toLowerCase() === this.state.selectedType.toLowerCase())
-                      : true;
-                    const searchableFields = [
-                      'Summary',
-                      'Flavor',
-                      'Aroma',
-                      'Finish',
-                      'Acidity',
-                      'Body',
-                      'Body Characteristics',
-                      'Tannins',
-                      'Tannin Characteristics',
-                      'Stella Recommended',
-                      'Vinification',
-                      'Maturation',
-                      'Region',
-                      'Vineyard',
-                      'Wine Name',
-                      'Vintage',
-                      'Sweetness'
-                    ];
-                    const searchMatch = !this.state.searchQuery ||
-                      searchableFields.some(field =>
-                        w[field]?.toString().toLowerCase().includes(this.state.searchQuery)
-                      );
-                    const priceMatch = this.state.selectedPriceType === "glass"
-                      ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
-                      : this.state.selectedPriceType === "bottle"
-                        ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
+                  let filteredData;
+                  // If #top hash, only apply Top Bottle/Top Glass filter, all else default
+                  if (window.location.hash.toLowerCase() === "#/wine#top") {
+                    filteredData = this.state.specs.filter(w => w["Top Bottle"] || w["Top Glass"]);
+                  } else {
+                    filteredData = filteredSpecs.filter(w => {
+                      // region is already filtered by filteredSpecs
+                      const varietalMatch = this.state.varietalValue === "all" || w.Varietal === this.state.varietalValue;
+                      const iconMatch = this.state.selectedIcon.length === 0 ||
+                        (w['Top Icons'] && this.state.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
+                      const typeMatch = this.state.selectedType
+                        ? (w["Wine Type"]?.toLowerCase() === this.state.selectedType.toLowerCase())
                         : true;
-                    // Boldness filter
-                    const bodyScale = {
-                      "light": 0,
-                      "light to medium": 0.25,
-                      "medium": 0.5,
-                      "medium to full": 0.75,
-                      "full": 1
-                    };
-                    const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
-                    const boldnessMatch = !this.state.showBoldnessFilter || wineBodyValue === this.state.boldness;
-                    // Bottle Price Range filter
-                    let bottlePrice = Number(w.Bottle_Price);
-                    if (isNaN(bottlePrice)) bottlePrice = 0;
-                    if (this.state.minBottlePrice && bottlePrice < Number(this.state.minBottlePrice)) return false;
-                    if (this.state.maxBottlePrice && bottlePrice > Number(this.state.maxBottlePrice)) return false;
-                    return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
-                  });
-                  // Vegan and Sustainability filters
-                  if (this.state.veganOnly) {
-                    filteredData = filteredData.filter(wine => wine.Vegan === true);
-                  }
-                  if (this.state.sustainableOnly) {
-                    filteredData = filteredData.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
+                      const searchableFields = [
+                        'Summary',
+                        'Flavor',
+                        'Aroma',
+                        'Finish',
+                        'Acidity',
+                        'Body',
+                        'Body Characteristics',
+                        'Tannins',
+                        'Tannin Characteristics',
+                        'Stella Recommended',
+                        'Vinification',
+                        'Maturation',
+                        'Region',
+                        'Vineyard',
+                        'Wine Name',
+                        'Vintage',
+                        'Sweetness'
+                      ];
+                      const searchMatch = !this.state.searchQuery ||
+                        searchableFields.some(field =>
+                          w[field]?.toString().toLowerCase().includes(this.state.searchQuery)
+                        );
+                      const priceMatch = this.state.selectedPriceType === "glass"
+                        ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
+                        : this.state.selectedPriceType === "bottle"
+                          ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
+                          : true;
+                      // Boldness filter
+                      const bodyScale = {
+                        "light": 0,
+                        "light to medium": 0.25,
+                        "medium": 0.5,
+                        "medium to full": 0.75,
+                        "full": 1
+                      };
+                      const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
+                      const boldnessMatch = !this.state.showBoldnessFilter || wineBodyValue === this.state.boldness;
+                      // Bottle Price Range filter
+                      let bottlePrice = Number(w.Bottle_Price);
+                      if (isNaN(bottlePrice)) bottlePrice = 0;
+                      if (this.state.minBottlePrice && bottlePrice < Number(this.state.minBottlePrice)) return false;
+                      if (this.state.maxBottlePrice && bottlePrice > Number(this.state.maxBottlePrice)) return false;
+                      // Top Picks filter
+                      if (this.state.topPicks && !w["Top Bottle"] && !w["Top Glass"]) return false;
+                      return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
+                    });
+                    // Vegan and Sustainability filters
+                    if (this.state.veganOnly) {
+                      filteredData = filteredData.filter(wine => wine.Vegan === true);
+                    }
+                    if (this.state.sustainableOnly) {
+                      filteredData = filteredData.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
+                    }
                   }
                   return filteredData.map((data1, index) => (
                     <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
                         <Card className='wine-card' bg={"Light"}>
                           <Card.Header>
                             <Card.Text>
+                              {data1["Top Bottle"] && (
+                                <Badge className="wine-top-selling">⭐️ Top Selling Bottle</Badge>
+                              )} {' '}
+                              {data1["Top Glass"] && (
+                                <Badge className="wine-top-selling">⭐️ Top Selling Glass</Badge>
+                              )} {' '}
                               <span className=".card-title" style={{ fontWeight: 'bold'}}>
                                 {data1['Wine Name']}
                               </span>
@@ -687,7 +815,7 @@ class index extends React.Component {
                             <Row>
                               <ListGroup.Item className="icon-wrapper">
                                 {data1['Region'] === "Piemonte" && (
-                                  <Badge className="wine-piemonte" onClick={() => this.handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>Piemonte</Badge>
+                                  <Badge className="wine-piemonte" onClick={() => this.handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>✨ Piemonte</Badge>
                                 )}{' '}
                                 {this.icons(data1)}
                               </ListGroup.Item>

@@ -20,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="wine" element={<Wine />} />
+          <Route path="wine-top-picks" element={<Wine type='top' />} />
           <Route path="italiano" element={<Wine type='italiano' />} />
           <Route path="rosso" element={<Wine type='rosso' />} />
           <Route path="bianco" element={<Wine type='bianco' />} />

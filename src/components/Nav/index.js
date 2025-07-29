@@ -26,6 +26,7 @@ function Index(props) {
                     <Link variant="outline-*" className="nav-link" to="/">Home</Link>
                     <Link variant="outline-*" className="nav-link" to="definitions">Definitions</Link>
                     <Link variant="outline-*" className="nav-link" to="wine">Wines</Link>
+                    <Link variant="outline-*" className="nav-link" to="wine-top-picks">Top Wine Picks</Link>
                 </ul>
                 </div>
             </div>
