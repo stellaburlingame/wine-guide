@@ -37,7 +37,7 @@
   position: relative;
   z-index: 4;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: .2rem;
   padding-bottom: 1rem;
   filter:
     /* heavier bottom-left*/ 
@@ -187,4 +187,22 @@ body {
   .wine-card-image-producer {
     width: 35%;
   }
+}
+.producer-background {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.producer-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -20px; right: 0; bottom: 0;
+  background-repeat: repeat;
+  background-size: 120px auto;
+  background-position: left;
+  opacity: 0.3; /* just the background */
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--producer-bg);
 }

@@ -684,16 +684,19 @@ class index extends React.Component {
                               </ListGroup.Item>
                             </Row>
                             <Row>
-                            <div className="col-lg-3 col-md-3 col-sm-3">
+                            <div className="col-lg-3 col-md-3 col-sm-3 producer-background"
+                            style={{
+                              '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/${encodeURIComponent(data1["Producer"])}.png)`                            }}
+                            >
+                              
                               <div className="wine-card-image-wrapper">
-
-                                <img
+                                {/* <img
                                   src={`${process.env.PUBLIC_URL}/photos/producer/${data1["Producer"]}.png`}
                                   alt="Producer"
                                   className="wine-card-image-producer"
                                   onError={(e) => (e.currentTarget.style.display = 'none')}
                                   onLoad={(e) => (e.currentTarget.style.display = '')}
-                                />
+                                /> */}
                                 {data1['PDF'] ? (
                                   <a href={`${process.env.PUBLIC_URL}/pdfs/${data1['PDF']}`} target="_blank" rel="noopener noreferrer">
                                     <Card.Img
