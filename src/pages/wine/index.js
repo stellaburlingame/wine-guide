@@ -119,6 +119,7 @@ class index extends React.Component {
         boldness: 0,
         minBottlePrice: null,
         maxBottlePrice: null,
+        producerOffsetClasses: {},
     }
   clearAllFilters = () => {
     this.setState({
@@ -153,6 +154,14 @@ class index extends React.Component {
             // Flatten all JSON arrays and set once
             const combinedData = results.flat();
             this.setState({ specs: combinedData });
+            // Assign a random background offset class for each wine
+            const offsetClasses = ['random-offset-1', 'random-offset-2', 'random-offset-3', 'random-offset-4', 'random-offset-5'];
+            const producerOffsetClasses = {};
+            combinedData.forEach((wine, idx) => {
+              const rand = offsetClasses[Math.floor(Math.random() * offsetClasses.length)];
+              producerOffsetClasses[idx] = rand;
+            });
+            this.setState({ producerOffsetClasses });
             const bottlePrices = combinedData
               .map(w => parseFloat(w.Bottle_Price))
               .filter(price => !isNaN(price) && price > 0);
@@ -684,9 +693,11 @@ class index extends React.Component {
                               </ListGroup.Item>
                             </Row>
                             <Row>
-                            <div className="col-lg-3 col-md-3 col-sm-3 producer-background"
-                            style={{
-                              '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/${encodeURIComponent(data1["Producer"])}.png)`                            }}
+                            <div
+                              className={`col-lg-3 col-md-3 col-sm-3 producer-background ${this.state.producerOffsetClasses[index]}`}
+                              style={{
+                                '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(data1["Producer"])}.png)`
+                              }}
                             >
                               
                               <div className="wine-card-image-wrapper">
