@@ -745,7 +745,7 @@ class index extends React.Component {
                           w[field]?.toString().toLowerCase().includes(this.state.searchQuery)
                         );
                       const priceMatch = this.state.selectedPriceType === "glass"
-                        ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
+                        ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) >= 0)
                         : this.state.selectedPriceType === "bottle"
                           ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
                           : true;
