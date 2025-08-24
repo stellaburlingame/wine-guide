@@ -12,6 +12,7 @@ import TableOfConents from "./pages/TableOfConents";
 import Home from "./pages/home";
 import NotFound from "./pages/NotFound";
 import Definitions from "./pages/definitions";
+import Credits from "./pages/credits";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="sparkling" element={<Wine type='sparkling' />} />
           <Route path="rose" element={<Wine type='rose' />} />
           <Route path="definitions" element={<Definitions/>} />
+          <Route path="credits" element={<Credits/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
