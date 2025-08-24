@@ -7,47 +7,29 @@ import { Link } from "react-router-dom";
 
 function Index(props) {
     return (
-        <>
-        
-        <CardGroup>
-                <Card className="m-3">
-                    <Card.Header>
-                        <Card.Title>Wine Specification</Card.Title>
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Text>
-                        A list of all wines and their specifications
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <Link variant="outline-*" className="navbar-brand logo" to="wine"><Button variant="primary">Visit</Button></Link>
-                        {/* <Link variant="outline-*" className="navbar-brand logo" to="all"><Button variant="primary">All Wines</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="italiano"><Button variant="primary">Rosso Italiano</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="rosso"><Button variant="primary">Rosso</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="bianco"><Button variant="primary">Bianco</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="sparkling"><Button variant="primary">Sparkling</Button></Link>
-                        <Link variant="outline-*" className="navbar-brand logo" to="rose"><Button variant="primary">Rose</Button></Link> */}
-                    </Card.Footer>
-                </Card>
-            </CardGroup>
-
-        <CardGroup>
-            <Card className="m-3">
-                <Card.Header>
-                    <Card.Title>Wine Definitions</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                    <Card.Text>
-                        Dictionary of wine terms and definitions
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <Link variant="outline-*" className="navbar-brand logo" to="definitions"><Button variant="primary">View</Button></Link>
-                    
-                </Card.Footer>
-            </Card>
-        </CardGroup>
-        </>
+        <main>
+            <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+                <div className="col-md-8 p-lg-5 mx-auto my-5">
+                    <div className="d-flex align-items-center justify-content-center">
+                        <img src="wine-training/assets/light.svg" alt="Stella Logo" height="120" className="me-3" />
+                        <h1 className="display-3 fw-bold">Welcome to the Stella Wine Guide</h1>
+                    </div>
+                    <h3 className="fw-normal text-muted mb-3">
+                        Explore our curated wine list, tasting notes, and recommended pairings
+                    </h3>
+                    <div className="d-flex justify-content-center gap-3 mt-4">
+                        <Link to="wine">
+                            <Button variant="primary" size="lg">Wine List</Button>
+                        </Link>
+                        <Link to="credits">
+                            <Button variant="outline-secondary" size="lg">Credits</Button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="product-device shadow-sm d-none d-md-block"></div>
+                <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            </div>
+        </main>
     );
 }
 

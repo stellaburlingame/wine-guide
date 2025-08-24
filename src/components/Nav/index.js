@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 
 require('./index.css')
-
 function Index(props) {
     return (
         <main>
@@ -13,12 +12,12 @@ function Index(props) {
                 <Navbar.Brand href="#home">
                     <img
                     alt=""
-                    src="/assets/dark.svg"
+                    src={`/wine-training/assets/dark.svg`}
                     width="30px"
                     height="30px"
                     className="d-inline-block align-top"
                     />{' '}
-                    Wine Training
+                    Stella Wine Guide
                 </Navbar.Brand>
                 </Link>
                 <div id="navbarNav">
