@@ -19,6 +19,7 @@
   "Maturation": "Aged for nine months on fine lees before bottling.",
   "Type of cask": "Stainless steel (unoaked)",
   "Color": "Pale golden yellow with light green glints; bright and luminous.",
+  "Hex": "#EAF2B8",
   "Region": "Chablis",
   "Appellation": "Chablis",
   "Vineyard": "Sloping right bank of the Serein river; south/south-east exposition",
@@ -74,6 +75,7 @@
   "Bottle_Price": 105,
   "PDF": "FlowersSonomaCoastChardonnay2022.pdf",
   "Top Icons": ["Floral", "Citrus", "Minerality", "Balanced", "Complex"],
+  "Hex": "#F4EEC5",
   "Sustainability": "Organically farmed estate vineyard and like-minded partner sites",
   "Vegan": false
 },
@@ -113,6 +115,7 @@
   "Bottle_Price": 98,
   "PDF": "GrgichHillsEstateChardonnay2022.pdf",
   "Top Icons": ["Citrus", "Tropical Fruit", "Balanced", "Complex"],
+  "Hex": "#E8D27C",
   "Sustainability": "Certified regenerative organic farming across all estate vineyards",
   "Vegan": false
 },
@@ -159,6 +162,7 @@
     "Balanced",
     "Tropical Fruit"
   ],
+  "Hex": "#F0F6C8",
   "Sustainability": "",
   "Vegan": false
 },
@@ -198,6 +202,7 @@
   "Bottle_Price": 60,
   "PDF": "GaviDOCGWhiteLabel.pdf",
   "Top Icons": ["Citrus", "Balanced", "Minerality", "Complex", "Aged", "Vegan"],
+  "Hex": "#EEF7C9",
   "Sustainability": "",
   "Vegan": true
 },
@@ -237,6 +242,7 @@
   "Bottle_Price": 60,
   "PDF": "MarcoFellugaMongrisPinotGrigio2023.pdf",
   "Top Icons": ["Stone Fruit", "Floral", "Minerality", "Balanced"],
+  "Hex": "#F3E7B0",
   "Sustainability": "Sustainable farming practices with vineyard parcels aged 20–50 years",
   "Vegan": true
 },
@@ -276,6 +282,7 @@
   "Bottle_Price": 68,
   "PDF": "KenWrightTyrusEvanPinotGris2022.pdf",
   "Top Icons": ["Stone Fruit", "Floral", "Balanced", "Silky", "Fruity/Berry"],
+  "Hex": "#F2E39A",
   "Sustainability": "",
   "Vegan": false
 },
@@ -315,6 +322,7 @@
   "Bottle_Price": 79,
   "PDF": "CakebreadSauvignonBlanc2023.pdf",
   "Top Icons": ["Citrus", "Tropical Fruit", "Balanced", "Minerality"],
+  "Hex": "#F3F8D2",
   "Sustainability": "",
   "Vegan": false
 },
@@ -354,6 +362,7 @@
   "Bottle_Price": 68,
   "PDF": "PEJULegacySauvignonBlanc2023.pdf",
   "Top Icons": ["Tropical Fruit", "Citrus", "Balanced", "Minerality"],
+  "Hex": "#F4F9D6",
   "Sustainability": "Certified Napa Green and Fish Friendly Farming across estate vineyards",
   "Vegan": false
 },
@@ -393,6 +402,7 @@
   "Bottle_Price": 62,
   "PDF": "PlinioVermentinoMaremmaToscana.pdf",
   "Top Icons": ["Floral", "Stone Fruit", "Herbal", "Minerality", "Balanced"],
+  "Hex": "#EDF6C1",
   "Sustainability": "",
   "Vegan": true,
   "Top Bottle": true
@@ -433,6 +443,7 @@
   "Bottle_Price": 0,
   "PDF": "ChalkHillSonomaCoastChardonnay2023.pdf",
   "Top Icons": ["Stone Fruit", "Oaky/Vanilla", "Floral", "Balanced", "Complex"],
+  "Hex": "#F0D58C",
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
@@ -473,6 +484,7 @@
   "Bottle_Price": 0,
   "PDF": "DryCreekVineyardDCV3SauvignonBlanc2023.pdf",
   "Top Icons": ["Citrus", "Tropical Fruit", "Floral", "Herbal", "Balanced"],
+  "Hex": "#F5F6CF",
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
@@ -519,6 +531,7 @@
     "Minerality",
     "Balanced"
   ],
+  "Hex": "#F6ECDD",
   "Sustainability": "",
   "Vegan": false
 }

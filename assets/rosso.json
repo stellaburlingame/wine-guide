@@ -34,6 +34,7 @@
     "Bottle_Price": 255,
     "PDF": "FarNienteCabernetSauvignon2022.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Silky", "Balanced", "Complex"],
+    "Hex": "#6B0F1A",
     "Sustainability": "",
     "Vegan": false
   },
@@ -72,6 +73,7 @@
     "Bottle_Price": 110,
     "PDF": "GrgichHillsEstateCabernetSauvignon2020.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Oaky/Vanilla", "Balanced"],
+    "Hex": "#5D1A2E",
     "Sustainability": "Certified regenerative organic farming practices across all estate vineyards.",
     "Vegan": false
   },
@@ -110,6 +112,7 @@
     "Bottle_Price": 0,
     "PDF": "KenWrightWillametteValleyPinotNoir2023.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Balanced", "Silky"],
+    "Hex": "#9E2A2F",
     "Sustainability": "Certified Organic farming; focus on high-level evidence-supported nutritional farming",
     "Vegan": false,
     "Top Glass": true
@@ -150,6 +153,7 @@
     "Bottle_Price": 195,
     "PDF": "CaymusCabernetSauvignon50thAnniversaryEdition2022.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Chocolate", "Bold", "Complex", "Aged"],
+    "Hex": "#3A0033",
     "Sustainability": "",
     "Vegan": false
   },
@@ -189,6 +193,7 @@
     "Bottle_Price": 78,
     "PDF": "JUSTINCabernetSauvignon2021.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Spice", "Herbal", "Chocolate", "Balanced"],
+    "Hex": "#5E0F19",
     "Sustainability": "",
     "Vegan": false,
     "Top Bottle": true
@@ -229,6 +234,7 @@
     "Bottle_Price": 180,
     "PDF": "SilverOakAlexanderValleyCabernetSauvignon2020.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Spice", "Balanced", "Complex"],
+    "Hex": "#9B111E",
     "Sustainability": "Alexander Valley facility certified LEED Platinum; integrated pest management, solar energy, fish‑friendly farming practices",
     "Vegan": false
   },
@@ -268,6 +274,7 @@
     "Bottle_Price": 395,
     "PDF": "DancingBearRanchCabernetSauvignon2020.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Bold", "Complex", "Aged"],
+    "Hex": "#4C0C16",
     "Sustainability": "",
     "Vegan": false
   },
@@ -307,6 +314,7 @@
     "Bottle_Price": 85,
     "PDF": "StagsLeapNapaValleyMerlot2020.pdf",
     "Top Icons": ["Fruity/Berry", "Herbal", "Spice", "Oaky/Vanilla", "Balanced", "Silky"],
+    "Hex": "#5A1025",
     "Sustainability": "",
     "Vegan": false
   },
@@ -353,6 +361,7 @@
       "Bold",
       "Complex"
     ],
+    "Hex": "#65122B",
     "Sustainability": "",
     "Vegan": false
   },
@@ -392,6 +401,7 @@
     "Bottle_Price": 112,
     "PDF": "FlowersSonomaCoastPinotNoir2023.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Herbal", "Minerality", "Silky", "Balanced"],
+    "Hex": "#B3172B",
     "Sustainability": "Committed to organic farming and minimal intervention winemaking practices.",
     "Vegan": false,
     "Top Bottle": true
@@ -433,6 +443,7 @@
     "Half_Bottle_Price": 62,
     "PDF": "GoldeneyeAndersonValleyPinotNoir2022.pdf",
     "Top Icons": ["Fruity/Berry", "Herbal", "Spice", "Silky", "Balanced", "Complex"],
+    "Hex": "#6E1F28",
     "Sustainability": "",
     "Vegan": false
   },
@@ -472,6 +483,7 @@
     "Bottle_Price": 148,
     "PDF": "CanaryHillVineyardPinotNoir2022.pdf",
     "Top Icons": ["Fruity/Berry", "Herbal", "Minerality", "Balanced", "Silky", "Complex"],
+    "Hex": "#6A1B2C",
     "Sustainability": "Certified organic; nutrition-based farming focused on vineyard health and terroir expression.",
     "Vegan": false
   },
@@ -511,6 +523,7 @@
     "Bottle_Price": 88,
     "PDF": "LanghartHill2022RussianRiverValleyPinotNoir2022.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Silky", "Balanced"],
+    "Hex": "#C22A2A",
     "Sustainability": "Sustainably farmed vineyard in the Russian River Valley with emphasis on vine balance and low vigor.",
     "Vegan": false
   },
@@ -550,6 +563,7 @@
     "Bottle_Price": 70,
     "PDF": "JAXY3Taureau2022.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Bold", "Silky"],
+    "Hex": "#701F2A",
     "Sustainability": "",
     "Vegan": false
   },
@@ -589,6 +603,7 @@
     "Bottle_Price": 78,
     "PDF": "TurleyJuvenileZinfandel2022.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Balanced", "Silky", "Bold"],
+    "Hex": "#8C1E3A",
     "Sustainability": "",
     "Vegan": false
   },
@@ -627,6 +642,7 @@
     "Bottle_Price": 0,
     "PDF": "QuiltCabernetSauvignon2022.pdf",
     "Top Icons": ["Fruity/Berry", "Chocolate", "Oaky/Vanilla", "Bold", "Complex", "Silky"],
+    "Hex": "#7A0F1A",
     "Sustainability": "",
     "Vegan": false,
     "Top Glass": true
