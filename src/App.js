@@ -8,6 +8,7 @@ import './App.css';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
+import TopWine from "./pages/TopWine";
 import TableOfConents from "./pages/TableOfConents";
 import Home from "./pages/home";
 import NotFound from "./pages/NotFound";
@@ -23,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="wine" element={<Wine />} />
           <Route path="table-of-contents" element={<TableOfConents />} />
-          <Route path="wine-top-picks" element={<Wine type='top' />} />
+          <Route path="wine-top-picks" element={<TopWine/>} />
           <Route path="italiano" element={<Wine type='italiano' />} />
           <Route path="rosso" element={<Wine type='rosso' />} />
           <Route path="bianco" element={<Wine type='bianco' />} />
