@@ -12,6 +12,8 @@ import DefinitionModal from '../../components/DefinitionModal';
 
 import icons from "../../components/Icons/icons.json";
 import regions from "../../components/Regions/regions.json";
+import { ReactComponent as RotatedLogo } from './rotated.svg';
+
 
 import "./print.css";
 import "./index.css";
@@ -97,6 +99,24 @@ Object.values(regions).forEach((region) => {
 
 
 class index extends React.Component {
+    darkenHex(hex, factor = 0.5) {
+    if (!hex || !/^#([0-9A-F]{3}){1,2}$/i.test(hex)) return hex;
+
+    let c = hex.substring(1);
+    if (c.length === 3) {
+      c = c.split('').map(ch => ch + ch).join('');
+    }
+    const num = parseInt(c, 16);
+    let r = (num >> 16) & 255;
+    let g = (num >> 8) & 255;
+    let b = num & 255;
+
+    r = Math.max(0, Math.min(255, Math.floor(r * factor)));
+    g = Math.max(0, Math.min(255, Math.floor(g * factor)));
+    b = Math.max(0, Math.min(255, Math.floor(b * factor)));
+
+    return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
+  }
     state = {
         specs: [],
         selectedCountry: "",
@@ -829,6 +849,28 @@ class index extends React.Component {
                             >
                               
                               <div className="wine-card-image-wrapper">
+                                <RotatedLogo
+                                  className={data1["Top Icons"]?.includes("Bubbly/Sparkling") ? "" : "bubbles-inactive"}
+                                  style={{
+                                    zIndex: 1,
+                                    position: 'absolute',
+                                    top: 10,
+                                    right: -5,
+                                    width: 'auto',
+                                    height: '25%',
+                                    // CSS variables consumed inside the SVG (see rotated.svg edits)
+                                    '--wine-base': data1.Hex || '#6B0F1A',
+                                    '--bubbles-stroke': data1.Hex || '#6B0F1A',
+                                  }}
+                                />
+                              {/* <object
+                                  src={`${process.env.PUBLIC_URL}/assets/rotated.svg`}
+                                  alt="Producer"
+                                  type="image/svg+xml"
+                                  style={{ zIndex: 1, position: 'absolute', top: 10, right: 0, width: 'auto', height: '15%' }}
+                                  >
+                                    <param name="color" value={'ff0000'}></param>
+                                </object> */}
                                 {/* <img
                                   src={`${process.env.PUBLIC_URL}/photos/producer/${data1["Producer"]}.png`}
                                   alt="Producer"

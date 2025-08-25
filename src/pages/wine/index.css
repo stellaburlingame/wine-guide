@@ -222,3 +222,11 @@ body {
 .producer-background.random-offset-3::before { left: -15px; top: -10px;}
 .producer-background.random-offset-4::before { left: -30px; top: -20px;}
 .producer-background.random-offset-5::before { left: -45px; top: -10px;}
+.bubbles-inactive #bubbles {
+  opacity: 0;;
+}
+
+/* Smooth color updates when switching wines */
+.bubbles-active #bubbles circle {
+  transition: stroke 200ms ease-in-out, fill 200ms ease-in-out;
+}
