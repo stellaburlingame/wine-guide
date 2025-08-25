@@ -1,7 +1,5 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { CardGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -11,7 +9,7 @@ function Index(props) {
             <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
                 <div className="col-md-8 p-lg-5 mx-auto my-5">
                     <div className="d-flex align-items-center justify-content-center">
-                        <img src="wine-training/assets/light.svg" alt="Stella Logo" height="120" className="me-3" />
+                        <img src="./assets/light.svg" alt="Wine Guide Logo" height="120" className="me-3" />
                         <h1 className="display-3 fw-bold">Welcome to the Stella Wine Guide</h1>
                     </div>
                     <h3 className="fw-normal text-muted mb-3">
