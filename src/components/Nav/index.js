@@ -12,7 +12,7 @@ function Index(props) {
                 <Navbar.Brand href="#home">
                     <img
                     alt=""
-                    src={`/wine-training/assets/dark.svg`}
+                    src={`./assets/dark.svg`}
                     width="30px"
                     height="30px"
                     className="d-inline-block align-top"

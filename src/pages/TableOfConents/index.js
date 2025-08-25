@@ -1,17 +1,13 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
 import DefinitionModal from '../../components/DefinitionModal';
 import Table from 'react-bootstrap/Table';
 
-import icons from "../../components/Icons/icons.json";
 import regions from "../../components/Regions/regions.json";
 
 // import "./print.css";
 // import "./index.css";
-const sustainabilityIcon = icons.filter(icon => icon.Type === "Sustainable")[0]
-const veganIcon = icons.filter(icon => icon.Type === "Vegan")[0]
 
 
 class index extends React.Component {
