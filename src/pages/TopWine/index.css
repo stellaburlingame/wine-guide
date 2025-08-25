@@ -1,0 +1,232 @@
+/* DOC/DOCG Classifcations */
+.wine-doc, .wine-docg, .wine-piemonte {
+  font-family: "Didot", serif;
+}
+.wine-piemonte {
+  color: #000 !important;
+  background-color: #dc9c10 !important;
+}
+.wine-docg {
+  color: #fffdf0 !important;
+  background-color: #534230 !important;
+}
+.wine-doc {
+  color: #1265A9 !important;
+  background-color: #B6D3F3 !important;
+}
+.wine-top-selling {
+  color: #fff !important;
+  background-color: #ff8c00 !important;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+/* Gradient Chart */
+.wine-specs__body {
+  margin-top: 0.5rem;
+}
+.wine-specs__body--medium {
+  margin-right: 1rem;
+}
+.gradient-chart__background {
+  position: relative;
+}
+.gradient-chart__triangle-indicator {
+  position: absolute;
+  transform: translateX(-50%);
+}
+/* Wine Card Image */
+.wine-card-image {
+  height: calc(400px - 4rem);
+  width: auto;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  padding-top: .2rem;
+  padding-bottom: 1rem;
+  filter:
+    /* heavier bottom-left*/ 
+    drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1)) 
+    /* heavier bottom-right */
+    drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.1 ))
+    /*center-bottom rounded*/ 
+    drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.1));
+}
+/* Wine Making and Region */
+.winemaking {
+  width: 73%;
+}
+.wine-region-image {
+  width: 27%;
+  height: auto;
+  border-radius: 4px;
+}
+/* Smaller screens adjustments */
+@media (max-width: 576px) {
+  .wine-card-body {
+    padding-bottom: 0 !important;
+  }
+  .winemaking,
+  .wine-region-image {
+    padding-left: 0 !important;
+  }
+  .winemaking {
+    width: 100% !important;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+  .wine-region-image {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .wine-region-image > img {
+    width: 70%;
+  }
+}
+/* Wine Card Layout */
+.wine-card {
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
+}
+.wine-card-right-image {
+  width: 65%;
+}
+.wine-card-left-image {
+  width: 35%;
+}
+.wine-pairing-text {
+  margin-right: 1px;
+  border-color: gold;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+body {
+  overflow-y: hidden;
+}
+.row {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-bottom: 1rem;
+}
+.card-header {
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+/* Bottom-only elliptical shadow for wine-card-image using a wrapper and pseudo-element */
+.wine-card-image-wrapper {
+  padding-top: 1.0rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  text-align: center;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .wine-card-image-wrapper .wine-region-image {
+    margin-bottom: 0;
+  }
+}
+.wine-card-body {
+  padding: 0rem 0rem;
+  padding-bottom: 0 !important;
+}
+/* .wine-card-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
+  z-index: 1;
+  filter: blur(4px);
+  pointer-events: none;
+} */
+.row {
+  margin: 0 auto !important;
+  padding: 0;
+}
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  padding: 0.75em 1.25em;
+  font-size: 1em;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.wine-list-group {
+  padding-right: 0;
+  border-left: 1px solid rgba(0, 0, 0, .125);
+  border-right: 1px solid rgba(0, 0, 0, .125);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.nav-link {
+    /* border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-bottom: .25rem;
+    margin-top: calc(var(--bs-nav-tabs-border-width) * -1); */
+}
+
+.wine-card-image-producer {
+  width: 60%;
+  left: -.5rem;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: .5rem;
+  z-index: 99;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .wine-card-image-producer {
+    width: 35%;
+  }
+}
+.producer-background {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.producer-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  /* left is set dynamically by random-offset-* classes */
+  right: -20px;
+  bottom: 0;
+  background-repeat: repeat;
+  background-size: 120px auto;
+  background-position: left;
+  opacity: 0.3; /* just the background */
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--producer-bg);
+}
+
+/* Dynamic random offset classes for producer background */
+.producer-background.random-offset-1::before { left: -90px; top: -10px; }
+.producer-background.random-offset-2::before { left: -60px; }
+.producer-background.random-offset-3::before { left: -15px; top: -10px;}
+.producer-background.random-offset-4::before { left: -30px; top: -20px;}
+.producer-background.random-offset-5::before { left: -45px; top: -10px;}
+.bubbles-inactive #bubbles {
+  opacity: 0;;
+}
+
+/* Smooth color updates when switching wines */
+.bubbles-active #bubbles circle {
+  transition: stroke 200ms ease-in-out, fill 200ms ease-in-out;
+}
