@@ -11,6 +11,7 @@
 # production
 /build
 /build-gh
+/build-custom
 
 # misc
 .DS_Store

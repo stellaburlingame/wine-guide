@@ -32,3 +32,10 @@ div.nav-icon > button.btn {
     font-family: 'Playfair Display', serif;
     font-style: oblique;
 }
+.nav-active {
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 10%);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+}
