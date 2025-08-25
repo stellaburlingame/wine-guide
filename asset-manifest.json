@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/wine-guide/static/css/main.d445d08e.css",
-    "main.js": "/wine-guide/static/js/main.82670543.js",
-    "static/js/453.ab1a0bdc.chunk.js": "/wine-guide/static/js/453.ab1a0bdc.chunk.js",
+    "main.css": "/wine-guide/static/css/main.88c515fc.css",
+    "main.js": "/wine-guide/static/js/main.e167cfaa.js",
+    "static/js/453.c002640d.chunk.js": "/wine-guide/static/js/453.c002640d.chunk.js",
     "static/media/rotated.svg": "/wine-guide/static/media/rotated.fa2f5acf9dadb4aaf80c965dc06cb913.svg",
     "index.html": "/wine-guide/index.html",
-    "main.d445d08e.css.map": "/wine-guide/static/css/main.d445d08e.css.map",
-    "main.82670543.js.map": "/wine-guide/static/js/main.82670543.js.map",
-    "453.ab1a0bdc.chunk.js.map": "/wine-guide/static/js/453.ab1a0bdc.chunk.js.map"
+    "main.88c515fc.css.map": "/wine-guide/static/css/main.88c515fc.css.map",
+    "main.e167cfaa.js.map": "/wine-guide/static/js/main.e167cfaa.js.map",
+    "453.c002640d.chunk.js.map": "/wine-guide/static/js/453.c002640d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d445d08e.css",
-    "static/js/main.82670543.js"
+    "static/css/main.88c515fc.css",
+    "static/js/main.e167cfaa.js"
   ]
 }
