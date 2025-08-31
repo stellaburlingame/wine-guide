@@ -771,7 +771,7 @@ class index extends React.Component {
                       {filteredData.map((data1, index) => (
                     <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
                       <WineCard
-                        data1={data1}
+                        wine={data1}
                         index={index}
                         format={this.format}
                         state={this.state}
