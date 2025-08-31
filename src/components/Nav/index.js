@@ -24,14 +24,17 @@ function Index(props) {
                     {/* <NavLink to="/" end className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
                         Home
                     </NavLink> */}
-                    <NavLink to="/definitions" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
+                    {/* <NavLink to="/definitions" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
                         Definitions
-                    </NavLink>
-                    <NavLink to="/wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
-                        Wines
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="/wine-top-picks" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
                         Top Wine Picks
+                    </NavLink>
+                    <NavLink to="/wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
+                        Wine List
+                    </NavLink>
+                    <NavLink to="/find-your-wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "") }>
+                        Find Your Wine
                     </NavLink>
                 </ul>
                 </div>
