@@ -35,22 +35,3 @@ html {
 .WineSpecs-module_body__>div:last-of-type {
     margin: 1.5625rem 0 2rem;
 }
-
-.gradient-chart__background {
-    background-image: linear-gradient(90deg, #f6cfd9 10%, #880a32 90%);
-}
-.gradient-chart__background {
-    border-bottom: 1px solid #a8a8a8;
-    height: 12px;
-    margin-top: 20px;
-    width: 100%;
-}
-.gradient-chart__triangle-indicator {
-    position: absolute;
-    left: 0;
-    margin-top: -20px;
-}
-.gradient-chart__triangle-indicator span{
-    position: absolute;
-    right: 0;
-}

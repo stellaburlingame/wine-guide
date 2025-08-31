@@ -27,8 +27,9 @@
     "build:gh": "npm run clean:gh && cross-env PUBLIC_URL=/wine-guide react-scripts build && shx mv build build-gh",
     "build:custom": "npm run clean:custom && cross-env PUBLIC_URL=/ react-scripts build && shx mv build build-custom",
     "deploy:origin": "npm run build:gh && gh-pages -d build-gh -o origin -b gh-pages",
-    "deploy:origin2": "npm run build:custom && gh-pages -d build-custom -o origin2 -b gh-pages -c wine-guide.dvas4155.com",
-    "deploy:both": "npm run deploy:origin && npm run deploy:origin2"
+    "deploy:origin2": "npm run build:custom && gh-pages -d build-custom -o origin2 -b gh-pages",
+    "deploy:both": "npm run deploy:origin && npm run deploy:origin2",
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
