@@ -1,0 +1,16 @@
+.side-badge {
+    z-index: 1;
+    position: absolute;
+    bottom: 3rem;
+    right: 3.1rem;
+    width: 2rem;
+}
+.side-badge > button {
+    display: inline-block;
+    transform: rotate(-90deg);
+    width: 10rem;
+    background-color: gray !important;
+}
+.side-badge > button:hover, .side-badge > button:focus, .side-badge > button:active {
+    background-color: rgb(95, 95, 95) !important;
+}

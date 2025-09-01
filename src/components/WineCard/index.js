@@ -9,6 +9,7 @@ import { ReactComponent as RotatedLogo } from '../../pages/wine/rotated.svg';
 import regions from "../../components/Regions/regions.json";
 
 import icons from "../../components/Icons/icons.json";
+import SideBadge from "../SideBadge";
 
 const sustainabilityIcon = icons.filter(icon => icon.Type === "Sustainable")[0]
 const veganIcon = icons.filter(icon => icon.Type === "Vegan")[0]
@@ -159,6 +160,7 @@ function Index(props) {
         >
 
             <div className="wine-card-image-wrapper">
+            {/* <SideBadge /> */}
             <RotatedLogo
                 className={wine["Top Icons"]?.includes("Bubbly/Sparkling") ? "" : "bubbles-inactive"}
                 style={{
