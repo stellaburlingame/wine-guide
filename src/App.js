@@ -10,6 +10,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
 import TopWine from "./pages/TopWine";
+import FindYourWine from "./pages/FindYourWine";
 import TableOfConents from "./pages/TableOfConents";
 import Home from "./pages/home";
 import NotFound from "./pages/NotFound";
@@ -59,7 +60,7 @@ class App extends React.Component {
             <Route path="/" element={<Home />} />
             <Route path="wine" element={<Wine />} />
             <Route path="table-of-contents" element={<TableOfConents />} />
-            {/* <Route path="find-your-wine" element={<Wine />} /> */}
+            <Route path="find-your-wine" element={<FindYourWine state={this.state} />} />
             <Route path="wine-top-picks" element={<TopWine state={this.state}/>} />
             <Route path="definitions" element={<Definitions/>} />
             <Route path="credits" element={<Credits/>} />
