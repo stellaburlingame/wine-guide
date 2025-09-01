@@ -33,9 +33,9 @@ function Index(props) {
                     <NavLink to="/wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}>
                         Wine List
                     </NavLink>
-                    <NavLink to="/find-your-wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "") }>
+                    {/* <NavLink to="/find-your-wine" className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "") }>
                         Find Your Wine
-                    </NavLink>
+                    </NavLink> */}
                 </ul>
                 </div>
             </div>
