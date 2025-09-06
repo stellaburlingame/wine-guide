@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/wine-guide/static/css/main.76230658.css",
-    "main.js": "/wine-guide/static/js/main.d57f3533.js",
+    "main.js": "/wine-guide/static/js/main.54258e73.js",
     "static/js/453.c002640d.chunk.js": "/wine-guide/static/js/453.c002640d.chunk.js",
     "static/media/rotated.svg": "/wine-guide/static/media/rotated.fa2f5acf9dadb4aaf80c965dc06cb913.svg",
     "index.html": "/wine-guide/index.html",
     "main.76230658.css.map": "/wine-guide/static/css/main.76230658.css.map",
-    "main.d57f3533.js.map": "/wine-guide/static/js/main.d57f3533.js.map",
+    "main.54258e73.js.map": "/wine-guide/static/js/main.54258e73.js.map",
     "453.c002640d.chunk.js.map": "/wine-guide/static/js/453.c002640d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76230658.css",
-    "static/js/main.d57f3533.js"
+    "static/js/main.54258e73.js"
   ]
 }
