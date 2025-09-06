@@ -1,16 +1,18 @@
 .side-badge {
+    border-radius: 10px 0 0 0 !important;
+    padding-left: 0.2rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    padding-right: 0.1rem !important;
     z-index: 1;
     position: absolute;
-    bottom: 3rem;
-    right: 3.1rem;
-    width: 2rem;
-}
-.side-badge > button {
-    display: inline-block;
-    transform: rotate(-90deg);
-    width: 10rem;
     background-color: gray !important;
+    bottom: 0rem;
+    right: 0rem;
+    width: auto;
+    writing-mode: sideways-lr;
+    text-orientation: upright;
 }
-.side-badge > button:hover, .side-badge > button:focus, .side-badge > button:active {
+.side-badge:hover, .side-badge:focus, .side-badge:active {
     background-color: rgb(95, 95, 95) !important;
 }

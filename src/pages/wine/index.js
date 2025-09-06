@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Accordion from 'react-bootstrap/Accordion';
+
+import BlankModal from '../../components/BlankModal';
 import DefinitionModal from '../../components/DefinitionModal';
 
 import regions from "../../components/Regions/regions.json";
@@ -270,19 +272,20 @@ class index extends React.Component {
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
-    handleModalShow = (term) => {
-      this.setState({ showDefinitionModal: true, currentTerm: term });
+    handleModalShow = (body, fullScreen) => {
+      this.setState({ showModal: true, fullScreen: fullScreen, modalContent: body });
+      // this.setState({ showDefinitionModal: true, currentTerm: term });
     }
     handleDefinitionShow = (term) => {
         const matched = this.state.definitions.find(
             d => d.Name?.toLowerCase() === (term?.Name || term)?.toLowerCase()
         );
         if (matched) {
-            this.handleModalShow(matched);
+            this.handleModalShow(<DefinitionModal {...matched} />);
         }
     }
     handleDefinitionClose = () => {
-        this.setState({ showDefinitionModal: false });
+        this.setState({ showModal: false });
     }
     checkIfAllFilter(value) {
         if (value === "all") {
@@ -778,6 +781,8 @@ class index extends React.Component {
                         producerOffsetClass={this.state.producerOffsetClasses}
                         handleDefinitionShow={this.handleDefinitionShow}
                         handleModalShow={this.handleModalShow}
+                        handleWineModalShow={this.handleWineModalShow}
+                        handleModalClose={this.handleDefinitionClose}
                         />
                       </div>
                       ))}
@@ -788,14 +793,11 @@ class index extends React.Component {
                     Page {rowIndex + 1} of {Math.ceil(this.state.specs.length / 2)}
                   </p> */}
             </Row>
-
-            <DefinitionModal
-              show={this.state.showDefinitionModal}
+            <BlankModal 
+              show={this.state.showModal}
               onHide={this.handleDefinitionClose}
-              Name={this.state.currentTerm?.Name}
-              Definition={this.state.currentTerm?.Definition}
-              Secondary_Text={this.state.currentTerm?.Secondary_Text}
-              Image={this.state.currentTerm?.Image}
+              body={this.state.modalContent}
+              fullScreen={this.state.fullScreen}
             />
             {this.state.showScrollToTop && (
               <button

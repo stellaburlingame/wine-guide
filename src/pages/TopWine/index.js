@@ -1,6 +1,7 @@
 import React from "react";
 import Row from 'react-bootstrap/Row';
 import DefinitionModal from '../../components/DefinitionModal';
+import BlankModal from '../../components/BlankModal';
 
 import WineCard from "../../components/WineCard";
 
@@ -34,19 +35,20 @@ class index extends React.Component {
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
-    handleModalShow = (term) => {
-      this.setState({ showDefinitionModal: true, currentTerm: term });
+    handleModalShow = (body) => {
+      this.setState({ showModal: true, modalContent: body });
+      // this.setState({ showDefinitionModal: true, currentTerm: term });
     }
     handleDefinitionShow = (term) => {
         const matched = this.props.state.definitions.find(
             d => d.Name?.toLowerCase() === (term?.Name || term)?.toLowerCase()
         );
         if (matched) {
-            this.handleModalShow(matched);
+            this.handleModalShow(<DefinitionModal {...matched} />);
         }
     }
     handleDefinitionClose = () => {
-        this.setState({ showDefinitionModal: false });
+        this.setState({ showModal: false });
     }
   render() {
     const specsFromProps = this.props.state && Array.isArray(this.props.state.specs) ? this.props.state.specs : [];
@@ -74,13 +76,10 @@ class index extends React.Component {
                 })()}
             </Row>
 
-            <DefinitionModal
-              show={this.state.showDefinitionModal}
+            <BlankModal 
+              show={this.state.showModal}
               onHide={this.handleDefinitionClose}
-              Name={this.state.currentTerm?.Name}
-              Definition={this.state.currentTerm?.Definition}
-              Secondary_Text={this.state.currentTerm?.Secondary_Text}
-              Image={this.state.currentTerm?.Image}
+              body={this.state.modalContent}
             />
             {this.state.showScrollToTop && (
               <button

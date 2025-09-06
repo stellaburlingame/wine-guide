@@ -4,11 +4,9 @@ import './index.css';
 
 function Index(props) {
     return (
-        <div className="side-badge">
-            <Button variant="secondary" className="p-1">
-                &nbsp;&nbsp;&nbsp;&nbsp;See Similar Wines
-            </Button>
-        </div>
+        <Button className="side-badge" variant="secondary" onClick={() => {props.onClick()}}>
+            See Similar Wines
+        </Button>
     );
 }
 

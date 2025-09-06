@@ -5,13 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Badge from 'react-bootstrap/Badge';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { ReactComponent as RotatedLogo } from '../../pages/wine/rotated.svg';
-import regions from "../../components/Regions/regions.json";
 
 import icons from "../../components/Icons/icons.json";
-import SideBadge from "../SideBadge";
-import DefinitionModal from "../DefinitionModal";
-import WineModal from "../WineModal";
 
 const sustainabilityIcon = icons.filter(icon => icon.Type === "Sustainable")[0]
 const veganIcon = icons.filter(icon => icon.Type === "Vegan")[0]
@@ -19,7 +14,7 @@ const veganIcon = icons.filter(icon => icon.Type === "Vegan")[0]
 function formatText(text) {
     return text?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 }
-function getIcons(wine, handleModalShow) {
+function getIcons(wine) {
     // Compute the array of icon elements to render
     const iconArray = icons.map((icon, i) => {
         const lowerKeywords = icon.Keywords?.map(k => k.toLowerCase()) || [];
@@ -31,35 +26,7 @@ function getIcons(wine, handleModalShow) {
         <React.Fragment key={i}>
             <span
             className="badge"
-            onClick={() => {
-                const fields = ["Summary", "Flavor", "Aroma", "Body Characteristics", "Tannin Characteristics"];
-                for (const field of fields) {
-                const text = wine[field];
-                if (!text) continue;
-                const sentence = text.split(/(?<=[.?!])\s+/).find(sent => lowerKeywords.some(keyword => sent.toLowerCase().includes(keyword))
-                );
-                if (sentence) {
-                handleModalShow( <DefinitionModal 
-                    Name={icon.Type}
-                    Definition={<><strong>Definition: </strong>{icon.Definition.replace(/\*\*/g, '').trim()}</>}
-                    Secondary_Text={<><strong>{wine["Wine Name"]}: </strong>{sentence.replace(/\*\*/g, '').trim()}</>}
-                    Image=""
-                />)
-                    return;
-                }
-                }
-                // fallback: show first keyword match or empty string
-                const allText = `${wine["Summary"] ?? ""} ${wine["Flavor"] ?? ""} ${wine["Aroma"] ?? ""} ${wine["Body Characteristics"] ?? ""} ${wine["Tannin Characteristics"] ?? ""} ${wine["Tannin Characteristics"] ?? ""}`;
-                const fallbackKeyword = lowerKeywords.find(k => allText.toLowerCase().includes(k)) || "";
-                handleModalShow( <DefinitionModal 
-                    Name={icon.Type}
-                    Definition={<><strong>Definition: </strong>{icon.Definition.replace(/\*\*/g, '').trim()}</>}
-                    Secondary_Text={fallbackKeyword ? <><strong>{wine["Wine Name"]}: </strong>{fallbackKeyword}</> : ""}
-                    Image=""
-                />)
-                ///>);
-            } }
-            style={{ marginRight: "0.5em", backgroundColor: icon.Color, color: icon.TextColor, cursor: "pointer" }}
+            style={{ marginRight: "0.5em", backgroundColor: icon.Color, color: icon.TextColor }}
             >
             {icon.Icon} {icon.Type}
             </span>
@@ -73,18 +40,7 @@ function getIcons(wine, handleModalShow) {
         {wine['Sustainability'] && (
         <span
             className="badge"
-            onClick={() => {
-                handleModalShow(
-                    <DefinitionModal 
-                        Name={sustainabilityIcon.Type}
-                        Definition={<><strong>Definition: </strong>{sustainabilityIcon.Definition.replace(/\*\*/g, '').trim()}</>}
-                        Secondary_Text={<><strong>{wine["Wine Name"]}: </strong>{wine["Sustainability"].replace(/\*\*/g, '').trim()}</>}
-                        Image=""
-                    />
-                )
-            }}
-            
-            style={{ marginRight: "0.5em", backgroundColor: sustainabilityIcon.Color, color: sustainabilityIcon.TextColor, cursor: "pointer" }}
+            style={{ marginRight: "0.5em", backgroundColor: sustainabilityIcon.Color, color: sustainabilityIcon.TextColor}}
             >
             
             {sustainabilityIcon.Icon} {sustainabilityIcon.Type}
@@ -93,18 +49,8 @@ function getIcons(wine, handleModalShow) {
         {wine['Vegan'] && (
         <span
             className="badge"
-            onClick={() => {
-                handleModalShow(
-                    <DefinitionModal 
-                        Name={veganIcon.Type}
-                        Definition={<><strong>Definition: </strong>{veganIcon.Definition.replace(/\*\*/g, '').trim()}</>}
-                        Secondary_Text={<><strong>{wine["Wine Name"]}: </strong>This wine is made without the use of animal products or by-products in its production process.</>}
-                        Image=""
-                    />
-                )
-            }}
             
-            style={{ marginRight: "0.5em", backgroundColor: veganIcon.Color, color: veganIcon.TextColor, cursor: "pointer" }}
+            style={{ marginRight: "0.5em", backgroundColor: veganIcon.Color, color: veganIcon.TextColor}}
             >
             
             {veganIcon.Icon} {veganIcon.Type}
@@ -117,9 +63,9 @@ function getIcons(wine, handleModalShow) {
 
 
 function Index(props) {
-    const { wine, index, handleDefinitionShow, handleModalShow, state, handleModalClose } = props;
+    const { wine, index, handleDefinitionShow, handleModalShow, state } = props;
     return (
-    <Card className='wine-card' bg={"Light"}>
+    <Card style={{height: '97%'}} className='wine-card' bg={"Light"}>
     <Card.Header>
         <Card.Text>
         {wine["Top Bottle"] && (
@@ -153,36 +99,18 @@ function Index(props) {
         <Row>
         <ListGroup.Item className="icon-wrapper">
             {wine['Region'] === "Piemonte" && (
-            <Badge className="wine-piemonte" onClick={() => handleDefinitionShow("Piemonte")} style={{ cursor: 'pointer' }}>✨ Piemonte</Badge>
+            <Badge className="wine-piemonte">✨ Piemonte</Badge>
             )}{' '}
             {getIcons(wine, handleModalShow)}
         </ListGroup.Item>
-        </Row>
-        <Row>
-            <div
-                className={`col-lg-3 col-md-3 col-sm-3 producer-background ${state.producerOffsetClasses ? state.producerOffsetClasses[index] : ''}`}
-                style={{
-                '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
-                }}
-            >
-
-            <SideBadge onClick={() => handleModalShow(<WineModal specs={props.state.specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
-            />
+        <div
+            className={`col-lg-3 col-md-3 col-sm-3 producer-background ${state.producerOffsetClasses ? state.producerOffsetClasses[index] : ''}`}
+            style={{
+            '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
+            }}
+        >
 
         <div className="wine-card-image-wrapper">
-            <RotatedLogo
-                className={wine["Top Icons"]?.includes("Bubbly/Sparkling") ? "" : "bubbles-inactive"}
-                style={{
-                zIndex: 1,
-                position: 'absolute',
-                top: 10,
-                right: -15,
-                width: 'auto',
-                height: '5rem',
-                // CSS variables consumed inside the SVG (see rotated.svg edits)
-                '--wine-base': wine.Hex || '#6B0F1A',
-                '--bubbles-stroke': wine.Hex || '#6B0F1A',
-                }} />
             {wine['PDF'] ? (
                 <a href={`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`} target="_blank" rel="noopener noreferrer">
                 <Card.Img
@@ -225,30 +153,13 @@ function Index(props) {
                 </Badge>
             ))}
             </ListGroup.Item>
-            <ListGroup.Item><strong>Winemaker paring:</strong> {wine["General Recommended Accompanies"]}</ListGroup.Item>
 
-        </ListGroup>
-        </Row>
-        <Row className="tasting-notes-wrapper">
-        <div className="card-header">
-            <strong>Tasting Notes</strong>
-            {/* {icons(wine)} */}
-        </div>
-        <div className="row">
-            <ListGroup variant="flush" className="col-lg-6 col-md-12 col-sm-12 wine-list-group">
             <ListGroup.Item><strong>Flavor:</strong> {wine["Flavor"]}</ListGroup.Item>
             <ListGroup.Item><strong>Aroma:</strong> {wine["Aroma"]}</ListGroup.Item>
-            {wine["Finish"] && (
-                <ListGroup.Item><strong>Finish:</strong> {wine["Finish"]}</ListGroup.Item>
-            )}
-            {wine["Acidity"] && (
-                <ListGroup.Item><strong>Acidity:</strong> {wine["Acidity"]}</ListGroup.Item>
-            )}
+
             {/* {wine["Sweetness"] && (
         <ListGroup.Item><strong>Sweetness:</strong> {wine["Sweetness"]}</ListGroup.Item>
         )}   */}
-            </ListGroup>
-            <ListGroup className="col-lg-6 col-md-6 col-sm-12 wine-list-group" variant="flush">
             <ListGroup.Item>
                 <strong>Body: </strong>
                 <span>
@@ -290,43 +201,6 @@ function Index(props) {
                 </ListGroup.Item>
             )}
             </ListGroup>
-        </div>
-        </Row>
-        <Row className="winemaking-wrapper">
-        <strong className="card-header">Winemaking</strong>
-        <div className="winemaking p-0">
-            <ListGroup variant="flush">
-            <ListGroup.Item><strong>Vinification:</strong> {wine["Vinification"]}</ListGroup.Item>
-            <ListGroup.Item><strong>Maturation:</strong> {wine["Maturation"]}</ListGroup.Item>
-            {wine["Aging"] && (
-                <ListGroup.Item><strong>Aging:</strong> {wine["Aging"]}</ListGroup.Item>
-            )}
-            {wine["Blend"] && (
-                <ListGroup.Item><strong>Blend:</strong> {wine["Blend"]}</ListGroup.Item>
-            )}
-            {wine["Region"] && (
-                <ListGroup.Item><strong>Region:</strong> {regions[wine?.Region]?.["Region location"]}</ListGroup.Item>
-            )}
-            {wine["Appelation"] && (
-                <ListGroup.Item><strong>Appelation:</strong> {wine["Appelation"]}</ListGroup.Item>
-            )}
-            {wine["Vineyard"] && (
-                <ListGroup.Item><strong>Vineyard:</strong> {wine["Vineyard"]}</ListGroup.Item>
-            )}
-            </ListGroup>
-        </div>
-        <div className="wine-region-image p-0" onClick={() => handleModalShow(
-            <DefinitionModal
-            {...{'Name': regions[wine?.Region]?.["Region location"],
-            'Definition': <>{regions[wine?.Region]?.["Region Summary"]}</>,
-            'Image': `${process.env.PUBLIC_URL}/photos/region/${regions[wine?.Region]?.["Region Image"]}`}}
-            />
-        )} style={{ cursor: 'pointer' }}>
-            <img
-            src={`${process.env.PUBLIC_URL}/photos/region/${regions[wine?.Region]?.["Region Image"]}`}
-            alt={regions[wine?.Region]?.["Region location"]}
-            onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; } } />
-        </div>
         </Row>
     </Card.Body>
     </Card>

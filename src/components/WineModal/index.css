@@ -1,0 +1,19 @@
+.wine-modal-body {
+    padding: 0;
+}
+
+.horizontal-scrollable {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    white-space: nowrap;
+    display: block !important;
+    height: 100%;
+}
+/* .similar-wine-card {
+    height: 100%;
+} */
+.similar-wine-card {
+    /* display: inline-block; */
+    float: none;
+    white-space: normal;
+}
