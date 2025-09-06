@@ -1,0 +1,14 @@
+.wine-choice-body {
+    text-align: center;
+    display: block;
+}
+
+.wine-choice-button {
+    margin: 1rem;
+}
+/* .form-check-input {
+    display: none !important;
+} */
+.body-choice > label {
+    margin: 0.25rem;
+}
