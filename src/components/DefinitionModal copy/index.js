@@ -1,10 +1,15 @@
 import React from "react";
-import { Image, Modal } from "react-bootstrap";
+import { Button, Image, Modal } from "react-bootstrap";
 import './index.css';
 
 function Index(props) {
     return (
-        <>
+        <Modal 
+            show={props.show} 
+            onHide={props.onHide} 
+            dialogClassName="responsive-modal"
+            // fullscreen={true}
+        >
             <Modal.Header closeButton>
                 <Modal.Title>{props.Name}</Modal.Title>
             </Modal.Header>
@@ -31,12 +36,12 @@ function Index(props) {
                     </>
                 )}
             </Modal.Body>
-            {/* <Modal.Footer>
+            <Modal.Footer>
                 <Button variant="secondary" onClick={props.onHide}>
                     Close
                 </Button>
-            </Modal.Footer> */}
-        </>
+            </Modal.Footer>
+        </Modal>
     );
 }
 
