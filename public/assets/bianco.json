@@ -37,7 +37,8 @@
   "PDF": "ChablisDomaineSguinotBordet2023.pdf",
   "Top Icons": ["Stone Fruit", "Minerality", "Balanced", "Complex"],
   "Sustainability": "Certified sustainable viticulture",
-  "Vegan": true
+  "Vegan": true,
+  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Grgich Hills Estate Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Chalk Hill Sonoma Coast Chardonnay"]
 },
 {
   "Wine Type": "Bianco",
@@ -78,6 +79,7 @@
   "Hex": "#F4EEC5",
   "Sustainability": "Organically farmed estate vineyard and like-minded partner sites",
   "Vegan": false
+,  "Similar Wines": ["Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Chalk Hill Sonoma Coast Chardonnay", "Grgich Hills Estate Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -118,6 +120,7 @@
   "Hex": "#E8D27C",
   "Sustainability": "Certified regenerative organic farming across all estate vineyards",
   "Vegan": false
+,  "Similar Wines": ["Chalk Hill Sonoma Coast Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Flowers Sonoma Coast Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -165,6 +168,7 @@
   "Hex": "#F0F6C8",
   "Sustainability": "",
   "Vegan": false
+,  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Chalk Hill Sonoma Coast Chardonnay", "Grgich Hills Estate Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -205,6 +209,7 @@
   "Hex": "#EEF7C9",
   "Sustainability": "",
   "Vegan": true
+,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "Bruni Plinio Vermintino Maremma Toscana", "Cakebread Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc"]
 },
 {
   "Wine Type": "Bianco",
@@ -245,6 +250,7 @@
   "Hex": "#F3E7B0",
   "Sustainability": "Sustainable farming practices with vineyard parcels aged 20–50 years",
   "Vegan": true
+,  "Similar Wines": ["Scarpetta Pinot Grigio", "Ken Wright Tyrus Evan Pinot Gris", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 },
 {
   "Wine Type": "Bianco",
@@ -285,6 +291,7 @@
   "Hex": "#F2E39A",
   "Sustainability": "",
   "Vegan": false
+,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 },
 {
   "Wine Type": "Bianco",
@@ -325,6 +332,7 @@
   "Hex": "#F3F8D2",
   "Sustainability": "",
   "Vegan": false
+,  "Similar Wines": ["PEJU Legacy Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
 },
 {
   "Wine Type": "Bianco",
@@ -365,6 +373,7 @@
   "Hex": "#F4F9D6",
   "Sustainability": "Certified Napa Green and Fish Friendly Farming across estate vineyards",
   "Vegan": false
+,  "Similar Wines": ["Cakebread Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
 },
 {
   "Wine Type": "Bianco",
@@ -406,6 +415,7 @@
   "Sustainability": "",
   "Vegan": true,
   "Top Bottle": true
+,  "Similar Wines": ["La Scola Gavi di Gavi", "Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "Cakebread Sauvignon Blanc", "PEJU Legacy Sauvignon Blanc"]
 },
 {
   "Wine Type": "Bianco",
@@ -447,6 +457,7 @@
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
+,  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Grgich Hills Estate Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -488,6 +499,7 @@
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
+,  "Similar Wines": ["Cakebread Sauvignon Blanc", "PEJU Legacy Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
 },
 
 {
@@ -534,5 +546,6 @@
   "Hex": "#F6ECDD",
   "Sustainability": "",
   "Vegan": false
+,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Ken Wright Tyrus Evan Pinot Gris", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 }
 ]
