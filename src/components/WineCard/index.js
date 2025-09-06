@@ -165,10 +165,10 @@ function Index(props) {
                 '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
                 }}
             >
-
+            {wine['Similar Wines'] &&
             <SideBadge onClick={() => handleModalShow(<WineModal specs={props.state.specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
             />
-
+            }
         <div className="wine-card-image-wrapper">
             <RotatedLogo
                 className={wine["Top Icons"]?.includes("Bubbly/Sparkling") ? "" : "bubbles-inactive"}
