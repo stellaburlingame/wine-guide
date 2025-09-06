@@ -35,9 +35,8 @@ class index extends React.Component {
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
-    handleModalShow = (body) => {
-      this.setState({ showModal: true, modalContent: body });
-      // this.setState({ showDefinitionModal: true, currentTerm: term });
+    handleModalShow = (body, fullScreen) => {
+      this.setState({ showModal: true, fullScreen: fullScreen, modalContent: body });
     }
     handleDefinitionShow = (term) => {
         const matched = this.props.state.definitions.find(
@@ -70,7 +69,17 @@ class index extends React.Component {
                         state={this.props.state}
                         handleDefinitionShow={this.handleDefinitionShow}
                         handleModalShow={this.handleModalShow}
-                        />
+                      />
+                      {/* <WineCard
+                        wine={data1}
+                        index={index}
+                        format={this.format}
+                        state={this.props.state.specs}
+                        producerOffsetClass={this.state.producerOffsetClasses}
+                        handleDefinitionShow={this.handleDefinitionShow}
+                        handleModalShow={this.handleModalShow}
+                        handleModalClose={this.handleDefinitionClose}
+                        /> */}
                       </div>
                   ));
                 })()}
@@ -80,6 +89,7 @@ class index extends React.Component {
               show={this.state.showModal}
               onHide={this.handleDefinitionClose}
               body={this.state.modalContent}
+              fullScreen={this.state.fullScreen}
             />
             {this.state.showScrollToTop && (
               <button
