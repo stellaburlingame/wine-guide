@@ -12,6 +12,7 @@
     width: auto;
     writing-mode: sideways-lr;
     text-orientation: upright;
+    font-size: .8rem !important;
 }
 .side-badge:hover, .side-badge:focus, .side-badge:active {
     background-color: rgb(95, 95, 95) !important;

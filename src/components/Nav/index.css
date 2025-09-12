@@ -27,9 +27,9 @@ div.nav-icon > button.btn {
     height: 40px;
 }
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     font-style: oblique;
 }
 .nav-active {

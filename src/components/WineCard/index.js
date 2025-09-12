@@ -128,7 +128,7 @@ function Index(props) {
         {wine["Top Glass"] && (
             <Badge className="wine-top-selling">⭐️ Top Selling Glass</Badge>
         )} {' '}
-        <span className=".card-title" style={{ fontWeight: 'bold' }}>
+        <span className=".card-title" style={{ fontWeight: 'bold', fontSize: '.95rem' }}>
             {wine['Wine Name']}
         </span>
         {' '} <Badge bg='secondary'>{wine['Vintage']}</Badge> {' '}
@@ -211,10 +211,11 @@ function Index(props) {
             {/* {icons(wine)} */}
             {wine["Summary"] && (
             <ListGroup.Item>
-                <span>
                 <span dangerouslySetInnerHTML={{ __html: formatText(wine["Summary"]) }} />
-                </span>
-                <br />
+            </ListGroup.Item>
+            )}
+            {wine["Unique Summary"] && (
+            <ListGroup.Item>
                 <strong>Uniqueness:</strong> {wine["Unique Summary"]}
             </ListGroup.Item>
             )}

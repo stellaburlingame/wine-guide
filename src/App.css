@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'Copperplate2';
+    src: url('./fonts/Copperplate-Heavy.ttf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Copperplate2';
+    src: url('./fonts/Copperplate-Bold.ttf') format('opentype');
+    font-weight: 700;
+}
 html {
     overflow-x: hidden;
+}
+body {
+    font-family: 'Copperplate2' !important;
+    font-size: .9rem;
 }
 .parent {
     display: flex;
