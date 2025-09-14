@@ -3,8 +3,10 @@
 }
 
 .horizontal-scrollable {
+    /* overflow-y: hidden !important; */
+    overflow-x: scroll !important;
     overflow-y: scroll !important;
-    overflow-x: hidden !important;
+    /* overflow-x: hidden !important; */
     white-space: nowrap;
     display: block !important;
     height: 100%;
@@ -16,4 +18,22 @@
     /* display: inline-block; */
     float: none;
     white-space: normal;
+}
+.wine-table {
+    /* width: 100%; */
+    table-layout: auto;
+    white-space: normal;
+    overflow-wrap: break-word;
+    height: 100%;
+}
+/* .wine-table > tbody, .wine-table > thead {
+    width: 40%;
+} */
+/* th, td, tr {
+    height: 400px;
+    width: 10px !important
+} */
+.wine-table > tbody > tr > th {
+    white-space: normal;
+    font-weight: normal;
 }

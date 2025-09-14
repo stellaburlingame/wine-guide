@@ -2,12 +2,16 @@ import React from "react";
 import { Modal } from "react-bootstrap";
 import './index.css';
 import { Button } from "react-bootstrap";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+// import { Table } from "react-bootstrap";
+// import Badge from 'react-bootstrap/Badge';
+
+
+import { Col } from "react-bootstrap";
 
 import SmallerWineCard from "../SmallerWineCard";
 
 function Index(props) {
-    console.log(props)
     const similarNames = Array.isArray(props.wine['Similar Wines'])
       ? props.wine['Similar Wines']
       : (props.wine['Similar Wines'] ? [props.wine['Similar Wines']] : []);
@@ -24,7 +28,7 @@ function Index(props) {
             </Modal.Header>
             
             <Modal.Body className="wine-modal-body">
-                <Row className="horizontal-scrollable">
+                <Row>
                 {similarWines.length > 0 ? (
                   similarWines.map((wine, idx) => (
                     <Col key={idx} className="similar-wine-card col-12 col-md-12 mb-3">

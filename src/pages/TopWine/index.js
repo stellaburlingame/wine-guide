@@ -70,16 +70,6 @@ class index extends React.Component {
                         handleDefinitionShow={this.handleDefinitionShow}
                         handleModalShow={this.handleModalShow}
                       />
-                      {/* <WineCard
-                        wine={data1}
-                        index={index}
-                        format={this.format}
-                        state={this.props.state.specs}
-                        producerOffsetClass={this.state.producerOffsetClasses}
-                        handleDefinitionShow={this.handleDefinitionShow}
-                        handleModalShow={this.handleModalShow}
-                        handleModalClose={this.handleDefinitionClose}
-                        /> */}
                       </div>
                   ));
                 })()}
