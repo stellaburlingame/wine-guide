@@ -316,7 +316,7 @@
     "Top Icons": ["Fruity/Berry", "Herbal", "Spice", "Oaky/Vanilla", "Balanced", "Silky"],
     "Hex": "#5A1025",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Newton \"The Puzzle\" Bordeaux-Style Meritage", "JAX Y3 Taureau", "JUSTIN Cabernet Sauvignon", "Silver Oak Alexander Valley Cabernet Sauvignon"]
+    "Vegan": false,  "Similar Wines": ["JAX Y3 Taureau", "JUSTIN Cabernet Sauvignon", "Silver Oak Alexander Valley Cabernet Sauvignon"]
   },
   {
     "Wine Type": "Rosso",
@@ -518,7 +518,7 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Bold", "Silky"],
     "Hex": "#701F2A",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Newton \"The Puzzle\" Bordeaux-Style Meritage", "Stags’ Leap Napa Valley Merlot", "Turley Juvenile Zinfandel", "Quilt Cabernet Sauvignon"]
+    "Vegan": false,  "Similar Wines": ["Stags’ Leap Napa Valley Merlot", "Turley Juvenile Zinfandel", "Quilt Cabernet Sauvignon"]
   },
   {
     "Wine Type": "Rosso",
