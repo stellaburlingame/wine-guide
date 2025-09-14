@@ -205,7 +205,7 @@
   "Glass_Price": 0,
   "Bottle_Price": 60,
   "PDF": "GaviDOCGWhiteLabel.pdf",
-  "Top Icons": ["Citrus", "Balanced", "Minerality", "Complex", "Aged", "Vegan"],
+  "Top Icons": ["Citrus", "Balanced", "Minerality", "Complex", "Aged"],
   "Hex": "#EEF7C9",
   "Sustainability": "",
   "Vegan": true
