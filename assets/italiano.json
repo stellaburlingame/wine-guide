@@ -1,6 +1,7 @@
 [
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Cipressi Nizza, Barbera D'Asti",
     "Producer": "Michele Chiarlo",
@@ -42,6 +43,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Pajena Barbera d'Alba",
     "Producer": "Enrico Serafino",
@@ -83,6 +85,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Prunotto Barbaresco",
     "Producer": "Prunotto",
@@ -124,6 +127,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Pio Cesare Barolo",
     "Producer": "Pio Cesare",
@@ -165,6 +169,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Massolino Barolo",
     "Producer": "Massolino",
@@ -206,6 +211,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Travaglini Gattinara",
     "Producer": "Travaglini",
@@ -247,6 +253,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Antinori “Pian Delle Vigne” Brunello di Montalcino",
     "Producer": "Antinori",
@@ -288,6 +295,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "Predominantly Sangiovese with small percentages of Cabernet Sauvignon and Cabernet Franc",
     "Wine Name": "Antinori Tignanello Super Tuscan",
     "Producer": "Antinori",
@@ -329,6 +337,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "85% Sangiovese (Prugnolo Gentile), 15% Colorino, Canaiolo, Merlot",
     "Wine Name": "Poliziano Vino Nobile di Montepulciano",
     "Producer": "Poliziano",
@@ -370,6 +379,8 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano", "Glass"],
+    "Glass Position": 15,
     "Blend": "",
     "Wine Name": "Nozzole Chianti Classico",
     "Producer": "Tenuta di Nozzole",
@@ -419,6 +430,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "90% Sangiovese, 10% Cabernet Sauvignon",
     "Wine Name": "Tenuta di Arceno Chianti Classico Riserva",
     "Producer": "Tenuta di Arceno",
@@ -461,6 +473,8 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano", "Glass"],
+    "Glass Position": 17,
     "Blend": "",
     "Wine Name": "Tenuta Regaleali “Lamuri” Nero D’Avola",
     "Producer": "Tenuta Regaleali",
@@ -502,6 +516,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "90% Nebbiolo, 10% Merlot",
     "Wine Name": "Nino Negri Valtellina Superiore Quadrio Nebbiolo",
     "Producer": "Nino Negri",
@@ -543,6 +558,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "75% Corvina Veronese and Corvinone Veronese, 25% Rondinella",
     "Wine Name": "Giuseppe Campagnola, Amarone della Valpolicella Classico",
     "Producer": "Giuseppe Campagnola",
@@ -584,6 +600,7 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Italiano"],
     "Blend": "",
     "Wine Name": "Cantele Primitivo Puglia",
     "Producer": "Cantele",
@@ -625,6 +642,8 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Glass"],
+    "Glass Position": 16,
     "Blend": "90% Barbera, 10% Nebbiolo",
     "Wine Name": "Barbera 'Vezzi'",
     "Producer": "Gotham Project",
@@ -666,6 +685,8 @@
   },
   {
     "Wine Type": "Italiano",
+    "Categories": ["Glass"],
+    "Glass Position": 18,
     "Blend": "50% Syrah, 25% Merlot, 25% Sangiovese",
     "Wine Name": "Querceto Tuscan Red",
     "Producer": "Castello di Querceto",
@@ -691,7 +712,7 @@
     "Sweetness": "Dry",
     "Varietal": "Syrah, Merlot, Sangiovese",
     "General Recommended Accompanies": "Pastas, meat dishes, charcuterie, pizza, and blue cheese.",
-    "Stella Recommended": "Spaghetti and Meatballs, Orrecchiette Primavera e Speck, Maiale con Pancetta e Aglio",
+    "Stella Recommended": "Spaghetti and Meatballs, Orecchiette Primavera e Speck, Maiale con Pancetta e Aglio",
     "Image": "QuercetoTuscanRed2020.png",
     "Summary": "A bold **Tuscan red blend** of Syrah, Merlot, and Sangiovese, this wine expresses the **terroir of Chianti and Valdarno hills** through fresh herbs, red fruits, and toasty spice. A **harmonious palate** leads to a balanced finish of plum and cherry.",
     "Unique Summary": "Grown in both the Valdarno and high Chianti elevations, this Tuscan red blend highlights savory herbs and fruit in a medium-bodied structure.",
