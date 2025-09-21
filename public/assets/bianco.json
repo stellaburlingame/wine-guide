@@ -1,6 +1,7 @@
 [
   {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Chablis Domaine Séguinot-Bordet",
   "Producer": "Domaine Séguinot-Bordet",
@@ -42,6 +43,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Flowers Sonoma Coast Chardonnay",
   "Producer": "Flowers Vineyards & Winery",
@@ -83,6 +85,8 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco", "Glass"],
+  "Glass Position": 8,
   "Blend": "",
   "Wine Name": "Grgich Hills Estate Chardonnay",
   "Producer": "Grgich Hills Estate",
@@ -124,6 +128,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Sonoma-Cutrer Russian River Ranches Chardonnay 2023",
   "Producer": "Sonoma-Cutrer Vineyards",
@@ -172,6 +177,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "La Scola Gavi di Gavi",
   "Producer": "La Scolca",
@@ -196,7 +202,7 @@
   "Sweetness": "Dry",
   "Varietal": "Gavi di Gavi",
   "General Recommended Accompanies": "Hors d'oeuvres, seafood, pasta with clams or pesto, white meats, vegetable tarts, Asian cuisine, or as an aperitif.",
-  "Stella Recommended": "Orecchetti Primavera e Speck, Pettorale Sole Piccata, Milanese di Pollo",
+  "Stella Recommended": "Orecchiette Primavera e Speck, Petrale Sole Piccata, Milanese di Pollo",
   "Image": "GaviDOCGWhiteLabel.png",
   "Summary": "This classic Gavi is produced from young vineyards in the renowned Rovereto di Gavi. It showcases a dry, crisp profile with bright acidity and almond nuance, expressing the elegant essence of Cortese. A quintessential Italian white with DOCG pedigree.",
   "Unique Summary": "From Gavi’s Grand Cru zone, this DOCG white delivers bright acidity and subtle almond complexity in a refined, dry style.",
@@ -213,6 +219,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Marco Felluga Mongris Pinot Grigio",
   "Producer": "Marco Felluga",
@@ -254,6 +261,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Ken Wright Tyrus Evan Pinot Gris",
   "Producer": "Ken Wright Cellars",
@@ -294,7 +302,49 @@
 ,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 },
 {
+  "Wine Type": "Rose",
+  "Categories": ["Bianco"],
+  "Blend": "Grenache, Cinsault, Rolle",
+  "Wine Name": "St. Marguerite Symphonie Rosé",
+  "Producer": "Chateau Sainte Marguerite",
+  "Vintage": 2024,
+  "Tannin Level": "",
+  "Tannin Characteristics": "",
+  "Body": "Light",
+  "Body Characteristics": "Fresh and delicate with elegant balance and a hint of grapefruit zest on the finish.",
+  "Finish": "Medium",
+  "Finish Characteristics": "Refined and zesty with citrus and floral persistence.",
+  "Acidity": "High",
+  "Aroma": "Floral notes, white peach, and grapefruit peel.",
+  "Flavor": "Delicate fruit with aromatic freshness and a clean citrus finish.",
+  "Style": "Dry Rosé",
+  "Vinification": "Cold skin maceration before pressing; temperature-controlled vinification; aged on fine lees in vats; fined and filtered before bottling.",
+  "Maturation": "Aged on fine lees in stainless steel vats.",
+  "Type of cask": "Stainless steel",
+  "Color": "Delicate pearly pink.",
+  "Hex": "#F9DDE4",
+  "Region": "Provence",
+  "Appellation": "Côtes de Provence",
+  "Vineyard": "",
+  "Sweetness": "Dry",
+  "Varietal": "Rose",
+  "General Recommended Accompanies": "Seafood tapas, grilled fish, lemon-fried squid fritters, prawns al ajillo, tuna empanadas.",
+  "Stella Recommended": "",
+  "Image": "SymphonieRose2024.png",
+  "Summary": "Symphonie Rosé 2024 is a Cru Classé organic and vegan rosé from Côtes de Provence, offering floral elegance, white peach, and grapefruit zest in a delicately structured profile. It’s a refined expression of southern French terroir.",
+  "Unique Summary": "Certified organic and vegan, this Provence rosé blends Grenache, Cinsault, and Rolle into a fresh, harmonious wine with floral lift and citrus-driven finesse.",
+  "DOCG": false,
+  "DOC": false,
+  "Glass_Price": 0,
+  "Bottle_Price": 70,
+  "PDF": "SymphonieRose2024.pdf",
+  "Top Icons": ["Floral", "Citrus", "Balanced", "Stone Fruit"],
+  "Sustainability": "Certified organic by FR BIO 01 Ecocert",
+  "Vegan": true
+},
+{
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "99% Sauvignon Blanc, 1% Semillon",
   "Wine Name": "Cakebread Sauvignon Blanc",
   "Producer": "Cakebread Cellars",
@@ -336,6 +386,7 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "PEJU Legacy Sauvignon Blanc",
   "Producer": "PEJU Winery",
@@ -377,6 +428,8 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Bianco", "Glass"],
+  "Glass Position": 10,
   "Blend": "85% Vermentino, 15% Viognier",
   "Wine Name": "Bruni Plinio Vermintino Maremma Toscana",
   "Producer": "Bruni",
@@ -401,7 +454,7 @@
   "Sweetness": "Dry",
   "Varietal": "Vermentino",
   "General Recommended Accompanies": "Seafood dishes, antipasti, lobster, and shellfish.",
-  "Stella Recommended": "Gamberi All Aglio, Milanese de Pollo, Petrale Sole Piccata",
+  "Stella Recommended": "Gamberi All Aglio, Milanese di Pollo, Petrale Sole Piccata",
   "Image": "PlinioVermentinoMaremmaToscana.png",
   "Summary": "Plinio honors the legacy of Roman viticulture with a fresh, floral Vermentino from Maremma. A blend of Vermentino and Viognier, it offers exotic fruit and herbal notes with a crisp, mineral finish, aged sur lie for added depth.",
   "Unique Summary": "Crafted from Maremma’s clay soils, this Vermentino-Viognier blend delivers floral freshness and mineral length.",
@@ -419,6 +472,8 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Glass"],
+  "Glass Position": 7,
   "Blend": "",
   "Wine Name": "Chalk Hill Sonoma Coast Chardonnay",
   "Producer": "Chalk Hill",
@@ -461,6 +516,8 @@
 },
 {
   "Wine Type": "Bianco",
+  "Categories": ["Glass"],
+  "Glass Position": 9,
   "Blend": "",
   "Wine Name": "Dry Creek Vineyard DCV3 Sauvignon Blanc",
   "Producer": "Dry Creek Vineyard",
@@ -504,6 +561,8 @@
 
 {
   "Wine Type": "Bianco",
+  "Categories": ["Glass"],
+  "Glass Position": 6,
   "Blend": "",
   "Wine Name": "Scarpetta Pinot Grigio",
   "Producer": "Scarpetta",
@@ -534,8 +593,7 @@
   "Unique Summary": "From top sites in Friuli’s Grave and Colli Orientali regions, this Pinot Grigio showcases freshness, minerality, and surprising complexity.",
   "DOCG": false,
   "DOC": true,
-  "Glass_Price": 18,
-  "Bottle_Price": 60,
+  "Glass_Price": 15,
   "PDF": "ScarpettaPinotGrigio2024.pdf",
   "Top Icons": [
     "Stone Fruit",
