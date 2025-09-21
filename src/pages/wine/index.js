@@ -7,12 +7,21 @@ import Row from 'react-bootstrap/Row';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Accordion from 'react-bootstrap/Accordion';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Badge from 'react-bootstrap/Badge';
+import Button from "react-bootstrap/Button";
 
 import BlankModal from '../../components/BlankModal';
 import DefinitionModal from '../../components/DefinitionModal';
 
 import regions from "../../components/Regions/regions.json";
 
+import { BiSearch } from "react-icons/bi";
+import { BiTrash } from "react-icons/bi";
+
+import { applyFilters, resetFilters } from './filters';
+
+// import { Search } from '../../components/WineFilters';
 
 import WineCard from '../../components/WineCard';
 
@@ -21,11 +30,7 @@ import "./index.css";
 
 // Utility to get available filter options after applying current filters
 function getAvailableFilters(wines, regions, filters) {
-  // filters: { selectedType, varietalValue, selectedCountry, selectedRegion, selectedIcon, selectedPriceType, showBoldnessFilter, boldness, searchQuery }
-  // Returns: { countries, regions, varietals, icons }
-  // Note: country/region/varietal values are unique arrays of allowed values in the current filtered list
-  // If a filter is not applied (e.g., selectedCountry=""), do not restrict based on that filter.
-
+  
   // Compose the filter logic (should match the filtering used in render)
   const bodyScale = {
     "light": 0,
@@ -62,9 +67,18 @@ function getAvailableFilters(wines, regions, filters) {
     const varietalMatch = filters.varietalValue === "all" || w.Varietal === filters.varietalValue;
     const iconMatch = !filters.selectedIcon || filters.selectedIcon.length === 0 ||
       (w['Top Icons'] && filters.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
-    const typeMatch = filters.selectedType
-      ? (w["Wine Type"]?.toLowerCase() === filters.selectedType.toLowerCase())
-      : true;
+    let typeMatch = true;
+    if (filters.selectedType === "all" || filters.selectedType === "" || null) {
+      typeMatch = true;
+    }
+    else {
+      const cats = (w.Categories || []).map(c => c.toLowerCase());
+        const sel = filters.selectedType.toLowerCase();
+        typeMatch = cats.includes(sel);
+    }
+    // const typeMatch = filters.selectedType
+    //   ? (w["Wine Type"]?.toLowerCase() === filters.selectedType.toLowerCase())
+    //   : true;
     const searchMatch = !filters.searchQuery ||
       searchFields.some(field =>
         w[field]?.toString().toLowerCase().includes(filters.searchQuery)
@@ -98,25 +112,8 @@ Object.values(regions).forEach((region) => {
 
 
 class index extends React.Component {
-    darkenHex(hex, factor = 0.5) {
-    if (!hex || !/^#([0-9A-F]{3}){1,2}$/i.test(hex)) return hex;
-
-    let c = hex.substring(1);
-    if (c.length === 3) {
-      c = c.split('').map(ch => ch + ch).join('');
-    }
-    const num = parseInt(c, 16);
-    let r = (num >> 16) & 255;
-    let g = (num >> 8) & 255;
-    let b = num & 255;
-
-    r = Math.max(0, Math.min(255, Math.floor(r * factor)));
-    g = Math.max(0, Math.min(255, Math.floor(g * factor)));
-    b = Math.max(0, Math.min(255, Math.floor(b * factor)));
-
-    return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
-  }
     state = {
+      filters: resetFilters().filters,
         specs: [],
         selectedCountry: "",
         selectedRegion: "",
@@ -139,24 +136,30 @@ class index extends React.Component {
         minBottlePrice: null,
         maxBottlePrice: null,
         producerOffsetClasses: {},
-        // Add new filter for Top Picks
-        topPicks: false,
-    }
+        recommendationsOpen: false,
+        suggestions: [],
+        suggestionsLimit: 7
+  }
   clearAllFilters = () => {
+    this.setState(resetFilters(this.state.specs).filters);
     this.setState({
       searchQuery: '',
       selectedCountry: '',
       selectedRegion: '',
       selectedPriceType: '',
       selectedIcon: [],
-      boldness: 0.25,
+      boldness: 0,
       showBoldnessFilter: false,
       veganOnly: false,
       sustainableOnly: false,
       selectedType: '',
       varietalValue: 'all',
-      topPicks: false
+      minBottlePrice: null,
+      maxBottlePrice: null,
     });
+  }
+  handleFilterChange() {
+    // this.setState(applyFilters(this.state.filters, this.state.specs))
   }
     // Add logic to set selectedType and filter by Wine Type based on hash on mount
     componentDidMount() {
@@ -165,31 +168,9 @@ class index extends React.Component {
         const typeFromHash = match ? match[1] : "";
         this.setState({ selectedType: typeFromHash });
 
-        // --- Begin hash filter logic for #top ---
-        // Only apply this logic if hash is exactly "#top"
-        const hash = window.location.hash.toLowerCase();
-        if (hash === '#/wine-top-picks') {
-          // Only apply Top Bottle and Top Glass, all else default
-          this.setState({
-            selectedCountry: '',
-            selectedRegion: '',
-            selectedPriceType: '',
-            selectedIcon: [],
-            showBoldnessFilter: false,
-            veganOnly: false,
-            sustainableOnly: false,
-            selectedType: '',
-            varietalValue: 'all',
-            minBottlePrice: null,
-            maxBottlePrice: null,
-            topPicks: true,
-            searchQuery: ''
-          });
-        }
-        // --- End hash filter logic for #top ---
-
         Promise.all(
           ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
+          // ["sparkling", "bianco", "rosso", "italiano"].map((type) =>
             fetch(`${process.env.PUBLIC_URL}/assets/${type}.json`).then((res) =>
               res.json()
             )
@@ -199,6 +180,8 @@ class index extends React.Component {
             // Flatten all JSON arrays and set once
             const combinedData = results.flat();
             this.setState({ specs: combinedData });
+            // this.clearAllFilters()
+            // this.setState(resetFilters(combinedData).filters);
             // Assign a random background offset class for each wine
             const offsetClasses = ['random-offset-1', 'random-offset-2', 'random-offset-3', 'random-offset-4', 'random-offset-5'];
             const producerOffsetClasses = {};
@@ -207,6 +190,8 @@ class index extends React.Component {
               producerOffsetClasses[idx] = rand;
             });
             this.setState({ producerOffsetClasses });
+            // (Optional) Update suggestions after specs are loaded
+            this.updateSuggestions(this.state.searchQuery);
           })
           .catch((err) => console.log(err));
 
@@ -217,6 +202,76 @@ class index extends React.Component {
         })
         .catch(err => console.log(err));
         window.addEventListener('scroll', this.checkScrollTop);
+    }
+    // --- SUGGESTIONS/SEARCH AUTOCOMPLETE HELPERS ---
+    buildSearchCorpus = () => {
+      const fields = [
+        'Summary','Flavor','Aroma','Finish','Acidity','Body','Body Characteristics',
+        'Tannins','Tannin Characteristics','Stella Recommended','Vinification','Maturation',
+        'Region','Vineyard','Wine Name','Vintage','Sweetness','Varietal'
+      ];
+      const corpus = [];
+      (this.state.specs || []).forEach(w => {
+        fields.forEach(f => {
+          const v = w[f];
+          if (v) {
+            // split on commas/semicolons to get tighter terms
+            const parts = v.toString().split(/[,;]/).map(s => s.trim()).filter(Boolean);
+            corpus.push(...parts);
+          }
+        });
+        if (Array.isArray(w['Top Icons'])) corpus.push(...w['Top Icons']);
+      });
+      return corpus;
+    }
+
+    countMatchesForTerm = (term) => {
+      const tl = (term || '').toLowerCase();
+      if (!tl) return 0;
+      const searchableFields = [
+        'Summary','Flavor','Aroma','Finish','Acidity','Body','Body Characteristics',
+        'Tannins','Tannin Characteristics','Stella Recommended','Vinification','Maturation',
+        'Region','Vineyard','Wine Name','Vintage','Sweetness','Varietal'
+      ];
+      let count = 0;
+      for (const w of this.state.specs) {
+        const hit = searchableFields.some(field => w[field]?.toString().toLowerCase().includes(tl));
+        if (hit) count++;
+      }
+      return count;
+    }
+
+    updateSuggestions = (q) => {
+      const query = (q || '').toLowerCase().trim();
+      if (!query) {
+        this.setState({ suggestions: [] });
+        return;
+      }
+      const seen = new Set();
+      const corpus = this.buildSearchCorpus();
+      const matches = [];
+      for (const term of corpus) {
+        const t = term.toString().trim();
+        if (!t) continue;
+        const tl = t.toLowerCase();
+        if (tl.includes(query) && !seen.has(tl)) {
+          seen.add(tl);
+          matches.push(t);
+          if (matches.length >= 50) break; // cap scan growth
+        }
+      }
+      // Sort by most hits, then prefix, then shorter terms
+      matches.sort((a,b) => {
+        const ca = this.countMatchesForTerm(a);
+        const cb = this.countMatchesForTerm(b);
+        if (cb !== ca) return cb - ca; // most hits first
+        const al = a.toLowerCase(), bl = b.toLowerCase();
+        const aStarts = al.startsWith(query) ? 0 : 1;
+        const bStarts = bl.startsWith(query) ? 0 : 1;
+        if (aStarts !== bStarts) return aStarts - bStarts; // then prefix match
+        return a.length - b.length; // then shorter terms
+      });
+      this.setState({ suggestions: matches, suggestionsLimit: 7 });
     }
 
     componentWillUnmount() {
@@ -233,38 +288,12 @@ class index extends React.Component {
             this.setState({ showScrollToTop: false });
         }
     }
-    componentDidUpdate(prevProps, prevState) {
-      // Optional: react to prop changes in the future
-      // Handle prop.type === 'top' to activate Top Picks filter and set wineType to 'top'
-      if (this.props.type === 'top' && prevProps.type !== 'top') {
-        this.setState((prevState) => ({
-          ...prevState,
-          topPicks: true,
-        }));
-      }
-      if (this.props.type !== 'top' && prevProps.type === 'top') {
-        this.setState((prevState) => ({
-          ...prevState,
-          topPicks: false,
-        }));
-      }
-      if (JSON.stringify(this.state.specs) !== JSON.stringify(prevState.specs)) {
-        return;
-      }
-
-      Promise.all(
-        ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
-          fetch(`${process.env.PUBLIC_URL}/assets/${type}.json`).then((res) => res.json())
-        )
-      )
-        .then((allData) => {
-          const combinedData = allData.flat();
-          if (JSON.stringify(prevState.specs) !== JSON.stringify(combinedData)) {
-            this.setState({ specs: combinedData });
-          }
-        })
-        .catch((err) => console.log(err));
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //   // Optional: react to prop changes in the future
+    //   if (JSON.stringify(this.state.specs) !== JSON.stringify(prevState.specs)) {
+    //     return;
+    //   }
+    // }
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -302,11 +331,6 @@ class index extends React.Component {
     this.setState({ selectedCountry, selectedRegion: "" });
   }
   render() {
-        // Only render filters if enableFilters prop is true (or undefined, for backward compatibility)
-        if (this.props.enableFilters === false) {
-          // If explicitly set to false, do not render filters or results.
-          return null;
-        }
         // --- region/country filter logic for filtering ---
         const filteredSpecs = this.state.specs.filter((wine) => {
           // Use regions mapping to get country for wine.Region
@@ -333,17 +357,20 @@ class index extends React.Component {
         );
 
         // Compute filteredData once so it can be used in multiple places (header count + results)
-        let filteredData;
-        if (window.location.hash.toLowerCase() === "#/wine#top") {
-          filteredData = this.state.specs.filter(w => w["Top Bottle"] || w["Top Glass"]);
-        } else {
-          filteredData = filteredSpecs.filter(w => {
+        let filteredData = filteredSpecs.filter(w => {
             const varietalMatch = this.state.varietalValue === "all" || w.Varietal === this.state.varietalValue;
             const iconMatch = this.state.selectedIcon.length === 0 ||
               (w['Top Icons'] && this.state.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
-            const typeMatch = this.state.selectedType
-              ? (w["Wine Type"]?.toLowerCase() === this.state.selectedType.toLowerCase())
-              : true;
+            let typeMatch = true;
+            if (this.state.selectedType === "all" || this.state.selectedType === "") {
+              typeMatch = true;
+            }
+            else {
+              const cats = (w.Categories || []).map(c => c.toLowerCase());
+                const sel = this.state.selectedType.toLowerCase();
+                typeMatch = cats.includes(sel);
+            }
+
             const searchableFields = [
               'Summary','Flavor','Aroma','Finish','Acidity','Body','Body Characteristics',
               'Tannins','Tannin Characteristics','Stella Recommended','Vinification','Maturation',
@@ -363,7 +390,6 @@ class index extends React.Component {
             if (isNaN(bottlePrice)) bottlePrice = 0;
             if (this.state.minBottlePrice && bottlePrice < Number(this.state.minBottlePrice)) return false;
             if (this.state.maxBottlePrice && bottlePrice > Number(this.state.maxBottlePrice)) return false;
-            if (this.state.topPicks && !w["Top Bottle"] && !w["Top Glass"]) return false;
             return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
           });
           if (this.state.veganOnly) {
@@ -372,22 +398,28 @@ class index extends React.Component {
           if (this.state.sustainableOnly) {
             filteredData = filteredData.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
           }
-        }
-
+          // Sort only when viewing the glass category
+          if (this.state.selectedType === 'glass') {
+            filteredData.sort((a, b) => {
+              const posA = Number(a["Glass Position"]) || 0;
+              const posB = Number(b["Glass Position"]) || 0;
+              if (posA !== posB) return posA - posB;
+              // optional stable tie-breaker:
+              return (a["Wine Name"] || "").localeCompare(b["Wine Name"] || "");
+            });
+          }
         return (
             <>
             <Row className="p-3  form-wrapper">
               {/* Type Filter Tabs */}
-              <Form.Group className="p-0 col-12" hidden={this.state.topPicks}>
+              <Form.Group className="p-0 col-12">
                 <Tabs
                   activeKey={this.state.selectedType}
                   onSelect={(k) => {
                     // Handle Top Picks logic
-                    const isTopTab = k === "top";
                     this.setState((prevState) => ({
                       ...prevState,
-                      selectedType: k,
-                      topPicks: isTopTab ? true : false
+                      selectedType: k
                     }));
                     const url = new URL(window.location.href);
                     url.hash = `#/wine#${k}`;
@@ -399,11 +431,12 @@ class index extends React.Component {
                   justify
                 >
                   <Tab eventKey="" title="All Types" />
-                  <Tab eventKey="italiano" title="Italiano" />
-                  <Tab eventKey="rosso" title="Rosso" />
-                  <Tab eventKey="bianco" title="Bianco" />
+                  <Tab eventKey="glass" title="Wines by the Glass" />
                   <Tab eventKey="sparkling" title="Sparkling" />
-                  <Tab eventKey="rose" title="Rose" />
+                  <Tab eventKey="bianco" title="Bianco and Rose" />
+                  <Tab eventKey="rosso" title="Rosso" />
+                  <Tab eventKey="italiano" title="Italiano" />
+                  {/* <Tab eventKey="rose" title="Rose" /> */}
                 </Tabs>
               </Form.Group>
             <Card body className="form-wrapper">
@@ -411,21 +444,85 @@ class index extends React.Component {
                   <div style={{textAlign: "right"}} className="wine-count">
                     <strong>{filteredData.length}</strong> wines available out of <strong>{this.state.specs.length}</strong>
                   </div>
+
               </Row>
               <Row>
               {/* Search */}
-              <Form.Group className="mt-3 col-sm-10">
-                <Form.Control
-                  type="text"
-                  id="searchFilter"
-                  placeholder="Search by any keyword..."
-                  value={this.state.searchQuery || ""}
-                  onChange={(e) => this.setState({ searchQuery: e.target.value.toLowerCase() })}
-                />
+              <Form.Group style={{ position: "relative", display: 'flex' }} className="mt-3 col-sm-10">
+                  <Form.Control
+                    type="text"
+                    id="searchFilter"
+                    placeholder="Search by any keyword..."
+                    value={this.state.searchQuery || ""}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      this.setState({ searchQuery: val.toLowerCase() }, () => this.updateSuggestions(val));
+                    }}
+                    // onFocus={(e) => this.updateSuggestions(e.target.value)}
+                    // onEnter
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        this.setState({suggestions: []});
+                      }
+                    }} 
+                    onSubmit={() => this.setState({suggestions: []})}
+                  />
+
+                    <Button onClick={() => this.setState({suggestions: []})} variant="outline-success">
+                      <BiSearch />
+                    </Button>
+                    <Button onClick={() => this.setState({ searchQuery: ""})} variant="outline-danger">
+                      <BiTrash />
+                    </Button>
+                  
+                  <ListGroup
+                    hidden={!this.state.searchQuery || this.state.suggestions.length === 0}
+                    variant="flush"
+                    style={{
+                      position: "absolute",
+                      zIndex: 1000,
+                      top: "100%",
+                      left: 0,
+                      right: 0,
+                      width: "100%"
+                    }}
+                  >
+                    {this.state.suggestions.slice(0, this.state.suggestionsLimit).map((s, idx) => (
+                      <ListGroup.Item
+                        action
+                        key={idx}
+                        onClick={() => this.setState({ searchQuery: s.toLowerCase(), suggestions: [] })}
+                      >
+                        <div className="d-flex justify-content-between align-items-center">
+                          <span>{s}</span>
+                          <Badge bg="primary" pill>{this.countMatchesForTerm(s)}</Badge>
+                        </div>
+                      </ListGroup.Item>
+                    ))}
+                    {this.state.suggestions.length > this.state.suggestionsLimit && (
+                      <ListGroup.Item
+                        action
+                        variant="light"
+                        onClick={() => this.setState({ suggestionsLimit: this.state.suggestionsLimit + 10 })}
+                      >
+                        Show more…
+                      </ListGroup.Item>
+                    )}
+                    {this.state.suggestionsLimit > 7 && (
+                      <ListGroup.Item
+                        action
+                        variant="light"
+                        onClick={() => this.setState({ suggestionsLimit: 7 })}
+                      >
+                        Show less
+                      </ListGroup.Item>
+                    )}
+                  </ListGroup>
+                  
               </Form.Group>
 
               {/* Clear Filters Button Group */}
-              <Form.Group className="col-sm-2 mb-3 mt-3">
+              <Form.Group className="col-sm-2 mt-3">
                 {(() => {
                   // Compute filtersCleared as described in the instructions
                   const filtersCleared =
@@ -444,21 +541,25 @@ class index extends React.Component {
                     this.state.maxBottlePrice == null &&
                     !this.state.topPicks;
                   return (
-                    <button
+                    <Button
                       type="button"
-                      className="btn btn-success form-control"
+                      variant="outline-danger"
+                      className="form-control"
                       onClick={this.clearAllFilters}
                       disabled={filtersCleared}
                     >
                       Clear Filters
-                    </button>
+                    </Button>
                   );
                 })()}
+              </Form.Group>
+              <Form.Group className="col-sm-2 mb-3 mt-3">
+
               </Form.Group>
               </Row>
               <Accordion className="mb-4">
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header>Show More Filters                  </Accordion.Header>
+                  <Accordion.Header>Show More Filters</Accordion.Header>
                   <Accordion.Body>
                     <Row>
                       {/* Price Type Filter Radio Group */}
@@ -523,9 +624,8 @@ class index extends React.Component {
                       {/* Varietal Filter Block: Show placeholder when "All Types" is selected */}
                       </Form.Group>
 
-                      {/* ---- Varietal Filter: Show only varietals available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
-                        <Form.Label>Filter by Varietal</Form.Label>
+                        {/* <Form.Label>Filter by Varietal</Form.Label>
                         {this.state.selectedType !== "" ? (
                           <div>
                             <Form.Check
@@ -537,42 +637,10 @@ class index extends React.Component {
                               checked={this.state.varietalValue === "all"}
                               onChange={(e) => this.setState({ varietalValue: e.target.value })}
                             />
-                            {(this.state.topPicks
-                              ? Array.from(
-                                  new Set(
-                                    this.state.specs
-                                      .filter(w => (w["Top Bottle"] || w["Top Glass"]) && w["Wine Type"] === this.state.selectedType)
-                                      .flatMap(w => w.Varietal ? w.Varietal : [])
-                                  )
-                                )
-                              : Array.from(
-                                  new Set(
-                                    this.state.specs
-                                      .filter(wine => wine["Wine Type"] === this.state.selectedType)
-                                      .flatMap(wine => wine.Varietal ? wine.Varietal : [])
-                                  )
-                                )
-                            )
-                              .sort()
-                              .map((varietal) => (
-                                <Form.Check
-                                  key={varietal}
-                                  type="radio"
-                                  inline
-                                  name="varietal"
-                                  value={varietal}
-                                  id={`varietal-${varietal}`}
-                                  label={varietal}
-                                  checked={this.state.varietalValue === varietal}
-                                  onChange={(e) =>
-                                    this.setState((prev) => ({ ...prev, varietalValue: e.target.value }))
-                                  }
-                                />
-                              ))}
                           </div>
                         ) : (
                           <div className="text-muted">Select Wine Type to choose a varietal</div>
-                        )}
+                        )} */}
                       </Form.Group>
                       {/* ---- Country Filter: Show only countries available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
@@ -586,27 +654,14 @@ class index extends React.Component {
                             checked={this.state.selectedCountry === ""}
                             onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
                           />
-                          {(this.state.topPicks
-                            ? Array.from(
-                                new Set(
-                                  this.state.specs
-                                    .filter(w => w["Top Bottle"] || w["Top Glass"])
-                                    .map(w => regions[w.Region]?.Country || w.Country)
-                                    .filter(Boolean)
-                                )
-                              )
-                            : countries
-                          )
+                          {countries
                             .concat(
                               this.state.selectedCountry &&
                                 !(
-                                  this.state.topPicks
-                                    ? this.state.specs
-                                        .filter(w => w["Top Bottle"] || w["Top Glass"])
-                                        .map(w => regions[w.Region]?.Country || w.Country)
-                                        .filter(Boolean)
-                                        .includes(this.state.selectedCountry)
-                                    : countries.includes(this.state.selectedCountry)
+                                  this.state.specs
+                                    .map(w => regions[w.Region]?.Country || w.Country)
+                                    .filter(Boolean)
+                                    .includes(this.state.selectedCountry)
                                 )
                                 ? [this.state.selectedCountry]
                                 : []
@@ -625,14 +680,13 @@ class index extends React.Component {
                             ))}
                         </div>
                       </Form.Group>
-                      {/* ---- Region Filter: Show only regions available in top picks if topPicks is active ---- */}
                       <div className="col-md-6 col-sm-12">
                         <Form.Group>
                           <Form.Label>Filter by Region</Form.Label>
                           {this.state.selectedCountry && this.state.selectedCountry !== "all" ? (
                             <></>
                           ) : (
-                            <div className="text-muted" style={{ height: '38px', paddingTop: '6px' }}>
+                            <div className="text-muted mb-5" style={{ height: '38px', paddingTop: '6px' }}>
                               Select a country to choose a region
                             </div>
                           )}
@@ -646,19 +700,7 @@ class index extends React.Component {
                               checked={this.state.selectedRegion === ""}
                               onChange={(e) => this.setState({ selectedRegion: e.target.value })}
                             />
-                            {(this.state.topPicks
-                              ? Object.keys(regions)
-                                  .filter(region =>
-                                    (this.state.selectedCountry === "all" ||
-                                      this.state.selectedCountry === "" ||
-                                      regions[region]?.Country === this.state.selectedCountry) &&
-                                    this.state.specs.some(
-                                      w =>
-                                        (w["Top Bottle"] || w["Top Glass"]) &&
-                                        w.Region === region
-                                    )
-                                  )
-                              : Object.keys(regions).filter(region =>
+                            {(Object.keys(regions).filter(region =>
                                   this.state.selectedCountry === "all" ||
                                   this.state.selectedCountry === "" ||
                                   regions[region]?.Country === this.state.selectedCountry
@@ -678,30 +720,17 @@ class index extends React.Component {
                           </div>
                         </Form.Group>
                       </div>
-                      {/* ---- Top Icon Filter: Show only icons available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Description</Form.Label>
                         <div>
                           {Array.from(
                             new Set(
-                              (this.state.topPicks
-                                ? this.state.specs
-                                    .filter(w => w["Top Bottle"] || w["Top Glass"])
-                                    .flatMap(w => w['Top Icons'] || [])
-                                : this.state.specs.flatMap(wine => wine['Top Icons'] || [])
-                              ).concat(
-                                this.state.selectedIcon.filter(
-                                  icon =>
-                                    !(
-                                      this.state.topPicks
-                                        ? this.state.specs
-                                            .filter(w => w["Top Bottle"] || w["Top Glass"])
-                                            .flatMap(w => w['Top Icons'] || [])
-                                            .includes(icon)
-                                        : this.state.specs.flatMap(wine => wine['Top Icons'] || []).includes(icon)
-                                    )
+                              (this.state.specs.flatMap(wine => wine['Top Icons'] || [])
+                                ).concat(
+                                  this.state.selectedIcon.filter(
+                                    icon => !(this.state.specs.flatMap(w => w['Top Icons'] || []).includes(icon))
+                                  )
                                 )
-                              )
                             )
                           ).map((icon, idx) => (
                             <Form.Check
@@ -719,15 +748,7 @@ class index extends React.Component {
                                   return { selectedIcon: [...icons] };
                                 });
                               }}
-                              disabled={
-                                !(this.state.topPicks
-                                  ? this.state.specs
-                                      .filter(w => w["Top Bottle"] || w["Top Glass"])
-                                      .flatMap(w => w['Top Icons'] || [])
-                                      .includes(icon)
-                                  : availableFilters.icons.includes(icon)
-                                ) && !this.state.selectedIcon.includes(icon)
-                              }
+                              disabled={!availableFilters.icons.includes(icon) && !this.state.selectedIcon.includes(icon)}
                             />
                           ))}
                         </div>
@@ -748,7 +769,7 @@ class index extends React.Component {
                               min={0}
                               max={1}
                               step={0.25}
-                              value={this.state.boldness}
+                              value={this.state.boldness || ""}
                               onChange={(e) => this.setState({ boldness: parseFloat(e.target.value) })}
                             />
                             <div>
