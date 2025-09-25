@@ -2,7 +2,7 @@
   "name": "Stella Wine Guide",
   "short_name": "Wine Guide",
   "description": "Browse Stella's wine list with tasting notes, winemaker details, and pairing suggestions",
-  "start_url": "./wine-guide/",
+  "start_url": "/wine-guide/",
   "icons": [
     {
       "src": "./web-app-manifest-192x192.png",
