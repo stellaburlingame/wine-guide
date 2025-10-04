@@ -1,15 +1,17 @@
 {
   "name": "Stella Wine Guide",
   "short_name": "Wine Guide",
+  "description": "Browse Stella's wine list with tasting notes, winemaker details, and pairing suggestions",
+  "start_url": "/wine-guide/",
+  "id": "https://stellaburlingame.github.io/wine-guide/",
   "icons": [
     {
-      "src": "/assets/web-app-manifest-192x192.png",
+      "src": "./web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
-      "src": "/assets/web-app-manifest-512x512.png",
+      "src": "./web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -17,5 +19,21 @@
   ],
   "theme_color": "#172A3E",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "screenshots": [    
+    {
+      "src": "./ScreenshotWide.png",
+        "sizes": "2732x2048",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Application"
+    },
+    {
+      "src": "./ScreenshotWide.png",
+        "sizes": "2732x2048",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Application"
+    }
+  ]
 }
