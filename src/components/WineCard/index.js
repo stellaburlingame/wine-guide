@@ -1,5 +1,5 @@
 import React from "react";
-// import './index.css';
+import './index.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';

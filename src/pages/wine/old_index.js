@@ -1,8 +1,11 @@
 
 import React from "react";
+import RangeExample from '../../components/RangeExample';
 import { Card } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
@@ -16,7 +19,7 @@ import regions from "../../components/Regions/regions.json";
 import { BiSearch } from "react-icons/bi";
 import { BiTrash } from "react-icons/bi";
 
-import { resetFilters } from './filters';
+import { applyFilters, resetFilters } from './filters';
 
 // import { Search } from '../../components/WineFilters';
 
@@ -24,36 +27,19 @@ import WineCard from '../../components/WineCard';
 
 import "./print.css";
 import "./index.css";
-import { WineTabs } from "./Components/WineTabs";
-import { BoldnessFilter, PriceFilters } from "./Components/WineFilters";
 
 // Utility to get available filter options after applying current filters
-function getAvailableFilters(filtered) {
-  // Get unique values from filtered
-  const countries = Array.from(new Set(filtered.map(w => regions[w.Region]?.Country || w.Country).filter(Boolean))).sort();
-  const regionList = Array.from(new Set(filtered.map(w => w.Region).filter(Boolean))).sort();
-  const varietals = Array.from(new Set(filtered.map(w => w.Varietal).filter(Boolean))).sort();
-  const icons = Array.from(new Set(filtered.flatMap(w => w['Top Icons'] || []))).sort();
-  return { countries, regions: regionList, varietals, icons };
-}
-
-// --- region filter logic setup ---
-const countries = Array.from(
-  new Set(Object.values(regions).map((region) => region.Country))
-);
-
-const regionToCountry = {};
-Object.values(regions).forEach((region) => {
-  regionToCountry[region.Region] = region.Country;
-});
-const bodyScale = {
+function getAvailableFilters(wines, regions, filters) {
+  
+  // Compose the filter logic (should match the filtering used in render)
+  const bodyScale = {
     "light": 0,
     "light to medium": 0.25,
     "medium": 0.5,
     "medium to full": 0.75,
     "full": 1
-};
-const searchFields = [
+  };
+  const searchFields = [
     'Summary',
     'Flavor',
     'Aroma',
@@ -71,14 +57,68 @@ const searchFields = [
     'Wine Name',
     'Vintage',
     'Sweetness'
-];
+  ];
+  
+  const filtered = wines.filter(w => {
+    // Country/region logic
+    const wineCountry = regions[w.Region]?.Country || w.Country;
+    const matchCountry = filters.selectedCountry ? wineCountry === filters.selectedCountry : true;
+    const matchRegion = filters.selectedRegion ? w.Region === filters.selectedRegion : true;
+    const varietalMatch = filters.varietalValue === "all" || w.Varietal === filters.varietalValue;
+    const iconMatch = !filters.selectedIcon || filters.selectedIcon.length === 0 ||
+      (w['Top Icons'] && filters.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
+    let typeMatch = true;
+    if (filters.selectedType === "all" || filters.selectedType === "" || null) {
+      typeMatch = true;
+    }
+    else {
+      const cats = (w.Categories || []).map(c => c.toLowerCase());
+        const sel = filters.selectedType.toLowerCase();
+        typeMatch = cats.includes(sel);
+    }
+    // const typeMatch = filters.selectedType
+    //   ? (w["Wine Type"]?.toLowerCase() === filters.selectedType.toLowerCase())
+    //   : true;
+    const searchMatch = !filters.searchQuery ||
+      searchFields.some(field =>
+        w[field]?.toString().toLowerCase().includes(filters.searchQuery)
+      );
+    const priceMatch = filters.selectedPriceType === "glass"
+      ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
+      : filters.selectedPriceType === "bottle"
+        ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
+        : true;
+    const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
+    const boldnessMatch = !filters.showBoldnessFilter || wineBodyValue === filters.boldness;
+    return matchCountry && matchRegion && varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
+  });
+  // Get unique values from filtered
+  const countries = Array.from(new Set(filtered.map(w => regions[w.Region]?.Country || w.Country).filter(Boolean))).sort();
+  const regionList = Array.from(new Set(filtered.map(w => w.Region).filter(Boolean))).sort();
+  const varietals = Array.from(new Set(filtered.map(w => w.Varietal).filter(Boolean))).sort();
+  const icons = Array.from(new Set(filtered.flatMap(w => w['Top Icons'] || []))).sort();
+  return { countries, regions: regionList, varietals, icons };
+}
+
+// --- region filter logic setup ---
+const countries = Array.from(
+  new Set(Object.values(regions).map((region) => region.Country))
+);
+
+const regionToCountry = {};
+Object.values(regions).forEach((region) => {
+  regionToCountry[region.Region] = region.Country;
+});
+
 
 class index extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-        ...resetFilters(),
+    state = {
+      ...resetFilters(),
         specs: [],
+        selectedCountry: "",
+        selectedRegion: "",
+        varietalValue: "all",
+        searchQuery: "",
         showDefinitionModal: false,
         definitions: [],
         currentTerm: {
@@ -87,37 +127,40 @@ class index extends React.Component {
           Image: "",
           Name: ""
         },
-        priceRange: {
-          bottle: {
-              min: 0,
-              max: 500
-          },
-          glass: {
-              min: 0,
-              max: 500
-          }
-        },
+        showScrollToTop: false,
+        selectedIcon: [],
+        selectedType: "",
+        selectedPriceType: "",
+        showBoldnessFilter: false,
+        boldness: 0,
+        minBottlePrice: null,
+        maxBottlePrice: null,
         producerOffsetClasses: {},
         recommendationsOpen: false,
         suggestions: [],
         suggestionsLimit: 7
-      }
-      this.handleChange = this.handleChange.bind(this);
   }
   clearAllFilters = () => {
-    this.setState({filters: resetFilters(this.state.specs).filters});
-    this.setState({wines: this.state.specs})
+    this.setState(resetFilters(this.state.specs).filters);
+    this.setState({
+      searchQuery: '',
+      selectedCountry: '',
+      selectedRegion: '',
+      selectedPriceType: '',
+      selectedIcon: [],
+      boldness: 0,
+      showBoldnessFilter: false,
+      veganOnly: false,
+      sustainableOnly: false,
+      selectedType: '',
+      varietalValue: 'all',
+      minBottlePrice: null,
+      maxBottlePrice: null,
+    });
   }
-  handleFilterChange = (e, filterResetChange) => {
-    let reset = false
-    reset = filterResetChange
-    this.setState((prevState) => ({
-      filters: {
-        ...prevState.filters,
-        ...e,
-        filtersReset: reset
-      }
-    }));
+  handleFilterChange() {
+    this.setState(applyFilters(this.state.filters, this.state.specs));
+    // this.setState(applyFilters(this.state.filters, this.state.specs))
   }
     // Add logic to set selectedType and filter by Wine Type based on hash on mount
     componentDidMount() {
@@ -125,7 +168,7 @@ class index extends React.Component {
         const match = window.location.href.match(/\/#\/wine#([\w-]+)/);
         const typeFromHash = match ? match[1] : "";
         this.setState({ selectedType: typeFromHash });
-        this.handleFilterChange({ selectedType: typeFromHash }, typeFromHash === "");
+
         Promise.all(
           ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
           // ["sparkling", "bianco", "rosso", "italiano"].map((type) =>
@@ -138,6 +181,7 @@ class index extends React.Component {
             // Flatten all JSON arrays and set once
             const combinedData = results.flat();
             this.setState({ specs: combinedData });
+            this.setState({ wines: combinedData })
             // Assign a random background offset class for each wine
             const offsetClasses = ['random-offset-1', 'random-offset-2', 'random-offset-3', 'random-offset-4', 'random-offset-5'];
             const producerOffsetClasses = {};
@@ -145,20 +189,6 @@ class index extends React.Component {
               const rand = offsetClasses[Math.floor(Math.random() * offsetClasses.length)];
               producerOffsetClasses[idx] = rand;
             });
-            let glassPrices = combinedData.filter(w => w.Glass_Price !== 0 && w.Glass_Price !== undefined).map((w) => w.Glass_Price)
-            let bottlePrices = combinedData.filter(w => w.Bottle_Price !== 0 && w.Bottle_Price !== undefined).map((w) => w.Bottle_Price)
-            this.setState({
-                priceRange: {
-                  bottle: {
-                      min: Math.min(...bottlePrices),
-                      max: Math.max(...bottlePrices)
-                  },
-                  glass: {
-                      min: Math.min(...glassPrices),
-                      max: Math.max(...glassPrices)
-                  }
-              },
-            })
             this.setState({ producerOffsetClasses });
             // (Optional) Update suggestions after specs are loaded
             this.updateSuggestions(this.state.searchQuery);
@@ -258,6 +288,10 @@ class index extends React.Component {
             this.setState({ showScrollToTop: false });
         }
     }
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
@@ -274,81 +308,134 @@ class index extends React.Component {
         }
     }
     handleDefinitionClose = () => {
-      this.setState({ showModal: false });
+        this.setState({ showModal: false });
     }
-    applyFilters(filters) {
-      const searchQuery = this.state.searchQuery
+    checkIfAllFilter(value) {
+        if (value === "all") {
+            return Object.keys(this.state.specs);
+        }
+        else {
+            return Object.keys(this.state.specs);
+            // return [value];
+        }
+    }
+  handleCountryChange = (e) => {
+    const selectedCountry = e.target.value;
+    // When the country changes, optionally reset region filter
+    this.setState({ selectedCountry, selectedRegion: "" });
+  }
+  render() {
+    // this.setState(applyFilters(this.state.filters, this.state.specs));
+    console.log(this.state)
+        // --- region/country filter logic for filtering ---
         const filteredSpecs = this.state.specs.filter((wine) => {
-            // Use regions mapping to get country for wine.Region
-            const wineCountry = regions[wine.Region]?.Country || wine.Country;
-            const matchCountry = filters.selectedCountry ? wineCountry === filters.selectedCountry : true;
-            const matchRegion = filters.selectedRegion ? wine.Region === filters.selectedRegion : true;
-            return matchCountry && matchRegion;
+          // Use regions mapping to get country for wine.Region
+          const wineCountry = regions[wine.Region]?.Country || wine.Country;
+          const matchCountry = this.state.selectedCountry ? wineCountry === this.state.selectedCountry : true;
+          const matchRegion = this.state.selectedRegion ? wine.Region === this.state.selectedRegion : true;
+          return matchCountry && matchRegion;
         });
-        let filtered = filteredSpecs.filter(w => {
-            // Country/region logic
-            const wineCountry = regions[w.Region]?.Country || w.Country;
-            const matchCountry = filters.selectedCountry ? wineCountry === filters.selectedCountry : true;
-            const matchRegion = filters.selectedRegion ? w.Region === filters.selectedRegion : true;
-            const varietalMatch = filters.varietalValue === "all" || w.Varietal === filters.varietalValue;
-            const iconMatch = !filters.selectedIcon || filters.selectedIcon.length === 0 ||
-            (w['Top Icons'] && filters.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
+        // Get available filters based on currently filtered data
+        const availableFilters = getAvailableFilters(
+          this.state.specs,
+          regions,
+          {
+            selectedType: this.state.selectedType,
+            varietalValue: this.state.varietalValue,
+            selectedCountry: this.state.selectedCountry,
+            selectedRegion: this.state.selectedRegion,
+            selectedIcon: this.state.selectedIcon,
+            selectedPriceType: this.state.selectedPriceType,
+            showBoldnessFilter: this.state.showBoldnessFilter,
+            boldness: this.state.boldness,
+            searchQuery: this.state.searchQuery
+          }
+        );
+
+        // Compute filteredData once so it can be used in multiple places (header count + results)
+        let filteredData = filteredSpecs.filter(w => {
+            const varietalMatch = this.state.varietalValue === "all" || w.Varietal === this.state.varietalValue;
+            const iconMatch = this.state.selectedIcon.length === 0 ||
+              (w['Top Icons'] && this.state.selectedIcon.every(icon => w['Top Icons'].includes(icon)));
             let typeMatch = true;
-            if (filters.selectedType === "all" || filters.selectedType === "") {
-                typeMatch = true;
+            if (this.state.selectedType === "all" || this.state.selectedType === "") {
+              typeMatch = true;
             }
             else {
-                const cats = (w.Categories || []).map(c => c.toLowerCase());
-                const sel = filters.selectedType.toLowerCase();
+              const cats = (w.Categories || []).map(c => c.toLowerCase());
+                const sel = this.state.selectedType.toLowerCase();
                 typeMatch = cats.includes(sel);
             }
-            const searchMatch = !searchQuery ||
-            searchFields.some(field =>
-                w[field]?.toString().toLowerCase().includes(searchQuery)
-            );
-            const priceMatch = filters.priceType === "glass"
-            ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
-            : filters.priceType === "bottle"
+
+            const searchableFields = [
+              'Summary','Flavor','Aroma','Finish','Acidity','Body','Body Characteristics',
+              'Tannins','Tannin Characteristics','Stella Recommended','Vinification','Maturation',
+              'Region','Vineyard','Wine Name','Vintage','Sweetness'
+            ];
+            const searchMatch = !this.state.searchQuery ||
+              searchableFields.some(field => w[field]?.toString().toLowerCase().includes(this.state.searchQuery));
+            const priceMatch = this.state.selectedPriceType === "glass"
+              ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) >= 0)
+              : this.state.selectedPriceType === "bottle"
                 ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
                 : true;
-            let priceRange = false;
-            if (filters.priceType === "" || filters.priceRange.bottle.min === 0 || filters.priceRange.bottle.max === 0) {
-              priceRange = true
-            }
-            if (filters.priceType === "bottle" && filters.priceRange.bottle.min <= w.Bottle_Price && filters.priceRange.bottle.max >= w.Bottle_Price ) {
-              priceRange = true
-            }
+            const bodyScale = { "light": 0, "light to medium": 0.25, "medium": 0.5, "medium to full": 0.75, "full": 1 };
             const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
-            const boldnessMatch = !filters.showBoldnessFilter || wineBodyValue === filters.boldness;
-            return matchCountry && matchRegion && varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch && priceRange;
-        });
-        if (filters.veganOnly) {
-            filtered = filtered.filter(wine => wine.Vegan === true);
-        }
-        if (filters.sustainableOnly) {
-            filtered = filtered.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
-        }
-        // Sort only when viewing the glass category
-        if (filters.selectedType === 'glass') {
-            filtered.sort((a, b) => {
-                const posA = Number(a["Glass Position"]) || 0;
-                const posB = Number(b["Glass Position"]) || 0;
-                if (posA !== posB) return posA - posB;
-                // optional stable tie-breaker:
-                return (a["Wine Name"] || "").localeCompare(b["Wine Name"] || "");
+            const boldnessMatch = !this.state.showBoldnessFilter || wineBodyValue === this.state.boldness;
+            let bottlePrice = Number(w.Bottle_Price);
+            if (isNaN(bottlePrice)) bottlePrice = 0;
+            if (this.state.minBottlePrice && bottlePrice < Number(this.state.minBottlePrice)) return false;
+            if (this.state.maxBottlePrice && bottlePrice > Number(this.state.maxBottlePrice)) return false;
+            return varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch;
+          });
+          if (this.state.veganOnly) {
+            filteredData = filteredData.filter(wine => wine.Vegan === true);
+          }
+          if (this.state.sustainableOnly) {
+            filteredData = filteredData.filter(wine => wine.Sustainability && wine.Sustainability.length > 0);
+          }
+          // Sort only when viewing the glass category
+          if (this.state.selectedType === 'glass') {
+            filteredData.sort((a, b) => {
+              const posA = Number(a["Glass Position"]) || 0;
+              const posB = Number(b["Glass Position"]) || 0;
+              if (posA !== posB) return posA - posB;
+              // optional stable tie-breaker:
+              return (a["Wine Name"] || "").localeCompare(b["Wine Name"] || "");
             });
-        }
-        return filtered;
-    }
-  render() {
-    let filteredData = this.applyFilters(this.state.filters)
-      return (
-        <>
-          <Row className="p-3  form-wrapper">
-            {/* Type Filter Tabs */}
-            <Form.Group className="p-0 col-12">
-              <WineTabs {...{activeKey: this.state.filters.selectedType, updateFilters: this.handleFilterChange }} />
-            </Form.Group>
+          }
+        return (
+            <>
+            <Row className="p-3  form-wrapper">
+              {/* Type Filter Tabs */}
+              <Form.Group className="p-0 col-12">
+                <Tabs
+                  activeKey={this.state.selectedType}
+                  defaultActiveKey="profile"
+                  onSelect={(k) => {
+                    // Handle Top Picks logic
+                    this.setState((prevState) => ({
+                      ...prevState,
+                      selectedType: k
+                    }));
+                    const url = new URL(window.location.href);
+                    url.hash = `#/wine#${k}`;
+                    window.history.pushState(null, "", url);
+                  }}
+                  id="type-tab"
+                  className="wine-type-tabs"
+                  fill
+                  justify
+                >
+                  <Tab eventKey="" title="All Types" />
+                  <Tab eventKey="glass" title="Wines by the Glass" />
+                  <Tab eventKey="sparkling" title="Sparkling" />
+                  <Tab eventKey="bianco" title="Bianco and Rose" />
+                  <Tab eventKey="rosso" title="Rosso" />
+                  <Tab eventKey="italiano" title="Italiano" />
+                  {/* <Tab eventKey="rose" title="Rose" /> */}
+                </Tabs>
+              </Form.Group>
             <Card body className="form-wrapper">
               <Row>
                   <div style={{textAlign: "right"}} className="wine-count">
@@ -433,33 +520,81 @@ class index extends React.Component {
 
               {/* Clear Filters Button Group */}
               <Form.Group className="col-sm-2 mt-3">
-                <Button
-                  type="button"
-                  variant="outline-danger"
-                  className="form-control"
-                  onClick={() => this.clearAllFilters()}
-                  disabled={this.state.filters.filtersReset}
-                >
-                  Clear Filters
-                </Button>
+                {(() => {
+                  // Compute filtersCleared as described in the instructions
+                  const filtersCleared =
+                    !this.state.searchQuery &&
+                    !this.state.selectedCountry &&
+                    !this.state.selectedRegion &&
+                    !this.state.selectedPriceType &&
+                    this.state.selectedIcon.length === 0 &&
+                    this.state.boldness === 0.25 &&
+                    !this.state.showBoldnessFilter &&
+                    !this.state.veganOnly &&
+                    !this.state.sustainableOnly &&
+                    !this.state.selectedType &&
+                    this.state.varietalValue === "all" &&
+                    this.state.minBottlePrice == null &&
+                    this.state.maxBottlePrice == null &&
+                    !this.state.topPicks;
+                  return (
+                    <Button
+                      type="button"
+                      variant="outline-danger"
+                      className="form-control"
+                      onClick={this.clearAllFilters}
+                      disabled={filtersCleared}
+                    >
+                      Clear Filters
+                    </Button>
+                  );
+                })()}
+              </Form.Group>
+              <Form.Group className="col-sm-2 mb-3 mt-3">
+
               </Form.Group>
               </Row>
-              <br />
               <Accordion className="mb-4">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Show More Filters</Accordion.Header>
                   <Accordion.Body>
                     <Row>
-                      <PriceFilters {...{
-                          priceType: this.state.filters.priceType,
-                          handleFilterChange: this.handleFilterChange,
-                          priceRange: this.state.priceRange,
-                          minBottlePrice: this.state.filters?.minBottlePrice,
-                          maxBottlePrice: this.state.filters?.maxBottlePrice,
-                        }} />
-                        <hr />
                       {/* Price Type Filter Radio Group */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
+                        <Form.Label>Filter by Price Type</Form.Label>
+                        <div>
+                          {[
+                            { value: "", label: "All" },
+                            { value: "glass", label: "Glass Only" },
+                            { value: "bottle", label: "Bottle Only" }
+                          ].map((option) => (
+                            <Form.Check
+                              key={option.value}
+                              type="radio"
+                              label={option.label}
+                              name="priceType"
+                              value={option.value}
+                              checked={this.state.selectedPriceType === option.value}
+                              onChange={(e) => this.setState({ selectedPriceType: e.target.value })}
+                            />
+                          ))}
+                        </div>
+
+                      {/* Bottle Price Range Filter */}
+                      <div className="">
+                        <br />
+                        <RangeExample
+                          minPrice={this.state.minBottlePrice}
+                          maxPrice={this.state.maxBottlePrice}
+                          onChange={({ min, max }) => {
+                            this.setState((prev) => ({
+                              ...prev,
+                              minBottlePrice: min ?? 0,
+                              maxBottlePrice: max ?? 500,
+                            }));
+                          }}
+                        />
+                      </div>
                         {/* Vegan and Sustainability Switches */}
                         <div>
                           <br />
@@ -468,18 +603,18 @@ class index extends React.Component {
                             type="switch"
                             id="vegan-switch"
                             label="Only Vegan Practices"
-                            checked={this.state.filters.veganOnly}
+                            checked={this.state.veganOnly}
                             onChange={(e) =>
-                              this.handleFilterChange({veganOnly: e.target.checked })
+                              this.setState((prev) => ({ ...prev, veganOnly: e.target.checked }))
                             }
                           />
                           <Form.Check
                             type="switch"
                             id="sustainability-switch"
                             label="Only Sustainability Practices"
-                            checked={this.state.filters.sustainableOnly}
+                            checked={this.state.sustainableOnly}
                             onChange={(e) =>
-                              this.handleFilterChange({ sustainableOnly: e.target.checked })
+                              this.setState((prev) => ({ ...prev, sustainableOnly: e.target.checked }))
                             }
                           />
                         </div>
@@ -513,19 +648,19 @@ class index extends React.Component {
                             label="All"
                             name="country"
                             value=""
-                            checked={this.state.filters.selectedCountry === ""}
-                            onChange={(e) => this.handleFilterChange({ selectedCountry: e.target.value, selectedRegion: "" })}
+                            checked={this.state.selectedCountry === ""}
+                            onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
                           />
                           {countries
                             .concat(
-                              this.state.filters.selectedCountry &&
+                              this.state.selectedCountry &&
                                 !(
                                   this.state.specs
                                     .map(w => regions[w.Region]?.Country || w.Country)
                                     .filter(Boolean)
-                                    .includes(this.state.filters.selectedCountry)
+                                    .includes(this.state.selectedCountry)
                                 )
-                                ? [this.state.filters.selectedCountry]
+                                ? [this.state.selectedCountry]
                                 : []
                             )
                             .filter((v, i, arr) => arr.indexOf(v) === i)
@@ -536,8 +671,8 @@ class index extends React.Component {
                                 label={country}
                                 name="country"
                                 value={country}
-                                checked={this.state.filters.selectedCountry === country}
-                                onChange={(e) => this.handleFilterChange({ selectedCountry: e.target.value, selectedRegion: "" })}
+                                checked={this.state.selectedCountry === country}
+                                onChange={(e) => this.setState({ selectedCountry: e.target.value, selectedRegion: "" })}
                               />
                             ))}
                         </div>
@@ -545,27 +680,27 @@ class index extends React.Component {
                       <div className="col-md-6 col-sm-12">
                         <Form.Group>
                           <Form.Label>Filter by Region</Form.Label>
-                          {this.state.filters.selectedCountry && this.state.filters.selectedCountry !== "all" ? (
+                          {this.state.selectedCountry && this.state.selectedCountry !== "all" ? (
                             <></>
                           ) : (
                             <div className="text-muted mb-5" style={{ height: '38px', paddingTop: '6px' }}>
                               Select a country to choose a region
                             </div>
                           )}
-                          <div hidden={!this.state.filters.selectedCountry && this.state.filters.selectedCountry !== "all"}>
+                          <div hidden={!this.state.selectedCountry && this.state.selectedCountry !== "all"}>
                             <Form.Check
                               inline
                               type="radio"
                               label="All"
                               name="region"
                               value=""
-                              checked={this.state.filters.selectedRegion === ""}
-                              onChange={(e) => this.handleFilterChange({ selectedRegion: e.target.value })}
+                              checked={this.state.selectedRegion === ""}
+                              onChange={(e) => this.setState({ selectedRegion: e.target.value })}
                             />
                             {(Object.keys(regions).filter(region =>
-                                  this.state.filters.selectedCountry === "all" ||
-                                  this.state.filters.selectedCountry === "" ||
-                                  regions[region]?.Country === this.state.filters.selectedCountry
+                                  this.state.selectedCountry === "all" ||
+                                  this.state.selectedCountry === "" ||
+                                  regions[region]?.Country === this.state.selectedCountry
                                 )
                             ).map(region => (
                               <Form.Check
@@ -575,8 +710,8 @@ class index extends React.Component {
                                 name="region"
                                 value={region}
                                 label={region}
-                                checked={this.state.filters.selectedRegion === region}
-                                onChange={(e) => this.handleFilterChange({ selectedRegion: e.target.value })}
+                                checked={this.state.selectedRegion === region}
+                                onChange={(e) => this.setState({ selectedRegion: e.target.value })}
                               />
                             ))}
                           </div>
@@ -589,7 +724,7 @@ class index extends React.Component {
                             new Set(
                               (this.state.specs.flatMap(wine => wine['Top Icons'] || [])
                                 ).concat(
-                                  this.state.filters.selectedIcon.filter(
+                                  this.state.selectedIcon.filter(
                                     icon => !(this.state.specs.flatMap(w => w['Top Icons'] || []).includes(icon))
                                   )
                                 )
@@ -600,28 +735,50 @@ class index extends React.Component {
                               type="checkbox"
                               label={icon}
                               value={icon}
-                              checked={this.state.filters.selectedIcon.includes(icon)}
+                              checked={this.state.selectedIcon.includes(icon)}
                               inline={true}
                               onChange={(e) => {
                                 const { checked, value } = e.target;
                                 this.setState(prevState => {
-                                  const icons = new Set(prevState.filters.selectedIcon);
+                                  const icons = new Set(prevState.selectedIcon);
                                   checked ? icons.add(value) : icons.delete(value);
-                                  return { filters: {...prevState.filters, filtersReset: false, selectedIcon: [...icons] }};
+                                  return { selectedIcon: [...icons] };
                                 });
                               }}
-                              disabled={!getAvailableFilters(filteredData).icons.includes(icon) && !this.state.filters.selectedIcon.includes(icon)}
+                              disabled={!availableFilters.icons.includes(icon) && !this.state.selectedIcon.includes(icon)}
                             />
                           ))}
                         </div>
                       </Form.Group>
-                      <BoldnessFilter
-                        {...{
-                          updateFilters: this.handleFilterChange, 
-                          showBoldnessFilter: this.state.filters.showBoldnessFilter, 
-                          boldness: this.state.filters.boldness
-                        }} 
-                      />
+                      {/* Boldness Filter */}
+                      <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
+                        <Form.Label>Filter by Boldness</Form.Label>
+                        <Form.Check
+                          type="switch"
+                          id="boldness-switch"
+                          label="Enable Boldness Filter"
+                          checked={this.state.showBoldnessFilter}
+                          onChange={(e) => this.setState({ showBoldnessFilter: e.target.checked })}
+                        />
+                        {this.state.showBoldnessFilter && (
+                          <>
+                            <Form.Range
+                              min={0}
+                              max={1}
+                              step={0.25}
+                              value={this.state.boldness || ""}
+                              onChange={(e) => this.setState({ boldness: parseFloat(e.target.value) })}
+                            />
+                            <div>
+                              {this.state.boldness === 0 && "Low Bodied"}
+                              {this.state.boldness === 0.25 && "Light to Medium Bodied"}
+                              {this.state.boldness === 0.5 && "Medium Bodied"}
+                              {this.state.boldness === 0.75 && "Medium to Full Bodied"}
+                              {this.state.boldness === 1 && "Full Bodied"}
+                            </div>
+                          </>
+                        )}
+                      </Form.Group>
                     </Row>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -633,19 +790,19 @@ class index extends React.Component {
                   return (
                     <>
                       {filteredData.map((data1, index) => (
-                        <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
-                          <WineCard
-                            wine={data1}
-                            index={index}
-                            format={this.format}
-                            state={this.state}
-                            producerOffsetClass={this.state.producerOffsetClasses}
-                            handleDefinitionShow={this.handleDefinitionShow}
-                            handleModalShow={this.handleModalShow}
-                            handleWineModalShow={this.handleWineModalShow}
-                            handleModalClose={this.handleDefinitionClose}
-                            />
-                          </div>
+                    <div className="wine-wrapper col-md-12 col-lg-6 col-sm-12" key={index}>
+                      <WineCard
+                        wine={data1}
+                        index={index}
+                        format={this.format}
+                        state={this.state}
+                        producerOffsetClass={this.state.producerOffsetClasses}
+                        handleDefinitionShow={this.handleDefinitionShow}
+                        handleModalShow={this.handleModalShow}
+                        handleWineModalShow={this.handleWineModalShow}
+                        handleModalClose={this.handleDefinitionClose}
+                        />
+                      </div>
                       ))}
                     </>
                   );
