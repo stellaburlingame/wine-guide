@@ -1,0 +1,173 @@
+.choose-your-wine-button-text {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere; /* better long-word handling */
+    hyphens: auto;           /* softer breaks for long words */
+    text-align: center;
+}
+.choose-your-wine-button {
+    position: relative; /* anchor ::before/::after triangles */
+    display: inline-grid !important;
+    width: 120px;
+    height: 65px;
+    word-break: break-word;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0 6px;          /* keep text away from edges */
+    background-color: lemonchiffon;
+    transition: 0.5s;
+}
+.choose-your-wine-button:hover, .choose-your-wine-button.active {
+    background: var(--button-bg) !important;
+    border: 0;
+}
+.choose-your-wine-button.active:before {
+    border-bottom-color: var(--button-bg) !important;
+}
+.choose-your-wine-button:hover:before {
+    border-bottom-color: var(--button-bg) !important;
+}
+.choose-your-wine-button.active:after {
+    border-top-color: var(--button-bg) !important;
+}
+.choose-your-wine-button:hover:after {
+    border-top-color: var(--button-bg) !important;
+}
+.choose-your-wine-button:after, .choose-your-wine-button:before, .choose-your-wine-button {
+    transition: 0.5s;
+}
+.choose-your-wine-button:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 59px solid transparent;
+    border-right: 59px solid transparent;
+    border-bottom: 30px solid lemonchiffon;
+}
+.choose-your-wine-button:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 59px solid transparent;
+    border-right: 59px solid transparent;
+    border-top: 30px solid lemonchiffon;
+}
+.choose-your-wine-button {
+    white-space: break-spaces;
+    width: 120px;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    filter: brightness(1.1);
+    font-size: smaller;
+}
+
+
+.choose-your-wine-button {
+    margin-top: .9rem;
+    margin-bottom: .9rem;
+}
+.row-even {
+    margin-left: 0rem;
+}
+.row-odd {
+    margin-left: 0rem;
+    padding: 0rem;
+}
+
+/* Auto-wrapping flex container for hex buttons */
+.hex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 12px; /* row gap, column gap */
+  --hex-shift: 24px; /* default stagger */
+}
+
+/* Stagger alternate rows via data attribute (set in JS) */
+.choose-your-wine-button[data-row="odd"] { transform: translateX(var(--hex-shift)); }
+.choose-your-wine-button[data-row="even"] { transform: translateX(0); }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .choose-your-wine-button {
+        width: 108px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+    .row-odd { margin-left: 1.6rem; }
+    .choose-your-wine-button:before {
+        top: -27px;
+        border-left: 53px solid transparent;
+        border-right: 53px solid transparent;
+        border-bottom: 27px solid lemonchiffon;
+    }
+    .choose-your-wine-button:after {
+        bottom: -27px;
+        border-left: 53px solid transparent;
+        border-right: 53px solid transparent;
+        border-top: 27px solid lemonchiffon;
+    }
+}
+
+.body-choice > .row-even:first-child,
+.body-choice > .row-odd:first-child {
+    margin-left: 0;
+    justify-content: center;
+}
+
+.body-choice > div {
+    gap: 8px;
+}
+
+@media (max-width: 575.98px) {
+    /* shrink hex buttons for phones */
+    .choose-your-wine-button {
+        width: 92px;
+        height: 52px;
+        font-size: clamp(0.66rem, 2.6vw, 0.78rem);
+        padding: 0 6px;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
+    .choose-your-wine-button:before {
+        top: -24px;
+        border-left: 45px solid transparent;
+        border-right: 45px solid transparent;
+        border-bottom: 24px solid lemonchiffon;
+    }
+    .choose-your-wine-button:after {
+        bottom: -24px;
+        border-left: 45px solid transparent;
+        border-right: 45px solid transparent;
+        border-top: 24px solid lemonchiffon;
+    }
+
+    /* reduced stagger and tighter gaps on phones */
+    .hex-wrap { --hex-shift: 14px; gap: 8px 10px; }
+
+    .wine-choice-body { padding: 0 8px; }
+    .body-choice > div { gap: 0px; }
+}
+.row-shift-left, .row-shift-right {
+    min-width: 101%;
+}
+.row-shift-left {
+    margin-left: var(--shift, 20px) !important;
+}
+.row-shift-right {
+    margin-right: var(--shift, 20px) !important;
+}
+.choose-your-wine-button-icon {
+    font-size: 1.5rem;
+}
+.check-button {
+    max-width: 120px;
+}
