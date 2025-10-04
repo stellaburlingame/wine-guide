@@ -19,8 +19,8 @@ div.nav-icon > button.btn {
 .default > svg {
     color: gray;
 }
-#links > a {
-    color: white;
+.nav-links > .nav-link {
+    color: white !important; 
 }
 .navbar-brand > img {
     width: 40px;
@@ -30,7 +30,7 @@ div.nav-icon > button.btn {
     font-size: 1.3rem;
     font-weight: 600;
     /* font-family: 'Playfair Display', serif; */
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 .nav-active {
     color: white !important;
