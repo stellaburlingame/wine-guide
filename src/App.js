@@ -5,10 +5,15 @@ import {
   Route,
   HashRouter
 } from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import './App.css';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
+import Wine2 from "./pages/wine/old_index.js";
 import TopWine from "./pages/TopWine";
 import FindYourWine from "./pages/FindYourWine";
 import TableOfConents from "./pages/TableOfConents";
@@ -59,6 +64,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="wine" element={<Wine />} />
+            <Route path="wine2" element={<Wine2 />} />
             <Route path="table-of-contents" element={<TableOfConents />} />
             <Route path="find-your-wine" element={<FindYourWine state={this.state} />} />
             <Route path="wine-top-picks" element={<TopWine state={this.state}/>} />
