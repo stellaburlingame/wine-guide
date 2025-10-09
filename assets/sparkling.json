@@ -82,7 +82,7 @@
   "DOCG": false,
   "DOC": false,
   "Glass_Price": 0,
-  "Half_Bottle_Price": 72,
+  "Half_Bottle_Price": 75,
   "Bottle_Price": 0,
   "PDF": "BillecartSalmonBrutReserve.pdf",
   "Top Icons": [
@@ -221,8 +221,8 @@
   "Unique Summary": "Produced from 40-year-old vines and partially fermented for low alcohol, this aromatic Moscato retains vivid fruit and floral charm in every sip.",
   "DOCG": true,
   "DOC": false,
-  "Glass_Price": 13,
-  "Bottle_Price": 60,
+  "Glass_Price": 14,
+  "Bottle_Price": 65,
   "PDF": "ViettiMoscatoDasti.pdf",
   "Top Icons": [
     "Bubbly/Sparkling",
@@ -269,7 +269,7 @@
   "Unique Summary": "Produced using the Charmat method, this Prosecco balances floral aromas and citrusy vibrancy with a soft, approachable finish.",
   "DOCG": false,
   "DOC": true,
-  "Glass_Price": 18,
+  "Glass_Price": 13,
   "Bottle_Price": 60,
   "PDF": "ValDOcaProseccoTreviso.pdf",
   "Top Icons": [
