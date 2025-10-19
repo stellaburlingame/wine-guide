@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Range } from 'react-range';
 import Form from 'react-bootstrap/Form';
 
-function RangeExample({ onChange, min = 42, max = 395, defaultValues = [42, 395] }) {
+function RangeExample({ onChange, min, max, defaultValues, type}) {
   const [values, setValues] = useState(defaultValues);
 
   const handleChange = (newValues) => {
@@ -13,7 +13,7 @@ function RangeExample({ onChange, min = 42, max = 395, defaultValues = [42, 395]
   return (
     <Form.Group>
       <Form.Label>
-        Bottle Price Range (${values[0]} - ${values[1]})
+        {type} Price Range (${values[0]} - ${values[1]})
       </Form.Label>
       <div className="px-2" style={{ width: '100%' }}>
         <Range

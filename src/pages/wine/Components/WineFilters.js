@@ -5,6 +5,7 @@ import RangeExample from '../../../components/RangeExample';
 // BoldnessFilter Component
 export function BoldnessFilter(props) {
     const { boldness, showBoldnessFilter, updateFilters } = props;
+    
     return(
     <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
         <Form.Label>Filter by Boldness</Form.Label>
@@ -74,6 +75,16 @@ export function DescriptionFilter(props) {
 }
 export function PriceFilters(props) {
     const { priceType, handleFilterChange, priceRange } = props
+
+    let min = 0;
+    let max = 0;
+    if (priceType === "bottle") {
+        min = priceRange.bottle.min ?? 0;
+        max = priceRange.bottle.max ?? 500;
+    } else if (priceType === "glass") {
+        min = priceRange.glass.min ?? 0;
+        max = priceRange.glass.max ?? 100;
+    }
     return(
         <>
             <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
@@ -91,36 +102,61 @@ export function PriceFilters(props) {
                         name="priceType"
                         value={option.value}
                         checked={priceType === option.value}
-                        onChange={(e) => handleFilterChange({ priceType: e.target.value })}
+                        onChange={(e) => handleFilterChange({ priceType: e.target.value, priceRange: { bottle: { min: 0, max: 0 }, glass: { min: 0, max: 0 } } }) }
                     />
                     ))}
                 </div>
             </Form.Group>
             {priceType === "bottle" && (
                 <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
-                    <div className="">
-                        <RangeExample
-                            min={priceRange.bottle.min ?? 0}
-                            max={priceRange.bottle.max ?? 500}
-                            defaultValues={[priceRange.bottle.min, priceRange.bottle.max]}
-                            onChange={({ min, max }) => {
-                                const minVal = typeof min === 'string' ? parseFloat(min) : min;
-                                const maxVal = typeof max === 'string' ? parseFloat(max) : max;
-                                handleFilterChange({
-                                    priceRange: {
-                                        bottle: {
-                                            min: minVal,
-                                            max: maxVal
-                                        },
-                                        glass: {
-                                            min: 0,
-                                            max: 0
-                                        }
+                    <RangeExample
+                        min={min}
+                        max={max}
+                        defaultValues={[min, max]}
+                        type="Bottle"
+                        onChange={({ min, max }) => {
+                            const minVal = typeof min === 'string' ? parseFloat(min) : min;
+                            const maxVal = typeof max === 'string' ? parseFloat(max) : max;
+                            handleFilterChange({
+                                priceRange: {
+                                    bottle: {
+                                        min: minVal,
+                                        max: maxVal
+                                    },
+                                    glass: {
+                                        min: 0,
+                                        max: 0
                                     }
-                                })
-                            }}
-                        />
-                    </div>
+                                }
+                            })
+                        }}
+                    />
+                </Form.Group>
+            )}
+            {priceType === "glass" && (
+                <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
+                    <RangeExample
+                        min={min}
+                        max={max}
+                        defaultValues={[min, max]}
+                        type="Glass"
+                        onChange={({ min, max }) => {
+                            const minVal = typeof min === 'string' ? parseFloat(min) : min;
+                            const maxVal = typeof max === 'string' ? parseFloat(max) : max;
+                            handleFilterChange({
+                                priceRange: {
+                                    glass: {
+                                        min: minVal,
+                                        max: maxVal
+                                    },
+                                    bottle: {
+                                        min: 0,
+                                        max: 0 
+                                    }
+                                }
+                            })
+                        }}
+                    />
                 </Form.Group>
             )}
         </>
