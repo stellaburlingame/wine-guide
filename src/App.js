@@ -69,7 +69,7 @@ class App extends React.Component {
             <Route path="find-your-wine" element={<FindYourWine state={this.state} />} />
             <Route path="wine-top-picks" element={<TopWine state={this.state}/>} />
             <Route path="definitions" element={<Definitions/>} />
-            <Route path="credits" element={<Credits/>} />
+            <Route path="credits" element={<Credits state={this.state}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
