@@ -1,7 +1,16 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 
-const CreditsPage = () => (
+const CreditsPage = (props) => 
+  {
+    const specs = props.state?.specs || [];
+    const producers = {};
+    specs.forEach((wine) => {
+      producers[wine.Producer] = [...(producers[wine.Producer] || []), wine['Wine Name']];
+
+    });
+    console.log("CreditsPage props:", producers);
+    return (
   <>
 
   <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
@@ -50,9 +59,16 @@ const CreditsPage = () => (
         <Accordion.Header>View Full Winemaker Credits</Accordion.Header>
         <Accordion.Body>
           <ul>
-            <li>Michele Chiarlo – Barbera d’Asti DOCG</li>
-            <li>Prunotto – Barbaresco DOCG</li>
-            <li>Pio Cesare – Barolo DOCG</li>
+            {Object.keys(producers).map((producerName) => (
+              <li key={producerName}>
+                {producerName}
+                <ol>
+                  {producers[producerName].map((wineName) => (
+                    <li key={wineName}>{wineName}</li>
+                  ))}
+                </ol>
+              </li>
+            ))}
           </ul>
         </Accordion.Body>
       </Accordion.Item>
@@ -90,6 +106,7 @@ const CreditsPage = () => (
     </Accordion>
   </div>
   </>
-);
+)
+};
 
 export default CreditsPage;
