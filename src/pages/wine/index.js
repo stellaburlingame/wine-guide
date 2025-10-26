@@ -307,17 +307,23 @@ class index extends React.Component {
                 w[field]?.toString().toLowerCase().includes(searchQuery)
             );
             const priceMatch = filters.priceType === "glass"
-            ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
+            // ? parseFloat(w.Glass_Price) > 0 && (!w.Bottle_Price || parseFloat(w.Bottle_Price) === 0)
+            ? parseFloat(w.Glass_Price) > 0
             : filters.priceType === "bottle"
-                ? parseFloat(w.Bottle_Price) > 0 && (!w.Glass_Price || parseFloat(w.Glass_Price) === 0)
+                ? parseFloat(w.Bottle_Price) > 0
                 : true;
             let priceRange = false;
-            if (filters.priceType === "" || filters.priceRange.bottle.min === 0 || filters.priceRange.bottle.max === 0) {
+            if (filters.priceType === "" || (filters.priceRange.bottle?.min === 0 && filters.priceRange.bottle?.max === 0 && filters.priceRange.glass?.min === 0 && filters.priceRange.glass?.max === 0)) {
               priceRange = true
             }
-            if (filters.priceType === "bottle" && filters.priceRange.bottle.min <= w.Bottle_Price && filters.priceRange.bottle.max >= w.Bottle_Price ) {
+            if (filters.priceType === "bottle" && filters.priceRange.bottle?.min <= w.Bottle_Price && filters.priceRange.bottle?.max >= w.Bottle_Price ) {
               priceRange = true
             }
+            if (filters.priceType === "glass" && filters.priceRange.glass?.min <= w.Glass_Price && filters.priceRange.glass?.max >= w.Glass_Price) {
+              priceRange = true
+            }
+            console.log(filters.priceRange, filters.priceType, w.Wine_Name, priceRange)
+            console.log(filters.priceRange.glass?.min, w.Glass_Price, filters.priceRange.glass?.max)
             const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
             const boldnessMatch = !filters.showBoldnessFilter || wineBodyValue === filters.boldness;
             return matchCountry && matchRegion && varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch && priceRange;
@@ -486,7 +492,8 @@ class index extends React.Component {
                       {/* Varietal Filter Block: Show placeholder when "All Types" is selected */}
                       </Form.Group>
 
-                      <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
+                      <hr />
+                      {/* <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3"> */}
                         {/* <Form.Label>Filter by Varietal</Form.Label>
                         {this.state.selectedType !== "" ? (
                           <div>
@@ -503,7 +510,7 @@ class index extends React.Component {
                         ) : (
                           <div className="text-muted">Select Wine Type to choose a varietal</div>
                         )} */}
-                      </Form.Group>
+                      {/* </Form.Group> */}
                       {/* ---- Country Filter: Show only countries available in top picks if topPicks is active ---- */}
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Country</Form.Label>
@@ -582,6 +589,7 @@ class index extends React.Component {
                           </div>
                         </Form.Group>
                       </div>
+                      <hr />
                       <Form.Group className="col-md-6 col-sm-12 fw-bold mb-3">
                         <Form.Label>Filter by Description</Form.Label>
                         <div>
