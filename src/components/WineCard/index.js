@@ -29,7 +29,7 @@ function Index(props) {
         {wine["Top Glass"] && (
             <TopGlass />
         )} {' '}
-        <span className=".card-title" style={{ fontWeight: 'bold', fontSize: '.95rem' }}>
+        <span className="card-title" style={{ fontWeight: 'bold', fontSize: '.95rem' }}>
             {wine['Wine Name']}
         </span>
         {' '} <Vintage>{wine['Vintage']}</Vintage> {' '}

@@ -9,6 +9,9 @@
     .wine-card-image-wrapper {
         height: 2.1in !important;
     }
+    .card-title {
+        font-size: 13px !important;
+    }
     .pages {
         font-size: 12px !important;
         text-align: right;
@@ -62,8 +65,8 @@
         width: 50% !important;
     }
     .card {
-        height: 7.3in;
-        margin-top: -2rem !important;
+        height: 7.8in;
+        margin-top: -10rem !important;
     }
     .wine-card {
         margin-bottom: 1rem !important;
@@ -113,7 +116,10 @@
         page-break-inside: avoid;
     }
     .wine-wrapper {
-        margin-top: 2rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .bg-wine-body {
+        height: 0.5rem !important;
     }
     .wine-print .col-sm-4 {
         width: 50% !important;
