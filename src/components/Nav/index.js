@@ -26,6 +26,12 @@ function Index() {
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav className="nav-links">
                 <NavLink
+                    to="/new-wines"
+                    className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}
+                >
+                    New Wines
+                </NavLink>
+                <NavLink
                     to="/wine-top-picks"
                     className={({ isActive }) => "nav-link" + (isActive ? " nav-active" : "")}
                 >

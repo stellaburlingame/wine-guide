@@ -1,0 +1,55 @@
+<svg width="100%" height="100%" viewBox="0 0 885 885" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;">
+  <g transform="matrix(0.941575,0.24021,-0.24021,0.941575,278.63,-44.5567)">
+    <g>
+      <g id="wine-fill" transform="matrix(1,0,0,1,-275.798,-68.7212)">
+
+        <!-- 1) BASE FILL: uses a CSS variable per wine -->
+        <path
+          d="M676.555,183.199C701.259,245.191 667.511,283.264 625.081,389.337C561.644,495.065 519.353,579.648 498.207,643.085C477.061,579.648 429.501,489.683 366.064,383.955C355.979,371.966 363.595,345.956 409.019,308.403C433.879,287.853 439.337,270.838 468.915,251.485C542.997,203.014 665.44,155.308 676.555,183.199Z"
+          style="fill: var(--wine-base, #6B0F1A);"
+        />
+
+        <!-- 2) SHADE OVERLAY: same path, black gradient with opacity -->
+        <path
+          d="M676.555,183.199C701.259,245.191 667.511,283.264 625.081,389.337C561.644,495.065 519.353,579.648 498.207,643.085C477.061,579.648 429.501,489.683 366.064,383.955C355.979,371.966 363.595,345.956 409.019,308.403C433.879,287.853 439.337,270.838 468.915,251.485C542.997,203.014 665.44,155.308 676.555,183.199Z"
+          style="fill: url(#_Shade1);"
+        />
+      </g>
+
+      <!-- (rest of your SVG unchanged, but give bubbles a stroke var if you want) -->
+      <g>
+        <g transform="matrix(1,0,0,1,-276.177,-93.2709)">
+          <path d="M498.349,893.306C537.024,893.306 575.037,918.664 615.551,922.505C668.13,927.489 720.237,929.385 720.237,944.217C720.237,970.476 621.826,981.387 499.284,981.387C376.743,981.387 276.177,970.476 276.177,944.217C276.177,926.441 315.898,924.852 383.983,920.677C416.474,918.685 454.631,893.306 498.349,893.306Z"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-275.798,-68.7212)">
+          <path d="M371.458,384.218C390.927,211.432 632.461,193.247 676.555,183.199M688.519,72.151C681.928,120.574 679.014,154.873 676.555,183.199M676.555,183.199C670.782,249.682 667.511,283.264 625.081,389.337C561.644,495.065 519.353,579.648 498.207,643.085C477.061,579.648 434.883,495.065 371.446,389.337L307.895,230.744C307.895,125.015 434.77,72.151 688.519,72.151" style="fill:none;stroke:black;stroke-width:36px;"/>
+        </g>
+        <g transform="matrix(15.8593,0,0,15.8593,-285.089,-28.2891)">
+          <path d="M32,38L32,52" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+        <g id="bubbles">
+          <g transform="matrix(15.8593,0,0,15.8593,-268.151,-37.283)">
+            <circle cx="48" cy="10" r="3" style="fill:none;stroke:var(--bubbles-stroke, currentColor);stroke-width:2px;"/>
+          </g>
+          <g transform="matrix(15.8593,0,0,15.8593,-285.089,-28.2891)">
+            <circle cx="54" cy="18" r="2" style="fill:none;stroke:var(--bubbles-stroke, currentColor);stroke-width:2px;"/>
+          </g>
+          <g transform="matrix(15.8593,0,0,15.8593,-255.52,-42.1185)">
+            <circle cx="44" cy="22" r="1.8" style="fill:none;stroke:var(--bubbles-stroke, currentColor);stroke-width:2px;"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <defs>
+    <!-- Black-with-opacity shade gradient (shared safely across cards) -->
+    <linearGradient id="_Shade1" x1="0" y1="0" x2="1" y2="0"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="matrix(-33.6604,292.91,-292.91,-33.6604,494.785,273.679)">
+      <stop offset="0"  stop-color="#000000" stop-opacity="0.00"/>
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0.18"/>
+      <stop offset="1"  stop-color="#000000" stop-opacity="0.40"/>
+    </linearGradient>
+  </defs>
+</svg>
