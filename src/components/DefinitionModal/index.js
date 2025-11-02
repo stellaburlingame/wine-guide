@@ -2,6 +2,8 @@ import React from "react";
 import { Image, Modal } from "react-bootstrap";
 import './index.css';
 
+import NA from '../WineCard/NA.png';
+
 function Index(props) {
     return (
         <>
@@ -14,7 +16,7 @@ function Index(props) {
                     <Image
                         onError={({ currentTarget }) => {
                             currentTarget.onerror = null;
-                            currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                            currentTarget.src = NA;
                         }}
                         src={`${props.Image}`}
                         alt={props.Name}

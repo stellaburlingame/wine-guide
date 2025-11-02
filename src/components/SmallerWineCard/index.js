@@ -9,6 +9,7 @@ import ProgressBar from "../ProgressBar";
 import { Icons, Vintage, PriceBadge, DOC, DOCG, TopBottle, TopGlass } from "../Badges";
 
 import TextFormat from "../TextFormat";
+import NA from '../WineCard/NA.png';
 
 function Index(props) {
     const { wine, index, state } = props;
@@ -53,7 +54,7 @@ function Index(props) {
                 <Card.Img
                     onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
-                    currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                    currentTarget.src = NA;
                     } }
                     variant="top"
                     src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}
@@ -64,7 +65,7 @@ function Index(props) {
                 <Card.Img
                 onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
-                    currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                    currentTarget.src = NA;
                 } }
                 variant="top"
                 src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}

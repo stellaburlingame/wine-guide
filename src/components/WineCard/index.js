@@ -12,6 +12,8 @@ import SideBadge from "../SideBadge";
 import DefinitionModal from "../DefinitionModal";
 import WineModal from "../WineModal";
 
+import NA from './NA.png';
+
 import { Icons, Vintage, PriceBadge, DOC, DOCG, TopBottle, TopGlass } from "../Badges";
 
 import TextFormat from "../TextFormat";
@@ -78,7 +80,7 @@ function Index(props) {
                 <Card.Img
                     onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
-                    currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                    currentTarget.src = NA;
                     } }
                     variant="top"
                     src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}
@@ -89,7 +91,7 @@ function Index(props) {
                 <Card.Img
                 onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
-                    currentTarget.src = `${process.env.PUBLIC_URL}/photos/NA.png`;
+                    currentTarget.src = NA;
                 } }
                 variant="top"
                 src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}
@@ -185,7 +187,7 @@ function Index(props) {
             <img
             src={`${process.env.PUBLIC_URL}/photos/region/${regions[wine?.Region]?.["Region Image"]}`}
             alt={regions[wine?.Region]?.["Region location"]}
-            onError={(e) => { e.target.onerror = null; e.target.src = `${process.env.PUBLIC_URL}/photos/NA.png`; } } />
+            onError={(e) => { e.target.onerror = null; e.target.src = NA; } } />
         </div>
         </Row>
     </Card.Body>
