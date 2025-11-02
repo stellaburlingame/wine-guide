@@ -326,7 +326,6 @@ class index extends React.Component {
   }
   render() {
     // this.setState(applyFilters(this.state.filters, this.state.specs));
-    console.log(this.state)
         // --- region/country filter logic for filtering ---
         const filteredSpecs = this.state.specs.filter((wine) => {
           // Use regions mapping to get country for wine.Region

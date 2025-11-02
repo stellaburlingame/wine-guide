@@ -322,8 +322,6 @@ class index extends React.Component {
             if (filters.priceType === "glass" && filters.priceRange.glass?.min <= w.Glass_Price && filters.priceRange.glass?.max >= w.Glass_Price) {
               priceRange = true
             }
-            console.log(filters.priceRange, filters.priceType, w.Wine_Name, priceRange)
-            console.log(filters.priceRange.glass?.min, w.Glass_Price, filters.priceRange.glass?.max)
             const wineBodyValue = bodyScale[w.Body?.toLowerCase()] ?? 0;
             const boldnessMatch = !filters.showBoldnessFilter || wineBodyValue === filters.boldness;
             return matchCountry && matchRegion && varietalMatch && iconMatch && typeMatch && searchMatch && priceMatch && boldnessMatch && priceRange;

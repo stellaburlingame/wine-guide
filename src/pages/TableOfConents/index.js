@@ -104,7 +104,6 @@ class index extends React.Component {
             this.setState({ showDefinitionModal: false });
         }
     render() {
-        console.log(this.state.specs)
         return (
             <>
                 <Row className="col-12">

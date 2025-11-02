@@ -9,7 +9,6 @@ const CreditsPage = (props) =>
       producers[wine.Producer] = [...(producers[wine.Producer] || []), wine['Wine Name']];
 
     });
-    console.log("CreditsPage props:", producers);
     return (
   <>
 
