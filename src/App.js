@@ -23,9 +23,24 @@ import NotFound from "./pages/NotFound";
 
 import Definitions from "./pages/definitions";
 import Credits from "./pages/credits";
-
+import { Modal, Button } from 'react-bootstrap';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ageVerified: localStorage.getItem('ageVerified') === 'true',
+      specs: undefined,
+      producerOffsetClasses: undefined,
+      definitions: undefined,
+    };
+  }
+
+  handleAgeConfirm = () => {
+    localStorage.setItem('ageVerified', 'true');
+    this.setState({ ageVerified: true });
+  };
+
   componentDidMount() {
     Promise.all(
       ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
@@ -60,6 +75,26 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>
+        <Modal
+          show={!this.state.ageVerified}
+          backdrop="static"
+          keyboard={false}
+          centered
+        >
+          <Modal.Header>
+            <Modal.Title>Welcome to the Stella Wine Guide</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            By clicking Enter you verify that you are 21 years of age or older 
+          </Modal.Body>
+          <Modal.Footer className="p-0 m-0">
+            <div style={{width: '100%'}} className="d-grid m-2">
+            <Button size="lg" variant="outline-secondary" onClick={this.handleAgeConfirm}>
+              Enter
+            </Button>
+            </div>
+          </Modal.Footer>
+        </Modal>
         <Nav />
         <div className="App col-lg-12 mx-auto">
           <Routes>
