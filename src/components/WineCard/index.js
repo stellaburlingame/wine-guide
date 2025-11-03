@@ -12,6 +12,8 @@ import SideBadge from "../SideBadge";
 import DefinitionModal from "../DefinitionModal";
 import WineModal from "../WineModal";
 
+import PDFViewer from "../PDFViewer";
+
 import NA from './NA.png';
 
 import { Icons, Vintage, PriceBadge, DOC, DOCG, TopBottle, TopGlass } from "../Badges";
@@ -76,8 +78,12 @@ function Index(props) {
                 '--bubbles-stroke': wine.Hex || '#6B0F1A',
                 }} />
             {wine['PDF'] ? (
-                <a href={`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`} target="_blank" rel="noopener noreferrer">
+                <div>
                 <Card.Img
+                    // onClick={() => window.open(`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`, '_blank', 'noopener,noreferrer')}
+                    onClick={() => handleModalShow(
+                        <PDFViewer handleModalClose={handleModalClose} filename={wine['PDF']} file={`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`} />
+                    )}
                     onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
                     currentTarget.src = NA;
@@ -86,7 +92,7 @@ function Index(props) {
                     src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}
                     className="wine-card-image"
                     style={{ cursor: "pointer" }} />
-                </a>
+                </div>
             ) : (
                 <Card.Img
                 onError={({ currentTarget }) => {

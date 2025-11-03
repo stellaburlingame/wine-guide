@@ -4,6 +4,7 @@
   "homepage": "https://wine-guide.dvas4155.com",
   "private": false,
   "dependencies": {
+    "@react-hook/resize-observer": "^2.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,10 +14,12 @@
     "gh-pages": "^6.3.0",
     "honeycomb-grid": "^4.1.5",
     "nth-check": "^2.1.1",
+    "pdfreader": "^3.0.8",
     "react": "^18.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^18.1.0",
     "react-icons": "^5.5.0",
+    "react-pdf": "^10.2.0",
     "react-range": "^1.10.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
@@ -30,7 +33,8 @@
     "deploy:origin": "npm run build:gh && gh-pages -d build-gh -o origin -b gh-pages",
     "deploy:origin2": "npm run build:custom && gh-pages -d build-custom -o origin2 -b gh-pages",
     "deploy:both": "npm run deploy:origin && npm run deploy:origin2",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "postinstall": "mkdir -p public/cmaps public/standard_fonts public/pdf && cp -R node_modules/pdfjs-dist/cmaps/* public/cmaps/ && cp -R node_modules/pdfjs-dist/standard_fonts/* public/standard_fonts/ && cp node_modules/pdfjs-dist/build/pdf.worker.min.* public/pdf/"
   },
   "eslintConfig": {
     "extends": [

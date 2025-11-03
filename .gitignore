@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/public/cmaps
+/public/standard_fonts
+/public/wasm
+/public/pdf
 
 # testing
 /coverage
