@@ -1,0 +1,17 @@
+.Example__container__document {
+    margin: 0 auto;
+}
+.PDF-Resizer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.PDF-Resizer > div {
+    margin: 0 auto;
+    font-size: large;
+}
+.pdf-modal-body {
+    background-color: rgba(0, 0, 0, .03);
+}

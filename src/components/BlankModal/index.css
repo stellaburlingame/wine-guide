@@ -1,3 +1,4 @@
 .modal-fullscreen {
-    width: 99vw;
+    width: 100vw;
+    min-height: fit-content;
 }

@@ -23,6 +23,7 @@ import TextFormat from "../TextFormat";
 
 function Index(props) {
     const { wine, index, handleDefinitionShow, handleModalShow, state, handleModalClose } = props;
+    
     return (
     <Card className='wine-card' bg={"Light"}>
     <Card.Header>
@@ -82,7 +83,7 @@ function Index(props) {
                 <Card.Img
                     // onClick={() => window.open(`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`, '_blank', 'noopener,noreferrer')}
                     onClick={() => handleModalShow(
-                        <PDFViewer handleModalClose={handleModalClose} filename={wine['PDF']} file={`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`} />
+                        <PDFViewer handleModalClose={handleModalClose} filename={wine['PDF']} file={`${process.env.PUBLIC_URL}/pdfs/${wine['PDF']}`} />, true
                     )}
                     onError={({ currentTarget }) => {
                     currentTarget.onerror = null;

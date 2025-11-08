@@ -104,9 +104,6 @@
   white-space: normal;
   text-align: left;
 }
-body {
-  overflow-y: hidden;
-}
 .row {
   width: 100% !important;
   margin: 0 auto !important;
@@ -127,7 +124,6 @@ body {
   align-items: flex-end;
   height: 100%;
   text-align: center;
-  overflow: visible;
 }
 @media (min-width: 768px) {
   .wine-card-image-wrapper .wine-region-image {

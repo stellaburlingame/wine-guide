@@ -3,9 +3,11 @@ import useResizeObserver from '@react-hook/resize-observer';
 import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
-import { Button, ButtonGroup, Modal, Row } from "react-bootstrap";
+import { Button, Modal, Row } from "react-bootstrap";
 
 import { FaDownload, FaEye } from 'react-icons/fa';
+
+import './index.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.PUBLIC_URL}/pdf/pdf.worker.min.mjs`;
 
@@ -17,14 +19,15 @@ const options = {
 
 const resizeObserverOptions = {};
 
-const maxWidth = 800;
 
 export default function Sample(props) {
-  const [file ] = useState(props.file);
+  const [ file ] = useState(props.file);
+  const onClose = props.handleModalClose;
   const [numPages, setNumPages] = useState(null);
   const [containerRef, setContainerRef] = useState(null);
   const [containerWidth, setContainerWidth] = useState(null);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [scale, setScale] = useState(0.9);
 
   const onResize = useCallback((entry) => {
     if (!entry) return;
@@ -62,26 +65,46 @@ export default function Sample(props) {
       setIsDownloading(false);
     }
   };
-
+  const maxScale = 1.2;
+  const minScale = 0.5;
+  const handlePDFResize = (scaleChange) => () => {
+    setScale((prevScale) => {
+      const newScale = prevScale + scaleChange / 100;
+      if (newScale < minScale) return minScale;
+      if (newScale > maxScale) return maxScale;
+      return Math.min(newScale, 3.0);
+    });
+  }
   return (
             <>
             <Modal.Header closeButton>
+              <div className='PDF-Resizer'>
+                <div>
+                <Button variant='light' onClick={handlePDFResize(-10)}>
+                    -
+                  </Button>
+                  <span>
+                    {(scale * 100).toFixed(0)}%
+                  </span>
+                  <Button variant='light' onClick={handlePDFResize(10)}>
+                    +
+                  </Button>
+                </div>
+              </div>
             </Modal.Header>
             
-            <Modal.Body className="wine-modal-body">
+            <Modal.Body className="pdf-modal-body">
 
-                <div className="Example">
-                    <div className="Example__container__document" ref={setContainerRef}>
+                    <div style={{width: `calc(100% * ${scale})`}} className="Example__container__document" ref={setContainerRef}>
                     <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options}>
                         {Array.from(new Array(numPages || 0), (_el, index) => (
                         <Page
                             key={`page_${index + 1}`}
                             pageNumber={index + 1}
-                            width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
+                            width={containerWidth}
                         />
                         ))}
                     </Document>
-                    </div>
                 </div>
             </Modal.Body>
             <Modal.Footer>
@@ -96,6 +119,11 @@ export default function Sample(props) {
                     disabled={isDownloading}
                 >
                     <FaDownload /> Download PDF
+                </Button>
+              </Row>
+              <Row >
+                <Button variant='danger' onClick={() => {onClose()}}>
+                  Close
                 </Button>
               </Row>
             </Modal.Footer>

@@ -68,6 +68,7 @@ class index extends React.Component {
                         format={this.format}
                         state={this.props.state}
                         handleDefinitionShow={this.handleDefinitionShow}
+                        handleModalClose={this.handleDefinitionClose}
                         handleModalShow={this.handleModalShow}
                       />
                       </div>

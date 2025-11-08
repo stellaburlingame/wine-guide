@@ -9,8 +9,8 @@
     src: url('./fonts/Copperplate-Bold.ttf') format('opentype');
     font-weight: 700;
 }
-html {
-    overflow-x: hidden;
+body {
+    overflow-y: auto;
 }
 body {
     font-family: 'Copperplate2' !important;

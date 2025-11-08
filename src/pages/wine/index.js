@@ -650,6 +650,7 @@ class index extends React.Component {
                             handleModalShow={this.handleModalShow}
                             handleWineModalShow={this.handleWineModalShow}
                             handleModalClose={this.handleDefinitionClose}
+                            handleDefinitionClose={this.handleDefinitionClose}
                             />
                           </div>
                       ))}
