@@ -1,0 +1,467 @@
+[
+  {
+    "id": 658,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/yukon-mashed-potato-add-black-truffle-2-gfvg-12/"
+    },
+    "modified": "2025-06-30T22:06:24",
+    "modified_gmt": "2025-06-30T22:06:24",
+    "slug": "yukon-mashed-potato-add-black-truffle-2-gfvg-12",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/yukon-mashed-potato-add-black-truffle-2-gfvg-12/",
+    "title": {
+      "rendered": "Yukon Mashed Potato (add: black truffle $2.) (GF,VG) $12."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124],
+    "class_list": [
+      "post-658",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni"
+    ],
+    "sort_order": "5",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/658",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=658"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=658"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 653,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/mascarpone-polenta-gf-vg-13/"
+    },
+    "modified": "2025-06-30T22:06:24",
+    "modified_gmt": "2025-06-30T22:06:24",
+    "slug": "mascarpone-polenta-gf-vg-13",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/mascarpone-polenta-gf-vg-13/",
+    "title": {
+      "rendered": "Mascarpone Polenta (GF, VG) $13."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124],
+    "class_list": [
+      "post-653",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni"
+    ],
+    "sort_order": "0",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/653",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=653"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=653"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 654,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/sauteed-baby-spinach-gf-v-vg-14/"
+    },
+    "modified": "2025-06-30T22:34:19",
+    "modified_gmt": "2025-06-30T22:34:19",
+    "slug": "sauteed-baby-spinach-gf-v-vg-14",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/sauteed-baby-spinach-gf-v-vg-14/",
+    "title": {
+      "rendered": "Sautéed Baby Spinach (GF, V, VG) $14."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124, 137],
+    "class_list": [
+      "post-654",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni",
+      "menu_category-lunch-cortorni"
+    ],
+    "sort_order": "1",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/654",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=654"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=654"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 655,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/roasted-garlic-butter-mushrooms-gf-v-vg-13/"
+    },
+    "modified": "2025-06-30T22:34:19",
+    "modified_gmt": "2025-06-30T22:34:19",
+    "slug": "roasted-garlic-butter-mushrooms-gf-v-vg-13",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/roasted-garlic-butter-mushrooms-gf-v-vg-13/",
+    "title": {
+      "rendered": "Roasted Garlic Butter Mushrooms (GF, V, VG) $13."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124, 137],
+    "class_list": [
+      "post-655",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni",
+      "menu_category-lunch-cortorni"
+    ],
+    "sort_order": "2",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/655",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=655"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=655"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 656,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/roasted-brussel-sprouts-with-pancetta-balsamic-reduction-gf-v-vg-14/"
+    },
+    "modified": "2025-06-30T22:06:24",
+    "modified_gmt": "2025-06-30T22:06:24",
+    "slug": "roasted-brussel-sprouts-with-pancetta-balsamic-reduction-gf-v-vg-14",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/roasted-brussel-sprouts-with-pancetta-balsamic-reduction-gf-v-vg-14/",
+    "title": {
+      "rendered": "Roasted Brussel Sprouts with Pancetta, Balsamic Reduction (GF, V, VG) $14."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124],
+    "class_list": [
+      "post-656",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni"
+    ],
+    "sort_order": "3",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/656",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=656"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=656"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 657,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/chefs-seasonal-vegetable-of-the-day-gf-v-vg-12/"
+    },
+    "modified": "2025-06-30T22:34:20",
+    "modified_gmt": "2025-06-30T22:34:20",
+    "slug": "chefs-seasonal-vegetable-of-the-day-gf-v-vg-12",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/chefs-seasonal-vegetable-of-the-day-gf-v-vg-12/",
+    "title": {
+      "rendered": "Chef’s Seasonal Vegetable of the day (GF, V, VG) $12."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [124, 137],
+    "class_list": [
+      "post-657",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-contorni",
+      "menu_category-lunch-cortorni"
+    ],
+    "sort_order": "4",
+    "wine": "",
+    "glass_price": "",
+    "half_price": "",
+    "bottle_price": "",
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/657",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=657"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=657"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

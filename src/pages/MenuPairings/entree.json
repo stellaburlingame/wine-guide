@@ -1,0 +1,1483 @@
+[
+  {
+    "id": 650,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/spezzatino-al-barolo-gf-42/"
+    },
+    "modified": "2025-06-30T22:08:49",
+    "modified_gmt": "2025-06-30T22:08:49",
+    "slug": "spezzatino-al-barolo-gf-42",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/spezzatino-al-barolo-gf-42/",
+    "title": {
+      "rendered": "Spezzatino al Barolo (GF) $42."
+    },
+    "content": {
+      "rendered": "\n\u003Cp\u003Eboneless short rib slowly braised “Piemontese Style”, marinated &amp; braised in red wine &amp;\u003C/p\u003E\n\n\n\n\u003Cp\u003Ehearty vegetables, mascarpone polenta\u003C/p\u003E\n\n\n\n\u003Cp\u003E\u003C/p\u003E\n",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-650",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "13",
+      "rendered": "13"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/650",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=650"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=650"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 651,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/filetto-con-taleggio-52/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "filetto-con-taleggio-52",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/filetto-con-taleggio-52/",
+    "title": {
+      "rendered": "Filetto con “Taleggio” $52."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Egrilled beef filet topped with taleggio cheese, truffled mashed potatoes &#038; sautéed mushrooms\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-651",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "14",
+      "rendered": "14"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/651",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=651"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=651"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 652,
+    "date": "2025-06-30T22:06:24",
+    "date_gmt": "2025-06-30T22:06:24",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/optional-add-baked-lobster-dungeness-crab-grilled-prawns-aq/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "optional-add-baked-lobster-dungeness-crab-grilled-prawns-aq",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/optional-add-baked-lobster-dungeness-crab-grilled-prawns-aq/",
+    "title": {
+      "rendered": "optional add: baked lobster, dungeness crab, grilled prawns $ AQ."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-652",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "15",
+      "rendered": "15"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/652",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=652"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=652"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 646,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/maiale-con-pancetta-e-aglio-36/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "maiale-con-pancetta-e-aglio-36",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/maiale-con-pancetta-e-aglio-36/",
+    "title": {
+      "rendered": "Maiale con Pancetta e Aglio $36."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Eroasted pork tenderloin with an infusion of pancetta &#038; roasted garlic, white spagna bean ragu\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-646",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "9",
+      "rendered": "9"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/646",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=646"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=646"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 647,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/osso-buco-di-vitello-gf-47/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "osso-buco-di-vitello-gf-47",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/osso-buco-di-vitello-gf-47/",
+    "title": {
+      "rendered": "Osso Buco di Vitello (GF) $47."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ebraised veal shank, mascarpone polenta\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-647",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "10",
+      "rendered": "10"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/647",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=647"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=647"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 648,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/piccata-di-vitello-42/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "piccata-di-vitello-42",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/piccata-di-vitello-42/",
+    "title": {
+      "rendered": "Piccata di Vitello $42."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Epan fried veal scaloppine, lemon butter caper sauce (milanese &#038; marsala style available)\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-648",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "11",
+      "rendered": "11"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/648",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=648"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=648"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 649,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/scottadito-di-agnello-50/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "scottadito-di-agnello-50",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/scottadito-di-agnello-50/",
+    "title": {
+      "rendered": "Scottadito di Agnello $50."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Egrilled Australian grass-fed lamb chops, rosemary and mint gravy\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-649",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "12",
+      "rendered": "12"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/649",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=649"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=649"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 637,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/giannas-eggplant-parmigiana-vg-30/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "giannas-eggplant-parmigiana-vg-30",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/giannas-eggplant-parmigiana-vg-30/",
+    "title": {
+      "rendered": "Gianna’s Eggplant Parmigiana (VG) $30."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-637",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "0",
+      "rendered": "0"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/637",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=637"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=637"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 638,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/risotto-of-the-day-gf-v-vg-aq/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "risotto-of-the-day-gf-v-vg-aq",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/risotto-of-the-day-gf-v-vg-aq/",
+    "title": {
+      "rendered": "Risotto of the Day (GF, V, VG) $ AQ."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-638",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "1",
+      "rendered": "1"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/638",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=638"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=638"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 639,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/salmone-with-a-prosecco-beurre-blanc-gf-38/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "salmone-with-a-prosecco-beurre-blanc-gf-38",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/salmone-with-a-prosecco-beurre-blanc-gf-38/",
+    "title": {
+      "rendered": "Salmone with a Prosecco Beurre Blanc (GF) $38."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-639",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "2",
+      "rendered": "2"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/639",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=639"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=639"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 640,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/petrale-sole-piccata-gf-36/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "petrale-sole-piccata-gf-36",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/petrale-sole-piccata-gf-36/",
+    "title": {
+      "rendered": "Petrale Sole Piccata (GF) $36."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-640",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "3",
+      "rendered": "3"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/640",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=640"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=640"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 641,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/gamberi-allaglio-gf-34/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "gamberi-allaglio-gf-34",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/gamberi-allaglio-gf-34/",
+    "title": {
+      "rendered": "Gamberi all’Aglio (GF) $34."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Epan roasted prawns, garlic butter, lemon vinaigrette over spaghetti or arugula diavola style (spicy tomato &#038; brandy) available\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-641",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "4",
+      "rendered": "4"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/641",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=641"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=641"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 642,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/pollo-alla-calabrese-gf-38/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "pollo-alla-calabrese-gf-38",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/pollo-alla-calabrese-gf-38/",
+    "title": {
+      "rendered": "Pollo alla “Calabrese” (GF) $38."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Echicken breast, kalamata olives, artichokes, capers, tomatoes, pine nuts\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-642",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "5",
+      "rendered": "5"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/642",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=642"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=642"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 643,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/pollo-alla-parmigiana-40/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "pollo-alla-parmigiana-40",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/pollo-alla-parmigiana-40/",
+    "title": {
+      "rendered": "Pollo alla Parmigiana $40."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ebreaded chicken breast topped with spicy marinara &#038; melted mozzarella di bufala, penne all’ arrabbiata\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-643",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "6",
+      "rendered": "6"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/643",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=643"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=643"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 644,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/pollo-alla-cacciatora-con-polenta-gf-38/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "pollo-alla-cacciatora-con-polenta-gf-38",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/pollo-alla-cacciatora-con-polenta-gf-38/",
+    "title": {
+      "rendered": "Pollo alla “Cacciatora” con Polenta (GF) $38."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Eboneless leg &#038; thigh braised with mushrooms, root vegetables, kalamata olives, white wine, tomato &#038; garlic\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122],
+    "class_list": [
+      "post-644",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi"
+    ],
+    "sort_order": {
+      "value": "7",
+      "rendered": "7"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/644",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=644"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=644"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 645,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/milanese-di-pollo-36/"
+    },
+    "modified": "2025-06-30T22:36:35",
+    "modified_gmt": "2025-06-30T22:36:35",
+    "slug": "milanese-di-pollo-36",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/milanese-di-pollo-36/",
+    "title": {
+      "rendered": "Milanese di Pollo $36."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ebreaded chicken scallopine milanese style, arugula &#038; cherry tomato\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [122, 136],
+    "class_list": [
+      "post-645",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-secondi",
+      "menu_category-lunch-secondi"
+    ],
+    "sort_order": {
+      "value": "8",
+      "rendered": "8"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/645",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=645"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=645"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

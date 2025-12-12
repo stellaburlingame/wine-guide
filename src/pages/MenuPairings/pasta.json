@@ -1,0 +1,928 @@
+[
+  {
+    "id": 663,
+    "date": "2025-06-30T22:29:10",
+    "date_gmt": "2025-06-30T22:29:10",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/?post_type=menu_item&#038;p=663"
+    },
+    "modified": "2025-06-30T22:29:56",
+    "modified_gmt": "2025-06-30T22:29:56",
+    "slug": "gnocchi-di-patate-nonna-nilla-vg-32",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/gnocchi-di-patate-nonna-nilla-vg-32/",
+    "title": {
+      "rendered": "Gnocchi di Patate “Nonna Nilla” (VG) $32."
+    },
+    "content": {
+      "rendered": "\n\u003Cp\u003EItalian sausage and porcini ragu or walnut &amp; gorgonzola or bolognese\u003C/p\u003E\n",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [134, 121],
+    "class_list": [
+      "post-663",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-lunch-pasta",
+      "menu_category-dinner-pasta"
+    ],
+    "sort_order": {
+      "value": "1",
+      "rendered": "1"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/663",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=663"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=663"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 633,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/rigatoni-al-ragu-di-maiale-28/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "rigatoni-al-ragu-di-maiale-28",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/rigatoni-al-ragu-di-maiale-28/",
+    "title": {
+      "rendered": "Rigatoni al Ragu di Maiale $28."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Esmoked pork and sweet bell pepper ragu, shaved ricotta salata\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121],
+    "class_list": [
+      "post-633",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta"
+    ],
+    "sort_order": {
+      "value": "6",
+      "rendered": "6"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/633",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=633"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=633"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 634,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/penne-all-arrabbiata-or-amatriciana-style-v-vg-24/"
+    },
+    "modified": "2025-06-30T22:27:44",
+    "modified_gmt": "2025-06-30T22:27:44",
+    "slug": "penne-all-arrabbiata-or-amatriciana-style-v-vg-24",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/penne-all-arrabbiata-or-amatriciana-style-v-vg-24/",
+    "title": {
+      "rendered": "Penne all&#8217; Arrabbiata or Amatriciana Style (V, VG) $24."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121, 134],
+    "class_list": [
+      "post-634",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta",
+      "menu_category-lunch-pasta"
+    ],
+    "sort_order": {
+      "value": "7",
+      "rendered": "7"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/634",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=634"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=634"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 635,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/giardino-verdura-garden-vegetable-ravioli-all-arrabbiata-gf-v-vg-26/"
+    },
+    "modified": "2025-06-30T22:27:44",
+    "modified_gmt": "2025-06-30T22:27:44",
+    "slug": "giardino-verdura-garden-vegetable-ravioli-all-arrabbiata-gf-v-vg-26",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/giardino-verdura-garden-vegetable-ravioli-all-arrabbiata-gf-v-vg-26/",
+    "title": {
+      "rendered": "Giardino Verdura (garden vegetable) Ravioli all&#8217; Arrabbiata (GF, V, VG) $26."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121, 134],
+    "class_list": [
+      "post-635",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta",
+      "menu_category-lunch-pasta"
+    ],
+    "sort_order": {
+      "value": "8",
+      "rendered": "8"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/635",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=635"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=635"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 636,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/gluten-free-fusilli-pasta-available/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "gluten-free-fusilli-pasta-available",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/gluten-free-fusilli-pasta-available/",
+    "title": {
+      "rendered": "** gluten free fusilli pasta available **"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121],
+    "class_list": [
+      "post-636",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta"
+    ],
+    "sort_order": {
+      "value": "9",
+      "rendered": "9"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/636",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=636"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=636"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 628,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/truffle-stuffed-gnocchi-brown-butter-sage-vg-aq/"
+    },
+    "modified": "2025-06-30T22:31:45",
+    "modified_gmt": "2025-06-30T22:31:45",
+    "slug": "truffle-stuffed-gnocchi-brown-butter-sage-vg-aq",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/truffle-stuffed-gnocchi-brown-butter-sage-vg-aq/",
+    "title": {
+      "rendered": "Truffle stuffed Gnocchi, brown butter &#038; sage (VG) $AQ"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121, 134],
+    "class_list": [
+      "post-628",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta",
+      "menu_category-lunch-pasta"
+    ],
+    "sort_order": {
+      "value": "0",
+      "rendered": "0"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/628",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=628"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=628"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 629,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/spaghetti-meatballs-or-bolognese-30/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "spaghetti-meatballs-or-bolognese-30",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/spaghetti-meatballs-or-bolognese-30/",
+    "title": {
+      "rendered": "Spaghetti &#038; Meatballs (or Bolognese) $30."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121],
+    "class_list": [
+      "post-629",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta"
+    ],
+    "sort_order": {
+      "value": "2",
+      "rendered": "2"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/629",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=629"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=629"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 630,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/lasagna-filetto-bolognese-limited-32/"
+    },
+    "modified": "2025-06-30T22:27:44",
+    "modified_gmt": "2025-06-30T22:27:44",
+    "slug": "lasagna-filetto-bolognese-limited-32",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/lasagna-filetto-bolognese-limited-32/",
+    "title": {
+      "rendered": "Lasagna Filetto Bolognese (limited) $32."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121, 134],
+    "class_list": [
+      "post-630",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta",
+      "menu_category-lunch-pasta"
+    ],
+    "sort_order": {
+      "value": "3",
+      "rendered": "3"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/630",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=630"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=630"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 631,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/orecchiette-primavera-e-speck-vg-28/"
+    },
+    "modified": "2025-06-30T22:06:23",
+    "modified_gmt": "2025-06-30T22:06:23",
+    "slug": "orecchiette-primavera-e-speck-vg-28",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/orecchiette-primavera-e-speck-vg-28/",
+    "title": {
+      "rendered": "Orecchiette Primavera e Speck (VG) $28."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Especk, mushrooms, asparagus, parmigiano cream sauce\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121],
+    "class_list": [
+      "post-631",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta"
+    ],
+    "sort_order": {
+      "value": "4",
+      "rendered": "4"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/631",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=631"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=631"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 632,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/fiocchi-con-pere-e-taleggio-vg-28/"
+    },
+    "modified": "2025-06-30T22:27:44",
+    "modified_gmt": "2025-06-30T22:27:44",
+    "slug": "fiocchi-con-pere-e-taleggio-vg-28",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/fiocchi-con-pere-e-taleggio-vg-28/",
+    "title": {
+      "rendered": "Fiocchi con Pere e Taleggio (VG) $28."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Epasta purses stuffed with pears and taleggio cheese, parmigiano cream sauce, chive oil\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [121, 134],
+    "class_list": [
+      "post-632",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-pasta",
+      "menu_category-lunch-pasta"
+    ],
+    "sort_order": {
+      "value": "5",
+      "rendered": "5"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/632",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=632"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=632"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

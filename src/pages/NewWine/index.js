@@ -12,26 +12,7 @@ import "./index.css";
 class index extends React.Component {
     state = {
     }
-    // Add logic to set selectedType and filter by Wine Type based on hash on mount
-    componentDidMount() {
-        // --- End hash filter logic for #top ---
-        window.addEventListener('scroll', this.checkScrollTop);
-    }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.checkScrollTop);
-    }
-    scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    checkScrollTop = () => {
-        if (!this.state.showScrollToTop && window.pageYOffset > 400) {
-            this.setState({ showScrollToTop: true });
-        } else if (this.state.showScrollToTop && window.pageYOffset <= 400) {
-            this.setState({ showScrollToTop: false });
-        }
-    }
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
@@ -82,16 +63,6 @@ class index extends React.Component {
               body={this.state.modalContent}
               fullScreen={this.state.fullScreen}
             />
-            {this.state.showScrollToTop && (
-              <button
-                onClick={this.scrollToTop}
-                className="scroll-to-top-button"
-                style={{
-                }}
-              >
-                ↑ Top
-              </button>
-            )}
         </>
         )
     }

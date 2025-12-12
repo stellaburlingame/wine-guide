@@ -1,0 +1,1580 @@
+[
+  {
+    "id": 626,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/insalata-di-bietole-gf-v-vg-17/"
+    },
+    "modified": "2025-06-30T22:26:11",
+    "modified_gmt": "2025-06-30T22:26:11",
+    "slug": "insalata-di-bietole-gf-v-vg-17",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/insalata-di-bietole-gf-v-vg-17/",
+    "title": {
+      "rendered": "Insalata di Bietole (GF, V, VG) $17."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Eroasted red &#038; golden beets, arugula, ricotta salata, maple vinaigrette\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-626",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "15",
+      "rendered": "15"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/626",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=626"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=626"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 627,
+    "date": "2025-06-30T22:06:23",
+    "date_gmt": "2025-06-30T22:06:23",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/add-chicken-salmon-prawns-dungeness-crab-or-filetto-aq/"
+    },
+    "modified": "2025-06-30T22:26:10",
+    "modified_gmt": "2025-06-30T22:26:10",
+    "slug": "add-chicken-salmon-prawns-dungeness-crab-or-filetto-aq",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/add-chicken-salmon-prawns-dungeness-crab-or-filetto-aq/",
+    "title": {
+      "rendered": "add chicken, salmon, prawns, dungeness crab or filetto $ AQ"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-627",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "16",
+      "rendered": "16"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/627",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=627"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=627"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 616,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/polpette-23/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "polpette-23",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/polpette-23/",
+    "title": {
+      "rendered": "Polpette $23."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Eveal &#038; filet meatballs, spicy marinara, creamy polenta\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [133, 120],
+    "class_list": [
+      "post-616",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-lunch-antipasti",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "5",
+      "rendered": "5"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/616",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=616"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=616"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 617,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/baked-garlic-butter-lobster-escargot-style-gf-28/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "baked-garlic-butter-lobster-escargot-style-gf-28",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/baked-garlic-butter-lobster-escargot-style-gf-28/",
+    "title": {
+      "rendered": "Baked Garlic Butter Lobster “Escargot Style” (GF) $28."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-617",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "6",
+      "rendered": "6"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/617",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=617"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=617"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 618,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/risotto-cakes-con-porcini-gf-vg-21/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "risotto-cakes-con-porcini-gf-vg-21",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/risotto-cakes-con-porcini-gf-vg-21/",
+    "title": {
+      "rendered": "Risotto Cakes con Porcini (GF, VG) $21."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [133, 120],
+    "class_list": [
+      "post-618",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-lunch-antipasti",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "7",
+      "rendered": "7"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/618",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=618"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=618"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 619,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/escargot-stella-alpina-g-23/"
+    },
+    "modified": "2025-06-30T22:06:22",
+    "modified_gmt": "2025-06-30T22:06:22",
+    "slug": "escargot-stella-alpina-g-23",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/escargot-stella-alpina-g-23/",
+    "title": {
+      "rendered": "Escargot Stella Alpina (G) $23."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120],
+    "class_list": [
+      "post-619",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "8",
+      "rendered": "8"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/619",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=619"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=619"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 620,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/polenta-gorgonzola-gratin-20/"
+    },
+    "modified": "2025-06-30T22:06:22",
+    "modified_gmt": "2025-06-30T22:06:22",
+    "slug": "polenta-gorgonzola-gratin-20",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/polenta-gorgonzola-gratin-20/",
+    "title": {
+      "rendered": "Polenta &#038; Gorgonzola “Gratin” $20."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ebroiled polenta medallions topped with sizzling gorgonzola &#038; parmigiano cream sauce\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120],
+    "class_list": [
+      "post-620",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "9",
+      "rendered": "9"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/620",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=620"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=620"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 621,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/fonduta-alla-piemontese-vg-32/"
+    },
+    "modified": "2025-06-30T22:06:22",
+    "modified_gmt": "2025-06-30T22:06:22",
+    "slug": "fonduta-alla-piemontese-vg-32",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/fonduta-alla-piemontese-vg-32/",
+    "title": {
+      "rendered": "Fonduta alla Piemontese (VG) $32."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Epot of melted gruyere and black truffle, served with veggie dippers &#038; ciabatta (serves 2)\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120],
+    "class_list": [
+      "post-621",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "10",
+      "rendered": "10"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/621",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=621"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=621"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 622,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/insalata-cesare-gf-17/"
+    },
+    "modified": "2025-06-30T22:26:10",
+    "modified_gmt": "2025-06-30T22:26:10",
+    "slug": "insalata-cesare-gf-17",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/insalata-cesare-gf-17/",
+    "title": {
+      "rendered": "Insalata “Cesare” (GF) $17."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Eromaine, shaved parmigiano, crispy pancetta, house made garlic croutons\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [133, 120],
+    "class_list": [
+      "post-622",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-lunch-antipasti",
+      "menu_category-dinner-antipasti"
+    ],
+    "sort_order": {
+      "value": "11",
+      "rendered": "11"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/622",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=622"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=622"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 623,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/insalata-stella-gf-v-vg-17/"
+    },
+    "modified": "2025-06-30T22:26:10",
+    "modified_gmt": "2025-06-30T22:26:10",
+    "slug": "insalata-stella-gf-v-vg-17",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/insalata-stella-gf-v-vg-17/",
+    "title": {
+      "rendered": "Insalata “Stella” (GF, V, VG) $17."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ebutter lettuce, dried cranberries, walnuts, gorgonzola, red onion, apricot citrus vinaigrette\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-623",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "12",
+      "rendered": "12"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/623",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=623"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=623"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 624,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/heirloom-burrata-caprese-gf-vg-21/"
+    },
+    "modified": "2025-06-30T22:26:10",
+    "modified_gmt": "2025-06-30T22:26:10",
+    "slug": "heirloom-burrata-caprese-gf-vg-21",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/heirloom-burrata-caprese-gf-vg-21/",
+    "title": {
+      "rendered": "Heirloom Burrata Caprese (GF, VG) $21."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-624",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "13",
+      "rendered": "13"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/624",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=624"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=624"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 625,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/insalata-boscaiola-gf-v-vg-17/"
+    },
+    "modified": "2025-07-03T20:58:58",
+    "modified_gmt": "2025-07-03T20:58:58",
+    "slug": "insalata-boscaiola-gf-v-vg-17",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/insalata-boscaiola-gf-v-vg-17/",
+    "title": {
+      "rendered": "Insalata Boscaiola (GF, V, VG) $18."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Earugula, thinly sliced mushrooms, apples, parmigiano &#038; walnuts, white truffle vinaigrette\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-625",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "14",
+      "rendered": "14"
+    },
+    "wine": {
+      "value": "0",
+      "rendered": "No"
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/625",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=625"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=625"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 611,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/zuppa-del-giorno-12/"
+    },
+    "modified": "2025-06-30T22:25:21",
+    "modified_gmt": "2025-06-30T22:25:21",
+    "slug": "zuppa-del-giorno-12",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/zuppa-del-giorno-12/",
+    "title": {
+      "rendered": "Zuppa Del Giorno $12."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-611",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "0",
+      "rendered": "0"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/611",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=611"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=611"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 612,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/stella-garlic-bread-or-rosemary-focaccia-v-vg-8/"
+    },
+    "modified": "2025-06-30T22:25:21",
+    "modified_gmt": "2025-06-30T22:25:21",
+    "slug": "stella-garlic-bread-or-rosemary-focaccia-v-vg-8",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/stella-garlic-bread-or-rosemary-focaccia-v-vg-8/",
+    "title": {
+      "rendered": "Stella Garlic Bread or Rosemary Focaccia (V, VG) $ 8."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-612",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "1",
+      "rendered": "1"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/612",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=612"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=612"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 613,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/the-fish-market-cheesy-garlic-bread-12-add-dungeness-crab-14/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "the-fish-market-cheesy-garlic-bread-12-add-dungeness-crab-14",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/the-fish-market-cheesy-garlic-bread-12-add-dungeness-crab-14/",
+    "title": {
+      "rendered": "“The Fish Market” Cheesy Garlic Bread $12. (add: Dungeness Crab $14.)"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-613",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "2",
+      "rendered": "2"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/613",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=613"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=613"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 614,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/antipasto-piemontese-gf-28/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "antipasto-piemontese-gf-28",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/antipasto-piemontese-gf-28/",
+    "title": {
+      "rendered": "Antipasto Piemontese (GF) $28."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Esalame di felino, prosciutto di parma, taleggio cheese, roasted veggies, kalamata olives, dried fruit\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-614",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "3",
+      "rendered": "3"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/614",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=614"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=614"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 615,
+    "date": "2025-06-30T22:06:22",
+    "date_gmt": "2025-06-30T22:06:22",
+    "guid": {
+      "rendered": "http://192.168.1.10:8094/menu-item/carpaccio-all-albese-gf-23/"
+    },
+    "modified": "2025-06-30T22:25:20",
+    "modified_gmt": "2025-06-30T22:25:20",
+    "slug": "carpaccio-all-albese-gf-23",
+    "status": "publish",
+    "type": "menu_item",
+    "link": "http://192.168.1.10:8094/menu-item/carpaccio-all-albese-gf-23/",
+    "title": {
+      "rendered": "Carpaccio all’ Albese (GF) $23."
+    },
+    "content": {
+      "rendered": "\u003Cp\u003Ethinly sliced raw beef filet, mushrooms, arugula, shaved parmigiano, lemon infusion\u003C/p\u003E",
+      "protected": false
+    },
+    "template": "",
+    "menu_category": [120, 133],
+    "class_list": [
+      "post-615",
+      "menu_item",
+      "type-menu_item",
+      "status-publish",
+      "hentry",
+      "menu_category-dinner-antipasti",
+      "menu_category-lunch-antipasti"
+    ],
+    "sort_order": {
+      "value": "4",
+      "rendered": "4"
+    },
+    "wine": {
+      "value": [],
+      "rendered": ""
+    },
+    "glass_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "half_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "bottle_price": {
+      "value": [],
+      "rendered": ""
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item/615",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_item"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/types/menu_item"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/media?parent=615"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "menu_category",
+          "embeddable": true,
+          "href": "http://192.168.1.10:8094/wp-json/wp/v2/menu_category?post=615"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

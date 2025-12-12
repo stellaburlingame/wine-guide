@@ -171,7 +171,6 @@ class index extends React.Component {
             this.setState({ definitions: data });
         })
         .catch(err => console.log(err));
-        window.addEventListener('scroll', this.checkScrollTop);
     }
     // --- SUGGESTIONS/SEARCH AUTOCOMPLETE HELPERS ---
     buildSearchCorpus = () => {
@@ -244,20 +243,6 @@ class index extends React.Component {
       this.setState({ suggestions: matches, suggestionsLimit: 7 });
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.checkScrollTop);
-    }
-    scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    checkScrollTop = () => {
-        if (!this.state.showScrollToTop && window.pageYOffset > 400) {
-            this.setState({ showScrollToTop: true });
-        } else if (this.state.showScrollToTop && window.pageYOffset <= 400) {
-            this.setState({ showScrollToTop: false });
-        }
-    }
     handleChange(event) {
         this.setState({ selectedRegion: event.target.value });
     }
@@ -667,16 +652,6 @@ class index extends React.Component {
               body={this.state.modalContent}
               fullScreen={this.state.fullScreen}
             />
-            {this.state.showScrollToTop && (
-              <button
-                onClick={this.scrollToTop}
-                className="scroll-to-top-button"
-                style={{
-                }}
-              >
-                ↑ Top
-              </button>
-            )}
         </>
         )
     }
