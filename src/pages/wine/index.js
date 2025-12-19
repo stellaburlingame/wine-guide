@@ -105,8 +105,8 @@ class index extends React.Component {
       this.handleChange = this.handleChange.bind(this);
   }
   clearAllFilters = () => {
-    this.setState({filters: resetFilters(this.state.specs).filters});
-    this.setState({wines: this.state.specs})
+    this.setState({filters: resetFilters(this.props.state.specs).filters});
+    this.setState({wines: this.props.state.specs})
   }
   handleFilterChange = (e, filterResetChange) => {
     let reset = false
@@ -121,49 +121,49 @@ class index extends React.Component {
   }
     // Add logic to set selectedType and filter by Wine Type based on hash on mount
     componentDidMount() {
-        // Read wine type from URL hash and set as initial selectedType
+    //     // Read wine type from URL hash and set as initial selectedType
         const match = window.location.href.match(/\/#\/wine#([\w-]+)/);
         const typeFromHash = match ? match[1] : "";
         this.setState({ selectedType: typeFromHash });
         this.handleFilterChange({ selectedType: typeFromHash }, typeFromHash === "");
-        Promise.all(
-          ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
-          // ["sparkling", "bianco", "rosso", "italiano"].map((type) =>
-            fetch(`${process.env.PUBLIC_URL}/assets/${type}.json`).then((res) =>
-              res.json()
-            )
-          )
-        )
-          .then((results) => {
-            // Flatten all JSON arrays and set once
-            const combinedData = results.flat();
-            this.setState({ specs: combinedData });
-            // Assign a random background offset class for each wine
-            const offsetClasses = ['random-offset-1', 'random-offset-2', 'random-offset-3', 'random-offset-4', 'random-offset-5'];
-            const producerOffsetClasses = {};
-            combinedData.forEach((wine, idx) => {
-              const rand = offsetClasses[Math.floor(Math.random() * offsetClasses.length)];
-              producerOffsetClasses[idx] = rand;
-            });
-            let glassPrices = combinedData.filter(w => w.Glass_Price !== 0 && w.Glass_Price !== undefined).map((w) => w.Glass_Price)
-            let bottlePrices = combinedData.filter(w => w.Bottle_Price !== 0 && w.Bottle_Price !== undefined).map((w) => w.Bottle_Price)
-            this.setState({
-                priceRange: {
-                  bottle: {
-                      min: Math.min(...bottlePrices),
-                      max: Math.max(...bottlePrices)
-                  },
-                  glass: {
-                      min: Math.min(...glassPrices),
-                      max: Math.max(...glassPrices)
-                  }
-              },
-            })
-            this.setState({ producerOffsetClasses });
-            // (Optional) Update suggestions after specs are loaded
-            this.updateSuggestions(this.state.searchQuery);
-          })
-          .catch((err) => console.log(err));
+    //     Promise.all(
+    //       ["italiano", "rosso", "bianco", "sparkling"].map((type) =>
+    //       // ["sparkling", "bianco", "rosso", "italiano"].map((type) =>
+    //         fetch(`${process.env.PUBLIC_URL}/assets/${type}.json`).then((res) =>
+    //           res.json()
+    //         )
+    //       )
+    //     )
+    //       .then((results) => {
+    //         // Flatten all JSON arrays and set once
+    //         const combinedData = results.flat();
+    //         this.setState({ specs: combinedData });
+    //         // Assign a random background offset class for each wine
+    //         const offsetClasses = ['random-offset-1', 'random-offset-2', 'random-offset-3', 'random-offset-4', 'random-offset-5'];
+    //         const producerOffsetClasses = {};
+    //         combinedData.forEach((wine, idx) => {
+    //           const rand = offsetClasses[Math.floor(Math.random() * offsetClasses.length)];
+    //           producerOffsetClasses[idx] = rand;
+    //         });
+    //         let glassPrices = combinedData.filter(w => w.Glass_Price !== 0 && w.Glass_Price !== undefined).map((w) => w.Glass_Price)
+    //         let bottlePrices = combinedData.filter(w => w.Bottle_Price !== 0 && w.Bottle_Price !== undefined).map((w) => w.Bottle_Price)
+    //         this.setState({
+    //             priceRange: {
+    //               bottle: {
+    //                   min: Math.min(...bottlePrices),
+    //                   max: Math.max(...bottlePrices)
+    //               },
+    //               glass: {
+    //                   min: Math.min(...glassPrices),
+    //                   max: Math.max(...glassPrices)
+    //               }
+    //           },
+    //         })
+    //         this.setState({ producerOffsetClasses });
+    //         // (Optional) Update suggestions after specs are loaded
+    //         this.updateSuggestions(this.state.searchQuery);
+    //       })
+    //       .catch((err) => console.log(err));
 
         fetch(`${process.env.PUBLIC_URL}/assets/definitions.json`)
         .then(res => res.json())
@@ -180,7 +180,7 @@ class index extends React.Component {
         'Region','Vineyard','Wine Name','Vintage','Sweetness','Varietal'
       ];
       const corpus = [];
-      (this.state.specs || []).forEach(w => {
+      (this.props.state.specs || []).forEach(w => {
         fields.forEach(f => {
           const v = w[f];
           if (v) {
@@ -203,7 +203,7 @@ class index extends React.Component {
         'Region','Vineyard','Wine Name','Vintage','Sweetness','Varietal'
       ];
       let count = 0;
-      for (const w of this.state.specs) {
+      for (const w of this.props.state.specs) {
         const hit = searchableFields.some(field => w[field]?.toString().toLowerCase().includes(tl));
         if (hit) count++;
       }
@@ -262,8 +262,11 @@ class index extends React.Component {
       this.setState({ showModal: false });
     }
     applyFilters(filters) {
+      if (this.props.state.specs === undefined || !Array.isArray(this.props.state.specs)) {
+        return;
+      }
       const searchQuery = this.state.searchQuery
-        const filteredSpecs = this.state.specs.filter((wine) => {
+        const filteredSpecs = this.props.state.specs.filter((wine) => {
             // Use regions mapping to get country for wine.Region
             const wineCountry = regions[wine.Region]?.Country || wine.Country;
             const matchCountry = filters.selectedCountry ? wineCountry === filters.selectedCountry : true;
@@ -331,8 +334,12 @@ class index extends React.Component {
     }
   render() {
     let filteredData = this.applyFilters(this.state.filters)
+    if (!filteredData) {
+      return <div>Loading...</div>;
+    }
       return (
         <>
+        
           <Row className="p-3  form-wrapper">
             {/* Type Filter Tabs */}
             <Form.Group className="p-0 col-12">
@@ -341,7 +348,7 @@ class index extends React.Component {
             <Card body className="form-wrapper">
               <Row>
                   <div style={{textAlign: "right"}} className="wine-count">
-                    <strong>{filteredData.length}</strong> wines available out of <strong>{this.state.specs.length}</strong>
+                    <strong>{filteredData.length}</strong> wines available out of <strong>{this.props.state.specs.length}</strong>
                   </div>
 
               </Row>
@@ -510,7 +517,7 @@ class index extends React.Component {
                             .concat(
                               this.state.filters.selectedCountry &&
                                 !(
-                                  this.state.specs
+                                  this.props.state.specs
                                     .map(w => regions[w.Region]?.Country || w.Country)
                                     .filter(Boolean)
                                     .includes(this.state.filters.selectedCountry)
@@ -578,10 +585,10 @@ class index extends React.Component {
                         <div>
                           {Array.from(
                             new Set(
-                              (this.state.specs.flatMap(wine => wine['Top Icons'] || [])
+                              (this.props.state.specs.flatMap(wine => wine['Top Icons'] || [])
                                 ).concat(
                                   this.state.filters.selectedIcon.filter(
-                                    icon => !(this.state.specs.flatMap(w => w['Top Icons'] || []).includes(icon))
+                                    icon => !(this.props.state.specs.flatMap(w => w['Top Icons'] || []).includes(icon))
                                   )
                                 )
                             )
@@ -630,12 +637,14 @@ class index extends React.Component {
                             index={index}
                             format={this.format}
                             state={this.state}
+                            specs={this.props.state.specs}
                             producerOffsetClass={this.state.producerOffsetClasses}
                             handleDefinitionShow={this.handleDefinitionShow}
                             handleModalShow={this.handleModalShow}
                             handleWineModalShow={this.handleWineModalShow}
                             handleModalClose={this.handleDefinitionClose}
                             handleDefinitionClose={this.handleDefinitionClose}
+                            varietals={this.props.state.varietals}
                             />
                           </div>
                       ))}
@@ -643,7 +652,7 @@ class index extends React.Component {
                   );
                 })()}
                   {/* <p className="pages" style={{color: "white"}}>
-                    Page {rowIndex + 1} of {Math.ceil(this.state.specs.length / 2)}
+                    Page {rowIndex + 1} of {Math.ceil(this.props.state.specs.length / 2)}
                   </p> */}
             </Row>
             <BlankModal 

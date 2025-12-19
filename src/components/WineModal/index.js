@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal } from "react-bootstrap";
+import { Card, ListGroup, Modal } from "react-bootstrap";
 import './index.css';
 import { Button } from "react-bootstrap";
 import { Row } from "react-bootstrap";
@@ -12,22 +12,63 @@ import { Col } from "react-bootstrap";
 import SmallerWineCard from "../SmallerWineCard";
 
 function Index(props) {
-    const similarNames = Array.isArray(props.wine['Similar Wines'])
-      ? props.wine['Similar Wines']
-      : (props.wine['Similar Wines'] ? [props.wine['Similar Wines']] : []);
+  const currentVarietal = props.varietals[props.wine['Varietal']];
 
-    // Preserve the order provided in the JSON by mapping names -> wine objects
-    const similarWines = similarNames
-      .map((name) => props.specs.find((w) => w['Wine Name'] === name))
-      .filter(Boolean)
-      .slice(0, 10);
+    // Build similar wine list from varietal-level suggestions
+    const varietalSimilarNames = currentVarietal?.similar
+      ? Object.keys(currentVarietal.similar)
+      : [];
+
+    // Include the current wine's own varietal first
+    const allVarietals = [props.wine['Varietal'], ...varietalSimilarNames];
+
+    // De-duplicate while preserving order
+    const uniqueVarietals = Array.from(new Set(allVarietals));
+
+    const MAX_TOTAL_SIMILAR = 10;
+    const MAX_PER_VARIETAL = 4;
+
+    // Collect multiple wines per varietal (up to MAX_PER_VARIETAL), excluding the current wine itself
+    const similarWines = uniqueVarietals
+      .flatMap((varietalName) =>
+        props.specs
+          .filter(
+            (w) =>
+              w['Varietal'] === varietalName &&
+              w['Wine Name'] !== props.wine['Wine Name']
+          )
+          .slice(0, MAX_PER_VARIETAL)
+      )
+      .slice(0, MAX_TOTAL_SIMILAR);
     return (
         <>
             <Modal.Header closeButton>
-                <Modal.Title>Similar Wines to {props.wine['Wine Name']}...</Modal.Title>
+                <Modal.Title>
+                  Similar Wines to {props.wine['Wine Name']}...
+                </Modal.Title>
             </Modal.Header>
             
             <Modal.Body className="wine-modal-body">
+              <Col className="p-3 similar-wine-card col-12 col-md-12">
+              <Card>
+                <Card.Body>
+                  <p>{currentVarietal.description}</p>
+                  <hr />
+                  <b>Similar wines include:</b>
+                  <ListGroup variant="flush" className="mb-3">
+                    {Object.keys(currentVarietal.similar).map((key, index) => (
+                      <ListGroup.Item key={index}><strong>{key}:</strong> {currentVarietal.similar[key]}</ListGroup.Item>
+                    ))}
+                    {currentVarietal.not_like ? (
+                      <ListGroup.Item>
+                      <p><strong>Not like:</strong> {currentVarietal.not_like}</p>
+                      </ListGroup.Item>
+                    ) : null}
+                  </ListGroup>
+                </Card.Body>
+              </Card>
+                
+              </Col>
                 <Row>
                 {similarWines.length > 0 ? (
                   similarWines.map((wine, idx) => (

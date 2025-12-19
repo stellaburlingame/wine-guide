@@ -22,8 +22,10 @@ import TextFormat from "../TextFormat";
 
 
 function Index(props) {
-    const { wine, index, handleDefinitionShow, handleModalShow, state, handleModalClose } = props;
-    
+    const { wine, specs, varietals, index, handleDefinitionShow, handleModalShow, state, handleModalClose } = props;
+    if (props.varietals[props.wine['Varietal']] === undefined) {
+        console.log(props.wine['Varietal']);
+    }
     return (
     <Card className='wine-card' bg={"Light"}>
     <Card.Header>
@@ -60,8 +62,8 @@ function Index(props) {
                 '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
                 }}
             >
-            {wine['Similar Wines'] &&
-            <SideBadge onClick={() => handleModalShow(<WineModal specs={props.state.specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
+            {props.varietals[props.wine['Varietal']] &&
+            <SideBadge onClick={() => handleModalShow(<WineModal varietals={varietals} specs={specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
             />
             }
         <div className="wine-card-image-wrapper">

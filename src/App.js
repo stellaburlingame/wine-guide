@@ -24,6 +24,7 @@ import NotFound from "./pages/NotFound";
 import Definitions from "./pages/definitions";
 import Credits from "./pages/credits";
 import { Modal, Button } from 'react-bootstrap';
+import WineMapChart from "./pages/WineChart";
 
 class App extends React.Component {
       state = {
@@ -52,6 +53,13 @@ class App extends React.Component {
         this.setState({ producerOffsetClasses });
       })
       .catch((err) => console.log(err));
+
+      fetch(`${process.env.PUBLIC_URL}/assets/varietals.json`)
+      .then(res => res.json())
+      .then(data => {
+          this.setState({ varietals: data });
+      })
+      .catch(err => console.log(err));
       fetch(`${process.env.PUBLIC_URL}/assets/definitions.json`)
       .then(res => res.json())
       .then(data => {
@@ -119,7 +127,7 @@ class App extends React.Component {
         <div className="App col-lg-12 mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="wine" element={<Wine />} />
+            <Route path="wine" element={<Wine state={this.state} />} />
             <Route path="table-of-contents" element={<TableOfConents />} />
             <Route path="find-your-wine" element={<FindYourWine state={this.state} />} />
             <Route path="menu-pairings" element={<MenuPairings state={this.state} />} />
@@ -127,6 +135,7 @@ class App extends React.Component {
             <Route path="new-wines" element={<NewWines state={this.state}/>} />
             <Route path="definitions" element={<Definitions/>} />
             <Route path="credits" element={<Credits state={this.state}/>} />
+            <Route path="varietals" element={<WineMapChart state={this.state}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
