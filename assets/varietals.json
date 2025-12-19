@@ -1,0 +1,298 @@
+{
+  "Amarone": {
+    "body": 95,
+    "fruity": 35,
+    "color": "#4B0F1A",
+    "description": "Amarone is a powerful, full-bodied Italian red made from partially dried grapes. It delivers intense flavors of dried cherry, fig, dark chocolate, and spice with high alcohol and a rich, velvety texture.",
+    "similar": {
+      "Brunello": "Both wines are full-bodied, structured, and complex, offering depth and aging potential, though Amarone is richer due to dried grapes."
+    },
+    "not_like": "Compared to many California Sangiovese or red blends, Brunello is more restrained, savory, and structured, emphasizing acidity and tannin over ripe fruit, oak sweetness, and higher alcohol."
+  },
+
+  "Barbera": {
+    "body": 65,
+    "fruity": 75,
+    "color": "#7A1E2D",
+    "description": "Barbera is a medium-bodied Italian red known for bright acidity, juicy red fruit, and low tannins. It is lively, food-friendly, and often highlights cherry and plum flavors.",
+    "similar": {
+      "Chianti Classico": "Both feature bright acidity and red fruit, making them versatile food wines, though Barbera is softer in tannin."
+    },
+    "not_like": "Not like a Californian red, because Barbera emphasizes bright acidity and freshness rather than high alcohol, jammy fruit, and heavy oak or spice."
+  },
+
+  "Brunello": {
+    "body": 90,
+    "fruity": 40,
+    "color": "#5A1020",
+    "description": "Brunello di Montalcino is a structured, full-bodied red made from Sangiovese. It offers dark cherry, leather, earth, and spice with firm tannins and excellent aging potential.",
+    "similar": {
+      "Nebbiolo": "Both wines are structured, age-worthy, and tannic, with complex savory and earthy characteristics."
+    },
+    "not_like": "Compared to many California Sangiovese or red blends, Brunello is more restrained, savory, and structure-driven, emphasizing acidity and tannin over ripe fruit, oak sweetness, and higher alcohol."
+  },
+
+  "Brut": {
+    "body": 30,
+    "fruity": 55,
+    "color": "#F4E9C9",
+    "description": "Brut sparkling wines are crisp and dry, with fresh acidity and notes of citrus, apple, and brioche. The low residual sugar makes them refreshing and versatile.",
+    "similar": {
+      "Prosecco": "Both are sparkling wines with bright acidity, though Brut is typically drier and more structured."
+    }
+  },
+
+  "Brut Rosé": {
+    "body": 35,
+    "fruity": 65,
+    "color": "#F2B6C6",
+    "description": "Brut Rosé combines crisp acidity with subtle red fruit flavors like strawberry and raspberry. It balances freshness with elegance and visual appeal.",
+    "similar": {
+      "Rosé": "Both emphasize fresh red fruit and light body, though Brut Rosé adds sparkle and dryness."
+    }
+  },
+
+  "Cabernet Sauvignon": {
+    "body": 95,
+    "fruity": 30,
+    "color": "#3F0D12",
+    "description": "Cabernet Sauvignon is a bold, full-bodied red known for dark fruit, firm tannins, and structure. Common notes include blackcurrant, cedar, and tobacco.",
+    "similar": {
+      "Merlot": "Both are classic Bordeaux varieties, though Merlot is softer and more approachable.",
+      "Super Tuscan": "Both can be bold and structured with dark fruit and oak influence; Super Tuscans often deliver a Cabernet-like profile but with an Italian, acidity-driven backbone.",
+      "Brunello": "Both are full-bodied and age-worthy with firm structure; Brunello leans more savory and acidic, while Cabernet is typically darker-fruited and more tannic."
+    }
+  },
+
+  "Chardonnay": {
+    "body": 60,
+    "fruity": 55,
+    "color": "#E6D39A",
+    "description": "Chardonnay ranges from crisp and mineral-driven to rich and buttery. It often features apple, pear, citrus, and sometimes oak-derived vanilla and toast.",
+    "similar": {
+      "Gavi di Gavi": "Both can be medium-bodied whites, though Chardonnay is broader while Gavi is more mineral-driven.",
+      "Vermentino": "Both can be medium-bodied with citrus and texture; Vermentino tends to be brighter, more herbal, and less oak-influenced.",
+      "Pinot Grigio": "Both can be crisp and approachable; Pinot Grigio is typically lighter and more neutral, while Chardonnay can be richer and broader."
+    }
+  },
+
+  "Chianti Classico": {
+    "body": 70,
+    "fruity": 45,
+    "color": "#6B1A1A",
+    "description": "Chianti Classico is a medium-bodied Italian red made from Sangiovese, offering bright acidity, red cherry flavors, and savory herbal notes.",
+    "similar": {
+      "Nobile di Montepulciano": "Both are Sangiovese-based wines with balanced acidity and red fruit character."
+    },
+    "not_like": "Compared to many California red blends, Chianti Classico emphasizes acidity, savory herbs, and food-driven balance rather than ripe fruit, heavy oak, and higher alcohol."
+  },
+
+  "Gavi di Gavi": {
+    "body": 40,
+    "fruity": 60,
+    "color": "#F0E8B8",
+    "description": "Gavi di Gavi is a crisp Italian white made from Cortese, known for citrus, green apple, and mineral-driven freshness.",
+    "similar": {
+      "Vermentino": "Both are fresh, high-acid whites with citrus and mineral notes."
+    },
+    "not_like": "Compared to California Chardonnay, Gavi di Gavi focuses on minerality, citrus, and freshness rather than oak, butter, or richness."
+  },
+
+  "Lambrusco": {
+    "body": 45,
+    "fruity": 80,
+    "color": "#8B1E3F",
+    "description": "Lambrusco is a lightly sparkling red with fresh acidity and juicy berry flavors. Styles range from dry to slightly sweet.",
+    "similar": {
+      "Brut Rosé": "Both offer effervescence and freshness, though Lambrusco is darker and fruitier."
+    },
+    "not_like": "Unlike most California red wines, Lambrusco is lightly sparkling, lower in alcohol, and designed for freshness rather than power or oak influence."
+  },
+
+  "Merlot": {
+    "body": 75,
+    "fruity": 60,
+    "color": "#5E0B15",
+    "description": "Merlot is a smooth, medium-to-full-bodied red known for soft tannins and flavors of plum, black cherry, and chocolate.",
+    "similar": {
+      "Cabernet Sauvignon": "Both are Bordeaux varieties, but Merlot is rounder and more approachable.",
+      "Super Tuscan": "Many Super Tuscans include Merlot; both can be plush and dark-fruited, with Super Tuscans adding Italian structure and savory nuance.",
+      "Nero d'Avola": "Both can be ripe, smooth, and dark-fruited; Nero d'Avola tends to show more Mediterranean spice and warmth."
+    }
+  },
+
+  "Moscato": {
+    "body": 20,
+    "fruity": 95,
+    "color": "#F7F0C8",
+    "description": "Moscato is a light-bodied, aromatic white wine with pronounced floral and stone fruit sweetness and low alcohol.",
+    "similar": {
+      "Prosecco": "Both are light, aromatic, and crowd-pleasing; Prosecco is typically drier and more apple/pear-driven, while Moscato is sweeter and more floral.",
+      "Brut": "Both can feel refreshing and low in heaviness; Brut is dry and crisp, while Moscato is sweeter and more aromatic.",
+      "Brut Rosé": "Both are light and fruit-forward in feel; Brut Rosé is dry with subtle red fruit, while Moscato is sweet with floral/stone-fruit aromatics."
+    },
+    "not_like": "Not like a Californian white, because Moscato is sweet, highly aromatic, and low in alcohol rather than dry, oak-influenced, or citrus/mineral-driven."
+  },
+
+  "Nebbiolo": {
+    "body": 85,
+    "fruity": 30,
+    "color": "#7C2A2A",
+    "description": "Nebbiolo is a high-tannin, high-acid red known for rose, tar, cherry, and earthy complexity with strong aging potential.",
+    "similar": {
+      "Barolo": "Barolo is made from Nebbiolo and showcases the same structure and aromatics."
+    },
+    "not_like": "Compared to California Cabernet Sauvignon, Nebbiolo emphasizes high acidity, firm tannins, and savory complexity over ripe fruit and oak-driven richness."
+  },
+  "Barolo": {
+    "body": 90,
+    "fruity": 30,
+    "color": "#6B1F1F",
+    "description": "Barolo is a powerful, age-worthy Italian red made entirely from Nebbiolo. It is known for firm tannins, high acidity, and complex aromas of rose, tar, cherry, leather, and earth, often requiring years of aging to fully soften.",
+    "similar": {
+      "Nebbiolo": "Barolo is made from 100% Nebbiolo and represents the grape in its most structured and long-lived expression."
+    },
+    "not_like": "Compared to California Cabernet Sauvignon, Barolo emphasizes tannin, acidity, and savory complexity over ripe fruit, oak sweetness, and immediate approachability."
+  },
+
+  "Nero d'Avola": {
+    "body": 80,
+    "fruity": 55,
+    "color": "#5B0F1B",
+    "description": "Nero d'Avola is a full-bodied Sicilian red offering ripe dark fruit, spice, and moderate tannins with warmth.",
+    "similar": {
+      "Zinfandel": "Both are bold, fruit-forward wines with ripe berry and spice characteristics."
+    }
+  },
+
+  "Nobile di Montepulciano": {
+    "body": 80,
+    "fruity": 45,
+    "color": "#64161E",
+    "description": "Vino Nobile di Montepulciano is a structured Sangiovese-based red with red fruit, earth, and balanced tannins.",
+    "similar": {
+      "Chianti Classico": "Both rely on Sangiovese and share acidity-driven structure."
+    },
+    "not_like": "Compared to many California Sangiovese or red blends, Nobile di Montepulciano is more restrained, savory, and acidity-driven rather than fruit-forward and oaky."
+  },
+
+  "Pinot Grigio": {
+    "body": 35,
+    "fruity": 55,
+    "color": "#F3EDD1",
+    "description": "Pinot Grigio is a light-bodied white wine known for crisp acidity and subtle citrus and pear flavors.",
+    "similar": {
+      "Pinot Gris": "Same grape, with Pinot Gris typically offering slightly richer texture.",
+      "Gavi di Gavi": "Both are crisp, citrus-leaning Italian whites; Gavi is often more mineral and slightly more structured.",
+      "Sauvignon Blanc": "Both are refreshing and high-acid; Sauvignon Blanc is usually more aromatic and herbal than Pinot Grigio."
+    }
+  },
+
+  "Pinot Gris": {
+    "body": 50,
+    "fruity": 60,
+    "color": "#E8D9A8",
+    "description": "Pinot Gris is fuller and richer than Pinot Grigio, often showing stone fruit and spice notes.",
+    "similar": {
+      "Pinot Grigio": "Both come from the same grape with different stylistic expressions."
+    }
+  },
+
+  "Pinot Noir": {
+    "body": 55,
+    "fruity": 65,
+    "color": "#8A2E3B",
+    "description": "Pinot Noir is a lighter-bodied red known for red fruit, earth, and silky tannins.",
+    "similar": {
+      "Barbera": "Both emphasize bright acidity and red fruit with lighter tannin, making them very food-friendly.",
+      "Chianti Classico": "Both can show tart cherry and subtle earthiness with an acidity-driven, savory profile, though Chianti Classico is usually a bit firmer in tannin.",
+      "Nobile di Montepulciano": "Both are elegant and meal-friendly with red-fruit character and savory nuance, though Nobile tends to be more structured and tannic."
+    }
+  },
+
+  "Primitivo": {
+    "body": 85,
+    "fruity": 70,
+    "color": "#4E0C14",
+    "description": "Primitivo is a bold southern Italian red known for ripe dark fruit, spice, and warmth.",
+    "similar": {
+      "Zinfandel": "They are genetically identical grapes with similar flavor profiles."
+    }
+  },
+
+  "Prosecco": {
+    "body": 25,
+    "fruity": 65,
+    "color": "#F5F1D4",
+    "description": "Prosecco is a light, fruity sparkling wine with notes of pear, apple, and floral aromas.",
+    "similar": {
+      "Brut": "Both are sparkling wines, though Prosecco is typically fruitier."
+    }
+  },
+
+  "Rose": {
+    "body": 30,
+    "fruity": 70,
+    "color": "#F2A7B5",
+    "description": "Rosé wines are fresh and light-bodied, offering strawberry, citrus, and floral notes.",
+    "similar": {
+      "Brut Rosé": "Both highlight red fruit freshness, with Brut Rosé adding effervescence."
+    }
+  },
+
+  "Sauvignon Blanc": {
+    "body": 40,
+    "fruity": 50,
+    "color": "#EDF2C4",
+    "description": "Sauvignon Blanc is a crisp white with high acidity and flavors of citrus, grass, and tropical fruit.",
+    "similar": {
+      "Vermentino": "Both are fresh, high-acid whites with herbal and citrus elements.",
+      "Gavi di Gavi": "Both are crisp and refreshing with bright citrus; Gavi usually leans more mineral and less overtly herbal.",
+      "Pinot Grigio": "Both are clean, zesty, and easy-drinking; Sauvignon Blanc is typically more aromatic and herbal, while Pinot Grigio is more subtle."
+    }
+  },
+
+  "Super Tuscan": {
+    "body": 85,
+    "fruity": 45,
+    "color": "#4B0F18",
+    "description": "Super Tuscans are bold blends combining international grapes with Italian structure, offering depth and richness.",
+    "similar": {
+      "Cabernet Sauvignon": "Both emphasize body, structure, and dark fruit intensity."
+    }
+  },
+
+  "Vermentino": {
+    "body": 40,
+    "fruity": 55,
+    "color": "#F1EDB8",
+    "description": "Vermentino is a fresh Mediterranean white with citrus, herbal notes, and bright acidity.",
+    "similar": {
+      "Sauvignon Blanc": "Both share freshness, acidity, and herbal aromatics."
+    }
+  },
+
+  "Zinfandel": {
+    "body": 85,
+    "fruity": 75,
+    "color": "#4A0A12",
+    "description": "Zinfandel is a bold, fruit-forward red wine known for ripe blackberry, jammy fruit, spice, and a warming finish.",
+    "similar": {
+      "Primitivo": "They are the same grape variety and share bold fruit, spice, and body.",
+      "Nero d'Avola": "Both can be ripe, dark-fruited, and spicy with a warm finish; Nero d'Avola often leans more savory/Mediterranean.",
+      "Amarone": "Both can feel powerful and high-impact with rich dark fruit; Amarone is typically more dried-fruit, velvety, and higher in alcohol."
+    }
+  },
+  "Syrah, Merlot, Sangiovese": {
+    "body": 85,
+    "fruity": 50,
+    "color": "#4C1A1F",
+    "description": "This blended red combines Syrah’s dark fruit and spice, Merlot’s softness and plush texture, and Sangiovese’s acidity and structure. The result is a full-bodied yet balanced wine with depth, savory complexity, and food-friendly lift.",
+    "similar": {
+      "Super Tuscan": "Both blend international and Italian varieties to achieve richness, structure, and balance, often combining dark fruit with savory, acidity-driven elements.",
+      "Chianti Classico": "Both rely on Sangiovese for acidity and structure, though this blend is typically riper, darker-fruited, and more powerful.",
+      "Nero d'Avola": "Both can show dark fruit, spice, and warmth, with Nero d’Avola leaning more Mediterranean and this blend showing added polish from Merlot."
+    },
+    "not_like": "Not like a Californian red, because this blend emphasizes balance, acidity, and savory structure rather than overt ripeness, heavy oak sweetness, or jammy fruit."
+  }
+}
