@@ -48,9 +48,11 @@ class index extends React.Component {
                         index={index}
                         format={this.format}
                         state={this.props.state}
+                        specs={specsFromProps}
                         handleDefinitionShow={this.handleDefinitionShow}
                         handleModalShow={this.handleModalShow}
                         handleModalClose={this.handleDefinitionClose}
+                        varietals={this.props.state.varietals}
                       />
                       </div>
                   ));
