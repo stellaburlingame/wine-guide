@@ -38,8 +38,7 @@
     "PDF": "CipressiNizzaMicheleChiarloBarberadAsti2019.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Balanced", "Oaky/Vanilla"],
     "Sustainability": "Manual harvest and yield control; vineyard cultivated with Guyot and low spurred cordon, aiming for low yield and optimal ripeness",
-    "Vegan": false,
-    "Similar Wines": ["Pajena Barbera d'Alba", "Barbera 'Vezzi'", "Nino Negri Valtellina Superiore Quadrio Nebbiolo", "Prunotto Barbaresco"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -80,8 +79,7 @@
     "PDF": "PajenaBarberaDAlba2021.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Silky", "Balanced"],
     "Sustainability": "Sustainably farmed vineyards; grapes hand-harvested and chilled with carbonic snow to reduce oxidation and sulfur use",
-    "Vegan": false,
-    "Similar Wines": ["Cipressi Nizza, Barbera D'Asti", "Barbera 'Vezzi'", "Nino Negri Valtellina Superiore Quadrio Nebbiolo", "Prunotto Barbaresco"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -122,8 +120,7 @@
     "PDF": "PrunottoBarbaresco2021.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Aged", "Complex", "Silky", "Balanced"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Pio Cesare Barolo", "Massolino Barolo", "Travaglini Gattinara", "Nino Negri Valtellina Superiore Quadrio Nebbiolo"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -164,8 +161,7 @@
     "PDF": "PioCesareBarolo2019.pdf",
     "Top Icons": ["Aged", "Complex", "Bold", "Silky", "Oaky/Vanilla", "Balanced"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Massolino Barolo", "Prunotto Barbaresco", "Travaglini Gattinara", "Nino Negri Valtellina Superiore Quadrio Nebbiolo"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -206,8 +202,7 @@
     "PDF": "MassolinoBarolo2019.pdf",
     "Top Icons": ["Aged", "Complex", "Spice", "Floral", "Bold"],
     "Sustainability": "Sustainable and vegan practicing vineyards with traditional vinification",
-    "Vegan": true,
-    "Similar Wines": ["Pio Cesare Barolo", "Prunotto Barbaresco", "Travaglini Gattinara", "Nino Negri Valtellina Superiore Quadrio Nebbiolo"]
+    "Vegan": true
   },
   {
     "Wine Type": "Italiano",
@@ -248,8 +243,7 @@
     "PDF": "TravagliniGattinara2020.pdf",
     "Top Icons": ["Floral", "Spice", "Minerality", "Balanced", "Complex", "Aged"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Massolino Barolo", "Pio Cesare Barolo", "Prunotto Barbaresco", "Nino Negri Valtellina Superiore Quadrio Nebbiolo"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -290,8 +284,7 @@
     "PDF": "PiandelleVigneBrunellodiMontalcino2019.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Silky", "Aged", "Balanced"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Poliziano Vino Nobile di Montepulciano", "Nozzole Chianti Classico", "Tenuta di Arceno Chianti Classico Riserva", "Antinori Tignanello Super Tuscan"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -332,8 +325,7 @@
     "PDF": "Tignanello2021.pdf",
     "Top Icons": ["Fruity/Berry", "Chocolate", "Spice", "Complex", "Bold", "Aged"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Nozzole Chianti Classico", "Tenuta di Arceno Chianti Classico Riserva", "Poliziano Vino Nobile di Montepulciano", "Antinori “Pian Delle Vigne” Brunello di Montalcino", "Querceto Tuscan Red"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -374,8 +366,7 @@
     "PDF": "PolizianoVinoNobilediMontepulciano2021.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Complex"],
     "Sustainability": "Sustainably farmed; optical sorting and French oak aging",
-    "Vegan": true,
-    "Similar Wines": ["Nozzole Chianti Classico", "Tenuta di Arceno Chianti Classico Riserva", "Antinori “Pian Delle Vigne” Brunello di Montalcino", "Antinori Tignanello Super Tuscan"]
+    "Vegan": true
   },
   {
     "Wine Type": "Italiano",
@@ -425,7 +416,6 @@
     ],
     "Sustainability": "",
     "Vegan": false,
-    "Similar Wines": ["Tenuta di Arceno Chianti Classico Riserva", "Poliziano Vino Nobile di Montepulciano", "Antinori “Pian Delle Vigne” Brunello di Montalcino", "Antinori Tignanello Super Tuscan"],
     "Top Glass": true
   },
   {
@@ -468,7 +458,6 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Balanced", "Silky", "Complex"],
     "Sustainability": "Estate-grown with attention to vineyard expression and environmental harmony",
     "Vegan": false,
-    "Similar Wines": ["Nozzole Chianti Classico", "Poliziano Vino Nobile di Montepulciano", "Antinori Tignanello Super Tuscan", "Antinori “Pian Delle Vigne” Brunello di Montalcino"],
     "Top Bottle": true
   },
   {
@@ -511,8 +500,7 @@
     "PDF": "TenutaRegalealiLamri2022.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Balanced", "Silky", "Sustainable"],
     "Sustainability": "Grapes grown at high elevations for natural freshness; aged with minimal oak impact",
-    "Vegan": false,
-    "Similar Wines": ["Cantele Primitivo Puglia", "Querceto Tuscan Red", "JAX Y3 Taureau", "Turley Juvenile Zinfandel"]
+    "Vegan": false
   },
   {
   "Wine Type": "Italiano",
@@ -596,8 +584,7 @@
     "PDF": "NinoNegriValtellinaSuperioreDOCGQuadrio2020.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Balanced", "Aged", "Silky"],
     "Sustainability": "Terraced vineyards managed with low-yield, high-elevation practices for optimal ripeness and purity",
-    "Vegan": false,
-    "Similar Wines": ["Travaglini Gattinara", "Prunotto Barbaresco", "Massolino Barolo", "Cipressi Nizza, Barbera D'Asti"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -638,8 +625,7 @@
     "PDF": "CampagnolaAmaronedellaValpolicellaDOCGClassico.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Bold", "Complex", "Aged", "Balanced"],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["Cantele Primitivo Puglia", "Turley Juvenile Zinfandel", "JAX Y3 Taureau", "Tenuta Regaleali “Lamuri” Nero D’Avola"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -680,8 +666,7 @@
     "PDF": "CantelePrimitivoPugliaIGP.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced"],
     "Sustainability": "Sustainably farmed vineyards in Salento with traditional head-trained vines",
-    "Vegan": false,
-    "Similar Wines": ["Turley Juvenile Zinfandel", "Giuseppe Campagnola, Amarone della Valpolicella Classico", "Tenuta Regaleali “Lamuri” Nero D’Avola", "JAX Y3 Taureau"]
+    "Vegan": false
   },
   {
     "Wine Type": "Italiano",
@@ -729,7 +714,6 @@
       "Herbal"
     ],
     "Sustainability": "",
-    "Vegan": false,
-    "Similar Wines": ["JAX Y3 Taureau", "Tenuta Regaleali “Lamuri” Nero D’Avola", "Cantele Primitivo Puglia", "Poliziano Vino Nobile di Montepulciano"]
+    "Vegan": false
   }
 ]

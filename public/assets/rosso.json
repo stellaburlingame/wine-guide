@@ -37,7 +37,7 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Silky", "Balanced", "Complex"],
     "Hex": "#6B0F1A",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Silver Oak Alexander Valley Cabernet Sauvignon", "Caymus Cabernet Sauvignon 50th Anniversary Edition", "Quilt Cabernet Sauvignon", "JUSTIN Cabernet Sauvignon", "Dancing Bear Ranch Cabernet Sauvignon"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -78,7 +78,7 @@
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Oaky/Vanilla", "Balanced"],
     "Hex": "#5D1A2E",
     "Sustainability": "Certified regenerative organic farming practices across all estate vineyards.",
-    "Vegan": false,  "Similar Wines": ["Silver Oak Alexander Valley Cabernet Sauvignon", "Quilt Cabernet Sauvignon", "Caymus Cabernet Sauvignon 50th Anniversary Edition", "Far Niente Cabernet Sauvignon"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -119,7 +119,7 @@
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Chocolate", "Bold", "Complex", "Aged"],
     "Hex": "#3A0033",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Far Niente Cabernet Sauvignon", "Silver Oak Alexander Valley Cabernet Sauvignon", "Quilt Cabernet Sauvignon", "JUSTIN Cabernet Sauvignon"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -160,7 +160,7 @@
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Spice", "Herbal", "Chocolate", "Balanced"],
     "Hex": "#5E0F19",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Quilt Cabernet Sauvignon", "Silver Oak Alexander Valley Cabernet Sauvignon", "Far Niente Cabernet Sauvignon", "Caymus Cabernet Sauvignon 50th Anniversary Edition"],
+    "Vegan": false,
     "Top Bottle": true
   },
   {
@@ -244,7 +244,7 @@
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Spice", "Balanced", "Complex"],
     "Hex": "#9B111E",
     "Sustainability": "Alexander Valley facility certified LEED Platinum; integrated pest management, solar energy, fish‑friendly farming practices",
-    "Vegan": false,  "Similar Wines": ["Far Niente Cabernet Sauvignon", "Caymus Cabernet Sauvignon 50th Anniversary Edition", "Quilt Cabernet Sauvignon", "JUSTIN Cabernet Sauvignon"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -285,7 +285,7 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Bold", "Complex", "Aged"],
     "Hex": "#4C0C16",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Far Niente Cabernet Sauvignon", "Silver Oak Alexander Valley Cabernet Sauvignon", "Quilt Cabernet Sauvignon", "Caymus Cabernet Sauvignon 50th Anniversary Edition"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -369,7 +369,7 @@
     "Top Icons": ["Fruity/Berry", "Floral", "Herbal", "Minerality", "Silky", "Balanced"],
     "Hex": "#B3172B",
     "Sustainability": "Committed to organic farming and minimal intervention winemaking practices.",
-    "Vegan": false,  "Similar Wines": ["Goldeneye Duckhorn Anderson Valley Pinot Noir", "Ken Wright Willamette Valley Pinot Noir", "Ken Wright Canary Hill Vineyard Pinot Noir", "Langhart & Hill Russian River Valley Pinot Noir"],
+    "Vegan": false,
     "Top Bottle": true
   },
   {
@@ -412,7 +412,7 @@
     "Top Icons": ["Fruity/Berry", "Herbal", "Spice", "Silky", "Balanced", "Complex"],
     "Hex": "#6E1F28",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Flowers Sonoma Coast Pinot Noir", "Ken Wright Willamette Valley Pinot Noir", "Ken Wright Canary Hill Vineyard Pinot Noir", "Langhart & Hill Russian River Valley Pinot Noir"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -495,7 +495,7 @@
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Silky", "Balanced"],
     "Hex": "#C22A2A",
     "Sustainability": "Sustainably farmed vineyard in the Russian River Valley with emphasis on vine balance and low vigor.",
-    "Vegan": false,  "Similar Wines": ["Flowers Sonoma Coast Pinot Noir", "Goldeneye Duckhorn Anderson Valley Pinot Noir", "Ken Wright Willamette Valley Pinot Noir", "Ken Wright Canary Hill Vineyard Pinot Noir"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -536,7 +536,7 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Bold", "Silky"],
     "Hex": "#701F2A",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Stags’ Leap Napa Valley Merlot", "Turley Juvenile Zinfandel", "Quilt Cabernet Sauvignon"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -577,7 +577,7 @@
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Balanced", "Silky", "Bold"],
     "Hex": "#8C1E3A",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["JAX Y3 Taureau", "JUSTIN Cabernet Sauvignon", "Quilt Cabernet Sauvignon", "Stags’ Leap Napa Valley Merlot"]
+    "Vegan": false
   },
   {
     "Wine Type": "Rosso",
@@ -618,7 +618,7 @@
     "Top Icons": ["Fruity/Berry", "Chocolate", "Oaky/Vanilla", "Bold", "Complex", "Silky"],
     "Hex": "#7A0F1A",
     "Sustainability": "",
-    "Vegan": false,  "Similar Wines": ["Caymus Cabernet Sauvignon 50th Anniversary Edition", "Silver Oak Alexander Valley Cabernet Sauvignon", "Far Niente Cabernet Sauvignon", "JUSTIN Cabernet Sauvignon"],
+    "Vegan": false,
     "Top Glass": true
   },
     {
@@ -660,7 +660,7 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Balanced", "Silky"],
     "Hex": "#9E2A2F",
     "Sustainability": "Certified Organic farming; focus on high-level evidence-supported nutritional farming",
-    "Vegan": false,  "Similar Wines": ["Flowers Sonoma Coast Pinot Noir", "Goldeneye Duckhorn Anderson Valley Pinot Noir", "Langhart & Hill Russian River Valley Pinot Noir", "Ken Wright Canary Hill Vineyard Pinot Noir"],
+    "Vegan": false,
     "Top Glass": true
   }
 ]
