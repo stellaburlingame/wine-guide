@@ -1,5 +1,5 @@
 import React from "react";
-// import './index.css';
+import './index.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
@@ -11,10 +11,11 @@ import { Icons, Vintage, PriceBadge, DOC, DOCG, TopBottle, TopGlass } from "../B
 import TextFormat from "../TextFormat";
 import NA from '../WineCard/NA.png';
 
+
 function Index(props) {
     const { wine, index, state } = props;
     return (
-    <Card style={{height: '97%'}} className='wine-card' bg={"Light"}>
+    <Card style={{height: '97%'}} className='small-wine-card' bg={"Light"}>
     <Card.Header>
         <Card.Text>
         {wine["Top Bottle"] && (
@@ -41,6 +42,8 @@ function Index(props) {
         <ListGroup.Item className="icon-wrapper">
             <Icons wine={wine} />
         </ListGroup.Item>
+        </Row>
+        <Row className="wine-card-body">
         <div
             className={`col-lg-3 col-md-3 col-sm-3 producer-background ${state.producerOffsetClasses ? state.producerOffsetClasses[index] : ''}`}
             style={{

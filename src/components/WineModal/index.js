@@ -49,13 +49,13 @@ function Index(props) {
             </Modal.Header>
             
             <Modal.Body className="wine-modal-body">
-              <Col className="p-3 similar-wine-card col-12 col-md-12">
+              <Col className="pt-2 pb-0 p-3 similar-wine-card col-12 col-md-12">
               <Card>
-                <Card.Body>
+                <Card.Body className="pb-0">
                   <p>{currentVarietal.description}</p>
                   <hr />
                   <b>Similar wines include:</b>
-                  <ListGroup variant="flush" className="mb-3">
+                  <ListGroup variant="flush">
                     {Object.keys(currentVarietal.similar).map((key, index) => (
                       <ListGroup.Item key={index}><strong>{key}:</strong> {currentVarietal.similar[key]}</ListGroup.Item>
                     ))}

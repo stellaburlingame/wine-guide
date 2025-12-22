@@ -20,6 +20,6 @@
   ],
   "start_url": "https://stellaburlingame.github.io/wine-guide/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#222529",
+  "background_color": "#222529"
 }

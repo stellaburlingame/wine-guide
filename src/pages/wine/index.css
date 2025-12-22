@@ -165,9 +165,9 @@
 }
 .wine-list-group {
   padding-right: 0;
-  border-left: 1px solid rgba(0, 0, 0, .125);
-  border-right: 1px solid rgba(0, 0, 0, .125);
-  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  border: 1px solid rgba(0, 0, 0, .125);
+  /* border-right: 1px solid rgba(0, 0, 0, .125);
+  border-bottom: 1px solid rgba(0, 0, 0, .125); */
 }
 .nav-link {
     /* border-bottom-left-radius: .25rem;
