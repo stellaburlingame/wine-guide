@@ -13,6 +13,7 @@
     "bootstrap-icons": "^1.13.1",
     "chart.js": "^4.5.1",
     "chartjs-plugin-datalabels": "^2.2.0",
+    "fs": "^0.0.1-security",
     "gh-pages": "^6.3.0",
     "honeycomb-grid": "^4.1.5",
     "nth-check": "^2.1.1",
@@ -33,11 +34,12 @@
     "clean:custom": "rimraf build-custom",
     "build:gh": "npm run clean:gh && cross-env PUBLIC_URL=/wine-guide react-scripts build && shx mv build build-gh",
     "build:custom": "npm run clean:custom && cross-env PUBLIC_URL=/ react-scripts build && shx mv build build-custom",
-    "deploy:origin": "npm run build:gh && gh-pages -d build-gh -o origin -b gh-pages",
-    "deploy:origin2": "npm run build:custom && gh-pages -d build-custom -o origin2 -b gh-pages",
     "deploy:both": "npm run deploy:origin && npm run deploy:origin2",
     "start": "react-scripts start",
-    "postinstall": "mkdir -p public/cmaps public/standard_fonts public/pdf && cp -R node_modules/pdfjs-dist/cmaps/* public/cmaps/ && cp -R node_modules/pdfjs-dist/standard_fonts/* public/standard_fonts/ && cp node_modules/pdfjs-dist/build/pdf.worker.min.* public/pdf/"
+    "postinstall": "mkdir -p public/cmaps public/standard_fonts public/pdf && cp -R node_modules/pdfjs-dist/cmaps/* public/cmaps/ && cp -R node_modules/pdfjs-dist/standard_fonts/* public/standard_fonts/ && cp node_modules/pdfjs-dist/build/pdf.worker.min.* public/pdf/",
+    "version:bump": "node scripts/bump-version.js",
+    "deploy:origin": "npm run version:bump && npm run build:gh && gh-pages -d build-gh -o origin -b gh-pages",
+    "deploy:origin2": "npm run build:custom && gh-pages -d build-custom -o origin2 -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +47,7 @@
       "react-app/jest"
     ]
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",
