@@ -23,6 +23,9 @@ import TextFormat from "../TextFormat";
 
 function Index(props) {
     const { wine, specs, varietals, index, handleDefinitionShow, handleModalShow, state, handleModalClose } = props;
+    if (props.varietals === undefined) {
+        return null;
+    }
     if (props.varietals[props.wine['Varietal']] === undefined) {
         console.log(props.wine['Varietal']);
     }

@@ -15,7 +15,8 @@ ChartJS.register(LinearScale, PointElement, Tooltip, Legend, ChartDataLabels);
 const quadrantPlugin = {
   id: "quadrantPlugin",
   afterDraw(chart) {
-    const { ctx, chartArea, scales } = chart;
+    const { ctx, chartArea } = chart;
+    // const { ctx, chartArea, scales } = chart;
     const { left, right, top, bottom } = chartArea;
     // const xMid = scales.x.getPixelForValue(50);
     // const yMid = scales.y.getPixelForValue(50);

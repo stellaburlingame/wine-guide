@@ -636,9 +636,8 @@ class index extends React.Component {
                             wine={data1}
                             index={index}
                             format={this.format}
-                            state={this.state}
+                            state={this.props.state}
                             specs={this.props.state.specs}
-                            producerOffsetClass={this.state.producerOffsetClasses}
                             handleDefinitionShow={this.handleDefinitionShow}
                             handleModalShow={this.handleModalShow}
                             handleWineModalShow={this.handleWineModalShow}
