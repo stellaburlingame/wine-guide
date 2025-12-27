@@ -1,4 +1,7 @@
 @media print {
+    .side-badge {
+        display: none !important;
+    }
     @page {
         size: landscape;
         margin: 0in;
