@@ -20,11 +20,11 @@ class index extends React.Component {
                         <h3 className="fw-normal text-muted mb-3">
                             Explore our curated wine list, tasting notes, and recommended pairings
                         </h3>
-                        <div className="d-flex justify-content-center gap-3 mt-4">
+                        {/* <div className="d-flex justify-content-center gap-3 mt-4">
                             <Link to="new-wines">
                                 <Button style={{backgroundColor: '#'}} variant="dark" size="lg">✨ Visit New Wines{' '}<FaArrowRight size={'2em'} /></Button>
                             </Link>
-                        </div>
+                        </div> */}
                         <div className="d-flex justify-content-center gap-3 mt-4">
                             <Link to="wine">
                                 <Button variant="dark" size="lg">Go to Wine List{' '}<FaArrowRight size={'2em'} /></Button>
