@@ -38,8 +38,7 @@
   "PDF": "ChablisDomaineSguinotBordet2023.pdf",
   "Top Icons": ["Stone Fruit", "Minerality", "Balanced", "Complex"],
   "Sustainability": "Certified sustainable viticulture",
-  "Vegan": true,
-  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Grgich Hills Estate Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Chalk Hill Sonoma Coast Chardonnay"]
+  "Vegan": true
 },
 {
   "Wine Type": "Bianco",
@@ -124,7 +123,6 @@
   "Hex": "#E8D27C",
   "Sustainability": "Certified regenerative organic farming across all estate vineyards",
   "Vegan": false
-,  "Similar Wines": ["Chalk Hill Sonoma Coast Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Flowers Sonoma Coast Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -173,7 +171,6 @@
   "Hex": "#F0F6C8",
   "Sustainability": "",
   "Vegan": false
-,  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Chalk Hill Sonoma Coast Chardonnay", "Grgich Hills Estate Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -215,7 +212,6 @@
   "Hex": "#EEF7C9",
   "Sustainability": "",
   "Vegan": true
-,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "Bruni Plinio Vermintino Maremma Toscana", "Cakebread Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc"]
 },
 {
   "Wine Type": "Bianco",
@@ -257,7 +253,6 @@
   "Hex": "#F3E7B0",
   "Sustainability": "Sustainable farming practices with vineyard parcels aged 20–50 years",
   "Vegan": true
-,  "Similar Wines": ["Scarpetta Pinot Grigio", "Ken Wright Tyrus Evan Pinot Gris", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 },
 {
   "Wine Type": "Bianco",
@@ -299,7 +294,6 @@
   "Hex": "#F2E39A",
   "Sustainability": "",
   "Vegan": false
-,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 },
 {
   "Wine Type": "Bianco",
@@ -383,7 +377,6 @@
   "Hex": "#F3F8D2",
   "Sustainability": "",
   "Vegan": false
-,  "Similar Wines": ["PEJU Legacy Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
 },
 {
   "Wine Type": "Bianco",
@@ -425,7 +418,6 @@
   "Hex": "#F4F9D6",
   "Sustainability": "Certified Napa Green and Fish Friendly Farming across estate vineyards",
   "Vegan": false
-,  "Similar Wines": ["Cakebread Sauvignon Blanc", "Dry Creek Vineyard DCV3 Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
 },
 {
   "Wine Type": "Bianco",
@@ -469,7 +461,6 @@
   "Sustainability": "",
   "Vegan": true,
   "Top Bottle": true
-,  "Similar Wines": ["La Scola Gavi di Gavi", "Marco Felluga Mongris Pinot Grigio", "Scarpetta Pinot Grigio", "Cakebread Sauvignon Blanc", "PEJU Legacy Sauvignon Blanc"]
 },
 {
   "Wine Type": "Bianco",
@@ -556,7 +547,6 @@
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
-,  "Similar Wines": ["Flowers Sonoma Coast Chardonnay", "Sonoma-Cutrer Russian River Ranches Chardonnay 2023", "Grgich Hills Estate Chardonnay", "Chablis Domaine Séguinot-Bordet"]
 },
 {
   "Wine Type": "Bianco",
@@ -600,54 +590,5 @@
   "Sustainability": "",
   "Vegan": false,
   "Top Glass": true
-,  "Similar Wines": ["Cakebread Sauvignon Blanc", "PEJU Legacy Sauvignon Blanc", "Bruni Plinio Vermintino Maremma Toscana", "La Scola Gavi di Gavi"]
-},
-
-{
-  "Wine Type": "Bianco",
-  "Categories": ["Glass"],
-  "Glass Position": 6,
-  "Blend": "",
-  "Wine Name": "Scarpetta Pinot Grigio",
-  "Producer": "Scarpetta",
-  "Vintage": 2022,
-  "Tannin Level": "",
-  "Tannin Characteristics": "",
-  "Body": "Medium",
-  "Body Characteristics": "Light on its feet yet complex, with melon, stone fruit, and a mineral-driven medium body.",
-  "Finish": "Medium",
-  "Finish Characteristics": "Balanced and persistent with lingering mineral notes.",
-  "Acidity": "High",
-  "Aroma": "Aromas of stone fruits and melon.",
-  "Flavor": "Melon, stone fruits, crisp minerality.",
-  "Style": "Dry White Wine",
-  "Vinification": "Destemmed grapes are left on skins for 12 hours before fermentation in stainless steel to enhance aromatics and clarity.",
-  "Maturation": "Aged six months on lees in stainless steel.",
-  "Type of cask": "Stainless steel",
-  "Color": "Light straw with a hint of salmon",
-  "Region": "Friuli-Venezia Giulia",
-  "Appellation": "Pinot Grigio DOC Friuli",
-  "Vineyard": "Grave and Colli Orientali, planted in gravely and ponca soils",
-  "Sweetness": "Dry",
-  "Varietal": "Pinot Grigio",
-  "General Recommended Accompanies": "Aperitivo, light grilled fish, sashimi, pesce crudo, ceviche",
-  "Stella Recommended": "",
-  "Image": "ScarpettaPinotGrigio2024.png",
-  "Summary": "Scarpetta Pinot Grigio 2024 is a crisp and elegant white from Friuli-Venezia Giulia. Sourced from Grave and Colli Orientali, it combines bright acidity with stone fruit, melon, and a clean mineral edge. Aged six months on lees for added texture.",
-  "Unique Summary": "From top sites in Friuli’s Grave and Colli Orientali regions, this Pinot Grigio showcases freshness, minerality, and surprising complexity.",
-  "DOCG": false,
-  "DOC": true,
-  "Glass_Price": 14,
-  "PDF": "ScarpettaPinotGrigio2024.pdf",
-  "Top Icons": [
-    "Stone Fruit",
-    "Tropical Fruit",
-    "Minerality",
-    "Balanced"
-  ],
-  "Hex": "#F6ECDD",
-  "Sustainability": "",
-  "Vegan": false
-,  "Similar Wines": ["Marco Felluga Mongris Pinot Grigio", "Ken Wright Tyrus Evan Pinot Gris", "La Scola Gavi di Gavi", "Bruni Plinio Vermintino Maremma Toscana"]
 }
 ]
