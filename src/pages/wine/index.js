@@ -64,6 +64,7 @@ const searchFields = [
     'Tannins',
     'Tannin Characteristics',
     'Stella Recommended',
+    'General Recommended Accompanies',
     'Vinification',
     'Maturation',
     'Region',

@@ -1,3 +1,3 @@
-const version = "25.12.27.01"
+const version = "26.02.28.02"
 
 export default version;
