@@ -45,7 +45,6 @@
   "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Far Niente Chardonnay",
-  "New Wine": true,
   "Producer": "Far Niente",
   "Vintage": 2023,
   "Tannin Level": "",
@@ -80,7 +79,9 @@
   "Hex": "#F6E8C3",
   "Top Icons": ["Citrus", "Floral", "Stone Fruit", "Silky", "Balanced", "Oaky/Vanilla"],
   "Sustainability": "",
-  "Vegan": false
+  "Vegan": false,
+  "New Wine": true,
+  "introduced":  "2025-10-31"
 },
 {
   "Wine Type": "Bianco",
@@ -252,7 +253,8 @@
 "Sustainability": "",
 "Vegan": false,
 "Hex": "#F2E5A2",
-"New Wine": true
+"New Wine": true,
+"introduced":  "2026-02-28"
 },
 {
   "Wine Type": "Bianco",
@@ -341,7 +343,6 @@
   "Categories": ["Bianco"],
   "Blend": "",
   "Wine Name": "Langhart & Hill Rosé",
-  "New Wine": true,
   "Producer": "Langhart & Hill",
   "Vintage": 2022,
   "Tannin Level": "",
@@ -376,7 +377,9 @@
   "Hex": "#F7AFAF",
   "Top Icons": ["Citrus", "Floral", "Minerality", "Fruity/Berry", "Bubbly/Sparkling", "Balanced"],
   "Sustainability": "",
-  "Vegan": false
+  "Vegan": false,
+  "New Wine": true,
+  "introduced":  "2025-10-31"
 },
 {
   "Wine Type": "Bianco",

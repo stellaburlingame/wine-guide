@@ -168,7 +168,6 @@
     "Categories": ["Rosso"],
     "Blend": "88% Cabernet Sauvignon, 6% Petit Verdot, 6% Merlot",
     "Wine Name": "PEJU Legacy Cabernet Sauvignon",
-    "New Wine": true,
     "Producer": "PEJU Winery",
     "Vintage": 2022,
     "Tannin Level": "High",
@@ -203,7 +202,9 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Complex", "Aged"],
     "Hex": "#4C1F1A",
     "Sustainability": "Certified Napa Green and Fish Friendly Farming across all estate vineyards",
-    "Vegan": false
+    "Vegan": false,
+    "New Wine": true,
+    "introduced":  "2025-10-31"
   },
   {
     "Wine Type": "Rosso",
@@ -292,7 +293,6 @@
     "Categories": ["Rosso"],
     "Blend": "",
     "Wine Name": "Langhart & Hill Russian River Valley Merlot",
-    "New Wine": true,
     "Producer": "Langhart & Hill",
     "Vintage": 2021,
     "Tannin Level": "Medium",
@@ -327,7 +327,9 @@
     "Hex": "#7B2E2F",
     "Top Icons": ["Fruity/Berry", "Spice", "Herbal", "Balanced", "Silky", "Complex"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+    "New Wine": true,
+    "introduced":  "2025-10-31"
   },
   {
     "Wine Type": "Rosso",
@@ -419,7 +421,6 @@
     "Categories": ["Rosso"],
     "Blend": "",
     "Wine Name": "Jax Calesa Pinot Noir",
-    "New Wine": true,
     "Producer": "JAX Vineyards",
     "Vintage": 2022,
     "Tannin Level": "Medium",
@@ -454,7 +455,9 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Silky", "Complex", "Oaky/Vanilla", "Sustainable"],
     "Hex": "#5A1F1F",
     "Sustainability": "Practices include hand-harvesting, minimal intervention, and site-specific vinification for expression of terroir",
-    "Vegan": false
+    "Vegan": false,
+    "New Wine": true,
+    "introduced":  "2025-10-31"
   },
   {
     "Wine Type": "Rosso",
@@ -579,7 +582,8 @@
     "Sustainability": "",
     "Vegan": false,
     "Hex": "#6E0E1A",
-    "New Wine": true
+    "New Wine": true,
+    "introduced":  "2026-02-28"
   },
   {
     "Wine Type": "Rosso",
