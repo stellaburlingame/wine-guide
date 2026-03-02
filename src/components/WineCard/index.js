@@ -97,7 +97,7 @@ function Index(props) {
                     variant="top"
                     src={`${process.env.PUBLIC_URL}/photos/wine/${wine["Image"]}`}
                     className="wine-card-image"
-                    style={{ cursor: "pointer" }} />
+                    style={{ cursor: "pointer", width: wine['Half_Bottle_Price'] ? '66%' : '100%' }} />
                 </div>
             ) : (
                 <Card.Img

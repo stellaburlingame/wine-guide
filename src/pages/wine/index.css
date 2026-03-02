@@ -45,6 +45,7 @@
   margin: 0 auto;
   padding-top: .2rem;
   padding-bottom: 1rem;
+  bottom: 0;
   filter:
     /* heavier bottom-left*/ 
     drop-shadow(-10px 20px 15px rgba(0, 0, 0, 0.1)) 
