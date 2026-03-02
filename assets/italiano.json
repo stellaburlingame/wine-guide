@@ -463,6 +463,7 @@
   },
   {
 "Wine Type": "Italiano",
+"Categories": ["Italiano"],
 "Blend": "",
 "Wine Name": "Chianti Classico Riserva, Villa Antinori, Toscana",
 "Producer": "Antinori",
@@ -500,7 +501,8 @@
 "Sustainability": "",
 "Vegan": false,
 "Hex": "#7B1E2B",
-"New Wine": true
+"New Wine": true,
+"introduced": "2026-02-28"
 },
   {
     "Wine Type": "Italiano",
