@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wine-guide/static/css/main.0cefafac.css",
-    "main.js": "/wine-guide/static/js/main.7f1d9059.js",
+    "main.js": "/wine-guide/static/js/main.1b40b2e6.js",
     "static/js/453.0460bf28.chunk.js": "/wine-guide/static/js/453.0460bf28.chunk.js",
     "static/media/Copperplate-Heavy.ttf": "/wine-guide/static/media/Copperplate-Heavy.1314aa76a8e5dd03d78b.ttf",
     "static/media/Copperplate-Bold.ttf": "/wine-guide/static/media/Copperplate-Bold.c309063c2544713f3257.ttf",
@@ -10,11 +10,11 @@
     "static/media/rotated.svg": "/wine-guide/static/media/rotated.fa2f5acf9dadb4aaf80c965dc06cb913.svg",
     "index.html": "/wine-guide/index.html",
     "main.0cefafac.css.map": "/wine-guide/static/css/main.0cefafac.css.map",
-    "main.7f1d9059.js.map": "/wine-guide/static/js/main.7f1d9059.js.map",
+    "main.1b40b2e6.js.map": "/wine-guide/static/js/main.1b40b2e6.js.map",
     "453.0460bf28.chunk.js.map": "/wine-guide/static/js/453.0460bf28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0cefafac.css",
-    "static/js/main.7f1d9059.js"
+    "static/js/main.1b40b2e6.js"
   ]
 }
