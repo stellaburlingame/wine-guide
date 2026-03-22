@@ -81,7 +81,28 @@
   "Sustainability": "",
   "Vegan": false,
   "New Wine": true,
-  "introduced":  "2025-10-31"
+  "introduced":  "2025-10-31",
+
+    "Reviews": [
+      {
+        "points": 97,
+        "reviewer": "Tasting Panel",
+        "vintage": 2023,
+        "description": "The combination of Carneros' maritime climate and the volcanic soils of Coombsville lends a hand in creating one of the most deluxe Chardonnays our team has had the pleasure of tasting. Augmented by sweet vanilla cream, elderflower, and white cherry, the mouthfeel is exquisitely graceful, and notes of key lime, herbed lemon, and luscious ripe pineapple are opulent to the end. Aged sur lie in French oak barrels."
+      },
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2023,
+        "description": "Pure aromas of lemon confit, poached Asian pears, pastry and lanolin. The palate is medium-bodied with focused acidity and a creamy texture, giving notes of lime curd, orange blossoms, yellow apples and flint. Very well constructed and polished."
+      },
+      {
+        "points": 92,
+        "reviewer": "Wine Spectator",
+        "vintage": 2023,
+        "description": "Elegant and fragrant up front, with notes of orange blossoms and ginger paste alongside fleshy, juicy flavors of ripe melon, peach, apricot and fresh lemon zest. Accents of smoked sea salt and fennel pollen linger on this white's sleek frame."
+      }
+    ]
 },
 {
   "Wine Type": "Bianco",
@@ -254,7 +275,22 @@
 "Vegan": false,
 "Hex": "#F2E5A2",
 "New Wine": true,
-"introduced":  "2026-03-05"
+"introduced":  "2026-03-05",
+    "Reviews": [
+      {
+        "points": 90,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2022,
+        "description": "Lifted and fresh aromas of green and Golden Delicious apples with subtle hints of lemon peel and white flowers grace the glass. The fleshy palate is generous with mixed stone fruits and blanched almonds, finishing with a pop of acidity."
+      },
+
+      {
+        "points": 90,
+        "reviewer": "Wine Spectator",
+        "vintage": 2020,
+        "description": "Fresh and balanced, with a citrusy overtone of grapefruit pith and citronella, this shows flavors of crunchy white peach, chive blossoms and minerally saline and stone, followed by a creamy finish."
+      }
+    ]
 },
 {
   "Wine Type": "Bianco",

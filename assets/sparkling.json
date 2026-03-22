@@ -280,6 +280,20 @@
 "Vegan": false,
 "Hex": "#f2a3ad",
 "New Wine": true,
-"introduced":  "2026-03-15"
+"introduced":  "2026-03-15",
+"Reviews": [
+  {
+    "points": 90,
+    "reviewer": "Wine Enthusiast",
+    "description": "Juicy and compelling in fresh berry fruit, this wine offers light baking spice and dried herb components that balance it and provide complexity. Crisp and light in style, it's ready for summertime sipping."
+  },
+
+  {
+    "points": 90,
+    "reviewer": "Wilfred Wong of Wine.com",
+    "vintage": 2018,
+    "description": "COMMENTARY: The Banshee Rosé is one of my favorites in the marketplace, and the 2018 vintage is true to excellent self. TASTING NOTES: This wine is delicious and nicely balanced, with a bit of perkiness in the finish. Its aromas and flavors of ripe raspberry and an accent of minerality should pair it nicely with cashew chicken accented by a touch of chili oil. (Tasted: March 8, 2019, San Francisco, CA)"
+  }
+]
 }
 ]

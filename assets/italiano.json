@@ -82,7 +82,15 @@
 "Vegan": false,
 "Hex": "#7B1E2B",
 "New Wine": true,
-"introduced":  "2026-03-05"
+"introduced":  "2026-03-05",
+    "Reviews": [
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2020,
+        "description": "A very pretty and intense barbera with crushed berries and lots of citrus character. It’s full and layered."
+      }
+    ]
 },
   {
     "Wine Type": "Italiano",
@@ -462,7 +470,23 @@
 "Vegan": false,
 "Hex": "#7B1E2B",
 "New Wine": true,
-"introduced": "2026-03-05"
+"introduced": "2026-03-05",
+
+    "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2022,
+        "description": "A youthful wine full of fruit, showing intense fresh roses, black cherries and plums. The generous nose is supported by a lush, supple palate with medium body. Velvety tannins with a chalkier finish and refreshing length."
+      },
+
+      {
+        "points": 92,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2020,
+        "description": "Showing a soothing dark color and rich concentration, the Marchesi Antinori 2022 Chianti Classico Riserva Villa Antinori draws its fruit from across the appellation. This is a silky, satiny wine with good fruit and dimension and an accessible personality. It closes with sweet tannins and a hint of elegant chalkiness for good measure."
+      }
+    ]
 },
   {
     "Wine Type": "Italiano",
