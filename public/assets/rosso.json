@@ -189,7 +189,7 @@
     "Vineyard": "Estate vineyards certified Napa Green and Fish Friendly Farming",
     "Sweetness": "Dry",
     "Varietal": "Cabernet Sauvignon",
-    "General Recommended Accompanies": "Grilled steaks, braised short ribs, aged cheddar, or mushroom risotto",
+    "General Recommended Accompanies": "Grilled steak, roast portobello mushrooms, lamb and aged cheeses such as Gouda or Cheddar.",
     "Stella Recommended": "Scottadito di Agnello, Maiale con Pancetta e Aglio, Osso Buco di Vitello",
     "Image": "PejuLegacyCabernet2022.png",
     "Summary": "**PEJU's 2022 Legacy Cabernet Sauvignon** showcases a vintage marked by intense conditions and expressive results. A blend of **Cabernet Sauvignon, Petit Verdot, and Merlot**, it delivers layers of **dried red fruit, cigar box, and cocoa dust** with a **medium to full body** and **elegant finish**. Sustainably farmed in Napa Valley and aged in 40% new oak for 19 months.",
@@ -204,7 +204,57 @@
     "Sustainability": "Certified Napa Green and Fish Friendly Farming across all estate vineyards",
     "Vegan": false,
     "New Wine": true,
-    "introduced":  "2025-10-31"
+    "introduced":  "2025-10-31",
+    "Reviews": [
+      {
+        "points": 94,
+        "reviewer": "Decanter",
+        "vintage": 2022,
+        "description": ""
+      },
+      {
+        "points": 90,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2022,
+        "description": ""
+      },
+      {
+        "points": 94,
+        "reviewer": "The Tasting Panel",
+        "vintage": 2021,
+        "description": "Jasmine, violets, and mocha are on target in this dynamic, energetic red along with strokes of chalky tannins. An elegant flow of creamy boysenberry and sinewy sandalwood sustains its structure, while a wash of Worcestershire goes on and on."
+      },
+      {
+        "points": 90,
+        "reviewer": "Wine Spectator",
+        "vintage": 2021,
+        "description": "A plump, inviting style, with plum and black cherry compote notes leading off, backed by roasted apple wood and a hint of licorice root. Shoes nice freshness on the finish."
+      },
+      {
+        "points": 90,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2021,
+        "description": "The 2021 Cabernet Sauvignon Legacy Collection features gently herbal aromas and a solid base of cassis fruit. It's medium to full-bodied, ripe, concentrated and velvety on the palate, with good length, plus flourishes of vanilla and cedar on the finish."
+      },
+      {
+        "points": 95,
+        "reviewer": "The Tasting Panel",
+        "vintage": 2019,
+        "description": ""
+      },
+      {
+        "points": 91,
+        "reviewer": "James Suckling",
+        "vintage": 2019,
+        "description": ""
+      },
+      {
+        "points": 91,
+        "reviewer": "Wine Advocate",
+        "vintage": 2019,
+        "description": ""
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -322,14 +372,34 @@
     "DOCG": false,
     "DOC": false,
     "Glass_Price": 0,
-    "Bottle_Price": 85,
+    "Bottle_Price": 88,
     "PDF": "LanghartHill2022RussianRiverValleyPinotNoir2022.pdf",
     "Hex": "#7B2E2F",
     "Top Icons": ["Fruity/Berry", "Spice", "Herbal", "Balanced", "Silky", "Complex"],
     "Sustainability": "",
     "Vegan": false,
     "New Wine": true,
-    "introduced":  "2025-10-31"
+    "introduced":  "2025-10-31",
+    "Reviews": [
+      {
+        "points": 95,
+        "reviewer": "West Coast Wine Competition",
+        "vintage": 2024,
+        "description": "BEST OF CLASS 95 points and Double Gold Award"
+      },
+      {
+        "points": 97,
+        "reviewer": "Los Angeles International Wine Competition",
+        "vintage": 2024,
+        "description": "97 Points and Double Gold Award"
+      },
+      {
+        "points": 94,
+        "reviewer": "Press Democrat North Coast Wine Challenge",
+        "vintage": 2024,
+        "description": "Gold Award 2026 San Francisco Chronicle Wine Competition"
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -457,7 +527,22 @@
     "Sustainability": "Practices include hand-harvesting, minimal intervention, and site-specific vinification for expression of terroir",
     "Vegan": false,
     "New Wine": true,
-    "introduced":  "2025-10-31"
+    "introduced":  "2025-10-31",
+
+    "Reviews": [
+      {
+        "points": 95,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2021,
+        "description": "Exciting scents of sour cherries, mulled plums and baking spices fill the aroma of this complex and layered wine. Intricate nuances of cinnamon, nutmeg and mint emerge on the palate, complementing the broad fruit flavors. A full body is braced by mild acidity and soft tannins."
+      },
+      {
+        "points": 93,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2021,
+        "description": "The 2021 Pinot Noir Calesa Vineyard boasts quite a bit more nuance and displays a reflective ruby red color. The nose opens to notes of crushed red raspberries, floral rosy perfume, fresh pine, and baking spice. Medium-bodied, it fills the palate with a ripe feel and a snappy lift of salinity on the finish."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -583,48 +668,7 @@
     "Vegan": false,
     "Hex": "#6E0E1A",
     "New Wine": true,
-    "introduced":  "2026-02-28"
-  },
-  {
-    "Wine Type": "Rosso",
-    "Categories": ["Rosso"],
-    "Blend": "",
-    "Wine Name": "Zinfandel, Turley \"Juvenile\", Napa",
-    "Producer": "Turley Wine Cellars",
-    "Vintage": 2023,
-    "Tannin Level": "Medium",
-    "Tannin Characteristics": "Lush and round with youthful grip and pleasing softness.",
-    "Body": "Medium to Full",
-    "Body Characteristics": "Juicy and textured with bold fruit and vibrant intensity.",
-    "Finish": "Medium",
-    "Finish Characteristics": "Fruit-forward and plush with spice and floral echoes.",
-    "Acidity": "Medium",
-    "Aroma": "Bright cherry, ripe berries, rose petal, and hints of darker fruits.",
-    "Flavor": "Juicy cherry, berry compote, floral notes, and soft spice on a lush palate.",
-    "Style": "Dry Red Wine",
-    "Vinification": "Young vines (6–25 years) picked and vinified separately from heritage vineyards; native yeast fermentation.",
-    "Maturation": "Aged 12 months in 80% French oak, 20% American (95% used, 5% new); bottled unfined.",
-    "Type of cask": "French and American oak (mostly used)",
-    "Color": "Bright garnet with purple highlights",
-    "Region": "Napa",
-    "Appellation": "",
-    "Vineyard": "Blend from 27 sites including Hayne, Pesenti, Salvador, Vineyard 101, Fredericks, and Kirschenmann",
-    "Sweetness": "Dry",
-    "Varietal": "Zinfandel",
-    "General Recommended Accompanies": "Barbecue, grilled sausages, pizza, or spicy tomato-based dishes.",
-    "Stella Recommended": "Spaghetti and Meatballs or Bolognese, Penne Arrabbiata, Gambero 'Diavola Style'",
-    "Image": "TurleyJuvenileZinfandel2022.png",
-    "Summary": "Crafted from young vines across Turley’s famed Zinfandel sites, the 2022 Juvenile bursts with vibrant cherry, berry, and rose petal, delivering a lush, fruit-driven profile with freshness and lift.",
-    "Unique Summary": "Young-vine Zinfandel from heritage vineyards—plush, energetic, and irresistibly drinkable.",
-    "DOCG": false,
-    "DOC": false,
-    "Glass_Price": 0,
-    "Bottle_Price": 78,
-    "PDF": "TurleyJuvenileZinfandel2022.pdf",
-    "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Balanced", "Silky", "Bold"],
-    "Hex": "#8C1E3A",
-    "Sustainability": "",
-    "Vegan": false
+    "introduced":  "2026-03-05"
   },
   {
     "Wine Type": "Rosso",
