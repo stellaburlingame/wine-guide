@@ -1,9 +1,58 @@
 @media print {
+  .producer-background,
+  .producer-background::before,
+  .producer-background::after {
+    transform: none !important;
+    background-position: center !important;
+    background-repeat: repeat !important;
+    background-size: auto !important;
+  }
+
     .side-badge {
         display: none !important;
     }
+    .introduced-date-wrapper {
+        display: none !important;
+    }
+    
+    .accordion-collapse {
+        display: block !important;
+        height: auto !important;
+        visibility: visible !important;
+    }
+
+    .accordion-collapse.collapse {
+        display: block !important;
+    }
+
+    .accordion-collapse.collapsing {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .accordion-button {
+        pointer-events: none !important;
+        font-size: 12px !important;
+    }
+    .accordion-item {
+        border: none !important;
+    }
+
+    .accordion-header {
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-button {
+        background-color: rgba(0, 0, 0, .03);
+        box-shadow: none !important;
+    }
+
+    .accordion-button::after {
+        display: none !important;
+    }
     @page {
-        size: landscape;
+        size: portrait;
         margin: 0in;
     }
     .wine-card-image {
@@ -55,7 +104,8 @@
         page-break-inside: avoid;
     }
     .wine-print .col-6 {
-        width: 50% !important;
+        min-width: 100% !important;
+        width: 100% !important;
         page-break-inside: avoid;
         break-inside: avoid;
     }
@@ -103,10 +153,10 @@
     header, .footer, .scroll-to-top-button, .form-wrapper {
         display: none !important;
     }
-    .winemaking-wrapper {
+    /* .winemaking-wrapper {
         position: absolute;
         bottom: 0;
-    }
+    } */
     /* .tasting-notes-wrapper {
         display: flex;
         justify-content: center;
@@ -120,14 +170,15 @@
     }
     .wine-wrapper {
         margin-top: 0.5rem !important;
+        width: 100% !important;
     }
     .bg-wine-body {
         height: 0.5rem !important;
     }
     .wine-print .col-sm-4 {
-        width: 50% !important;
-        max-width: 50%;
-        flex: 0 0 50%;
+        width: 100% !important;
+        max-width: 100%;
+        flex: 0 0 100%;
         box-sizing: border-box;
         page-break-inside: avoid;
         break-inside: avoid;

@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Badge from 'react-bootstrap/Badge';
+import Accordion from 'react-bootstrap/Accordion';
 import ProgressBar from "../ProgressBar";
 import { ReactComponent as RotatedLogo } from '../../pages/wine/rotated.svg';
 import regions from "../../components/Regions/regions.json";
@@ -133,7 +134,6 @@ function Index(props) {
             <ListGroup.Item><strong>Winemaker paring:</strong> {wine["General Recommended Accompanies"]}</ListGroup.Item>
         </ListGroup>
         </Row>
-        <Row className="tasting-notes-wrapper">
         <div className="card-header">
             <strong>Tasting Notes</strong>
             {/* {icons(wine)} */}
@@ -165,7 +165,6 @@ function Index(props) {
                 )}
             </ListGroup>
         </div>
-        </Row>
         <Row className="winemaking-wrapper">
         <strong className="card-header">Winemaking</strong>
         <div className="winemaking p-0">
@@ -202,6 +201,34 @@ function Index(props) {
             onError={(e) => { e.target.onerror = null; e.target.src = NA; } } />
         </div>
         </Row>
+        {wine["Reviews"] && wine["Reviews"].length > 0 && (
+            <Row>
+                <div className="p-0">
+                    <Accordion>
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>
+                                <span style={{fontWeight: 'bold'}}>Professional Ratings</span>
+                            </Accordion.Header>
+                            <Accordion.Body className="p-0">
+                                <ListGroup variant="flush">
+                                    {wine["Reviews"].map((review, i) => (
+                                        <ListGroup.Item key={i}>
+                                            <strong>{review.reviewer}{review.vintage && ` (${review.vintage})`}: </strong> {review.points} points
+                                            {review.description && (
+                                                <>
+                                                    <br />
+                                                    <em>{review.description}</em>
+                                                </>
+                                            )}
+                                        </ListGroup.Item>
+                                    ))}
+                                </ListGroup>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </div>
+            </Row>
+        )}
     </Card.Body>
     </Card>
     );

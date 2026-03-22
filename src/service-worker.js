@@ -19,6 +19,17 @@ enableNavigationPreload();
 // Precache build assets injected by Workbox
 precacheAndRoute(self.__WB_MANIFEST);
 
+// Notify all open clients (tabs/windows) about SW events
+async function broadcastMessage(message) {
+  const windowClients = await self.clients.matchAll({
+    type: 'window',
+    includeUncontrolled: true,
+  });
+  for (const client of windowClients) {
+    client.postMessage(message);
+  }
+}
+
 const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
 registerRoute(
   ({ request, url }) => {
@@ -39,10 +50,48 @@ registerRoute(
         return preloadResponse;
       }
       // Fetch a fresh app shell
-      const networkResponse = await fetch(process.env.PUBLIC_URL + '/index.html', { cache: 'reload' });
+      const indexUrl = process.env.PUBLIC_URL + '/index.html';
+      const networkResponse = await fetch(indexUrl, { cache: 'reload' });
+
       // Update a small HTML cache for quick back/forward nav
       const htmlCache = await caches.open('html-app-shell');
-      htmlCache.put(process.env.PUBLIC_URL + '/index.html', networkResponse.clone());
+
+      // Compare with the previously cached HTML (if any)
+      const cachedResponse = await htmlCache.match(indexUrl);
+      let hasChanged = false;
+
+      if (cachedResponse) {
+        // Prefer cheap header comparisons when possible
+        const cachedEtag = cachedResponse.headers.get('etag');
+        const networkEtag = networkResponse.headers.get('etag');
+        const cachedLastModified = cachedResponse.headers.get('last-modified');
+        const networkLastModified = networkResponse.headers.get('last-modified');
+
+        if (cachedEtag && networkEtag) {
+          hasChanged = cachedEtag !== networkEtag;
+        } else if (cachedLastModified && networkLastModified) {
+          hasChanged = cachedLastModified !== networkLastModified;
+        } else {
+          // Fallback: compare body text (more expensive)
+          const [cachedText, networkText] = await Promise.all([
+            cachedResponse.clone().text(),
+            networkResponse.clone().text(),
+          ]);
+          hasChanged = cachedText !== networkText;
+        }
+      } else {
+        // No cached shell yet: treat as first-time cache population
+        hasChanged = true;
+      }
+
+      // Store the latest shell
+      await htmlCache.put(indexUrl, networkResponse.clone());
+
+      // Tell the app a newer shell exists (UI can prompt user)
+      if (hasChanged) {
+        await broadcastMessage({ type: 'APP_SHELL_UPDATED' });
+      }
+
       return networkResponse;
     } catch (err) {
       // Offline or failed network — serve the precached app shell
