@@ -44,12 +44,13 @@ function Index(props) {
         </ListGroup.Item>
         </Row>
         <Row className="wine-card-body">
-        <div
-            className={`col-lg-3 col-md-3 col-sm-3 producer-background ${state.producerOffsetClasses ? state.producerOffsetClasses[index] : ''}`}
-            style={{
-            '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
-            }}
-        >
+
+            <div
+                className={`col-lg-3 col-md-3 col-sm-3 producer-background ${state.producerOffsetClasses ? state.producerOffsetClasses[index] : ''}`}
+                style={{
+                '--producer-bg': `url(${process.env.PUBLIC_URL}/photos/producer/padded/${encodeURIComponent(wine["Producer"])}.png)`
+                }}
+            >
 
         <div className="wine-card-image-wrapper">
             {wine['PDF'] ? (

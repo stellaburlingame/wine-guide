@@ -67,7 +67,7 @@ function Index(props) {
                 }}
             >
             {props.varietals[props.wine['Varietal']] &&
-            <SideBadge onClick={() => handleModalShow(<WineModal varietals={varietals} specs={specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
+            <SideBadge onClick={() => handleModalShow(<WineModal varietals={varietals} state={state} specs={specs} wine={wine} onHide={handleModalClose} />, true)} style={{ cursor: 'pointer' }}
             />
             }
         <div className="wine-card-image-wrapper">

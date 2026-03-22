@@ -73,7 +73,7 @@ function Index(props) {
                 {similarWines.length > 0 ? (
                   similarWines.map((wine, idx) => (
                     <Col key={idx} className="similar-wine-card col-12 col-md-12 mb-3">
-                      <SmallerWineCard wine={wine} index={idx} state={{ specs: props.specs }} />
+                      <SmallerWineCard wine={wine} index={idx} state={props.state } />
                     </Col>
                   ))
                 ) : (
