@@ -65,10 +65,10 @@ class index extends React.Component {
 
                     return (
                       <React.Fragment key={dateStr}>
-                        <hr />
-                        <br />
-                        <div className="col-12">
+                        <div className="col-12 introduced-date-wrapper">
+                          <br />
                           <h3>{formatIntroducedDate(dateStr)}</h3>
+                          <hr />
                         </div>
                         {winesForDate.map((data1, index) => (
                           <div

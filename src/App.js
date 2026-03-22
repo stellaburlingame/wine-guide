@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import './App.css';
+
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Wine from "./pages/wine";
@@ -20,6 +21,7 @@ import MenuPairings from "./pages/MenuPairings";
 import TableOfConents from "./pages/TableOfConents";
 import Home from "./pages/home";
 import NotFound from "./pages/NotFound";
+import WineMenu from "./pages/WineMenu";
 
 import Definitions from "./pages/definitions";
 import Credits from "./pages/credits";
@@ -69,6 +71,15 @@ class App extends React.Component {
       window.addEventListener('scroll', this.checkScrollTop);
         // --- End hash filter logic for #top ---
         window.addEventListener('scroll', this.checkScrollTop);
+
+        // Listen for service worker update messages
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.addEventListener("message", (event) => {
+            if (event?.data?.type === "APP_SHELL_UPDATED") {
+              this.setState({ showUpdateModal: true });
+            }
+          });
+        }
     }
 
     componentWillUnmount() {
@@ -92,6 +103,7 @@ class App extends React.Component {
       specs: undefined,
       producerOffsetClasses: undefined,
       definitions: undefined,
+      showUpdateModal: false,
     };
   }
 
@@ -123,6 +135,27 @@ class App extends React.Component {
             </div>
           </Modal.Footer>
         </Modal>
+        <Modal
+          show={this.state.showUpdateModal}
+          backdrop="static"
+          keyboard={false}
+          centered
+        >
+          <Modal.Header>
+            <Modal.Title>Update Available</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            A new version of the Wine Guide is available.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="primary"
+              onClick={() => window.location.reload()}
+            >
+              Update
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <Nav />
         <div className="App col-lg-12 mx-auto">
           <Routes>
@@ -136,6 +169,7 @@ class App extends React.Component {
             <Route path="definitions" element={<Definitions/>} />
             <Route path="credits" element={<Credits state={this.state}/>} />
             <Route path="varietals" element={<WineMapChart state={this.state}/>} />
+            <Route path="wine-menu" element={<WineMenu state={this.state}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
