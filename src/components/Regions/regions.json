@@ -118,5 +118,11 @@
         "Region Summary": "Provence, in southeastern France, is world-famous for its elegant and pale rosé wines. The region benefits from a Mediterranean climate, limestone soils, and coastal breezes, producing wines with delicate aromas, bright acidity, and notes of red berries and herbs.",
         "Region location": "Provence, France",
         "Country": "France"
+    },
+    "Sardinia": {
+        "Region Image": "Sardinia.svg",
+        "Region Summary": "Sardegna, an island off the western coast of Italy, is best known for its vibrant Vermentino wines, particularly Vermentino di Sardegna DOC. The island’s Mediterranean climate, coastal breezes, and granite-rich soils produce wines with bright acidity, citrus and tropical fruit notes, and a distinctive saline minerality.",
+        "Region location": "Sardegna, Italy",
+        "Country": "Italy"
     }
 }
