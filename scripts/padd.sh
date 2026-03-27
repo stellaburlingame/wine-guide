@@ -7,11 +7,10 @@ if [ -z "$file" ]; then
   exit 1
 fi
 
-mkdir -p padded
 
-magick "$file" \
+magick "public/photos/producer/$file" \
     -resize 270x270\> \
     -background none \
     -gravity center \
     -extent 300x300 \
-    "padded/$file"
+    "public/photos/producer/padded/$file"
