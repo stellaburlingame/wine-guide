@@ -37,7 +37,33 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Silky", "Balanced", "Complex"],
     "Hex": "#6B0F1A",
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 96,
+        "reviewer": "James Suckling",
+        "vintage": 2021,
+        "description": "Very precisely polished and focused wine with aromas of black cherries, blue berries and violets followed by green bell pepper, black ink and gravel. Underlying umami notes, too. Full-bodied, firm yet finely grained juicy tannins with bright acidity that balances out the palate. Beautifully integrated toasty notes and baking spices on the mid-palate and in the finish. Flourishing and artful wine that will age gracefully."
+      },
+      {
+        "points": 94,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2021,
+        "description": "The 2021 Cabernet Sauvignon Napa Valley checks in as 88% Cabernet Sauvignon with the balance Merlot, Malbec, Petit Verdot, and Cabernet Franc, aged 17 months in 62% new French oak. Its deep purple hue is followed by a rich, inward, nicely concentrated Cabernet Sauvignon that has both red and black fruits, some spicy, chocolaty, herbal, and tobacco nuances, medium to full body, ripe tannins, and a beautiful finish. It's not massive by any means, but it s beautifully balanced and has a layered mouthfeel along with rock-solid depth and character. Give bottles 2-3 years if you can and enjoy over the following 15."
+      },
+      {
+        "points": 92,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2021,
+        "description": "Generous scents of ripe cherries emerge on the nose of the 2021 Cabernet Sauvignon Napa Valley, joined by hints of cedar, vanilla, dried herbs and some darker berries. Full-bodied and velvety in texture, it's a fine representation of Napa Valley Cabernet; it's just lacking the extra depth and complexity to elevate it to the absolute top rank."
+      },
+      {
+        "points": 92,
+        "reviewer": "Wine Spectator",
+        "vintage": 2021,
+        "description": "Frankly ripe, with a forward core of cassis and kirsch notes wrapped liberally in melted red licorice elements. Reveals ample toast, too, though the fruit wins out in the end. Gains energy from light bramble hints. Drink now through 2035. 16,800 cases made."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -78,7 +104,27 @@
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Oaky/Vanilla", "Balanced"],
     "Hex": "#5D1A2E",
     "Sustainability": "Certified regenerative organic farming practices across all estate vineyards.",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 95,
+        "reviewer": "Decanter",
+        "vintage": 2021,
+        "description": "Legendary winemaker Mike Grgich passed away at 100 in December of 2023. Acting as winemaker emeritus practically until his passing, he had a hand in shaping this blend. Today, his nephew, Croatian-born Ivo Jeramaz, manages day-to-day winemaking operations. The 2021 Estate Cabernet Sauvignon comes from Rutherford and Calistoga. 82% Cabernet Sauvignon, 10% Merlot, 5% Petit Verdot, and 3% Cabernet Franc was aged 20 months in 100% French oak. It's a fashionable, complex, and complete wine showing a deep ruby-purple in the glass and attractive aromas of spiced blackberries, kirsch, perfumed violets, cassis, and tobacco spices. Medium-bodied with compact, juicy dark fruits and firm, elongated, elegant tannins and iron-like minerality on the length finish."
+      },
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2021,
+        "description": "A medium-bodied cabernet sauvignon with aromas of dark cherries, blackcurrants, violets and baking spices. Firm tannins with a spicy, vivid mid-palate and a supple and fruity finish. Drink or hold."
+      },
+      {
+        "points": 91,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2021,
+        "description": "The Grgich Hills 2021 Cabernet Sauvignon Estate Grown offers up hallmark notes of cassis, faint herbal streaks and dusty earth. It's only medium-bodied and classically proportioned—a bit of a throwback in style—with silky, refined tannins and a lingering finish."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -119,7 +165,16 @@
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Chocolate", "Bold", "Complex", "Aged"],
     "Hex": "#3A0033",
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+
+    "Reviews": [
+      {
+        "points": 90,
+        "reviewer": "Wilfred Wong of Wine.com",
+        "vintage": 2022,
+        "description": "The 2022 Caymus Vineyards California Cabernet Sauvignon offers smooth sailing on the palate. This wine exhibits aromas and flavors of meaty notes, ripe blackberries, cassis, and spice hints. Enjoy this wine with a mixed grill BBQ. (Tasted: July 26, 2024, San Francisco, CA)"
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -161,7 +216,15 @@
     "Hex": "#5E0F19",
     "Sustainability": "",
     "Vegan": false,
-    "Top Bottle": true
+    "Top Bottle": true,
+    "Reviews": [
+      {
+        "points": 90,
+        "reviewer": "Wilfred Wong of Wine.com",
+        "vintage": 2022,
+        "description": "The 2022 Justin Cabernet Sauvignon displays a deep ruby hue with inviting aromas of dried forest leaves, tart blackberries, and a hint of spice. On the palate, it reveals a silky, polished texture with layers of dark berry flavors that carry through to a graceful finish. A fine match for roast Porchetta or other herb-crusted meats. (Tasted: October 10, 2025, San Francisco, CA)"
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -237,20 +300,8 @@
         "description": "The 2021 Cabernet Sauvignon Legacy Collection features gently herbal aromas and a solid base of cassis fruit. It's medium to full-bodied, ripe, concentrated and velvety on the palate, with good length, plus flourishes of vanilla and cedar on the finish."
       },
       {
-        "points": 95,
-        "reviewer": "The Tasting Panel",
-        "vintage": 2019,
-        "description": ""
-      },
-      {
         "points": 91,
         "reviewer": "James Suckling",
-        "vintage": 2019,
-        "description": ""
-      },
-      {
-        "points": 91,
-        "reviewer": "Wine Advocate",
         "vintage": 2019,
         "description": ""
       }
@@ -295,7 +346,21 @@
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Spice", "Balanced", "Complex"],
     "Hex": "#9B111E",
     "Sustainability": "Alexander Valley facility certified LEED Platinum; integrated pest management, solar energy, fish‑friendly farming practices",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 96,
+        "reviewer": "Decanter",
+        "vintage": 2021,
+        "description": "The 2021 Silver Oak Cabernet Sauvignon from Alexander Valley was harvested between 4 September and 8 October. The blend comprises 96% Cabernet Sauvignon, 2% Merlot and 1% each of Cabernet Franc and Petit Verdot. After blending, it was barrel-aged for 24 months in American oak, 50% of which was new, followed by 14 months of bottle ageing prior to release. The wine is beautifully layered and highly fragrant, with remarkable precision and focus in this vintage. Medium- to full-bodied, it integrates the hallmark Silver Oak American spice character through cedarwood aromatics, elegant whispers of vanilla bean, and nuances of fresh fennel (from more refined American oak barrels crafted after precision trials of both seasoning and toasting from the American oak cooperage they own in Higbee, Missouri). Supple dark-cherry and blackberry fruit are framed by graphite minerality, violets and clove, building in richness and complexity across the palate. Suave and silken, the dark-berry fruit is wrapped in a tapestry of velvety tannins, gliding to a focused finish of brown baking spices and crisp, clean acidity."
+      },
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2021,
+        "description": "So full-bodied, ripe and robust, offering spicy, iron-like, black fruit aromas, with generous dark cherries on a firmly tannic palate. Concentrated black plum, graphite, black pepper, coffee bean, pine resin and oak toast flavors on a full body. The tannins are powerful and fine-grained, shaping the texture significantly at this stage. Drinkable now, but best from 2030."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -336,7 +401,33 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Bold", "Complex", "Aged"],
     "Hex": "#4C0C16",
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 98,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2021,
+        "description": "Lastly, the 2021 Cabernet Sauvignon Dancing Bear Ranch comes from a stunning estate vineyard on Howell Mountain with the plantings dating back to 1999. A blend of 90% Cabernet Sauvignon, 8% Merlot, and a splash of Cabernet Franc, aged in 59% new oak, this beauty reminds me of a great Saint-Julien (Leoville Barton?) with its incredible purity and regal, structured style. Crème de cassis, lead pencil, violets, chalky minerality, and chocolaty oak all emerge on the nose, and it hits the palate with medium to full-bodied richness, a layered, multi-dimensional mouthfeel, ripe yet perfectly integrated tannins, and a gorgeous finish. It needs air if drinking any time soon and will ideally be given 4-6 years in the cellar. This beauty will have three decades of overall longevity."
+      },
+      {
+        "points": 95,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2021,
+        "description": "From the winery's estate vineyard on Howell Mountain, the 2021 Cabernet Sauvignon Dancing Bear Ranch is a blend of 90% Cabernet Sauvignon, 8% Merlot and 2% Cabernet Franc, all aged 22 months in 59% new French oak. Scents of mocha, tree bark, black cherries, raspberries and cherries mark the nose, while the medium to full-bodied palate is supple, lush and long, with ample concentration and some nicely ripe, softly dusty tannins on the lingering finish."
+      },
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2021,
+        "description": "Ripe dark-fruited character with hazelnuts, pine wood, chocolate and ground cloves. Medium- to full-bodied, refined and polished, with dusty tannins and succulent fruit. Long finish."
+      },
+      {
+        "points": 92,
+        "reviewer": "Wine Spectator",
+        "vintage": 2021,
+        "description": "Loganberry and black currant puree flavors stretch out nicely over this red's sleek iron spine, with hints of tar and apple wood. This is accessible now for its polish and fruit. Cabernet Sauvignon, Merlot and Cabernet Franc. Drink now through 2034. 2,600 cases made."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -442,7 +533,45 @@
     "Hex": "#B3172B",
     "Sustainability": "Committed to organic farming and minimal intervention winemaking practices.",
     "Vegan": false,
-    "Top Bottle": true
+    "Top Bottle": true,
+    "Reviews": [
+      {
+        "points": 94,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2023,
+        "description": "The 2023 Pinot Noir Sonoma Coast is a medium ruby color and is fresh on the nose with notes of lifted spice, compact red berries, Bing cherries, roses, and sweet herbs. The palate is medium-bodied, with a polished and fine texture, a silky feel, and clean elegance through the finish. It’s a lovely and charming Pinot Noir with a lot of finesse."
+      },
+      {
+        "points": 95,
+        "reviewer": "Decanter",
+        "vintage": 2023,
+        "description": "There is an oomph and intensity to the 2023 Sonoma Coast Pinot Noir from Flowers, with ripe fruits and generous forest character. Aromas of gravel dust, pine tar and smashed blue fruits come to the fore with whispers of violet florality. The palate shows a core of red and blue brambles, a nearly feral character to them. The savoury elements are followed by dried herbs, black tea, and a touch of mace. There's an intense saline throughline that crescendos at the finish."
+      },
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2023,
+        "description": "It's one of the first 2023 Sonoma pinots to be released and a great reflection of the long, cool growing season. Tangy, fresh and well balanced, with intricate orange zest, cinnamon, red cherry and black tea flavors on a vibrant, acid-driven texture. Medium- to full-bodied."
+      },
+      {
+        "points": 92,
+        "reviewer": "Vinous",
+        "vintage": 2023,
+        "description": "The 2023 Pinot Noir (Sonoma Coast) is another terrific wine from Flowers. Bright, aromatic and lifted, it offers up an exotic mélange of crushed red berry fruit, cedar, cinnamon, pipe tobacco and dried herbs. Strong floral and savory inflections lend energy throughout. The 2023 is light on its feet and quite delicate, not to mention long on personality."
+      },
+      {
+        "points": 92,
+        "reviewer": "Wine Spectator",
+        "vintage": 2023,
+        "description": "Fresh and focused, with raspberry and blood orange coulis lined with rooibos tea and savory notes. A subtle mineral thread supports the finish. Offers a textbook Sonoma Coast profile. Drink now through 2029. 34,600 cases made."
+      },
+      {
+        "points": 91,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2023,
+        "description": "The 2023 Pinot Noir Sonoma Coast was matured for 10 months in 20% new French oak. Cranberry and blackberry aromas pour from the glass, accented by wafts of saline, aniseed and Earl Grey tea leaves. The medium-bodied palate is bursting with bitters- and citrus-laced flavors. It’s structured by silky tannins and bight acidity and has a long, expressive finish."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -484,7 +613,16 @@
     "Top Icons": ["Fruity/Berry", "Herbal", "Spice", "Silky", "Balanced", "Complex"],
     "Hex": "#6E1F28",
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+
+    "Reviews": [
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2022,
+        "description": "A pretty wine with classic flavors and an elegant texture. Aromas of red tea, cherries, black tea and cinnamon lead to a silky palate of red cherries, strawberries and a touch of rhubarb. Light tannins, a full body and subtle oak nuances, even though more than 40% of the French barrels the wine aged in were new."
+      }
+    ]
   },
   {
     "Wine Type": "Rosso",
@@ -624,7 +762,16 @@
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Bold", "Silky"],
     "Hex": "#701F2A",
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+
+    "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2021,
+        "description": "Well-balanced with juicy blueberries, blackberries, cassis, warm herbs and flowers. Medium to full body with plush tannins. Well-rounded with an attractive mix of berries, herbs and spices and a flavorful finish with excellent length."
+      }
+    ]
   },
 
   {
@@ -710,7 +857,23 @@
     "Hex": "#7A0F1A",
     "Sustainability": "",
     "Vegan": false,
-    "Top Glass": true
+    "Top Glass": true,
+
+    "Reviews": [
+      {
+        "points": 94,
+        "reviewer": "Tasting Panel",
+        "vintage": 2021,
+        "description": "Ripe boysenberry preserves are amplified by a wash of milk chocolate and almond brittle. Sumptuously textured, with sleek tannins enveloped in sandalwood."
+      },
+
+      {
+        "points": 91,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2021,
+        "description": "Powerful and rich-tasting, this wine from Joseph Wagner is velvety in texture and spicy in aroma. It drips with jammy, Port-like flavors that are backed by fine-grained tannins that tighten a bit on the finish for a good grip. Best from 2025."
+      }
+    ]
   },
     {
     "Wine Type": "Rosso",

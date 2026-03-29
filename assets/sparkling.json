@@ -45,7 +45,30 @@
     "Minerality"
   ],
   "Sustainability": "Sustainably farmed hillside vineyards in Trentino; commitment to environmental stewardship and biodiversity.",
-  "Vegan": false
+  "Vegan": false,
+
+"Reviews": [
+  {
+    "points": 92,
+    "reviewer": "Wine Enthusiast",
+    "description": "Enticing aromas of preserved lemon peel, ripe yellow apples and a whisper of honey leap from the glass. The palate is full and expressive, with Mandarin orangeinflected citrus tones taking center stage, supported by a creamy mousse and energetic acidity."
+  },
+  {
+    "points": 91,
+    "reviewer": "Vinous",
+    "description": "The NV Trentodoc Brut entices with a bouquet that mixes savory and sweet, with nuances of white peach and mint complicated by hints of crushed stone and an enriching note of brioche. It reverberates with zesty tension as crisp orchard fruits and sour citrus tones are elevated by juicy acidity. The Brut finishes with amazing length and complexity, leaving salty mineral tones offset by a twang of sour lime. The NV Brut punches well above its weight class."
+  },
+  {
+    "points": 90,
+    "reviewer": "Decanter",
+    "description": "A touch of nuttiness, offsetting scents of preserved lemon and pear. Redcurrant richness, creamy, rich and round, with impressive mousse and tangy red apple bite. Bubbles are well-formed and well-integrated, giving a creamy texture that melds into the richness of fruit. Sweet spices and nougat cream on the finish. Great stuff."
+  },
+  {
+    "points": 90,
+    "reviewer": "Robert Parker's Wine Advocate",
+    "description": "In the bottle with the white label, the Ferrari NV Trento Brut is a fresh and crisp Italian sparkler with the etched mineral notes of the Dolomites that add a special signature. The wine is lean and sharp, just what you need with finger foods on an aromatic terrace overlooking the sea. You can count on consistency with this well-priced production of three million bottles."
+  }
+]
 },
 {
   "Wine Type": "Rose",
@@ -87,7 +110,20 @@
   "PDF": "FaireLaFeteBrutRose.pdf",
   "Top Icons": ["Bubbly/Sparkling", "Citrus", "Fruity/Berry", "Floral", "Balanced"],
   "Sustainability": "",
-  "Vegan": false
+  "Vegan": false,
+
+"Reviews": [
+  {
+    "points": 92,
+    "reviewer": "Tasting Panel",
+    "description": "With 60% Chardonnay, 25% Chenin Blanc, and 15% Pinot Noir, this fine value mingles scents of baguette, strawberry, salty lime, and red apple with crisp acidity and flavors of more strawberry and ruby grapefruit, which lead to touches of grassy herb and white pepper."
+  },
+  {
+    "points": 91,
+    "reviewer": "Wilfred Wong of Wine.com",
+    "description": "COMMENTARY: The Faire la Fête Crémant de Limoux Brut Rosé is enticing and beautiful. TASTING NOTES: This wine exhibits attractive aromas and flavors of ripe strawberries and spicy earth. Enjoy its soft yet balance style with a plate of mix sushi. (Tasted: April 4, 2020, San Francisco, CA)"
+  }
+]
 },
 {
   "Wine Type": "Sparkling",
@@ -135,59 +171,25 @@
     "Minerality"
   ],
   "Sustainability": "",
-  "Vegan": false
-},
-{
-  "Wine Type": "Sparkling",
-  "Categories": ["Sparkling", "Glass"],
-  "Glass Position": 3,
-  "Blend": "",
-  "Wine Name": "Moscato d’Asti, Cascinetta Vietti, Piemonte",
-  "Producer": "Vietti",
-  "Vintage": null,
-  "Tannin Level": "",
-  "Tannin Characteristics": "",
-  "Body": "Light",
-  "Body Characteristics": "Sweet and delicate with modest acidity and good balance.",
-  "Finish": "Medium",
-  "Finish Characteristics": "Hints of fresh apricot on the finish.",
-  "Acidity": "Medium",
-  "Aroma": "Intense aromas of ripe yellow fruit (peach, apricot), rose petals, acacia flowers, and ginger.",
-  "Flavor": "Peach, apricot, ginger, floral tones, with a sweet, delicate palate.",
-  "Style": "Light & Crisp Sparkling",
-  "Vinification": "Hand-harvested grapes gently pressed and cold decanted; must stored at low temperature. Partial fermentation in autoclave until 5.5% ABV, then fermentation halted. Sterile filtered and bottled to retain freshness and bubbles.",
-  "Maturation": "No malolactic fermentation; bottled after sterile filtration.",
-  "Type of cask": "Stainless steel",
-  "Color": "Bright straw-yellow with shimmering hints of gold",
-  "Hex": "#F5E8A8",
-  "Region": "Piemonte",
-  "Appellation": "Moscato d’Asti DOCG",
-  "Vineyard": "Small vineyards in Castiglione Tinella with 40-year-old vines",
-  "Sweetness": "Off-Dry",
-  "Varietal": "Moscato",
-  "General Recommended Accompanies": "Sweets and Desserts, Fresh Fruit",
-  "Stella Recommended": "Frutti di Bosco",
-  "Image": "ViettiMoscatoDAstiDOCG.png",
-  "Summary": "Vietti’s Moscato d’Asti DOCG offers a golden sparkle and enticing aromas of peach, apricot, and acacia flowers. Made from 100% Moscato from Castiglione Tinella, it’s delicately sweet with lively bubbles and a refreshing, fruity finish.",
-  "Unique Summary": "Produced from 40-year-old vines and partially fermented for low alcohol, this aromatic Moscato retains vivid fruit and floral charm in every sip.",
-  "DOCG": true,
-  "DOC": false,
-  "Glass_Price": 14,
-  "Bottle_Price": 65,
-  "PDF": "ViettiMoscatoDasti.pdf",
-  "Top Icons": [
-    "Bubbly/Sparkling",
-    "Floral",
-    "Stone Fruit",
-    "Tropical Fruit",
-    "Balanced"
-  ],
-  "Sustainability": "",
-  "Vegan": false
+  "Vegan": false,
+
+"Reviews": [
+  {
+    "points": 92,
+    "reviewer": "Wine Spectator",
+    "description": "Oyster shell, smoke and fleur de sel aromas lead on the nose of this mouthwatering Champagne, while the plush, creamy mousse carries flavors of poached quince, tangerine sorbet, candied ginger and brioche. Long and minerally on the well-cut and re- freshing finish. Pinot Noir, Meunier and Chardonnay."
+  },
+  {
+    "points": 91,
+    "reviewer": "James Suckling",
+    "description": "A silky Champagne with aromas of apricot pie, shortcrust, croissants, lemon curd and seashells. Very fine, soft bubbles. Gentle salinity underneath the pastry notes, with a soft finish. Drink now."
+  }
+]
 },
 {
 "Wine Type": "Sparkling",
-  "Categories": ["Sparkling", "Glass"],
+"Glass Position": 3,
+"Categories": ["Sparkling", "Glass"],
 "Blend": "",
 "Wine Name": "Moscato d’Asti, Marenco, Strevi",
 "Producer": "Marenco",
@@ -231,12 +233,18 @@
   {
     "points": 92,
     "reviewer": "Wine Enthusiast",
-    "description": ""
+    "description": "This savory, lightly sparkling dessert wine has intense aromas of ripe yellow peach, sage and orange blossom. The aromas carry over to the tangy, foaming palate along with blood orange and lemon drop candy. Vibrant acidity and energizing mineral notes keep it fresh and balanced. — Kerin O’Keefe"
   },
   {
     "points": 90,
     "reviewer": "Wine & Spirits",
     "description": ""
+  },
+  {
+    "points": 90,
+    "vintage": 2024,
+    "reviewer": "Simon Staffler, Othmar Kiem @ fallstaff",
+    "description": "Bright straw yellow. Banana and yellow peach on the nose, with a hint of thyme on the finish. Smooth notion on the palate, accessible and uncomplicated, shows yellow fruit and good balance."
   }
 ]
 },

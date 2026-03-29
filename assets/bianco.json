@@ -38,7 +38,15 @@
   "PDF": "ChablisDomaineSguinotBordet2023.pdf",
   "Top Icons": ["Stone Fruit", "Minerality", "Balanced", "Complex"],
   "Sustainability": "Certified sustainable viticulture",
-  "Vegan": true
+  "Vegan": true,
+    "Reviews": [
+      {
+        "points": 91,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2020,
+        "description": "This juicy, thirst-quenching Chardonnay highlights crisp green-apple and lemon flavors lifted by streaks of lime acidity and steely minerality. Medium bodied and zesty, this approachable but elegant dry white would enhance anything from french fries to oysters on the half shell. Best enjoyed young."
+      }
+    ]
 },
 {
   "Wine Type": "Bianco",
@@ -144,7 +152,27 @@
   "Top Icons": ["Citrus", "Tropical Fruit", "Balanced", "Complex"],
   "Hex": "#E8D27C",
   "Sustainability": "Certified regenerative organic farming across all estate vineyards",
-  "Vegan": false
+  "Vegan": false,
+      "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "Tasting Panel",
+        "vintage": 2022,
+        "description": "Creamy, with a focused woodsy character. Pear tart, chamomile, and honeyed banana lend depth and texture within a balanced, luxurious mouthfeel. Spiced pumpkin appears on the finish with a pinch of salinity."
+      },
+            {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2022,
+        "description": "This is aromatic with ripe peaches, pineapple, honeysuckle, praline and crushed stones. Full-bodied, dense and round-textured with a tangy, spiced nature. Shows tension and energy with mineral undertones at the end. Drink or hold."
+      },
+            {
+        "points": 91,
+        "reviewer": "Wine Spectator",
+        "vintage": 2022,
+        "description": "Bright and lemony, with plenty of aromatic interest from the lemon verbena, lemongrass and vetiver accents, all on a sleek frame. Details of lemon cream, Fuji apple, lime zest and salted shortbread come in on the finish. Drink now. 19,000 cases made."
+      }
+    ]
 },
 {
   "Wine Type": "Bianco",
@@ -192,7 +220,16 @@
   ],
   "Hex": "#F0F6C8",
   "Sustainability": "",
-  "Vegan": false
+  "Vegan": false,
+
+    "Reviews": [
+    {
+      "points": 91,
+      "reviewer": "James Suckling",
+      "vintage": 2023,
+      "description": "Bright aromas of lemon peel, hazelnuts, pastry and flint. The palate is medium-bodied with bright acidity, giving notes of grapefruit pith, lime curd and spices. Generous, with a light touch."
+    }
+  ]
 },
 {
   "Wine Type": "Bianco",
@@ -233,11 +270,20 @@
   "Top Icons": ["Citrus", "Balanced", "Minerality", "Complex", "Aged"],
   "Hex": "#EEF7C9",
   "Sustainability": "",
-  "Vegan": true
+  "Vegan": true,
+  "Reviews": [
+    {
+      "points": 90,
+      "reviewer": "James Suckling",
+      "vintage": 2024,
+      "description": "Crushed stones, fresh hazelnuts and stone fruit on the nose. It’s fresh and mineral with a medium body and a clean finish. Drink now."
+    }
+  ]
 },
 {
 "Wine Type": "Bianco",
 "Blend": "",
+"Categories": ["Bianco"],
 "Wine Name": "Pinot Grigio, Terlato Vineyards, Friuli",
 "Producer": "Terlato Vineyards",
 "Vintage": 2024,
@@ -291,47 +337,6 @@
         "description": "Fresh and balanced, with a citrusy overtone of grapefruit pith and citronella, this shows flavors of crunchy white peach, chive blossoms and minerally saline and stone, followed by a creamy finish."
       }
     ]
-},
-{
-  "Wine Type": "Bianco",
-  "Categories": ["Bianco"],
-  "Blend": "",
-  "Wine Name": "Pinot Grigio, Marco Felluga, Fruili",
-  "Producer": "Marco Felluga",
-  "Vintage": 2023,
-  "Tannin Level": "",
-  "Tannin Characteristics": "",
-  "Body": "Medium",
-  "Body Characteristics": "Well-structured with complexity from lees aging and minerality from Collio’s sandstone and limestone soils.",
-  "Finish": "Medium",
-  "Finish Characteristics": "Clean and vibrant with delicate fruit and mineral persistence.",
-  "Acidity": "High",
-  "Aroma": "Elegant notes of stone fruit and floral freshness with hints of minerality.",
-  "Flavor": "Dry and structured with subtle citrus, pear, and mineral-driven clarity.",
-  "Style": "Aromatic & Floral White",
-  "Vinification": "Cold maceration on skins after destemming, fermented with native and cultured yeasts.",
-  "Maturation": "Aged for 6 months on lees in stainless steel, followed by 2–3 months in bottle.",
-  "Type of cask": "Stainless-steel tanks",
-  "Color": "Pale straw with golden reflections.",
-  "Region": "Friuli-Venezia Giulia",
-  "Appellation": "Collio DOC",
-  "Vineyard": "Hillsides of Collio, 80–250 meters elevation, layers of sandstone, limestone, and clay.",
-  "Sweetness": "Dry",
-  "Varietal": "Pinot Grigio",
-  "General Recommended Accompanies": "Ideal to serve as an aperitif or paired with fish dishes, seafood, and fresh cheeses",
-  "Stella Recommended": "Petrale Sole Piccata, Milanese di Pollo, Maiale con Pancetta e Aglio",
-  "Image": "MarcoFellugaMongrisPinotGrigio2023.png",
-  "Summary": "From the mineral-rich hills of Collio, Marco Felluga’s Mongris Pinot Grigio is a structured and elegant white wine, aged on the lees for texture and complexity. Its freshness and acidity are hallmarks of both the region and the varietal.",
-  "Unique Summary": "A sustainably farmed Collio Pinot Grigio that combines minerality and elegance, aged six months on lees for refined structure.",
-  "DOCG": false,
-  "DOC": true,
-  "Glass_Price": 0,
-  "Bottle_Price": 68,
-  "PDF": "MarcoFellugaMongrisPinotGrigio2023.pdf",
-  "Top Icons": ["Stone Fruit", "Floral", "Minerality", "Balanced"],
-  "Hex": "#F3E7B0",
-  "Sustainability": "Sustainable farming practices with vineyard parcels aged 20–50 years",
-  "Vegan": true
 },
 {
   "Wine Type": "Bianco",
@@ -498,49 +503,6 @@
   "Hex": "#F4F9D6",
   "Sustainability": "Certified Napa Green and Fish Friendly Farming across estate vineyards",
   "Vegan": false
-},
-{
-  "Wine Type": "Bianco",
-  "Categories": ["Bianco", "Glass"],
-  "Glass Position": 10,
-  "Blend": "85% Vermentino, 15% Viognier",
-  "Wine Name": "Vermentino, Bruni, Toscana",
-  "Producer": "Bruni",
-  "Vintage": 2022,
-  "Tannin Level": "",
-  "Tannin Characteristics": "",
-  "Body": "Medium",
-  "Body Characteristics": "Fresh and full with harmonious structure and a long mineral finish.",
-  "Finish": "Long",
-  "Finish Characteristics": "Persistent and mineral-driven with floral and herbal notes lingering.",
-  "Acidity": "High",
-  "Aroma": "Intense bouquet of exotic fruits, peach, herbs, and wildflowers.",
-  "Flavor": "Floral and fruity with peach, exotic fruits, herbs, and a vibrant mineral tone.",
-  "Style": "Aromatic & Floral White",
-  "Vinification": "Cold maceration for 12–15 days on skins; fermented in stainless steel tanks at 16–18°C.",
-  "Maturation": "Aged 4 months sur lie in stainless steel; 2 months in bottle.",
-  "Type of cask": "Stainless steel vats",
-  "Color": "Straw yellow with greenish highlights.",
-  "Region": "Tuscany",
-  "Appellation": "Maremma Toscana DOC",
-  "Vineyard": "Vermentino di Toscana DOC, 9 hectares on medium-texture clay at 50–80 m elevation.",
-  "Sweetness": "Dry",
-  "Varietal": "Vermentino",
-  "General Recommended Accompanies": "Excellent with seafood dishes and antipasti, with lobster and other shellfish.",
-  "Stella Recommended": "Gamberi All Aglio, Milanese di Pollo, Petrale Sole Piccata",
-  "Image": "PlinioVermentinoMaremmaToscana.png",
-  "Summary": "Plinio honors the legacy of Roman viticulture with a fresh, floral Vermentino from Maremma. A blend of Vermentino and Viognier, it offers exotic fruit and herbal notes with a crisp, mineral finish, aged sur lie for added depth.",
-  "Unique Summary": "Crafted from Maremma’s clay soils, this Vermentino-Viognier blend delivers floral freshness and mineral length.",
-  "DOCG": false,
-  "DOC": true,
-  "Glass_Price": 16,
-  "Bottle_Price": 70,
-  "PDF": "PlinioVermentinoMaremmaToscana.pdf",
-  "Top Icons": ["Floral", "Stone Fruit", "Herbal", "Minerality", "Balanced"],
-  "Hex": "#EDF6C1",
-  "Sustainability": "",
-  "Vegan": true,
-  "Top Bottle": true
 },
 {
 "Wine Type": "Bianco",
@@ -721,13 +683,28 @@
   "Hex": "#F5F6CF",
   "Sustainability": "",
   "Vegan": false,
-  "Top Glass": true
+  "Top Glass": true,
+
+    "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "Wine Enthusiast",
+        "vintage": 2024,
+        "description": "This wine delivers a blast of fresh lime, ginger, and white flowers on the nose. The supple, textured palate brings bright flavors of citrus peel, pithy grapefruit, and spice before the floral energy of the finish takes over."
+      },
+      {
+        "points": 90,
+        "reviewer": "Wine Spectator",
+        "vintage": 2024,
+        "description": "This white’s mix of fresh lemon, pear and pomelo is pure and focused, with hints of peach blossoms, creamy oolong tea and dried ginger. Lemon oil and fresh-clipped herb notes linger on the finish."
+      }
+    ]
 },
 {
 "Wine Type": "Bianco",
 "Blend": "",
 "Categories": ["Bianco"],
-"Wine Name": "Y3 Chardonnay",
+"Wine Name": "Chardonnay, JAX Y3, Carneros",
 "Producer": "JAX Vineyards",
 "Vintage": 2021,
 "Tannin Level": "",

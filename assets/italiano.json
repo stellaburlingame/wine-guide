@@ -38,7 +38,29 @@
     "PDF": "CipressiNizzaMicheleChiarloBarberadAsti2019.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Balanced", "Oaky/Vanilla"],
     "Sustainability": "Manual harvest and yield control; vineyard cultivated with Guyot and low spurred cordon, aiming for low yield and optimal ripeness",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2022,
+        "description": "A restrained barbera with aromas of vibrant black cherries, licorice and smoke. Bright fruitiness on the palate, with a medium body, velvety tannins and crisp, persistent acidity. Savory finish. Drink or hold."
+      },
+
+      {
+        "points": 91,
+        "reviewer": "Vinous",
+        "vintage": 2022,
+        "description": "The 2022 Nizza Cipressi is packed with inky dark fruit, licorice, new leather and chocolate. Plush, succulent contours wrap it all together. Drink this dense, opulent Barbera over the next handful of years."
+      },
+
+      {
+        "points": 90,
+        "reviewer": "Wine Spectator",
+        "vintage": 2022,
+        "description": "Piercing scents of cherry, boysenberry, plum,fruit cake and spices herald this vibrant, crunchy red. Harmonious and firms up on the lingering finish. A Barbera for the table."
+      }
+    ]
   },
 
 {
@@ -131,7 +153,22 @@
     "PDF": "PrunottoBarbaresco2021.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Aged", "Complex", "Silky", "Balanced"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 91,
+        "reviewer": "James Suckling",
+        "vintage": 2022,
+        "description": "An overt style, the candied nose showing red fruits, raspberries, roses and a touch of gingerbread. Sweet and medium-bodied on the palate, this has refreshing acidity and velvety tannins that turn dustier in the savory finish. Try from 2026."
+      },
+
+      {
+        "points": 90,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2022,
+        "description": "A translucent medium ruby hue, the 2022 Barbaresco is zesty and spicy on the nose with forward notes of anise, orange zest, fresh mint, cranberry, and dried earth. The palate shows the fruity and sunny side of the vintage, and it’s medium-framed and light on its feet, with a clean and easygoing feel. It’s not the most profound wine, but it offers a lot of immediate appeal. Drink 2025-2032."
+      }
+    ]
   },
   {
     "Wine Type": "Italiano",
@@ -172,7 +209,36 @@
     "PDF": "PioCesareBarolo2019.pdf",
     "Top Icons": ["Aged", "Complex", "Bold", "Silky", "Oaky/Vanilla", "Balanced"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 95,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2019,
+        "description": "Pio Cesare does a great job with its classic 2019 Barolo (in production since 1881). The bottom of the front label reads \"Barolo Pio\" in memory of the legendary Pio Boffa. He was a wine entrepreneur who gained the immediate respect and love of all those who knew him. He passed away tragically during the COVID-19 pandemic just as the vaccines were being rolled out. This is a large production of about 70,000 bottles with fruit sourced from across seven vineyards in five villages. Despite those ambitious numbers, the wine remains strictly focused on bright Nebbiolo fruit with red cassis and aniseed. The finish is smooth with tannins that elegantly dissolve over the palate."
+      },
+
+      {
+        "points": 94,
+        "reviewer": "James Suckling",
+        "vintage": 2019,
+        "description": "Lovely perfumes of flowers, fresh strawberries and raspberries follow through to a medium- to full-bodied palate with fine tannins that run the length of the wine. Citrus and spice undertones. Finishes long and intense. Tannic finish."
+      },
+
+      {
+        "points": 92,
+        "reviewer": "Wine Spectator",
+        "vintage": 2019,
+        "description": "A savory version, displaying macerated cherry and currant fruit aligned with eucalyptus, rosemary and earth flavors. Dense and lively, ending with a solid grip of tannins. Fresh and on the austere side. Best from 2026 through 2042. 5,800 cases made, 3,500 cases imported."
+      },
+
+      {
+        "points": 92,
+        "reviewer": "Jeb Dunnuck",
+        "vintage": 2019,
+        "description": "A touch more reserved at the moment, the 2019 Barolo reveals notes of pure red fruit, cherry, grenadine, dusty earth, and menthol. It is gripping with structure and rich with tea leaf, cherry, and turned soil. Drink 2024-2035."
+      }
+    ]
   },
   {
     "Wine Type": "Italiano",
@@ -213,7 +279,39 @@
     "PDF": "MassolinoBarolo2019.pdf",
     "Top Icons": ["Aged", "Complex", "Spice", "Floral", "Bold"],
     "Sustainability": "Sustainable and vegan practicing vineyards with traditional vinification",
-    "Vegan": true
+    "Vegan": true,
+    "Reviews": [
+  {
+    "points": 94,
+    "reviewer": "James Suckling",
+    "vintage": 2020,
+    "description": "Bright and lively red fruit character with dried flowers, stones and hints of tree resin. Medium-bodied, clean and focused on the palate, with fine tannins and a linear finish."
+  },
+  {
+    "points": 94,
+    "reviewer": "Robert Parker's Wine Advocate",
+    "vintage": 2020,
+    "description": "Showing elegant richness and a velvety consistency, the Massolino 2020 Barolo ages in large oak botti for 30 months. The wine represents a blend of fruit from Serralunga d'Alba (Collaretto, Briccolina, Broglio and Le Turne) and one site in Castiglione Falletto. Elegance is underlined in this wine that shows wild berry, dried blueberry and a sweet touch of lilac over a medium-dark finish. The wine's texture manages to be direct and linear but generous at the same time."
+  },
+  {
+    "points": 93,
+    "reviewer": "Wine Enthusiast",
+    "vintage": 2020,
+    "description": "Opening with aromas of crushed red fruits and a bouquet of bay leaf, balsam and sandalwood that slowly lift from the glass. The palate is rounded and pretty—soft tannins make it immediately accessible."
+  },
+  {
+    "points": 93,
+    "reviewer": "Wine Spectator",
+    "vintage": 2020,
+    "description": "Cherry, plum, camphor and tobacco flavors are aligned with a silky texture. This intense red is juicy midpalate before building to the long finish, with earth, tobacco and licorice notes. Still, this is solid and dense."
+  },
+  {
+    "points": 92,
+    "reviewer": "Jeb Dunnuck",
+    "vintage": 2020,
+    "description": "Medium red in color, the 2020 Barolo is fruity and expressive out of the gate, with pure, ripe aromas of ripe mixed berries, wildflowers, sweet herbs, and cedar. There’s lovely freshness on the palate, with medium body, mouthwatering dark mineral accents, ripe tannins, and an approachable feel. It’s a very appealing wine that captures the elements of this vintage with a skillful hand. Drink 2024-2032."
+  }
+]
   },
   {
     "Wine Type": "Italiano",
@@ -254,7 +352,28 @@
     "PDF": "TravagliniGattinara2020.pdf",
     "Top Icons": ["Floral", "Spice", "Minerality", "Balanced", "Complex", "Aged"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+
+    "Reviews": [
+  {
+    "points": 96,
+    "reviewer": "James Suckling",
+    "vintage": 2021,
+    "description": "A restrained and smoky wine with a lot of freshness, showing aromas of potpourri, wild strawberries, citrus leaves and stony minerality. Full-bodied, it shows the firmness of nebbiolo well balanced by fruit concentration, refreshing acidity and a savory finish. Precise and balanced."
+  },
+  {
+    "points": 91,
+    "reviewer": "Vinous",
+    "vintage": 2021,
+    "description": "The 2021 Gattinara is bright and punchy. A fine introduction to the range, the 2021 possesses notable depth. There is a bit of angularity in the tannins. This is far from an easygoing wine."
+  },
+  {
+    "points": 90,
+    "reviewer": "Wine Spectator",
+    "vintage": 2021,
+    "description": "Vanilla, Bourbon and toasty oak accents frame cherry and strawberry flavors in this racy red. Underscored by eucalyptus and mineral notes, ending with a grip of chewy tannins. Give this time to absorb the oak. Best from 2027 through 2038,"
+  }
+]
   },
   {
     "Wine Type": "Italiano",
@@ -295,7 +414,33 @@
     "PDF": "PiandelleVigneBrunellodiMontalcino2019.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Spice", "Silky", "Aged", "Balanced"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+        "Reviews": [
+  {
+    "points": 94,
+    "reviewer": "James Suckling",
+    "vintage": 2020,
+    "description": "A complex red with floral, lemon-rind and candied-cherry character. It’s medium-bodied with juicy fruit, as well as plenty of dried citrus rind. Some sandalwood and dried-flower undertones, too."
+  },
+  {
+    "points": 93,
+    "reviewer": "Vinous",
+    "vintage": 2020,
+    "description": "Dried black cherries and crushed plums mix with cocoa, sage and dried orange peels as the 2020 Brunello di Montalcino emerges from the glass. This displays incredible vibrancy within. It’s juicy and spry, with ripe red and black fruits elevated by brilliant acidity as nuances of sour citrus add further tension toward the close. The 2020 leaves the palate stained in primary concentration and a coating of fine tannins, tapering off spicy and long yet still lively as hints of tart raspberry keep the mouth watering for more. Recent vintages from Pian delle Vigne have delightful new energy and verve."
+  },
+  {
+    "points": 94,
+    "reviewer": "Wine Spectator",
+    "vintage": 2020,
+    "description": "This red features an alluring mix of strawberry and cherry fruit combined with tomato leaf, eucalyptus and cast iron. Builds nicely on the palate to the long, complex finish. Dry, dusty tannins linger, along with fruity and savory echoes. Best from 2027 through 2043."
+  },
+  {
+    "points": 92,
+    "reviewer": "Jeb Dunnuck",
+    "vintage": 2020,
+    "description": "The 2020 Brunello Di Montalcino pours a saturated magenta/red color and is generous on the nose with notes of mixed berry compote, licorice candies, leather, and mocha. It fills the palate and has well-defined broad shoulders, with chalky tannins and a grounding mineral texture. A red consistent with what lovers of these wines can expect, it should have another 10 years ahead."
+  }
+]
   },
   {
     "Wine Type": "Italiano",
@@ -336,7 +481,39 @@
     "PDF": "Tignanello2021.pdf",
     "Top Icons": ["Fruity/Berry", "Chocolate", "Spice", "Complex", "Bold", "Aged"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+            "Reviews": [
+  {
+    "points": 97,
+    "reviewer": "Robert Parker's Wine Advocate",
+    "vintage": 2022,
+    "description": "Rich and fruit-forward, the Marchesi Antinori 2022 Tignanello very much respects the vintage that tends to deliver more concentration and volume overall. It delivers extra fruit weight with a velvety, satiny feel over a generous mouthfeel. Tignanello offers blackcurrant and cherry, but there is a mineral note that keeps things focused. This is a beautiful expression of the vintage, with excellent work done to execute soft tannins, texture and length."
+  },
+  {
+    "points": 92,
+    "reviewer": "James Suckling",
+    "vintage": 2022,
+    "description": "There’s extraordinary energy in this wine. It displays a dark nose of black cherries, bramble fruit, violets, forest, licorice, bark, carob and leather. Density and tension dominate the full-bodied palate, with firm, velvety tannins. It’s slightly austere in the finish at the moment, yet it’s crunchy and full of potential."
+  },
+  {
+    "points": 95,
+    "reviewer": "Decanter",
+    "vintage": 2022,
+    "description": "Tignanello in 2022 is a blend of 78% Sangiovese, 18% Cabernet Sauvignon and 4% Cabernet Franc. Pot-pourri-infused red and black berry aromas introduce a succulent palate of good intensity. It's well balanced and bright, with cashmere tannins supporting a core of sapid hedgerow berries outlined by crushed rock minerality and bitter herbs. The finish is slightly disjointed, displaying a touch of alcohol warmth and wood which is yet to fully integrate, but given time it should come good."
+  },
+  {
+    "points": 95,
+    "reviewer": "Vinous",
+    "vintage": 2022,
+    "description": "The 2022 Tignanello is such an elegant, poised wine. Brisk acids cut through a core of red Sangiovese fruit. Crushed flowers, mint, cinnamon, rose petal and a kiss of French oak appear later, adding notable brightness. The 2022 is a decidedly mid-weight Tignanello, but all the elements are very nicely balanced throughout. Tignanello saw rain episodes at the end of the season, like most properties, but steep, well-draining hillsides were a clear advantage. The blend is 78% Sangiovese, 18% Cabernet Sauvignon and 4% Cabernet Franc, essentially the classic proportions here."
+  },
+  {
+    "points": 94,
+    "reviewer": "Wine Spectator",
+    "vintage": 2022,
+    "description": "The rich texture wraps around plum, cherry, graphite, tobacco and earth flavors, with a line of dusty tannins underneath. Fresh, elegant and long, ending with a pleasant astringency. Give this a year or two to integrate. Sangiovese, Cabernet Sauvignon and Cabernet Franc. Best from 2027 through 2040."
+  }
+]
   },
   {
     "Wine Type": "Italiano",
@@ -377,7 +554,16 @@
     "PDF": "PolizianoVinoNobilediMontepulciano2021.pdf",
     "Top Icons": ["Fruity/Berry", "Spice", "Oaky/Vanilla", "Balanced", "Complex"],
     "Sustainability": "Sustainably farmed; optical sorting and French oak aging",
-    "Vegan": true
+    "Vegan": true,
+
+        "Reviews": [
+  {
+    "points": 92,
+    "reviewer": "Wilfred Wong of Wine.com",
+    "vintage": 2022,
+    "description": "The 2022 Poliziano Vino Nobile di Montepulciano exhibits a deep garnet-black color and presents aromas of smoky oak, toast, and vibrant red and black fruits. Full-bodied and densely packed, the palate is elevated by ripe blackberries and layers of spicy oak. Bold and structured, this wine pairs perfectly with Lomo Saltado. In this iconic Peruvian beef stir-fry, its richness and savory spice beautifully complement the dish’s bold flavors and seared textures. (Tasted: July 18, 2025, San Francisco, CA)"
+  }
+]
   },
   {
     "Wine Type": "Italiano",
@@ -427,7 +613,15 @@
     ],
     "Sustainability": "",
     "Vegan": false,
-    "Top Glass": true
+    "Top Glass": true,
+    "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2019,
+        "description": "This has intense spice and and floral character, with violets, bell peppers, morello cherries, cloves and tomato leaves on the nose. It’s medium-bodied with sleek tannins. Dense and compact palate. Some walnut notes at the end."
+      }
+    ]
   },
   {
 "Wine Type": "Italiano",
@@ -528,7 +722,22 @@
     "PDF": "TenutaRegalealiLamri2022.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Balanced", "Silky", "Sustainable"],
     "Sustainability": "Grapes grown at high elevations for natural freshness; aged with minimal oak impact",
-    "Vegan": false
+    "Vegan": false,
+    "Reviews": [
+      {
+        "points": 91,
+        "reviewer": "Wine & Spirits",
+        "vintage": 2019,
+        "description": "TNotes of tarragon and thyme weave through flavors of juicy black plum, gaining a dark chocolate richness while maintaining a firm, lively structure. This is a delicious and versatile introduction to nero d’Avola."
+      },
+
+      {
+        "points": 90,
+        "reviewer": "Robert Parker's Wine Advocate",
+        "vintage": 2019,
+        "description": "Here's a classic expression of Sicily's number one indigenous grape. The Tasca Conti d'Almerita 2019 Sicilia Nero d’Avola Lamùri Tenuta Regaleali offers plenty of dark fruit intensity and toasted pistachio nut, wild fennel and scorched earth. This is your quintessential pasta and meat ragù wine, thanks to its freshness and accessible style."
+      }
+    ]
   },
   {
   "Wine Type": "Italiano",
@@ -612,7 +821,16 @@
     "PDF": "NinoNegriValtellinaSuperioreDOCGQuadrio2020.pdf",
     "Top Icons": ["Fruity/Berry", "Floral", "Balanced", "Aged", "Silky"],
     "Sustainability": "Terraced vineyards managed with low-yield, high-elevation practices for optimal ripeness and purity",
-    "Vegan": false
+    "Vegan": false,
+
+    "Reviews": [
+      {
+        "points": 88,
+        "reviewer": "Wine Spectator",
+        "vintage": 2019,
+        "description": "Savory notes of herbed green olive, smoke and paprika meet dried cherry and pomegranate seed flavors in this bright, medium-bodied red, which is firmed by lightly chewy tannins. Nebbiolo and Merlot. Drink now. 949 cases imported."
+      }
+    ]
   },
   {
     "Wine Type": "Italiano",
@@ -641,7 +859,7 @@
     "Vineyard": "Hillside vineyards in Marano di Valpolicella, 200–350m elevation, calcareous soil",
     "Sweetness": "Dry",
     "Varietal": "Amarone",
-    "General Recommended Accompanies": "Game, grilled meats, full-flavored dishes, mature cheeses",
+    "General Recommended Accompanies": "Traditionally enjoyed with game, roasted and grilled meats, full flavored dishes and well mature cheeses.",
     "Stella Recommended": "Osso Buco, Scottadito, Gnocchi with Gorgonzola Sauce",
     "Image": "CampagnolaAmaronedellaValpolicellaDOCGClassico.png",
     "Summary": "**Campagnola Amarone della Valpolicella Classico** is a richly expressive **Amarone** from the hills of Marano, crafted with traditional grape drying and aged in both large barrels and barriques. It delivers **intense aromas of cherry, plum, vanilla**, and a **full, velvety palate**.",
@@ -653,7 +871,19 @@
     "PDF": "CampagnolaAmaronedellaValpolicellaDOCGClassico.pdf",
     "Top Icons": ["Fruity/Berry", "Oaky/Vanilla", "Bold", "Complex", "Aged", "Balanced"],
     "Sustainability": "",
-    "Vegan": false
+    "Vegan": false,
+      "Reviews": [
+      {
+        "points": 92,
+        "reviewer": "James Suckling",
+        "vintage": 2021
+      },
+      {
+        "points": 94,
+        "reviewer": "Luca Maroni",
+        "vintage": 2021
+      }
+    ]
   },
   {
     "Wine Type": "Italiano",
