@@ -701,5 +701,63 @@
   "Hex": "#F3E7B0",
   "Sustainability": "Sustainable farming practices with vineyard parcels aged 20–50 years",
   "Vegan": true
-}
+},
+  {
+    "Wine Type": "Italiano",
+    "Categories": ["Italiano", "Glass"],
+    "Glass Position": 15,
+    "Blend": "",
+    "Wine Name": "Chianti Classico, Nozzole, Toscana",
+    "Producer": "Tenuta di Nozzole",
+    "Vintage": 2021,
+    "Tannin Level": "Medium",
+    "Tannin Characteristics": "Firm and pleasant tannins",
+    "Body": "Medium to Full",
+    "Body Characteristics": "Flavourful and richly vinous with great structure and balance",
+    "Finish": "Long",
+    "Finish Characteristics": "Richly vinous and persistent with structured tannins",
+    "Acidity": "Medium",
+    "Aroma": "Floral hints of rose, violet, and aromatic herbs",
+    "Flavor": "Floral notes, herbs, vinous red fruit, firm tannins",
+    "Style": "Bold Red",
+    "Vinification": "Maceration with délestage and rackings in stainless steel vats at 28°C for about 15 days",
+    "Maturation": "10–12 months in 225-liter French oak barrels with 33% rotation; refined in bottle for at least 3 months",
+    "Type of cask": "Toasted French oak barrels",
+    "Color": "Bright ruby red",
+    "Hex": "#AA1D2E",
+    "Region": "Tuscany",
+    "Appellation": "Chianti Classico DOCG",
+    "Vineyard": "Tenuta di Nozzole, Greve in Chianti",
+    "Sweetness": "Dry",
+    "Varietal": "Chianti Classico",
+    "General Recommended Accompanies": "Beefsteak Florentine style with zolfino white beans in extra virgin olive oil",
+    "Stella Recommended": "Osso Buco, Lasagna Filetto Bolognese, Filetto, Spezzatino",
+    "Image": "NozzoleChiantiClassico2021.png",
+    "Summary": "**Nozzole Chianti Classico 2021** is a pure **Sangiovese** from the historic Tenuta di Nozzole estate in **Greve in Chianti**. It shows a **bright ruby color**, with aromas of **rose, violet, and herbs**, and a palate driven by **firm tannins** and **balanced structure**. Aged in **French oak**, it reflects the elegance and tradition of **Chianti Classico** winemaking.",
+    "Unique Summary": "A modern yet elegant Chianti Classico from a historic Tuscan estate, showcasing floral aromatics and firm structure.",
+    "DOCG": true,
+    "DOC": false,
+    "Glass_Price": 16,
+    "Bottle_Price": 70,
+    "PDF": "NozzoleChiantiClassico2021.pdf",
+    "Top Icons": [
+      "Floral",
+      "Herbal",
+      "Fruity/Berry",
+      "Oaky/Vanilla",
+      "Balanced",
+      "Complex"
+    ],
+    "Sustainability": "",
+    "Vegan": false,
+    "Top Glass": true,
+    "Reviews": [
+      {
+        "points": 93,
+        "reviewer": "James Suckling",
+        "vintage": 2019,
+        "description": "This has intense spice and and floral character, with violets, bell peppers, morello cherries, cloves and tomato leaves on the nose. It’s medium-bodied with sleek tannins. Dense and compact palate. Some walnut notes at the end."
+      }
+    ]
+  }
 ]
